@@ -18,7 +18,7 @@
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('url')); ?>:</b>
-	<?php echo CHtml::encode($data->url); ?>
+	<img src="<?php echo CHtml::encode($data->url); ?>" />
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('createTime')); ?>:</b>
