@@ -28,4 +28,11 @@ class Controller extends CController
 		echo CJSON::encode($data);
 		exit;
 	}
+	protected function jsonError($data,$message, $params = array())
+	{
+		$data = array('code'=>200,'message'=>$message,'data'=>$data);
+		$data = array_merge($data, $params);
+		echo CJSON::encode($data);
+		exit;
+	}
 }
