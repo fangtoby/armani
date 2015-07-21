@@ -1,11 +1,11 @@
 # armani
 
-echo # armani >> README.md
-git init
-git add README.md
-git commit -m "first commit"
-git remote add origin git@github.com:fangtoby/armani.git
-git push -u origin master
+	echo # armani >> README.md
+	git init
+	git add README.md
+	git commit -m "first commit"
+	git remote add origin git@github.com:fangtoby/armani.git
+	git push -u origin master
 
 #API
 	
