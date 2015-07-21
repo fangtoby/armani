@@ -7,7 +7,8 @@
 </head>
 <body>
       <div id="content">
-      <?php echo $content; ?>
+      	<?php var_dump($signPackage); ?>
+        <?php echo $content; ?>
     </div><!-- content -->
 </body>
 <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
@@ -25,6 +26,10 @@
    */
   wx.config({
     debug: true,
+    appId: '<?php echo $signPackage["appid"];?>',
+    timestamp: <?php echo $signPackage["timestamp"];?>,
+    nonceStr: '<?php echo $signPackage["nonceStr"];?>',
+    signature: '<?php echo $signPackage["signature"];?>',
     jsApiList: [
       // 所有要调用的 API 都要加到这个列表中
     ]

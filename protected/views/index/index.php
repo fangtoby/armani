@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/main.css">
-  <title><?php echo CHtml::encode($this->pageTitle); ?></title>
+  <title>index</title>
 </head>
 <body>
       <div id="content">
-      <?php echo $content; ?>
+       fg
     </div><!-- content -->
 </body>
 <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
@@ -25,6 +25,10 @@
    */
   wx.config({
     debug: true,
+    appId: '<?php echo $signPackage["appid"];?>',
+    timestamp: <?php echo $signPackage["timestamp"];?>,
+    nonceStr: '<?php echo $signPackage["nonceStr"];?>',
+    signature: '<?php echo $signPackage["signature"];?>',
     jsApiList: [
       // 所有要调用的 API 都要加到这个列表中
     ]
