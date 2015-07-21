@@ -22,7 +22,7 @@ class ApiController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view','productlist','productdetail','addphone'),
+				'actions'=>array('index','view','productlist','productdetail','addphone','addaddress'),
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
@@ -86,5 +86,32 @@ class ApiController extends Controller
 		$this->jsonError(array(
 			'code'=>$code
 		),'手机号码格式错误');
+	}
+	/**
+	 * 客户信息录入
+	 */
+	public function actionAddaddress()
+	{	
+		//$id = $this->uid;
+		$id = 3;
+		$code = 0;
+		$cityId = $_GET['cityId'];
+		$marketId = $_GET['marketId'];
+		
+		if(is_numeric($cityId) && is_numeric($marketId) && 
+		isset($cityId) && isset($marketId)){ 
+			$code = 1;
+			$model = User::model()->findByPk($id);
+			$model->cityId = $cityId;
+			$model->marketId = $marketId;
+			if($model->save()){
+				$this->jsonSuccess(array(
+					'code'=>$code
+					));
+			}
+		}
+		$this->jsonError(array(
+			'code'=>$code
+		),'参数错误');
 	}
 }

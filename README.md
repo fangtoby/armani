@@ -11,7 +11,7 @@ git push -u origin master
 	
 	商品列表
 	
-	api/productlist
+	api/productList
 	
 	返回格式
 	
@@ -31,19 +31,32 @@ git push -u origin master
 		"data":[{"id":"1","pid":"1","name":"Nude","url":"\/images\/list\/logo.png","createTime":"2015-07-21 14:10:23","updateTime":"2015-07-21 14:10:23","isDelete":"0"},{"id":"3","pid":"1","name":"Gebe","url":"\/images\/list\/logo.png","createTime":"2015-07-21 14:10:23","updateTime":"2015-07-21 14:10:23","isDelete":"0"}]
 	}
 	
-	添加手机号码，code返回格式说明
+	添加手机号码，参数number , code返回格式说明
 	
 	 *	code 1 输入成功
-	 *	code 2 数据库错误
-	 *	code 3 手机号码格式错误
+	 *	code 2 手机号码格式错误
 	
-	api/addphone/number/14782593339
+	api/addPhone/number/14782593339
 	
 	{
 		"code":200,
 		"message":"\u64cd\u4f5c\u6210\u529f",
 		"data":{"code":1}
 	}
+	
+	添加城市地址信息，参数cityId 城市id，marketId 商场id, code返回格式说明
+	
+	 *	code 1 输入成功
+	 *	code 2 格式错误
+	
+	api/addAddress/cityId/23/marketId/32
+	
+	{
+		"code":200,
+		"message":"\u64cd\u4f5c\u6210\u529f",
+		"data":{"code":1}
+	}
+	
 	
 
 # 虚拟主机配置 （这里以apache为例）
