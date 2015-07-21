@@ -340,3 +340,52 @@ Stack trace:
 REQUEST_URI=/favicon.ico
 HTTP_REFERER=http://www.armani.cc/
 ---
+2015/07/21 09:05:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "detail".' in F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController('detail')
+#1 F:\XAMPP\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 F:\XAMPP\htdocs\armani\app\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/detail
+---
+2015/07/21 09:05:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "zii".' in F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController('zii')
+#1 F:\XAMPP\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 F:\XAMPP\htdocs\armani\app\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/zii
+---
+2015/07/21 09:22:41 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in F:\XAMPP\htdocs\armani\yii-1\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 F:\XAMPP\htdocs\armani\yii-1\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 F:\XAMPP\htdocs\armani\yii-1\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 F:\XAMPP\htdocs\armani\yii-1\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 F:\XAMPP\htdocs\armani\yii-1\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(291): CFilterChain->run()
+#6 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(282): CController->run('detail')
+#8 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController('product/detail')
+#9 F:\XAMPP\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 F:\XAMPP\htdocs\armani\app\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/product/detail
+---
+2015/07/21 09:23:01 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php:336
+Stack trace:
+#0 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 F:\XAMPP\htdocs\armani\yii-1\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 F:\XAMPP\htdocs\armani\yii-1\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 F:\XAMPP\htdocs\armani\yii-1\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 F:\XAMPP\htdocs\armani\yii-1\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(291): CFilterChain->run()
+#7 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(282): CController->run('detail')
+#9 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController('product/detail')
+#10 F:\XAMPP\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#11 F:\XAMPP\htdocs\armani\app\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/product/detail
+---
