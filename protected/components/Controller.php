@@ -51,27 +51,34 @@ class Controller extends CController
 		}else{
 			//没有session,或者session过期
 			if(empty($_SESSION['user'])){  
-				//是否带有code
-				if(isset($_GET['code'])){
-					$wc = new WeiChat($this->appid,$this->secret,$_GET['code']);
-					$info = $wc->getSignPackage();
-					if($info){
-						$_SESSION['user'] = $info;
-						$this->jsapiTicket = $info['access']['jsapi_ticket'];
-						$this->saveUserInfo($info['userinfo']);
-						$this->setSignatureString();
-					}else{
+				if(Yii::app()->request->isAjaxRequest){
+					$this->jsonError(array(),'验证过期，请重新登陆！');
+				}else{
+					if(isset($_GET['code'])){//是否带有code
+						$wc = new WeiChat($this->appid,$this->secret,$_GET['code']);
+						$info = $wc->getSignPackage();
+						if($info){
+							$_SESSION['user'] = $info;
+							$this->jsapiTicket = $info['access']['jsapi_ticket'];
+							$this->saveUserInfo($info['userinfo']);
+							$this->setSignatureString();
+						}else{
+							$this->redirect('/index/error');
+						}
+						$filterChain->run();
+						return true;
+					}else{//没有session & code
 						$this->redirect('/index/error');
-					}
-					$filterChain->run();
-					return true;
-				}else{//没有session & code
-					$this->redirect('/index/error');
-				} 
+					} 
+				}
 			}else{  
 				//print_r($_SESSION['user']);  
 				if($_SESSION['user']['expire_time'] < time()){//自动登录过期
-					//$this->redirect('http://www.baidu.com');
+					if(Yii::app()->request->isAjaxRequest){
+						$this->jsonError(array(),'验证过期，请重新登陆！');
+					}else{
+						//$this->redirect('http://www.baidu.com');
+					}
 				}else{
 					$this->jsapiTicket = $_SESSION['user']['access']['jsapi_ticket'];
 					$this->setSignatureString();
@@ -139,7 +146,7 @@ class Controller extends CController
 	}
 	protected function jsonError($data,$message, $params = array())
 	{
-		$data = array('code'=>200,'message'=>$message,'data'=>$data);
+		$data = array('code'=>201,'message'=>$message,'data'=>$data);
 		$data = array_merge($data, $params);
 		echo CJSON::encode($data);
 		exit;
