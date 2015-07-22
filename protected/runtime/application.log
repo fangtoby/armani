@@ -1564,3 +1564,127 @@ REQUEST_URI=/index/index
 in F:\XAMPP\htdocs\armani\app\protected\views\layouts\main.php (28)
 in F:\XAMPP\htdocs\armani\app\protected\views\layouts\column1.php (3)
 in F:\XAMPP\htdocs\armani\app\protected\controllers\IndexController.php (37)
+2015/07/22 03:00:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 F:\XAMPP\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 F:\XAMPP\htdocs\armani\app\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+HTTP_REFERER=http://www.armani.cc/product/list
+---
+2015/07/22 07:46:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 F:\XAMPP\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 F:\XAMPP\htdocs\armani\app\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+HTTP_REFERER=http://www.armani.cc/index/index
+---
+2015/07/22 11:03:16 [error] [php] Missing argument 1 for WeiChat::getAccessToken(), called in F:\XAMPP\htdocs\armani\app\protected\components\WeiChat.php on line 17 and defined (F:\XAMPP\htdocs\armani\app\protected\components\WeiChat.php:68)
+Stack trace:
+#0 F:\XAMPP\htdocs\armani\yii-1\framework\web\filters\CInlineFilter.php(58): IndexController->filterCheckUser()
+#1 F:\XAMPP\htdocs\armani\yii-1\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#2 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(291): CFilterChain->run()
+#3 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(265): IndexController->runActionWithFilters()
+#4 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(282): IndexController->run()
+#5 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#6 F:\XAMPP\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#7 F:\XAMPP\htdocs\armani\app\index.php(13): CWebApplication->run()
+REQUEST_URI=/index/index?code=4354345
+in F:\XAMPP\htdocs\armani\app\protected\components\WeiChat.php (68)
+in F:\XAMPP\htdocs\armani\app\protected\components\WeiChat.php (17)
+in F:\XAMPP\htdocs\armani\app\protected\components\Controller.php (56)
+2015/07/22 11:04:03 [error] [php] Undefined property: stdClass::$access_token (F:\XAMPP\htdocs\armani\app\protected\components\WeiChat.php:18)
+Stack trace:
+#0 F:\XAMPP\htdocs\armani\yii-1\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#1 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(291): CFilterChain->run()
+#2 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(265): IndexController->runActionWithFilters()
+#3 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(282): IndexController->run()
+#4 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#5 F:\XAMPP\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#6 F:\XAMPP\htdocs\armani\app\index.php(13): CWebApplication->run()
+REQUEST_URI=/index/index?code=4354345
+in F:\XAMPP\htdocs\armani\app\protected\components\WeiChat.php (18)
+in F:\XAMPP\htdocs\armani\app\protected\components\Controller.php (56)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/07/22 11:04:05 [error] [php] Undefined property: stdClass::$access_token (F:\XAMPP\htdocs\armani\app\protected\components\WeiChat.php:18)
+Stack trace:
+#0 F:\XAMPP\htdocs\armani\yii-1\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#1 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(291): CFilterChain->run()
+#2 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(265): IndexController->runActionWithFilters()
+#3 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(282): IndexController->run()
+#4 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#5 F:\XAMPP\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#6 F:\XAMPP\htdocs\armani\app\index.php(13): CWebApplication->run()
+REQUEST_URI=/index/index?code=4354345
+in F:\XAMPP\htdocs\armani\app\protected\components\WeiChat.php (18)
+in F:\XAMPP\htdocs\armani\app\protected\components\Controller.php (56)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/07/22 11:05:13 [error] [php] Undefined property: stdClass::$access_token (F:\XAMPP\htdocs\armani\app\protected\components\WeiChat.php:18)
+Stack trace:
+#0 F:\XAMPP\htdocs\armani\yii-1\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#1 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(291): CFilterChain->run()
+#2 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(265): IndexController->runActionWithFilters()
+#3 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(282): IndexController->run()
+#4 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#5 F:\XAMPP\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#6 F:\XAMPP\htdocs\armani\app\index.php(13): CWebApplication->run()
+REQUEST_URI=/index/index?code=4354345
+2015/07/22 11:05:14 [error] [php] Undefined property: stdClass::$access_token (F:\XAMPP\htdocs\armani\app\protected\components\WeiChat.php:18)
+Stack trace:
+#0 F:\XAMPP\htdocs\armani\yii-1\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#1 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(291): CFilterChain->run()
+#2 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(265): IndexController->runActionWithFilters()
+#3 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(282): IndexController->run()
+#4 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#5 F:\XAMPP\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#6 F:\XAMPP\htdocs\armani\app\index.php(13): CWebApplication->run()
+REQUEST_URI=/index/index?code=4354345
+2015/07/22 11:05:15 [error] [php] Undefined property: stdClass::$access_token (F:\XAMPP\htdocs\armani\app\protected\components\WeiChat.php:18)
+Stack trace:
+#0 F:\XAMPP\htdocs\armani\yii-1\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#1 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(291): CFilterChain->run()
+#2 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(265): IndexController->runActionWithFilters()
+#3 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(282): IndexController->run()
+#4 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#5 F:\XAMPP\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#6 F:\XAMPP\htdocs\armani\app\index.php(13): CWebApplication->run()
+REQUEST_URI=/index/index?code=4354345
+2015/07/22 11:05:15 [error] [php] Undefined property: stdClass::$access_token (F:\XAMPP\htdocs\armani\app\protected\components\WeiChat.php:18)
+Stack trace:
+#0 F:\XAMPP\htdocs\armani\yii-1\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#1 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(291): CFilterChain->run()
+#2 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(265): IndexController->runActionWithFilters()
+#3 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(282): IndexController->run()
+#4 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#5 F:\XAMPP\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#6 F:\XAMPP\htdocs\armani\app\index.php(13): CWebApplication->run()
+REQUEST_URI=/index/index?code=4354345
+2015/07/22 11:05:20 [error] [php] Undefined property: stdClass::$access_token (F:\XAMPP\htdocs\armani\app\protected\components\WeiChat.php:18)
+Stack trace:
+#0 F:\XAMPP\htdocs\armani\yii-1\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#1 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(291): CFilterChain->run()
+#2 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(265): IndexController->runActionWithFilters()
+#3 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(282): IndexController->run()
+#4 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#5 F:\XAMPP\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#6 F:\XAMPP\htdocs\armani\app\index.php(13): CWebApplication->run()
+REQUEST_URI=/index/index?code=4354345
+in F:\XAMPP\htdocs\armani\app\protected\components\WeiChat.php (18)
+in F:\XAMPP\htdocs\armani\app\protected\components\Controller.php (56)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/07/22 11:05:47 [error] [php] Undefined property: stdClass::$access_token (F:\XAMPP\htdocs\armani\app\protected\components\WeiChat.php:19)
+Stack trace:
+#0 F:\XAMPP\htdocs\armani\yii-1\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#1 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(291): CFilterChain->run()
+#2 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(265): IndexController->runActionWithFilters()
+#3 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(282): IndexController->run()
+#4 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#5 F:\XAMPP\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#6 F:\XAMPP\htdocs\armani\app\index.php(13): CWebApplication->run()
+REQUEST_URI=/index/index?code=4354345
+in F:\XAMPP\htdocs\armani\app\protected\components\WeiChat.php (19)
+in F:\XAMPP\htdocs\armani\app\protected\components\Controller.php (56)
+in F:\XAMPP\htdocs\armani\app\index.php (13)

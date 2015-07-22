@@ -78,4 +78,8 @@ class IndexController extends Controller
 			'signPackage'=>$this->signPackage,
 		));
 	}
+	public function actionError()
+	{
+		$this->render('Error');
+	}
 }
