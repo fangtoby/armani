@@ -34,6 +34,7 @@ class Controller extends CController
 	private $secret = 'adfasdfasdf';
 	private $jsapiTicket;
 	private $access_token;
+	private $uid;
 	
 	/*public function filters(){
 		return array('checkUser');
@@ -55,7 +56,9 @@ class Controller extends CController
 					$wc = new WeiChat($this->appid,$this->secret,$_GET['code']);
 					$info = $wc->getSignPackage();
 					if($info){
+						$_SESSION['user'] = $info;
 						$this->jsapiTicket = $info['access']['jsapi_ticket'];
+						$this->saveUserInfo($info['userinfo']);
 						$this->setSignatureString();
 					}else{
 						$this->redirect('/index/error');
@@ -66,15 +69,41 @@ class Controller extends CController
 					$this->redirect('/index/error');
 				} 
 			}else{  
-				print_r($_SESSION['user']);  
-				$this->jsapiTicket = $_SESSION['user']['jsapiTicket'];
-				$this->setSignatureString();
+				//print_r($_SESSION['user']);  
+				if($_SESSION['user']['expire_time'] < time()){//自动登录过期
+					//$this->redirect('http://www.baidu.com');
+				}else{
+					$this->jsapiTicket = $_SESSION['user']['access']['jsapi_ticket'];
+					$this->setSignatureString();
+					$this->uid = $_SESSION['uid'];
+				}
 				$filterChain->run();
 				return true;
 			}  
 		}
 		
 	}
+	
+	protected function saveUserInfo($info){
+		$user = User::model()->findByAttributes(array(
+			'unionid'=>$info['unionid']
+		));
+		if(count($user)){
+			$user->updateTime = date("Y-m-d H:i:s");
+		}else{
+			$user = new User();
+			$user->nickname = $info['nickname'];
+			$user->sex = $info['sex'];
+			$user->unionid = $info['unionid'];
+			$user->headimgurl = $info['headimgurl'];
+			$user->createTime = date("Y-m-d H:i:s");
+			$user->updateTime = date("Y-m-d H:i:s");
+		}
+		$user->save();
+		$this->uid = $user->id;
+		 $_SESSION['uid'] = $this->uid;
+	}
+	
 	protected function setSignatureString(){
 		$protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off' || $_SERVER['SERVER_PORT'] == 443) ? "https://" : "http://";
 		$url = "$protocol$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";

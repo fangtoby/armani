@@ -5,6 +5,7 @@ class WeiChat {
   private $code;
   private $access_token;
   private $openId;
+  private $expire_time = 7000;
   
   public function __construct($appId, $appSecret , $code) {
     $this->appId = $appId;
@@ -38,6 +39,7 @@ class WeiChat {
       "access_token" => $access_token,//
 	  "jsapi_ticket" => $jsapiTicket
     );
+	$data['expire_time'] = time() + $expire_time;
 	
     return $data; 
   }
