@@ -44,8 +44,6 @@ class WeiChat {
     return $data; 
   }
   
-  
- 
   /*{
   "errcode":0,
   "errmsg":"ok",
@@ -70,7 +68,6 @@ class WeiChat {
   private function getAccessToken() {
       $url = "https://api.weixin.qq.com/sns/oauth2/access_token?grant_type=client_credential&appid=$this->appId&secret=$this->appSecret&code=$this->code";
       $res = json_decode($this->httpGet($url));
-	  print_r($res);
       return $res;
   }
   

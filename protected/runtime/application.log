@@ -1688,3 +1688,12 @@ REQUEST_URI=/index/index?code=4354345
 in F:\XAMPP\htdocs\armani\app\protected\components\WeiChat.php (19)
 in F:\XAMPP\htdocs\armani\app\protected\components\Controller.php (56)
 in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/07/23 03:15:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 F:\XAMPP\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 F:\XAMPP\htdocs\armani\app\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+HTTP_REFERER=http://www.armani.cc/index/index?code=4354345
+---
