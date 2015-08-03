@@ -6,5 +6,5 @@
 <a href="<?=$this->createUrl('index/detail',array('pid'=>2))?>">详情页 &gt;</a>
 
 <pre>
-	<?=print_r($data);?>
+<?=var_dump($data);?>
 </pre>

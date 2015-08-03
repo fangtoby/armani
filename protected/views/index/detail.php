@@ -3,8 +3,8 @@
 
 商品详情页，商品id<?=$pid;?>
 
-<a href="<?=$this->createUrl('index/share')?>"> 分享到朋友圈 &gt;</a>
+<a href="<?=$this->createUrl('index/share',array('pid'=>1,'did'=>1))?>"> 分享到朋友圈 &gt;</a>
 
 <pre>
-	<?=print_r($data);?>
+<?=var_dump($data);?>
 </pre>
