@@ -40,10 +40,17 @@ class Controller extends CController
 		return array('checkUser');
 	}*/
 	
-	/*public function beforeAction($action)
+	public function beforeAction($action)
 	{
+		$webUri = Yii::app()->request->baseUrl;
+		
+		Data::$data['staticUri'] = array(
+			'css' => $webUri.'/public/css/',
+			'js' => $webUri.'/public/js/',
+		);
+		
 		return $action;
-	}*/
+	}
 	
 	public function filterCheckUser($filterChain)
 	{

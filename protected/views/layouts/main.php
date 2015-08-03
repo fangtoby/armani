@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/main.css?v=<?=Yii::app()->params['version']['css'];?>">
+	<link rel="stylesheet" type="text/css" href="<?=Data::$data['staticUri']['css']?>/main.css?v=<?=Yii::app()->params['version']['css'];?>">
   <title><?php echo CHtml::encode($this->pageTitle); ?></title>
 </head>
 <body>
       <div id="content">
-      <?php echo $content; ?>
+      	<?php echo $content; ?>
     </div><!-- content -->
 </body>
 <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js?v=<?=Yii::app()->params['version']['js'];?>"></script>
@@ -37,6 +37,6 @@
     // 在这里调用 API
   });
 </script>
-<script src="/public/js/jquery-1.7.1.js?v=<?=Yii::app()->params['version']['js'];?>"></script>
-<script src="/public/js/<?=$this->id;?>/<?=$this->action->id;?>.js?v=<?=Yii::app()->params['version']['js'];?>"></script>
+<script src="<?=Data::$data['staticUri']['js']?>jquery-1.7.1.js?v=<?=Yii::app()->params['version']['js'];?>"></script>
+<script src="<?=Data::$data['staticUri']['js']?><?=$this->id;?>/<?=$this->action->id;?>.js?v=<?=Yii::app()->params['version']['js'];?>"></script>
 </html>

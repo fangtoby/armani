@@ -2287,3 +2287,135 @@ REQUEST_URI=/index/address
 in F:\XAMPP\htdocs\armani\app\protected\components\Controller.php (45)
 in F:\XAMPP\htdocs\armani\app\protected\components\Controller.php (45)
 in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/03 06:50:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "public".' in F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php:483
+Stack trace:
+#0 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(270): CController->missingAction('public')
+#1 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(282): CController->run('public')
+#2 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController('index/public/cs...')
+#3 F:\XAMPP\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 F:\XAMPP\htdocs\armani\app\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index/public/css//main.css?v=20150803
+HTTP_REFERER=http://www.armani.cc/index/address
+---
+2015/08/03 06:50:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "public".' in F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php:483
+Stack trace:
+#0 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(270): CController->missingAction('public')
+#1 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(282): CController->run('public')
+#2 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController('index/public/js...')
+#3 F:\XAMPP\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 F:\XAMPP\htdocs\armani\app\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index/public/js/jquery-1.7.1.js?v=20150803
+HTTP_REFERER=http://www.armani.cc/index/address
+---
+2015/08/03 06:50:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "public".' in F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php:483
+Stack trace:
+#0 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(270): CController->missingAction('public')
+#1 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(282): CController->run('public')
+#2 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController('index/public/js...')
+#3 F:\XAMPP\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 F:\XAMPP\htdocs\armani\app\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index/public/js/index/address.js?v=20150803
+HTTP_REFERER=http://www.armani.cc/index/address
+---
+2015/08/03 06:50:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "public".' in F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php:483
+Stack trace:
+#0 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(270): CController->missingAction('public')
+#1 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(282): CController->run('public')
+#2 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController('index/public/js...')
+#3 F:\XAMPP\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 F:\XAMPP\htdocs\armani\app\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index/public/js/jquery-1.7.1.js?v=20150803
+HTTP_REFERER=http://www.armani.cc/index/address
+---
+2015/08/03 06:50:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "public".' in F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php:483
+Stack trace:
+#0 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(270): CController->missingAction('public')
+#1 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(282): CController->run('public')
+#2 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController('index/public/cs...')
+#3 F:\XAMPP\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 F:\XAMPP\htdocs\armani\app\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index/public/css//main.css?v=20150803
+HTTP_REFERER=http://www.armani.cc/index/address
+---
+2015/08/03 06:50:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "public".' in F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php:483
+Stack trace:
+#0 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(270): CController->missingAction('public')
+#1 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(282): CController->run('public')
+#2 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController('index/public/js...')
+#3 F:\XAMPP\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 F:\XAMPP\htdocs\armani\app\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index/public/js/index/address.js?v=20150803
+HTTP_REFERER=http://www.armani.cc/index/address
+---
+2015/08/03 06:50:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "public".' in F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php:483
+Stack trace:
+#0 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(270): CController->missingAction('public')
+#1 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(282): CController->run('public')
+#2 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController('index/public/cs...')
+#3 F:\XAMPP\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 F:\XAMPP\htdocs\armani\app\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index/public/css//main.css?v=20150803
+HTTP_REFERER=http://www.armani.cc/index/address
+---
+2015/08/03 06:50:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "public".' in F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php:483
+Stack trace:
+#0 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(270): CController->missingAction('public')
+#1 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(282): CController->run('public')
+#2 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController('index/public/js...')
+#3 F:\XAMPP\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 F:\XAMPP\htdocs\armani\app\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index/public/js/jquery-1.7.1.js?v=20150803
+HTTP_REFERER=http://www.armani.cc/index/address
+---
+2015/08/03 06:50:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "public".' in F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php:483
+Stack trace:
+#0 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(270): CController->missingAction('public')
+#1 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(282): CController->run('public')
+#2 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController('index/public/js...')
+#3 F:\XAMPP\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 F:\XAMPP\htdocs\armani\app\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index/public/js/index/address.js?v=20150803
+HTTP_REFERER=http://www.armani.cc/index/address
+---
+2015/08/03 06:50:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "public".' in F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php:483
+Stack trace:
+#0 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(270): CController->missingAction('public')
+#1 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(282): CController->run('public')
+#2 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController('index/public/cs...')
+#3 F:\XAMPP\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 F:\XAMPP\htdocs\armani\app\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index/public/css//main.css?v=20150803
+HTTP_REFERER=http://www.armani.cc/index/address
+---
+2015/08/03 06:50:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "public".' in F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php:483
+Stack trace:
+#0 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(270): CController->missingAction('public')
+#1 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(282): CController->run('public')
+#2 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController('index/public/js...')
+#3 F:\XAMPP\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 F:\XAMPP\htdocs\armani\app\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index/public/js/jquery-1.7.1.js?v=20150803
+HTTP_REFERER=http://www.armani.cc/index/address
+---
+2015/08/03 06:50:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "public".' in F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php:483
+Stack trace:
+#0 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(270): CController->missingAction('public')
+#1 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(282): CController->run('public')
+#2 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController('index/public/js...')
+#3 F:\XAMPP\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 F:\XAMPP\htdocs\armani\app\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index/public/js/index/address.js?v=20150803
+HTTP_REFERER=http://www.armani.cc/index/address
+---
