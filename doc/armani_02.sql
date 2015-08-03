@@ -4,7 +4,7 @@ Source Host: localhost
 Source Database: armani
 Target Host: localhost
 Target Database: armani
-Date: 2015/7/21 16:43:14
+Date: 2015/8/3 9:28:31
 */
 
 create database armani;
@@ -68,6 +68,10 @@ CREATE TABLE `product` (
 DROP TABLE IF EXISTS `user`;
 CREATE TABLE `user` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
+  `sex` int(11) DEFAULT NULL,
+  `nickname` varchar(100) DEFAULT NULL,
+  `unionid` varchar(300) DEFAULT NULL,
+  `headimgurl` text,
   `token` text NOT NULL,
   `expire_time` datetime NOT NULL,
   `phone` varchar(100) NOT NULL,
@@ -91,4 +95,4 @@ INSERT INTO `detail` VALUES ('2', '2', 'Gebe', '/images/list/logo.png', '2015-07
 INSERT INTO `detail` VALUES ('3', '1', 'Gebe', '/images/list/logo.png', '2015-07-21 14:10:23', '2015-07-21 14:10:23', '0');
 INSERT INTO `product` VALUES ('1', 'Nude', 'nude is beautiflu', '/images/list/logo.png', '2015-07-21 14:10:23', '2015-07-21 14:10:23');
 INSERT INTO `product` VALUES ('2', 'Gene', 'Gene is Beautflu', '/images/list/logo.png', '2015-07-21 14:10:23', '2015-07-21 14:10:23');
-INSERT INTO `user` VALUES ('3', '^*&fhug(*&ye(r*)e(*uf)(ds', '2015-07-21 16:02:02', '14782593339', '2015-07-21 16:02:10', '2015-07-21 16:02:13', '1', '0', null, null, '23', '32', null);
+INSERT INTO `user` VALUES ('3', null, null, null, null, '^*&fhug(*&ye(r*)e(*uf)(ds', '2015-07-21 16:02:02', '14782593339', '2015-07-21 16:02:10', '2015-07-21 16:02:13', '1', '0', null, null, '23', '32', null);

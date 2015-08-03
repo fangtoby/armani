@@ -7,6 +7,10 @@ Target Database: armani
 Date: 2015/7/22 18:07:50
 */
 
+create database armani;
+
+use armani;
+
 SET FOREIGN_KEY_CHECKS=0;
 -- ----------------------------
 -- Table structure for city
