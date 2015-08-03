@@ -2419,3 +2419,66 @@ Stack trace:
 REQUEST_URI=/index/public/js/index/address.js?v=20150803
 HTTP_REFERER=http://www.armani.cc/index/address
 ---
+2015/08/03 08:34:04 [error] [php] Trying to get property of non-object (F:\XAMPP\htdocs\armani\app\protected\controllers\IndexController.php:33)
+Stack trace:
+#0 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(286): IndexController->runAction()
+#1 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(265): IndexController->runActionWithFilters()
+#2 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(282): IndexController->run()
+#3 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 F:\XAMPP\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#5 F:\XAMPP\htdocs\armani\app\index.php(13): CWebApplication->run()
+REQUEST_URI=/index/detail?pid=2
+in F:\XAMPP\htdocs\armani\app\protected\controllers\IndexController.php (33)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/03 08:34:51 [error] [php] Trying to get property of non-object (F:\XAMPP\htdocs\armani\app\protected\controllers\IndexController.php:40)
+Stack trace:
+#0 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(286): IndexController->runAction()
+#1 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(265): IndexController->runActionWithFilters()
+#2 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(282): IndexController->run()
+#3 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 F:\XAMPP\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#5 F:\XAMPP\htdocs\armani\app\index.php(13): CWebApplication->run()
+REQUEST_URI=/index/detail?pid=2
+in F:\XAMPP\htdocs\armani\app\protected\controllers\IndexController.php (40)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/03 08:35:04 [error] [php] Trying to get property of non-object (F:\XAMPP\htdocs\armani\app\protected\controllers\IndexController.php:40)
+Stack trace:
+#0 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(286): IndexController->runAction()
+#1 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(265): IndexController->runActionWithFilters()
+#2 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(282): IndexController->run()
+#3 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 F:\XAMPP\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#5 F:\XAMPP\htdocs\armani\app\index.php(13): CWebApplication->run()
+REQUEST_URI=/index/detail?pid=2
+in F:\XAMPP\htdocs\armani\app\protected\controllers\IndexController.php (40)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/03 08:50:30 [error] [exception.CException] exception 'CException' with message 'Property "IndexController.uid" is not defined.' in F:\XAMPP\htdocs\armani\yii-1\framework\base\CComponent.php:130
+Stack trace:
+#0 F:\XAMPP\htdocs\armani\app\protected\controllers\IndexController.php(54): CComponent->__get('uid')
+#1 F:\XAMPP\htdocs\armani\yii-1\framework\web\actions\CInlineAction.php(49): IndexController->actionShare()
+#2 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#3 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#4 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#5 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(282): CController->run('share')
+#6 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController('index/share')
+#7 F:\XAMPP\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#8 F:\XAMPP\htdocs\armani\app\index.php(13): CApplication->run()
+#9 {main}
+REQUEST_URI=/index/share
+HTTP_REFERER=http://www.armani.cc/index/detail?pid=2
+---
+2015/08/03 08:50:43 [error] [exception.CException] exception 'CException' with message 'Property "IndexController.uid" is not defined.' in F:\XAMPP\htdocs\armani\yii-1\framework\base\CComponent.php:130
+Stack trace:
+#0 F:\XAMPP\htdocs\armani\app\protected\controllers\IndexController.php(54): CComponent->__get('uid')
+#1 F:\XAMPP\htdocs\armani\yii-1\framework\web\actions\CInlineAction.php(49): IndexController->actionShare()
+#2 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#3 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#4 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#5 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(282): CController->run('share')
+#6 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController('index/share')
+#7 F:\XAMPP\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#8 F:\XAMPP\htdocs\armani\app\index.php(13): CApplication->run()
+#9 {main}
+REQUEST_URI=/index/share
+HTTP_REFERER=http://www.armani.cc/index/detail?pid=2
+---
