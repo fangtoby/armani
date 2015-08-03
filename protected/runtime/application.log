@@ -1697,3 +1697,593 @@ Stack trace:
 REQUEST_URI=/favicon.ico
 HTTP_REFERER=http://www.armani.cc/index/index?code=4354345
 ---
+2015/08/03 03:39:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 F:\XAMPP\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 F:\XAMPP\htdocs\armani\app\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+HTTP_REFERER=http://www.armani.cc/
+---
+2015/08/03 04:55:19 [error] [php] Undefined variable: content (F:\XAMPP\htdocs\armani\app\protected\views\index\list.php:11)
+Stack trace:
+#0 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(869): IndexController->renderFile()
+#1 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(782): IndexController->renderPartial()
+#2 F:\XAMPP\htdocs\armani\app\protected\controllers\IndexController.php(17): IndexController->render()
+#3 F:\XAMPP\htdocs\armani\yii-1\framework\web\actions\CInlineAction.php(49): IndexController->actionList()
+#4 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(286): IndexController->runAction()
+#6 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(265): IndexController->runActionWithFilters()
+#7 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(282): IndexController->run()
+#8 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 F:\XAMPP\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 F:\XAMPP\htdocs\armani\app\index.php(13): CWebApplication->run()
+REQUEST_URI=/index/list
+in F:\XAMPP\htdocs\armani\app\protected\views\index\list.php (11)
+in F:\XAMPP\htdocs\armani\app\protected\controllers\IndexController.php (17)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/03 04:58:50 [error] [php] Undefined variable: content (F:\XAMPP\htdocs\armani\app\protected\views\index\share.php:11)
+Stack trace:
+#0 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(869): IndexController->renderFile()
+#1 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(782): IndexController->renderPartial()
+#2 F:\XAMPP\htdocs\armani\app\protected\controllers\IndexController.php(31): IndexController->render()
+#3 F:\XAMPP\htdocs\armani\yii-1\framework\web\actions\CInlineAction.php(49): IndexController->actionShare()
+#4 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(286): IndexController->runAction()
+#6 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(265): IndexController->runActionWithFilters()
+#7 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(282): IndexController->run()
+#8 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 F:\XAMPP\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 F:\XAMPP\htdocs\armani\app\index.php(13): CWebApplication->run()
+REQUEST_URI=/index/share
+in F:\XAMPP\htdocs\armani\app\protected\views\index\share.php (11)
+in F:\XAMPP\htdocs\armani\app\protected\controllers\IndexController.php (31)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/03 04:59:35 [error] [php] Undefined variable: content (F:\XAMPP\htdocs\armani\app\protected\views\index\contact.php:11)
+Stack trace:
+#0 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(869): IndexController->renderFile()
+#1 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(782): IndexController->renderPartial()
+#2 F:\XAMPP\htdocs\armani\app\protected\controllers\IndexController.php(38): IndexController->render()
+#3 F:\XAMPP\htdocs\armani\yii-1\framework\web\actions\CInlineAction.php(49): IndexController->actionContact()
+#4 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(286): IndexController->runAction()
+#6 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(265): IndexController->runActionWithFilters()
+#7 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(282): IndexController->run()
+#8 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 F:\XAMPP\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 F:\XAMPP\htdocs\armani\app\index.php(13): CWebApplication->run()
+REQUEST_URI=/index/contact
+in F:\XAMPP\htdocs\armani\app\protected\views\index\contact.php (11)
+in F:\XAMPP\htdocs\armani\app\protected\controllers\IndexController.php (38)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/03 05:03:55 [error] [php] Undefined variable: signPackage (F:\XAMPP\htdocs\armani\app\protected\views\layouts\main.php:28)
+Stack trace:
+#0 F:\XAMPP\htdocs\armani\yii-1\framework\web\widgets\CContentDecorator.php(76): IndexController->renderFile()
+#1 F:\XAMPP\htdocs\armani\yii-1\framework\web\widgets\CContentDecorator.php(54): CContentDecorator->decorate()
+#2 F:\XAMPP\htdocs\armani\yii-1\framework\web\widgets\COutputProcessor.php(44): CContentDecorator->processOutput()
+#3 F:\XAMPP\htdocs\armani\yii-1\framework\web\CBaseController.php(214): CContentDecorator->run()
+#4 F:\XAMPP\htdocs\armani\yii-1\framework\web\CBaseController.php(308): IndexController->endWidget()
+#5 F:\XAMPP\htdocs\armani\app\protected\views\layouts\column1.php(3): IndexController->endContent()
+#6 F:\XAMPP\htdocs\armani\yii-1\framework\web\CBaseController.php(126): require()
+#7 F:\XAMPP\htdocs\armani\yii-1\framework\web\CBaseController.php(95): IndexController->renderInternal()
+#8 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(784): IndexController->renderFile()
+#9 F:\XAMPP\htdocs\armani\app\protected\controllers\IndexController.php(10): IndexController->render()
+#10 F:\XAMPP\htdocs\armani\yii-1\framework\web\actions\CInlineAction.php(49): IndexController->actionIndex()
+#11 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(308): CInlineAction->runWithParams()
+#12 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(286): IndexController->runAction()
+#13 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(265): IndexController->runActionWithFilters()
+#14 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(282): IndexController->run()
+#15 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#16 F:\XAMPP\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#17 F:\XAMPP\htdocs\armani\app\index.php(13): CWebApplication->run()
+REQUEST_URI=/index/index
+in F:\XAMPP\htdocs\armani\app\protected\views\layouts\main.php (28)
+in F:\XAMPP\htdocs\armani\app\protected\views\layouts\column1.php (3)
+in F:\XAMPP\htdocs\armani\app\protected\controllers\IndexController.php (10)
+2015/08/03 05:05:06 [error] [php] Undefined variable: signPackage (F:\XAMPP\htdocs\armani\app\protected\views\layouts\main.php:28)
+Stack trace:
+#0 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(784): IndexController->renderFile()
+#1 F:\XAMPP\htdocs\armani\app\protected\controllers\IndexController.php(10): IndexController->render()
+#2 F:\XAMPP\htdocs\armani\yii-1\framework\web\actions\CInlineAction.php(49): IndexController->actionIndex()
+#3 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(308): CInlineAction->runWithParams()
+#4 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(286): IndexController->runAction()
+#5 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(265): IndexController->runActionWithFilters()
+#6 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(282): IndexController->run()
+#7 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#8 F:\XAMPP\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#9 F:\XAMPP\htdocs\armani\app\index.php(13): CWebApplication->run()
+REQUEST_URI=/index/index
+in F:\XAMPP\htdocs\armani\app\protected\views\layouts\main.php (28)
+in F:\XAMPP\htdocs\armani\app\protected\controllers\IndexController.php (10)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/03 05:09:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/js/index/index-index.js".' in F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController('public/js/index...')
+#1 F:\XAMPP\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 F:\XAMPP\htdocs\armani\app\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/public/js/index/index-index.js
+HTTP_REFERER=http://www.armani.cc/index/index
+---
+2015/08/03 05:15:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/js/index/list.js".' in F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController('public/js/index...')
+#1 F:\XAMPP\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 F:\XAMPP\htdocs\armani\app\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/public/js/index/list.js
+HTTP_REFERER=http://www.armani.cc/index/list
+---
+2015/08/03 05:15:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/js/index/list.js".' in F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController('public/js/index...')
+#1 F:\XAMPP\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 F:\XAMPP\htdocs\armani\app\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/public/js/index/list.js
+HTTP_REFERER=http://www.armani.cc/index/list
+---
+2015/08/03 05:16:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/js/index/list.js".' in F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController('public/js/index...')
+#1 F:\XAMPP\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 F:\XAMPP\htdocs\armani\app\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/public/js/index/list.js
+HTTP_REFERER=http://www.armani.cc/index/list
+---
+2015/08/03 05:16:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/js/index/list.js".' in F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController('public/js/index...')
+#1 F:\XAMPP\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 F:\XAMPP\htdocs\armani\app\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/public/js/index/list.js
+HTTP_REFERER=http://www.armani.cc/index/list
+---
+2015/08/03 05:16:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/js/index/list.js".' in F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController('public/js/index...')
+#1 F:\XAMPP\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 F:\XAMPP\htdocs\armani\app\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/public/js/index/list.js
+HTTP_REFERER=http://www.armani.cc/index/list
+---
+2015/08/03 05:16:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/js/index/list.js".' in F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController('public/js/index...')
+#1 F:\XAMPP\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 F:\XAMPP\htdocs\armani\app\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/public/js/index/list.js
+HTTP_REFERER=http://www.armani.cc/index/list
+---
+2015/08/03 05:16:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/js/index/list.js".' in F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController('public/js/index...')
+#1 F:\XAMPP\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 F:\XAMPP\htdocs\armani\app\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/public/js/index/list.js
+HTTP_REFERER=http://www.armani.cc/index/list
+---
+2015/08/03 05:16:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/js/index/list.js".' in F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController('public/js/index...')
+#1 F:\XAMPP\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 F:\XAMPP\htdocs\armani\app\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/public/js/index/list.js
+HTTP_REFERER=http://www.armani.cc/index/list
+---
+2015/08/03 05:16:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/js/index/list.js".' in F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController('public/js/index...')
+#1 F:\XAMPP\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 F:\XAMPP\htdocs\armani\app\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/public/js/index/list.js
+HTTP_REFERER=http://www.armani.cc/index/list
+---
+2015/08/03 05:16:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/js/index/list.js".' in F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController('public/js/index...')
+#1 F:\XAMPP\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 F:\XAMPP\htdocs\armani\app\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/public/js/index/list.js
+HTTP_REFERER=http://www.armani.cc/index/list
+---
+2015/08/03 05:16:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/js/index/list.js".' in F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController('public/js/index...')
+#1 F:\XAMPP\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 F:\XAMPP\htdocs\armani\app\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/public/js/index/list.js
+HTTP_REFERER=http://www.armani.cc/index/list
+---
+2015/08/03 05:16:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/js/index/list.js".' in F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController('public/js/index...')
+#1 F:\XAMPP\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 F:\XAMPP\htdocs\armani\app\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/public/js/index/list.js
+HTTP_REFERER=http://www.armani.cc/index/list
+---
+2015/08/03 05:16:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "详情页".' in F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php:483
+Stack trace:
+#0 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(270): CController->missingAction('?????????')
+#1 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(282): CController->run('?????????')
+#2 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController('index/?????????')
+#3 F:\XAMPP\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 F:\XAMPP\htdocs\armani\app\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index/%E8%AF%A6%E6%83%85%E9%A1%B5
+HTTP_REFERER=http://www.armani.cc/index/list
+---
+2015/08/03 05:17:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/js/index/list.js".' in F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController('public/js/index...')
+#1 F:\XAMPP\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 F:\XAMPP\htdocs\armani\app\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/public/js/index/list.js
+HTTP_REFERER=http://www.armani.cc/index/list
+---
+2015/08/03 05:17:04 [error] [php] Undefined variable: content (F:\XAMPP\htdocs\armani\app\protected\views\index\detail.php:10)
+Stack trace:
+#0 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(869): IndexController->renderFile()
+#1 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(782): IndexController->renderPartial()
+#2 F:\XAMPP\htdocs\armani\app\protected\controllers\IndexController.php(24): IndexController->render()
+#3 F:\XAMPP\htdocs\armani\yii-1\framework\web\actions\CInlineAction.php(49): IndexController->actionDetail()
+#4 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(286): IndexController->runAction()
+#6 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(265): IndexController->runActionWithFilters()
+#7 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(282): IndexController->run()
+#8 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 F:\XAMPP\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 F:\XAMPP\htdocs\armani\app\index.php(13): CWebApplication->run()
+REQUEST_URI=/index/detail
+in F:\XAMPP\htdocs\armani\app\protected\views\index\detail.php (10)
+in F:\XAMPP\htdocs\armani\app\protected\controllers\IndexController.php (24)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/03 05:17:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/js/index/detail.js".' in F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController('public/js/index...')
+#1 F:\XAMPP\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 F:\XAMPP\htdocs\armani\app\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/public/js/index/detail.js
+HTTP_REFERER=http://www.armani.cc/index/detail
+---
+2015/08/03 05:18:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/js/index/detail.js".' in F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController('public/js/index...')
+#1 F:\XAMPP\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 F:\XAMPP\htdocs\armani\app\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/public/js/index/detail.js
+HTTP_REFERER=http://www.armani.cc/index/detail
+---
+2015/08/03 05:18:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/js/index/detail.js".' in F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController('public/js/index...')
+#1 F:\XAMPP\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 F:\XAMPP\htdocs\armani\app\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/public/js/index/detail.js
+HTTP_REFERER=http://www.armani.cc/index/detail
+---
+2015/08/03 05:18:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/js/index/detail.js".' in F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController('public/js/index...')
+#1 F:\XAMPP\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 F:\XAMPP\htdocs\armani\app\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/public/js/index/detail.js
+HTTP_REFERER=http://www.armani.cc/index/detail
+---
+2015/08/03 05:18:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/js/index/list.js".' in F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController('public/js/index...')
+#1 F:\XAMPP\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 F:\XAMPP\htdocs\armani\app\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/public/js/index/list.js
+HTTP_REFERER=http://www.armani.cc/index/list
+---
+2015/08/03 05:18:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/js/index/list.js".' in F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController('public/js/index...')
+#1 F:\XAMPP\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 F:\XAMPP\htdocs\armani\app\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/public/js/index/list.js
+HTTP_REFERER=http://www.armani.cc/index/list
+---
+2015/08/03 05:18:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/js/index/detail.js".' in F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController('public/js/index...')
+#1 F:\XAMPP\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 F:\XAMPP\htdocs\armani\app\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/public/js/index/detail.js
+HTTP_REFERER=http://www.armani.cc/index/detail
+---
+2015/08/03 05:18:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/js/index/share.js".' in F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController('public/js/index...')
+#1 F:\XAMPP\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 F:\XAMPP\htdocs\armani\app\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/public/js/index/share.js
+HTTP_REFERER=http://www.armani.cc/index/share
+---
+2015/08/03 05:21:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/js/index/share.js".' in F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController('public/js/index...')
+#1 F:\XAMPP\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 F:\XAMPP\htdocs\armani\app\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/public/js/index/share.js
+HTTP_REFERER=http://www.armani.cc/index/share
+---
+2015/08/03 05:22:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/js/index/detail.js".' in F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController('public/js/index...')
+#1 F:\XAMPP\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 F:\XAMPP\htdocs\armani\app\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/public/js/index/detail.js
+HTTP_REFERER=http://www.armani.cc/index/detail
+---
+2015/08/03 05:22:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/js/index/share.js".' in F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController('public/js/index...')
+#1 F:\XAMPP\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 F:\XAMPP\htdocs\armani\app\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/public/js/index/share.js
+HTTP_REFERER=http://www.armani.cc/index/share
+---
+2015/08/03 05:22:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/js/index/contact.js".' in F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController('public/js/index...')
+#1 F:\XAMPP\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 F:\XAMPP\htdocs\armani\app\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/public/js/index/contact.js
+HTTP_REFERER=http://www.armani.cc/index/contact
+---
+2015/08/03 05:22:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/js/index/follow.js".' in F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController('public/js/index...')
+#1 F:\XAMPP\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 F:\XAMPP\htdocs\armani\app\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/public/js/index/follow.js
+HTTP_REFERER=http://www.armani.cc/index/follow
+---
+2015/08/03 05:23:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/js/index/follow.js".' in F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController('public/js/index...')
+#1 F:\XAMPP\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 F:\XAMPP\htdocs\armani\app\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/public/js/index/follow.js
+HTTP_REFERER=http://www.armani.cc/index/follow
+---
+2015/08/03 05:23:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/js/index/contact.js".' in F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController('public/js/index...')
+#1 F:\XAMPP\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 F:\XAMPP\htdocs\armani\app\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/public/js/index/contact.js
+HTTP_REFERER=http://www.armani.cc/index/contact
+---
+2015/08/03 05:23:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/js/index/follow.js".' in F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController('public/js/index...')
+#1 F:\XAMPP\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 F:\XAMPP\htdocs\armani\app\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/public/js/index/follow.js
+HTTP_REFERER=http://www.armani.cc/index/follow
+---
+2015/08/03 05:24:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/js/index/follow.js".' in F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController('public/js/index...')
+#1 F:\XAMPP\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 F:\XAMPP\htdocs\armani\app\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/public/js/index/follow.js
+HTTP_REFERER=http://www.armani.cc/index/follow
+---
+2015/08/03 05:24:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/js/index/follow.js".' in F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController('public/js/index...')
+#1 F:\XAMPP\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 F:\XAMPP\htdocs\armani\app\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/public/js/index/follow.js
+HTTP_REFERER=http://www.armani.cc/index/follow
+---
+2015/08/03 05:24:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/js/index/follow.js".' in F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController('public/js/index...')
+#1 F:\XAMPP\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 F:\XAMPP\htdocs\armani\app\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/public/js/index/follow.js
+HTTP_REFERER=http://www.armani.cc/index/follow
+---
+2015/08/03 05:24:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/js/index/address.js".' in F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController('public/js/index...')
+#1 F:\XAMPP\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 F:\XAMPP\htdocs\armani\app\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/public/js/index/address.js
+HTTP_REFERER=http://www.armani.cc/index/address
+---
+2015/08/03 05:24:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/js/index/address.js".' in F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController('public/js/index...')
+#1 F:\XAMPP\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 F:\XAMPP\htdocs\armani\app\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/public/js/index/address.js
+HTTP_REFERER=http://www.armani.cc/index/address
+---
+2015/08/03 05:24:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/js/index/contact.js".' in F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController('public/js/index...')
+#1 F:\XAMPP\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 F:\XAMPP\htdocs\armani\app\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/public/js/index/contact.js
+HTTP_REFERER=http://www.armani.cc/index/contact
+---
+2015/08/03 05:24:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/js/index/share.js".' in F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController('public/js/index...')
+#1 F:\XAMPP\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 F:\XAMPP\htdocs\armani\app\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/public/js/index/share.js
+HTTP_REFERER=http://www.armani.cc/index/share
+---
+2015/08/03 05:24:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/js/index/share.js".' in F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController('public/js/index...')
+#1 F:\XAMPP\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 F:\XAMPP\htdocs\armani\app\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/public/js/index/share.js
+HTTP_REFERER=http://www.armani.cc/index/share
+---
+2015/08/03 05:24:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/js/index/share.js".' in F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController('public/js/index...')
+#1 F:\XAMPP\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 F:\XAMPP\htdocs\armani\app\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/public/js/index/share.js
+HTTP_REFERER=http://www.armani.cc/index/share
+---
+2015/08/03 05:25:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/js/index/share.js".' in F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController('public/js/index...')
+#1 F:\XAMPP\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 F:\XAMPP\htdocs\armani\app\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/public/js/index/share.js
+HTTP_REFERER=http://www.armani.cc/index/share
+---
+2015/08/03 05:26:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/js/index/share.js".' in F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController('public/js/index...')
+#1 F:\XAMPP\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 F:\XAMPP\htdocs\armani\app\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/public/js/index/share.js
+HTTP_REFERER=http://www.armani.cc/index/share
+---
+2015/08/03 05:27:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/js/index/detail.js".' in F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController('public/js/index...')
+#1 F:\XAMPP\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 F:\XAMPP\htdocs\armani\app\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/public/js/index/detail.js
+HTTP_REFERER=http://www.armani.cc/index/detail
+---
+2015/08/03 05:27:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/js/index/list.js".' in F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController('public/js/index...')
+#1 F:\XAMPP\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 F:\XAMPP\htdocs\armani\app\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/public/js/index/list.js
+HTTP_REFERER=http://www.armani.cc/index/list
+---
+2015/08/03 05:27:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/js/index/list.js".' in F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController('public/js/index...')
+#1 F:\XAMPP\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 F:\XAMPP\htdocs\armani\app\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/public/js/index/list.js
+HTTP_REFERER=http://www.armani.cc/index/list
+---
+2015/08/03 05:27:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/js/index/detail.js".' in F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController('public/js/index...')
+#1 F:\XAMPP\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 F:\XAMPP\htdocs\armani\app\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/public/js/index/detail.js
+HTTP_REFERER=http://www.armani.cc/index/detail
+---
+2015/08/03 05:27:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/js/index/share.js".' in F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController('public/js/index...')
+#1 F:\XAMPP\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 F:\XAMPP\htdocs\armani\app\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/public/js/index/share.js
+HTTP_REFERER=http://www.armani.cc/index/share
+---
+2015/08/03 05:27:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/js/index/contact.js".' in F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController('public/js/index...')
+#1 F:\XAMPP\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 F:\XAMPP\htdocs\armani\app\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/public/js/index/contact.js
+HTTP_REFERER=http://www.armani.cc/index/contact
+---
+2015/08/03 05:27:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/js/index/follow.js".' in F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController('public/js/index...')
+#1 F:\XAMPP\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 F:\XAMPP\htdocs\armani\app\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/public/js/index/follow.js
+HTTP_REFERER=http://www.armani.cc/index/follow
+---
+2015/08/03 05:28:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/js/index/address.js".' in F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController('public/js/index...')
+#1 F:\XAMPP\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 F:\XAMPP\htdocs\armani\app\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/public/js/index/address.js
+HTTP_REFERER=http://www.armani.cc/index/address
+---
+2015/08/03 05:30:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/main.css".' in F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController('css/main.css')
+#1 F:\XAMPP\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 F:\XAMPP\htdocs\armani\app\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/main.css
+HTTP_REFERER=http://www.armani.cc/index/address
+---
+2015/08/03 05:49:52 [error] [php] require(F:\XAMPP\htdocs\armani\app\protected\components/version.php): failed to open stream: No such file or directory (F:\XAMPP\htdocs\armani\app\protected\components\Controller.php:45)
+Stack trace:
+#0 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(286): IndexController->runAction()
+#1 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(265): IndexController->runActionWithFilters()
+#2 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(282): IndexController->run()
+#3 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 F:\XAMPP\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#5 F:\XAMPP\htdocs\armani\app\index.php(13): CWebApplication->run()
+REQUEST_URI=/index/address
+in F:\XAMPP\htdocs\armani\app\protected\components\Controller.php (45)
+in F:\XAMPP\htdocs\armani\app\protected\components\Controller.php (45)
+in F:\XAMPP\htdocs\armani\app\index.php (13)

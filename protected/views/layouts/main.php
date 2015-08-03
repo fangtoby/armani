@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/main.css">
+	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/main.css?v=<?=Yii::app()->params['version']['css'];?>">
   <title><?php echo CHtml::encode($this->pageTitle); ?></title>
 </head>
 <body>
@@ -10,7 +10,7 @@
       <?php echo $content; ?>
     </div><!-- content -->
 </body>
-<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js?v=<?=Yii::app()->params['version']['js'];?>"></script>
 <script>
   /*
    * 注意：
@@ -25,6 +25,10 @@
    */
   wx.config({
     debug: true,
+    appId: '<?php echo $this->signPackage["appid"];?>',
+    timestamp: <?php echo $this->signPackage["timestamp"];?>,
+    nonceStr: '<?php echo $this->signPackage["nonceStr"];?>',
+    signature: '<?php echo $this->signPackage["signature"];?>',
     jsApiList: [
       // 所有要调用的 API 都要加到这个列表中
     ]
@@ -33,4 +37,6 @@
     // 在这里调用 API
   });
 </script>
+<script src="/public/js/jquery-1.7.1.js?v=<?=Yii::app()->params['version']['js'];?>"></script>
+<script src="/public/js/<?=$this->id;?>/<?=$this->action->id;?>.js?v=<?=Yii::app()->params['version']['js'];?>"></script>
 </html>

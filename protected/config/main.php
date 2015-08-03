@@ -80,5 +80,6 @@ return array(
 	'params'=>array(
 		// this is used in contact page
 		'adminEmail'=>'webmaster@example.com',
+		'version'=>require(dirname(__FILE__).'/version.php'),
 	),
 );
