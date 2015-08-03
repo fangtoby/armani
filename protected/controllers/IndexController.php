@@ -19,8 +19,10 @@ class IndexController extends Controller
 	
 	public function actionDetail()
 	{
+		$pid = isset($_GET['pid']) ? $_GET['pid']:1;
 		$this->render('detail',array(
 			'signPackage'=>$this->signPackage,
+			'pid'=>$pid
 		));
 	}
 	

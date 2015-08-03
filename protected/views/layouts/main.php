@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-	<link rel="stylesheet" type="text/css" href="<?=Data::$data['staticUri']['css']?>/main.css?v=<?=Yii::app()->params['version']['css'];?>">
+	<link rel="stylesheet" type="text/css" href="<?=Data::$data['staticUri']['css']?>main.css?v=<?=Yii::app()->params['version']['css'];?>">
   <title><?php echo CHtml::encode($this->pageTitle); ?></title>
 </head>
 <body>
