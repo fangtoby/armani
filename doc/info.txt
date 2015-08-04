@@ -1,0 +1,21 @@
+Dear
+以下是15周年建好的站，以及IP，域名
+
+SVN
+https://101.226.245.5/svn/Projects/CCE.Customer/CCE.Customer.Campaign/Armani/masterofglow.comeyes.cn
+UserName:leo
+Paddword:lXoHihfQ
+
+域名：masterofglow.comeyes.cn
+测试地址：101.226.245.13:9003
+
+FTP
+Address：101.226.245.13 端口23
+UserName：armani_masterofglow
+Password：4JIdSqxGP4
+
+MySQL
+Address：101.226.245.13:3306
+DB-Name：masterofglow_comeyes_cn
+UserNmae：masterofglow
+Password：TLhB1MLMjt

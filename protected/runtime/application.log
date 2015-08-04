@@ -2482,3 +2482,30 @@ Stack trace:
 REQUEST_URI=/index/share
 HTTP_REFERER=http://www.armani.cc/index/detail?pid=2
 ---
+2015/08/04 03:06:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 F:\XAMPP\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 F:\XAMPP\htdocs\armani\app\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+HTTP_REFERER=http://www.armani.cc/index/index
+---
+2015/08/04 03:06:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/js/site/index.js".' in F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController('public/js/site/...')
+#1 F:\XAMPP\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 F:\XAMPP\htdocs\armani\app\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/public/js/site/index.js?v=20150803
+HTTP_REFERER=http://www.armani.cc/
+---
+2015/08/04 03:30:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 F:\XAMPP\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 F:\XAMPP\htdocs\armani\app\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+HTTP_REFERER=http://www.armani.cc/
+---
