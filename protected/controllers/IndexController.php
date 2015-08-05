@@ -33,7 +33,7 @@ class IndexController extends Controller
 	
 	public function actionDetail()
 	{
-		$pid = isset($_GET['pid']) ? $_GET['pid']:1;
+		/*$pid = isset($_GET['pid']) ? $_GET['pid']:1;
 		
 		$models = Detail::model()->findAllByAttributes(array(
 			'pid'=>$pid
@@ -46,7 +46,7 @@ class IndexController extends Controller
 		}
 		
 		if(!$models) $this->result = 0;
-		
+		*/
 		$this->render('detail',array(
 			'signPackage'=>$this->signPackage,
 			'pid'=>$pid,

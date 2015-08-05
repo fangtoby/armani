@@ -5,4 +5,4 @@
 
 $SendMessage = new SendMessage('14782593339','HelloWorld',NULL);
 
-echo $SendMessage->sendMs();
+echo $SendMessage->send();
