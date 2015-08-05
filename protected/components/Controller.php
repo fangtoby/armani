@@ -22,7 +22,7 @@ class Controller extends CController
 	public $breadcrumbs=array();
 	
 	protected $signPackage = array(
-		'appid'=>23, // 应用唯一标识，在微信开放平台提交应用审核通过后获得
+		'appid'=>'wxc2efec250f2952a3', // 应用唯一标识，在微信开放平台提交应用审核通过后获得
 		'secret'=>'234rdsfa',//应用密钥AppSecret，在微信开放平台提交应用审核通过后获得
 		'grant_type'=>'authorization_code',//固定
 		'code'=>'SDFERWE3w3erw',
@@ -51,6 +51,7 @@ class Controller extends CController
 		
 		return $action;
 	}
+	//http://armani2014.ccegroup.cn/ArmaniGetSignaturePara.ashx?Token=3808053
 	
 	public function filterCheckUser($filterChain)
 	{

@@ -40,7 +40,7 @@ function weixin(msg)
     imgUrl:'http://armani2014.ccegroup.cn/campaign/new2015/images/share.jpg', // 分享图标
     success: function () { 
         // 用户确认分享后执行的回调函数
-		//alert('sharedone');
+		alert('sharedone');
     },
     cancel: function () { 
         // 用户取消分享后执行的回调函数
@@ -50,6 +50,6 @@ function weixin(msg)
 		});
 	
 	wx.error(function(res){
-		//alert('error');
+		alert('error');
 		});
 }

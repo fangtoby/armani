@@ -11,7 +11,7 @@
       	<?php echo $content; ?>
     </div><!-- content -->
 </body>
-<!--<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js?v=<?=Yii::app()->params['version']['js'];?>"></script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js?v=<?=Yii::app()->params['version']['js'];?>"></script>
 <script>
   /*
    * 注意：
@@ -39,5 +39,5 @@
   });
 </script>
 <script src="<?=Data::$data['staticUri']['js']?>jquery-1.7.1.js?v=<?=Yii::app()->params['version']['js'];?>"></script>
-<script src="<?=Data::$data['staticUri']['js']?><?=$this->id;?>/<?=$this->action->id;?>.js?v=<?=Yii::app()->params['version']['js'];?>"></script>-->
+<script src="<?=Data::$data['staticUri']['js']?><?=$this->id;?>/<?=$this->action->id;?>.js?v=<?=Yii::app()->params['version']['js'];?>"></script>
 </html>
