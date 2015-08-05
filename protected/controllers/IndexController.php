@@ -16,8 +16,8 @@ class IndexController extends Controller
 		$models = Product::model()->findAll();
 		$data = array();
 		
-		foreach($item as $models){
-			$data[] = $item->$attributes;
+		foreach($models as $model){
+			$data[] = $model->attributes;
 		}
 		/*$result= array_map(function($record){ 
 			return $record->attributes; 
@@ -42,7 +42,7 @@ class IndexController extends Controller
 		$data = array();
 		
 		foreach($item as $models){
-			$data[] = $item->$attributes;
+			$data[] = $model->attributes;
 		}
 		
 		if(!$models) $this->result = 0;

@@ -1,4 +1,7 @@
 <?php
+/*
+* @author: fangtoby@live.cn
+*/
 class WeiChat {
   private $appId;
   private $appSecret;
