@@ -14,13 +14,19 @@ class IndexController extends Controller
 	public function actionList()
 	{
 		$models = Product::model()->findAll();
+		$data = array();
 		
-		$result= array_map(function($record) { return $record->attributes;},$models);
-		
+		foreach($item as $models){
+			$data[] = $item->$attributes;
+		}
+		/*$result= array_map(function($record){ 
+			return $record->attributes; 
+		},$models);
+		*/
 		$this->render('list',array(
 			'signPackage'=>$this->signPackage,
 			'result'=>$this->result,
-			'data'=>$result
+			'data'=>$data
 		));
 		
 	}
@@ -33,7 +39,11 @@ class IndexController extends Controller
 			'pid'=>$pid
 		));
 		
-		$result= array_map(function($record) { return $record->attributes;},$models);
+		$data = array();
+		
+		foreach($item as $models){
+			$data[] = $item->$attributes;
+		}
 		
 		if(!$models) $this->result = 0;
 		
@@ -41,7 +51,7 @@ class IndexController extends Controller
 			'signPackage'=>$this->signPackage,
 			'pid'=>$pid,
 			'result'=>$this->result,
-			'data'=>$result
+			'data'=>$data
 		));
 		
 	}
