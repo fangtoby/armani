@@ -24,7 +24,7 @@ class SendMessage{
 	private $msg;
 	private $dtime;
 	private $optional_headers = NULL;
-	private $url = "http://www.smsadmin.cn/smsmarketing/wwwroot/api/post_send";
+	private $url = "http://www.smsadmin.cn/smsmarketing/wwwroot/api/get_send/";
 	
 	public function __construct($mobile, $msg, $dtime = NULL) {
 		$this->mobile = $mobile;
@@ -60,7 +60,33 @@ class SendMessage{
 		 }
 		 return $response;
 	}
-	
+	function sends(){
+		$data = array(
+			'uid'=>$this->uid,
+			'pwd'=>$this->pwd,
+			'mobile'=>$this->mobile,
+			'msg'=>$this->msg,
+			'dtime'=>$this->dtime
+		);
+		return $this->send($this->url,$data);	
+	}
+	function send_post($url, $post_data) {  
+	  
+	  $postdata = http_build_query($post_data);  
+	  $options = array(  
+		'http' => array(  
+		  'method' => 'POST',  
+		  'header' => 'Content-type:application/x-www-form-urlencoded',  
+		  'content' => $postdata,  
+		  'timeout' => 15 * 60 // 超时时间（单位:s）  
+		)  
+	  );  
+	  $context = stream_context_create($options);  
+	  $result = file_get_contents($url, false, $context);  
+	  
+	  return $result;  
+	}  
+  
 	public function sendMs(){
 		$data = array(
 			'uid'=>$this->uid,
@@ -71,19 +97,16 @@ class SendMessage{
 		);
 		
 		$o = "" ;
-		foreach ( $data as $k => $v ) 
+		foreach ($data as $k => $v) 
 		{ 
-			 $o .= "$k=".urlencode($v)."&" ;
+			 $o .= $k."=".urlencode($v)."&" ;
 		} 
 		
-		$post_data = substr ( $o, 0, -1);
-		$ch = curl_init() ;
-		curl_setopt( $ch, CURLOPT_POST, 1 );
-		curl_setopt( $ch, CURLOPT_HEADER, 0 );
-		curl_setopt( $ch, CURLOPT_URL, $this->url );
-		curl_setopt( $ch, CURLOPT_POSTFIELDS, $post_data );
-		$result = curl_exec( $ch );
+		$post_data = substr( $o, 0, -1);
+		$ch = curl_init($this->url) ;
+		curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "GET"); // 正确
+		//curl_exec($ch);
 		
-		return $result;
+		return curl_exec($ch);
 	}
 }
