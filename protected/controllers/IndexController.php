@@ -13,7 +13,7 @@ class IndexController extends Controller
 				'unionid'=>$info['openid']
 			));
 			
-			$_SESSION["openid"] = $info['openid'];
+			//$_SESSION["openid"] = $info['openid'];
 			
 			if(!$model){
 				$user = new User();
@@ -23,11 +23,11 @@ class IndexController extends Controller
 				$user->headimgurl = $info['headimgurl'];
 				$user->save();
 			}else{
-				$model->unionid = $info['openid'];
+				/*$model->unionid = $info['openid'];
 				$model->nickname = $info['nickname'];
 				$model->sex = $info['sex'];
 				$model->headimgurl = $info['headimgurl'];
-				$model->save();
+				$model->save();*/
 			}
 			
 			$models = Product::model()->findAll();
@@ -48,7 +48,7 @@ class IndexController extends Controller
 			$id = "7";
 			$appId = "wxc2efec250f2952a3";
 			$domain = "wxresponse.comeyes.com";
-			$link ="http://masterofglow.comeyes.cn?v=234567898765";
+			$link ="http://masterofglow.comeyes.cn";
 			$ulink =  urlencode("http://{$domain}/External/Oauth.ashx?link={$link}&id={$id}");
 			
 			$url="https://open.weixin.qq.com/connect/oauth2/authorize?appid={$appId}&redirect_uri={$ulink}&response_type=code&scope=snsapi_userinfo&state=State#wechat_redirect";
@@ -85,8 +85,8 @@ class IndexController extends Controller
 	
 	public function actionDetail()
 	{
-		/*$pid = isset($_GET['pid']) ? $_GET['pid']:1;
-		
+		$pid = isset($_GET['pid']) ? $_GET['pid']:1;
+		/*
 		$models = Detail::model()->findAllByAttributes(array(
 			'pid'=>$pid
 		));
@@ -100,10 +100,7 @@ class IndexController extends Controller
 		if(!$models) $this->result = 0;
 		*/
 		$this->render('detail',array(
-			'signPackage'=>$this->signPackage,
-			'pid'=>$pid,
-			'result'=>$this->result,
-			'data'=>$data
+			'pid'=>$pid
 		));
 		
 	}
@@ -151,8 +148,12 @@ class IndexController extends Controller
 	
 	public function actionFollow()
 	{
+		$pid = isset($_GET['pid']) ? $_GET['pid']:1;
+		$did = isset($_GET['did']) ? $_GET['did']:1;
 		$this->render('follow',array(
 			'signPackage'=>$this->signPackage,
+			'pid'=>$pid,
+			'did'=>$did
 		));
 	}
 	

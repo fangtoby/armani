@@ -4,7 +4,7 @@ Source Host: localhost
 Source Database: armani
 Target Host: localhost
 Target Database: armani
-Date: 2015/8/6 17:00:57
+Date: 2015/8/6 17:54:40
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -40,6 +40,7 @@ DROP TABLE IF EXISTS `lottery`;
 CREATE TABLE `lottery` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `uid` int(11) DEFAULT NULL,
+  `phone` varchar(200) DEFAULT NULL,
   `cityId` int(11) DEFAULT NULL,
   `marketId` int(11) DEFAULT NULL,
   `type` int(11) DEFAULT NULL,
@@ -47,7 +48,7 @@ CREATE TABLE `lottery` (
   `updateTime` datetime DEFAULT NULL,
   `win` int(11) DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Table structure for market
@@ -135,7 +136,7 @@ CREATE TABLE `user` (
   `isShare` int(11) DEFAULT '0',
   `countReward` int(11) DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records 
@@ -169,6 +170,9 @@ INSERT INTO `city` VALUES ('26', '其他城市');
 INSERT INTO `detail` VALUES ('1', '1', 'Nude', '/images/list/logo.png', '2015-07-21 14:10:23', '2015-07-21 14:10:23', '0');
 INSERT INTO `detail` VALUES ('2', '2', 'Gebe', '/images/list/logo.png', '2015-07-21 14:10:23', '2015-07-21 14:10:23', '0');
 INSERT INTO `detail` VALUES ('3', '1', 'Gebe', '/images/list/logo.png', '2015-07-21 14:10:23', '2015-07-21 14:10:23', '0');
+INSERT INTO `lottery` VALUES ('2', null, '14782593339', '1', '2', '1', '2015-08-06 11:15:38', '2015-08-06 11:15:38', '0');
+INSERT INTO `lottery` VALUES ('3', null, '14782593338', '1', '11', '1', '2015-08-06 11:20:19', '2015-08-06 11:20:19', '0');
+INSERT INTO `lottery` VALUES ('4', null, '14782593332', '1', '12', '1', '2015-08-06 11:20:46', '2015-08-06 11:20:46', '0');
 INSERT INTO `market` VALUES ('2', '1', '付珊珊', '马丽娜', '北京市朝阳区建国路87号新光天地一层化妆品', 'A30', 'gac.cn-bej.xinguang@lorealposasia.com', '116.484893', '39.915465', '北京新光', '010-65331980', null, null);
 INSERT INTO `market` VALUES ('3', '2', '宋海涛', '伍光瑜', '西安市莲湖区西大街1号世纪金花钟楼店', 'A80', 'gac.cn-xia.jinhua@lorealposasia.com', '108.952124', '34.266097', '西安金花', '029-87631788', null, null);
 INSERT INTO `market` VALUES ('4', '2', '尚琳', '伍光瑜', '西安市碑林区环城南路东段336号', 'AY0', 'gac.cn-xiajinhuazj@lorealposasia.com', '108.955125', '34.255908', '西安珠江', '029-89358142', null, null);
@@ -214,3 +218,4 @@ INSERT INTO `product` VALUES ('1', 'Nude', 'nude is beautiflu', '/images/list/lo
 INSERT INTO `product` VALUES ('2', 'Gene', 'Gene is Beautflu', '/images/list/logo.png', '2015-07-21 14:10:23', '2015-07-21 14:10:23');
 INSERT INTO `reward` VALUES ('1', '1', '0.001', null, '0', '0.005', null, '0', '0.01', null, '0', '0.0002', null, '0', null, '2015-08-14 19:00:34', '2015-08-05 19:03:09', '2015-08-05 19:03:12', '0');
 INSERT INTO `user` VALUES ('3', null, null, 'oPV4Ht7hM8LFcOB2LT8CAtTe1nw0', null, '^*&fhug(*&ye(r*)e(*uf)(ds', '2015-07-21 16:02:02', '14782593339', '2015-07-21 16:02:10', '2015-07-21 16:02:13', '1', '0', '1', '1', '1', '2', null, '0');
+INSERT INTO `user` VALUES ('4', null, null, null, null, null, null, null, null, null, '1', '0', null, null, null, null, '0', '0');
