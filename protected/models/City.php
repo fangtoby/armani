@@ -1,26 +1,20 @@
 <?php
 
 /**
- * This is the model class for table "user".
+ * This is the model class for table "city".
  *
- * The followings are the available columns in table 'user':
- * @property integer $id
- * @property string $token
- * @property string $expire_time
- * @property string $phone
- * @property string $createTime
- * @property string $updateTime
- * @property integer $can_login
- * @property integer $login_times
+ * The followings are the available columns in table 'city':
+ * @property integer $CityID
+ * @property string $CityName
  */
-class User extends CActiveRecord
+class City extends CActiveRecord
 {
 	/**
 	 * @return string the associated database table name
 	 */
 	public function tableName()
 	{
-		return 'user';
+		return 'city';
 	}
 
 	/**
@@ -51,14 +45,8 @@ class User extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'id' => 'ID',
-			'token' => 'Token',
-			'expire_time' => 'Expire Time',
-			'phone' => 'Phone',
-			'createTime' => 'Create Time',
-			'updateTime' => 'Update Time',
-			'can_login' => 'Can Login',
-			'login_times' => 'Login Times',
+			'CityID' => 'City',
+			'CityName' => 'City Name',
 		);
 	}
 
@@ -80,14 +68,8 @@ class User extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
-		$criteria->compare('id',$this->id);
-		$criteria->compare('token',$this->token,true);
-		$criteria->compare('expire_time',$this->expire_time,true);
-		$criteria->compare('phone',$this->phone,true);
-		$criteria->compare('createTime',$this->createTime,true);
-		$criteria->compare('updateTime',$this->updateTime,true);
-		$criteria->compare('can_login',$this->can_login);
-		$criteria->compare('login_times',$this->login_times);
+		$criteria->compare('CityID',$this->CityID);
+		$criteria->compare('CityName',$this->CityName,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
@@ -98,7 +80,7 @@ class User extends CActiveRecord
 	 * Returns the static model of the specified AR class.
 	 * Please note that you should have this exact method in all your CActiveRecord descendants!
 	 * @param string $className active record class name.
-	 * @return User the static model class
+	 * @return City the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{

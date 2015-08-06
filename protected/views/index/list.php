@@ -5,6 +5,11 @@
   <meta charset="UTF-8">
 	<link rel="stylesheet" type="text/css" href="<?=Data::$data['staticUri']['css']?>main.css?v=<?=Yii::app()->params['version']['css'];?>">
   <title>商品列表页</title>
+  <style>
+  	.product-list li{
+		padding:40px 10px;		
+	}
+  </style>
 </head>
 <!--
     <a href="<?=$this->createUrl('index/index')?>">&lt;首页 </a>
@@ -12,13 +17,21 @@
 -->
 <body>
     <div id="content">
+    	<a href="<?=$this->createUrl('index/apply')?>">申请明星粉底 &gt;</a>
+        
         <ul>
             <li>appid:<span class="appid"></span></li>
             <li>TimesTamp:<span class="TimesTamp"></span></li>
             <li>NonceStr:<span class="NonceStr"></span></li>
             <li>SignaTure:<span class="SignaTure"></span></li>
         </ul>
-        <span>已结登陆</span>
+        <span>已结登陆122erw3</span>
+        <ul class="product-list">
+        	<li><a href="<?=$this->createUrl('index/detail',array('pid'=>1))?>"> 详情1 </a></li>
+        	<li><a href="<?=$this->createUrl('index/detail',array('pid'=>2))?>"> 详情2 </a></li>
+        	<li><a href="<?=$this->createUrl('index/detail',array('pid'=>3))?>"> 详情3 </a></li>
+        </ul>
+        <?php //echo $info; ?>
     </div><!-- content -->
 </body>
 <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js?v=<?=Yii::app()->params['version']['js'];?>"></script>

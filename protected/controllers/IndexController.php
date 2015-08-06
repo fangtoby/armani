@@ -6,22 +6,63 @@ class IndexController extends Controller
 	
 	public function actionIndex()
 	{
-		$id = "7";
-		$appId = "wxc2efec250f2952a3";
-		$domain = "wxresponse.comeyes.com";
-		$link ="http://masterofglow.comeyes.cn/index/list";
-		$ulink =  urlencode("http://{$domain}/External/Oauth.ashx?link={$link}&id={$id}");
-		
-		$url="https://open.weixin.qq.com/connect/oauth2/authorize?appid={$appId}&redirect_uri={$ulink}&response_type=code&scope=snsapi_userinfo&state=State#wechat_redirect";
-
-		$this->render('index',array(
-			'signPackage'=>$this->signPackage,
-			'url'=>$url
-		));
+		if(isset($_GET['info']) && $_GET['info'] !=  NULL){
+			$info = CJSON::decode($_GET['info']);
+			
+			$model = User::model()->findAllByAttributes(array(
+				'unionid'=>$info['openid']
+			));
+			
+			$_SESSION["openid"] = $info['openid'];
+			
+			if(!$model){
+				$user = new User();
+				$user->unionid = $info['openid'];
+				$user->nickname = $info['nickname'];
+				$user->sex = $info['sex'];
+				$user->headimgurl = $info['headimgurl'];
+				$user->save();
+			}else{
+				$model->unionid = $info['openid'];
+				$model->nickname = $info['nickname'];
+				$model->sex = $info['sex'];
+				$model->headimgurl = $info['headimgurl'];
+				$model->save();
+			}
+			
+			$models = Product::model()->findAll();
+			
+			$data = array();
+			
+			foreach($models as $model){
+				$data[] = $model->attributes;
+			}
+			$this->render('list',array(
+				'signPackage'=>$this->signPackage,
+				'result'=>$this->result,
+				'data'=>$data,
+				'info'=>$info
+			));
+			
+		}else{
+			$id = "7";
+			$appId = "wxc2efec250f2952a3";
+			$domain = "wxresponse.comeyes.com";
+			$link ="http://masterofglow.comeyes.cn?v=234567898765";
+			$ulink =  urlencode("http://{$domain}/External/Oauth.ashx?link={$link}&id={$id}");
+			
+			$url="https://open.weixin.qq.com/connect/oauth2/authorize?appid={$appId}&redirect_uri={$ulink}&response_type=code&scope=snsapi_userinfo&state=State#wechat_redirect";
+	
+			$this->render('index',array(
+				'signPackage'=>$this->signPackage,
+				'url'=>$url
+			));
+		}
 	}
 	
 	public function actionList()
 	{
+		//$info = $_GET['info'];
 		
 		$models = Product::model()->findAll();
 		$data = array();
@@ -36,7 +77,8 @@ class IndexController extends Controller
 		$this->render('list',array(
 			'signPackage'=>$this->signPackage,
 			'result'=>$this->result,
-			'data'=>$data
+			'data'=>$data,
+			//'info'=>$info
 		));
 		
 	}
@@ -81,6 +123,22 @@ class IndexController extends Controller
 		
 		$this->render('share',array(
 			'signPackage'=>$this->signPackage,
+		));
+	}
+	
+	/*
+	*	申请粉底
+	*/
+	
+	public function actionApply()
+	{
+		$City = City::model()->findAll();
+		$Market = Market::model()->findAll();
+		
+		$this->render('apply',array(
+			'signPackage'=>$this->signPackage,
+			'city'=>$City,
+			'market'=>$Market
 		));
 	}
 	

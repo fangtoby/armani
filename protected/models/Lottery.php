@@ -1,26 +1,27 @@
 <?php
 
 /**
- * This is the model class for table "user".
+ * This is the model class for table "lottery".
  *
- * The followings are the available columns in table 'user':
+ * The followings are the available columns in table 'lottery':
  * @property integer $id
- * @property string $token
- * @property string $expire_time
+ * @property integer $uid
  * @property string $phone
+ * @property integer $cityId
+ * @property integer $marketId
+ * @property integer $type
  * @property string $createTime
  * @property string $updateTime
- * @property integer $can_login
- * @property integer $login_times
+ * @property integer $win
  */
-class User extends CActiveRecord
+class Lottery extends CActiveRecord
 {
 	/**
 	 * @return string the associated database table name
 	 */
 	public function tableName()
 	{
-		return 'user';
+		return 'lottery';
 	}
 
 	/**
@@ -52,13 +53,14 @@ class User extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'token' => 'Token',
-			'expire_time' => 'Expire Time',
+			'uid' => 'Uid',
 			'phone' => 'Phone',
+			'cityId' => 'City',
+			'marketId' => 'Market',
+			'type' => 'Type',
 			'createTime' => 'Create Time',
 			'updateTime' => 'Update Time',
-			'can_login' => 'Can Login',
-			'login_times' => 'Login Times',
+			'win' => 'Win',
 		);
 	}
 
@@ -81,13 +83,14 @@ class User extends CActiveRecord
 		$criteria=new CDbCriteria;
 
 		$criteria->compare('id',$this->id);
-		$criteria->compare('token',$this->token,true);
-		$criteria->compare('expire_time',$this->expire_time,true);
+		$criteria->compare('uid',$this->uid);
 		$criteria->compare('phone',$this->phone,true);
+		$criteria->compare('cityId',$this->cityId);
+		$criteria->compare('marketId',$this->marketId);
+		$criteria->compare('type',$this->type);
 		$criteria->compare('createTime',$this->createTime,true);
 		$criteria->compare('updateTime',$this->updateTime,true);
-		$criteria->compare('can_login',$this->can_login);
-		$criteria->compare('login_times',$this->login_times);
+		$criteria->compare('win',$this->win);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
@@ -98,7 +101,7 @@ class User extends CActiveRecord
 	 * Returns the static model of the specified AR class.
 	 * Please note that you should have this exact method in all your CActiveRecord descendants!
 	 * @param string $className active record class name.
-	 * @return User the static model class
+	 * @return Lottery the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{

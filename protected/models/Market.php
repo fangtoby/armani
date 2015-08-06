@@ -1,26 +1,31 @@
 <?php
 
 /**
- * This is the model class for table "user".
+ * This is the model class for table "market".
  *
- * The followings are the available columns in table 'user':
- * @property integer $id
- * @property string $token
- * @property string $expire_time
- * @property string $phone
+ * The followings are the available columns in table 'market':
+ * @property integer $ShopID
+ * @property integer $CityID
+ * @property string $CounterManager
+ * @property string $DirectorName
+ * @property string $ShopAddress
+ * @property string $ShopCode
+ * @property string $ShopEmail
+ * @property string $ShopLocation_X
+ * @property string $ShopLocation_Y
+ * @property string $ShopName
+ * @property string $ShopPhone
  * @property string $createTime
  * @property string $updateTime
- * @property integer $can_login
- * @property integer $login_times
  */
-class User extends CActiveRecord
+class Market extends CActiveRecord
 {
 	/**
 	 * @return string the associated database table name
 	 */
 	public function tableName()
 	{
-		return 'user';
+		return 'market';
 	}
 
 	/**
@@ -51,14 +56,19 @@ class User extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'id' => 'ID',
-			'token' => 'Token',
-			'expire_time' => 'Expire Time',
-			'phone' => 'Phone',
+			'ShopID' => 'Shop',
+			'CityID' => 'City',
+			'CounterManager' => 'Counter Manager',
+			'DirectorName' => 'Director Name',
+			'ShopAddress' => 'Shop Address',
+			'ShopCode' => 'Shop Code',
+			'ShopEmail' => 'Shop Email',
+			'ShopLocation_X' => 'Shop Location X',
+			'ShopLocation_Y' => 'Shop Location Y',
+			'ShopName' => 'Shop Name',
+			'ShopPhone' => 'Shop Phone',
 			'createTime' => 'Create Time',
 			'updateTime' => 'Update Time',
-			'can_login' => 'Can Login',
-			'login_times' => 'Login Times',
 		);
 	}
 
@@ -80,14 +90,19 @@ class User extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
-		$criteria->compare('id',$this->id);
-		$criteria->compare('token',$this->token,true);
-		$criteria->compare('expire_time',$this->expire_time,true);
-		$criteria->compare('phone',$this->phone,true);
+		$criteria->compare('ShopID',$this->ShopID);
+		$criteria->compare('CityID',$this->CityID);
+		$criteria->compare('CounterManager',$this->CounterManager,true);
+		$criteria->compare('DirectorName',$this->DirectorName,true);
+		$criteria->compare('ShopAddress',$this->ShopAddress,true);
+		$criteria->compare('ShopCode',$this->ShopCode,true);
+		$criteria->compare('ShopEmail',$this->ShopEmail,true);
+		$criteria->compare('ShopLocation_X',$this->ShopLocation_X,true);
+		$criteria->compare('ShopLocation_Y',$this->ShopLocation_Y,true);
+		$criteria->compare('ShopName',$this->ShopName,true);
+		$criteria->compare('ShopPhone',$this->ShopPhone,true);
 		$criteria->compare('createTime',$this->createTime,true);
 		$criteria->compare('updateTime',$this->updateTime,true);
-		$criteria->compare('can_login',$this->can_login);
-		$criteria->compare('login_times',$this->login_times);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
@@ -98,7 +113,7 @@ class User extends CActiveRecord
 	 * Returns the static model of the specified AR class.
 	 * Please note that you should have this exact method in all your CActiveRecord descendants!
 	 * @param string $className active record class name.
-	 * @return User the static model class
+	 * @return Market the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{

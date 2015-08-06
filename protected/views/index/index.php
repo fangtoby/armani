@@ -11,12 +11,12 @@
 -->
 <body>
      <div id="content">
-     	<b>首页动画展示，动画展示<em class="lessTime">5</em>完成之后js跳转登陆验证url:<?=$url?></b>
+     	<b>首页动画展示，动画展示<em class="lessTime">3</em>完成之后js跳转登陆验证url:<?=$url?></b>
      </div><!-- content -->
 </body>
 <script src="<?=Data::$data['staticUri']['js']?>jquery-1.7.1.js?v=<?=Yii::app()->params['version']['js'];?>"></script>
 <script>
-	var number = 5;
+	var number = 3;
 	var url = "<?=$url?>";
 	var timer = setInterval(function(){
 		if(number > 0){
