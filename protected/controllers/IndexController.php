@@ -6,13 +6,23 @@ class IndexController extends Controller
 	
 	public function actionIndex()
 	{
+		$id = "7";
+		$appId = "wxc2efec250f2952a3";
+		$domain = "wxresponse.comeyes.com";
+		$link ="http://masterofglow.comeyes.cn/index/list";
+		$ulink =  urlencode("http://{$domain}/External/Oauth.ashx?link={$link}&id={$id}");
+		
+		$url="https://open.weixin.qq.com/connect/oauth2/authorize?appid={$appId}&redirect_uri={$ulink}&response_type=code&scope=snsapi_userinfo&state=State#wechat_redirect";
+
 		$this->render('index',array(
 			'signPackage'=>$this->signPackage,
+			'url'=>$url
 		));
 	}
 	
 	public function actionList()
 	{
+		
 		$models = Product::model()->findAll();
 		$data = array();
 		
