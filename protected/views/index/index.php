@@ -22,7 +22,7 @@
 		if(number > 0){
 			$('.lessTime').html( number );
 		}else{
-			window.location.href = url;
+			window.location.replace(url);
 			clearInterval(timer);	
 		}
 		number--;

@@ -5857,3 +5857,255 @@ REQUEST_URI=/index/list?pid=1
 in F:\XAMPP\htdocs\armani\app\protected\views\index\list.php (34)
 in F:\XAMPP\htdocs\armani\app\protected\controllers\IndexController.php (82)
 in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 04:23:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 F:\XAMPP\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 F:\XAMPP\htdocs\armani\app\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+HTTP_REFERER=http://www.armani.cc/gii/default/login
+---
+2015/08/07 04:55:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "main.css".' in F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php:483
+Stack trace:
+#0 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(270): CController->missingAction('main.css')
+#1 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(282): CController->run('main.css')
+#2 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/default/m...')
+#3 F:\XAMPP\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 F:\XAMPP\htdocs\armani\app\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/admin/default/main.css?v=20150803
+HTTP_REFERER=http://www.armani.cc/admin/default/index
+---
+2015/08/07 04:55:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "jquery-1.7.1.js".' in F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php:483
+Stack trace:
+#0 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(270): CController->missingAction('jquery-1.7.1.js')
+#1 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(282): CController->run('jquery-1.7.1.js')
+#2 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/default/j...')
+#3 F:\XAMPP\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 F:\XAMPP\htdocs\armani\app\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/admin/default/jquery-1.7.1.js?v=20150803
+HTTP_REFERER=http://www.armani.cc/admin/default/index
+---
+2015/08/07 04:56:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "jquery-1.7.1.js".' in F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php:483
+Stack trace:
+#0 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(270): CController->missingAction('jquery-1.7.1.js')
+#1 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(282): CController->run('jquery-1.7.1.js')
+#2 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/default/j...')
+#3 F:\XAMPP\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 F:\XAMPP\htdocs\armani\app\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/admin/default/jquery-1.7.1.js?v=20150803
+HTTP_REFERER=http://www.armani.cc/admin/default/index
+---
+2015/08/07 04:56:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "main.css".' in F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php:483
+Stack trace:
+#0 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(270): CController->missingAction('main.css')
+#1 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(282): CController->run('main.css')
+#2 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/default/m...')
+#3 F:\XAMPP\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 F:\XAMPP\htdocs\armani\app\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/admin/default/main.css?v=20150803
+HTTP_REFERER=http://www.armani.cc/admin/default/index
+---
+2015/08/07 04:56:24 [error] [php] include(TagCloud.php): failed to open stream: No such file or directory (F:\XAMPP\htdocs\armani\yii-1\framework\YiiBase.php:432)
+Stack trace:
+#0 unknown(0): spl_autoload_call()
+#1 F:\XAMPP\htdocs\armani\yii-1\framework\YiiBase.php(303): class_exists()
+#2 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWidgetFactory.php(146): import()
+#3 F:\XAMPP\htdocs\armani\yii-1\framework\web\CBaseController.php(146): CWidgetFactory->createWidget()
+#4 F:\XAMPP\htdocs\armani\yii-1\framework\web\CBaseController.php(180): DefaultController->createWidget()
+#5 F:\XAMPP\htdocs\armani\app\protected\modules\admin\views\layouts\column1.php(14): DefaultController->widget()
+#6 F:\XAMPP\htdocs\armani\yii-1\framework\web\CBaseController.php(126): require()
+#7 F:\XAMPP\htdocs\armani\yii-1\framework\web\CBaseController.php(95): DefaultController->renderInternal()
+#8 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(784): DefaultController->renderFile()
+#9 F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\DefaultController.php(7): DefaultController->render()
+#10 F:\XAMPP\htdocs\armani\yii-1\framework\web\actions\CInlineAction.php(49): DefaultController->actionIndex()
+#11 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(308): CInlineAction->runWithParams()
+#12 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(286): DefaultController->runAction()
+#13 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(265): DefaultController->runActionWithFilters()
+#14 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(282): DefaultController->run()
+#15 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#16 F:\XAMPP\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#17 F:\XAMPP\htdocs\armani\app\index.php(13): CWebApplication->run()
+REQUEST_URI=/admin/default/index
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\views\layouts\column1.php (14)
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\DefaultController.php (7)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 04:56:38 [error] [php] include(TagCloud.php): failed to open stream: No such file or directory (F:\XAMPP\htdocs\armani\yii-1\framework\YiiBase.php:432)
+Stack trace:
+#0 unknown(0): spl_autoload_call()
+#1 F:\XAMPP\htdocs\armani\yii-1\framework\YiiBase.php(303): class_exists()
+#2 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWidgetFactory.php(146): import()
+#3 F:\XAMPP\htdocs\armani\yii-1\framework\web\CBaseController.php(146): CWidgetFactory->createWidget()
+#4 F:\XAMPP\htdocs\armani\yii-1\framework\web\CBaseController.php(180): DefaultController->createWidget()
+#5 F:\XAMPP\htdocs\armani\app\protected\modules\admin\views\layouts\column1.php(14): DefaultController->widget()
+#6 F:\XAMPP\htdocs\armani\yii-1\framework\web\CBaseController.php(126): require()
+#7 F:\XAMPP\htdocs\armani\yii-1\framework\web\CBaseController.php(95): DefaultController->renderInternal()
+#8 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(784): DefaultController->renderFile()
+#9 F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\DefaultController.php(7): DefaultController->render()
+#10 F:\XAMPP\htdocs\armani\yii-1\framework\web\actions\CInlineAction.php(49): DefaultController->actionIndex()
+#11 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(308): CInlineAction->runWithParams()
+#12 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(286): DefaultController->runAction()
+#13 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(265): DefaultController->runActionWithFilters()
+#14 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(282): DefaultController->run()
+#15 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#16 F:\XAMPP\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#17 F:\XAMPP\htdocs\armani\app\index.php(13): CWebApplication->run()
+REQUEST_URI=/admin/default/index
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\views\layouts\column1.php (14)
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\DefaultController.php (7)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 04:56:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "main.css".' in F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php:483
+Stack trace:
+#0 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(270): CController->missingAction('main.css')
+#1 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(282): CController->run('main.css')
+#2 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/default/m...')
+#3 F:\XAMPP\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 F:\XAMPP\htdocs\armani\app\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/admin/default/main.css?v=20150803
+HTTP_REFERER=http://www.armani.cc/admin/default/index
+---
+2015/08/07 04:56:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "jquery-1.7.1.js".' in F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php:483
+Stack trace:
+#0 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(270): CController->missingAction('jquery-1.7.1.js')
+#1 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(282): CController->run('jquery-1.7.1.js')
+#2 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/default/j...')
+#3 F:\XAMPP\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 F:\XAMPP\htdocs\armani\app\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/admin/default/jquery-1.7.1.js?v=20150803
+HTTP_REFERER=http://www.armani.cc/admin/default/index
+---
+2015/08/07 04:58:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "screen.css".' in F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php:483
+Stack trace:
+#0 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(270): CController->missingAction('screen.css')
+#1 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(282): CController->run('screen.css')
+#2 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/default/s...')
+#3 F:\XAMPP\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 F:\XAMPP\htdocs\armani\app\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/admin/default/screen.css?v=20150803
+HTTP_REFERER=http://www.armani.cc/admin/default/index
+---
+2015/08/07 04:58:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "jquery-1.7.1.js".' in F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php:483
+Stack trace:
+#0 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(270): CController->missingAction('jquery-1.7.1.js')
+#1 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(282): CController->run('jquery-1.7.1.js')
+#2 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/default/j...')
+#3 F:\XAMPP\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 F:\XAMPP\htdocs\armani\app\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/admin/default/jquery-1.7.1.js?v=20150803
+HTTP_REFERER=http://www.armani.cc/admin/default/index
+---
+2015/08/07 05:23:10 [error] [php] include(TagCloud.php): failed to open stream: No such file or directory (F:\XAMPP\htdocs\armani\yii-1\framework\YiiBase.php:432)
+Stack trace:
+#0 unknown(0): spl_autoload_call()
+#1 F:\XAMPP\htdocs\armani\yii-1\framework\YiiBase.php(303): class_exists()
+#2 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWidgetFactory.php(146): import()
+#3 F:\XAMPP\htdocs\armani\yii-1\framework\web\CBaseController.php(146): CWidgetFactory->createWidget()
+#4 F:\XAMPP\htdocs\armani\yii-1\framework\web\CBaseController.php(180): MarketController->createWidget()
+#5 F:\XAMPP\htdocs\armani\app\protected\modules\admin\views\layouts\column1.php(14): MarketController->widget()
+#6 F:\XAMPP\htdocs\armani\yii-1\framework\web\CBaseController.php(126): require()
+#7 F:\XAMPP\htdocs\armani\yii-1\framework\web\CBaseController.php(95): MarketController->renderInternal()
+#8 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(784): MarketController->renderFile()
+#9 F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php(128): MarketController->render()
+#10 F:\XAMPP\htdocs\armani\yii-1\framework\web\actions\CInlineAction.php(49): MarketController->actionIndex()
+#11 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(308): CInlineAction->runWithParams()
+#12 F:\XAMPP\htdocs\armani\yii-1\framework\web\filters\CFilterChain.php(133): MarketController->runAction()
+#13 F:\XAMPP\htdocs\armani\yii-1\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#14 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#15 F:\XAMPP\htdocs\armani\yii-1\framework\web\filters\CInlineFilter.php(58): MarketController->filterAccessControl()
+#16 F:\XAMPP\htdocs\armani\yii-1\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#17 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(291): CFilterChain->run()
+#18 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(265): MarketController->runActionWithFilters()
+#19 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(282): MarketController->run()
+#20 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#21 F:\XAMPP\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#22 F:\XAMPP\htdocs\armani\app\index.php(13): CWebApplication->run()
+REQUEST_URI=/admin/market
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\views\layouts\column1.php (14)
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (128)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 05:23:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/admin".' in F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/admin')
+#1 F:\XAMPP\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 F:\XAMPP\htdocs\armani\app\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/admin
+---
+2015/08/07 05:23:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/admin".' in F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/admin')
+#1 F:\XAMPP\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 F:\XAMPP\htdocs\armani\app\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/admin/admin
+---
+2015/08/07 05:30:17 [error] [php] include(UserMenu.php): failed to open stream: No such file or directory (F:\XAMPP\htdocs\armani\yii-1\framework\YiiBase.php:432)
+Stack trace:
+#0 unknown(0): spl_autoload_call()
+#1 F:\XAMPP\htdocs\armani\yii-1\framework\YiiBase.php(303): class_exists()
+#2 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWidgetFactory.php(146): import()
+#3 F:\XAMPP\htdocs\armani\yii-1\framework\web\CBaseController.php(146): CWidgetFactory->createWidget()
+#4 F:\XAMPP\htdocs\armani\yii-1\framework\web\CBaseController.php(180): MarketController->createWidget()
+#5 F:\XAMPP\htdocs\armani\app\protected\modules\admin\views\layouts\column1.php(10): MarketController->widget()
+#6 F:\XAMPP\htdocs\armani\yii-1\framework\web\CBaseController.php(126): require()
+#7 F:\XAMPP\htdocs\armani\yii-1\framework\web\CBaseController.php(95): MarketController->renderInternal()
+#8 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(784): MarketController->renderFile()
+#9 F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php(103): MarketController->render()
+#10 unknown(0): MarketController->actionUpdate()
+#11 F:\XAMPP\htdocs\armani\yii-1\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs()
+#12 F:\XAMPP\htdocs\armani\yii-1\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#13 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(308): CInlineAction->runWithParams()
+#14 F:\XAMPP\htdocs\armani\yii-1\framework\web\filters\CFilterChain.php(133): MarketController->runAction()
+#15 F:\XAMPP\htdocs\armani\yii-1\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#16 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#17 F:\XAMPP\htdocs\armani\yii-1\framework\web\filters\CInlineFilter.php(58): MarketController->filterAccessControl()
+#18 F:\XAMPP\htdocs\armani\yii-1\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#19 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(291): CFilterChain->run()
+#20 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(265): MarketController->runActionWithFilters()
+#21 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(282): MarketController->run()
+#22 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#23 F:\XAMPP\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#24 F:\XAMPP\htdocs\armani\app\index.php(13): CWebApplication->run()
+REQUEST_URI=/admin/market/update/id/2
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\views\layouts\column1.php (10)
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (103)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 05:30:26 [error] [php] include(menu.php): failed to open stream: No such file or directory (F:\XAMPP\htdocs\armani\yii-1\framework\YiiBase.php:432)
+Stack trace:
+#0 unknown(0): spl_autoload_call()
+#1 F:\XAMPP\htdocs\armani\yii-1\framework\YiiBase.php(303): class_exists()
+#2 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWidgetFactory.php(146): import()
+#3 F:\XAMPP\htdocs\armani\yii-1\framework\web\CBaseController.php(146): CWidgetFactory->createWidget()
+#4 F:\XAMPP\htdocs\armani\yii-1\framework\web\CBaseController.php(180): MarketController->createWidget()
+#5 F:\XAMPP\htdocs\armani\app\protected\modules\admin\views\layouts\column1.php(10): MarketController->widget()
+#6 F:\XAMPP\htdocs\armani\yii-1\framework\web\CBaseController.php(126): require()
+#7 F:\XAMPP\htdocs\armani\yii-1\framework\web\CBaseController.php(95): MarketController->renderInternal()
+#8 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(784): MarketController->renderFile()
+#9 F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php(103): MarketController->render()
+#10 unknown(0): MarketController->actionUpdate()
+#11 F:\XAMPP\htdocs\armani\yii-1\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs()
+#12 F:\XAMPP\htdocs\armani\yii-1\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#13 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(308): CInlineAction->runWithParams()
+#14 F:\XAMPP\htdocs\armani\yii-1\framework\web\filters\CFilterChain.php(133): MarketController->runAction()
+#15 F:\XAMPP\htdocs\armani\yii-1\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#16 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#17 F:\XAMPP\htdocs\armani\yii-1\framework\web\filters\CInlineFilter.php(58): MarketController->filterAccessControl()
+#18 F:\XAMPP\htdocs\armani\yii-1\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#19 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(291): CFilterChain->run()
+#20 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(265): MarketController->runActionWithFilters()
+#21 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(282): MarketController->run()
+#22 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#23 F:\XAMPP\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#24 F:\XAMPP\htdocs\armani\app\index.php(13): CWebApplication->run()
+REQUEST_URI=/admin/market/update/id/2
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\views\layouts\column1.php (10)
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (103)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
