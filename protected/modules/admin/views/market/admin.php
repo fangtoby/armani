@@ -10,7 +10,7 @@ $this->breadcrumbs=array(
 $this->menu=array(
 	array('label'=>'添加店铺', 'url'=>array('create')),
 );
-
+//var_dump(Yii::app()->admin->name);
 ?>
 
 <h1>店铺管理</h1>

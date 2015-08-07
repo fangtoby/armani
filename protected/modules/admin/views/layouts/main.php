@@ -19,12 +19,14 @@
 <div class="container" id="page">
 	 <div id="header" class="clearfix">
      	<div class="top-menus">
+        <?php if(!Yii::app()->admin->isGuest): ?>
 		<?php echo CHtml::link('店铺管理','/admin/market/admin'); ?> |
 		<?php echo CHtml::link('奖品设置','/admin/prize/admin'); ?> |
 		<?php echo CHtml::link('中奖记录','/admin/lottery/admin'); ?> |
 		<?php echo CHtml::link('地区管理','/admin/city/admin'); ?> 
-		<?php if(!Yii::app()->user->isGuest): ?>
-			| <?php echo CHtml::link('logout',array('default/logout')); ?>
+        <?php endif; ?>
+		<?php if(!Yii::app()->admin->isGuest): ?>
+			| <?php echo CHtml::link( Yii::app()->admin->name.':退出',array('/admin/default/logout')); ?>
 		<?php endif; ?>
 		</div>
      	<h1>CCE-2015</h1> 

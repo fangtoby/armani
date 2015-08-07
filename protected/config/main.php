@@ -38,7 +38,11 @@ return array(
 			// enable cookie-based authentication
 			'allowAutoLogin'=>true,
 		),
-
+		'admin' => array(  
+			'class' => 'AdminWebUser', //后台登录类实例  
+			'stateKeyPrefix' => 'admin', //后台session前缀  
+			"guestName" => "游客"  
+		),
 		// uncomment the following to enable URLs in path-format
 		
 		'urlManager'=>array(

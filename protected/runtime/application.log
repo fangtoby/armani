@@ -7312,3 +7312,248 @@ Stack trace:
 REQUEST_URI=/admin/market/admin
 HTTP_REFERER=http://www.armani.cc/admin/market/view/id/2
 ---
+2015/08/07 11:31:13 [error] [php] Undefined variable: model (F:\XAMPP\htdocs\armani\app\protected\modules\admin\views\default\index.php:27)
+Stack trace:
+#0 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(869): DefaultController->renderFile()
+#1 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(782): DefaultController->renderPartial()
+#2 F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\DefaultController.php(7): DefaultController->render()
+#3 F:\XAMPP\htdocs\armani\yii-1\framework\web\actions\CInlineAction.php(49): DefaultController->actionIndex()
+#4 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(286): DefaultController->runAction()
+#6 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(265): DefaultController->runActionWithFilters()
+#7 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(282): DefaultController->run()
+#8 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 F:\XAMPP\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 F:\XAMPP\htdocs\armani\app\index.php(13): CWebApplication->run()
+REQUEST_URI=/admin/
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\views\default\index.php (27)
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\DefaultController.php (7)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 11:48:15 [error] [exception.CException] exception 'CException' with message 'Property "Admin.username" is not defined.' in F:\XAMPP\htdocs\armani\yii-1\framework\base\CComponent.php:130
+Stack trace:
+#0 F:\XAMPP\htdocs\armani\yii-1\framework\db\ar\CActiveRecord.php(145): CComponent->__get('username')
+#1 F:\XAMPP\htdocs\armani\app\protected\components\UserIdentity.php(27): CActiveRecord->__get('username')
+#2 F:\XAMPP\htdocs\armani\app\protected\models\LoginForm.php(54): UserIdentity->authenticate()
+#3 F:\XAMPP\htdocs\armani\yii-1\framework\validators\CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#4 F:\XAMPP\htdocs\armani\yii-1\framework\validators\CValidator.php(201): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#5 F:\XAMPP\htdocs\armani\yii-1\framework\base\CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#6 F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\DefaultController.php(21): CModel->validate()
+#7 F:\XAMPP\htdocs\armani\yii-1\framework\web\actions\CInlineAction.php(49): DefaultController->actionIndex()
+#8 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#10 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(282): CController->run('')
+#12 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController('admin')
+#13 F:\XAMPP\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#14 F:\XAMPP\htdocs\armani\app\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/admin/
+HTTP_REFERER=http://www.armani.cc/admin/
+---
+2015/08/07 11:56:48 [error] [php] include(AdminWebUser.php): failed to open stream: No such file or directory (F:\XAMPP\htdocs\armani\yii-1\framework\YiiBase.php:432)
+Stack trace:
+#0 unknown(0): spl_autoload_call()
+#1 F:\XAMPP\htdocs\armani\yii-1\framework\YiiBase.php(303): class_exists()
+#2 F:\XAMPP\htdocs\armani\yii-1\framework\YiiBase.php(196): import()
+#3 F:\XAMPP\htdocs\armani\yii-1\framework\base\CModule.php(393): createComponent()
+#4 F:\XAMPP\htdocs\armani\yii-1\framework\base\CModule.php(103): CWebApplication->getComponent()
+#5 F:\XAMPP\htdocs\armani\app\protected\components\UserIdentity.php(27): CWebApplication->__get()
+#6 F:\XAMPP\htdocs\armani\app\protected\models\LoginForm.php(54): UserIdentity->authenticate()
+#7 F:\XAMPP\htdocs\armani\yii-1\framework\validators\CInlineValidator.php(42): LoginForm->authenticate()
+#8 F:\XAMPP\htdocs\armani\yii-1\framework\validators\CValidator.php(201): CInlineValidator->validateAttribute()
+#9 F:\XAMPP\htdocs\armani\yii-1\framework\base\CModel.php(159): CInlineValidator->validate()
+#10 F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\DefaultController.php(21): LoginForm->validate()
+#11 F:\XAMPP\htdocs\armani\yii-1\framework\web\actions\CInlineAction.php(49): DefaultController->actionIndex()
+#12 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(308): CInlineAction->runWithParams()
+#13 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(286): DefaultController->runAction()
+#14 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(265): DefaultController->runActionWithFilters()
+#15 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(282): DefaultController->run()
+#16 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#17 F:\XAMPP\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#18 F:\XAMPP\htdocs\armani\app\index.php(13): CWebApplication->run()
+REQUEST_URI=/admin/
+in F:\XAMPP\htdocs\armani\app\protected\components\UserIdentity.php (27)
+in F:\XAMPP\htdocs\armani\app\protected\models\LoginForm.php (54)
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\DefaultController.php (21)
+2015/08/07 12:02:48 [error] [php] include(AdminWebUser.php): failed to open stream: No such file or directory (F:\XAMPP\htdocs\armani\yii-1\framework\YiiBase.php:432)
+Stack trace:
+#0 unknown(0): spl_autoload_call()
+#1 F:\XAMPP\htdocs\armani\yii-1\framework\YiiBase.php(303): class_exists()
+#2 F:\XAMPP\htdocs\armani\yii-1\framework\YiiBase.php(196): import()
+#3 F:\XAMPP\htdocs\armani\yii-1\framework\base\CModule.php(393): createComponent()
+#4 F:\XAMPP\htdocs\armani\yii-1\framework\base\CModule.php(103): CWebApplication->getComponent()
+#5 F:\XAMPP\htdocs\armani\app\protected\models\LoginForm.php(74): CWebApplication->__get()
+#6 F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\DefaultController.php(21): LoginForm->login()
+#7 F:\XAMPP\htdocs\armani\yii-1\framework\web\actions\CInlineAction.php(49): DefaultController->actionIndex()
+#8 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(308): CInlineAction->runWithParams()
+#9 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(286): DefaultController->runAction()
+#10 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(265): DefaultController->runActionWithFilters()
+#11 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(282): DefaultController->run()
+#12 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#13 F:\XAMPP\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#14 F:\XAMPP\htdocs\armani\app\index.php(13): CWebApplication->run()
+REQUEST_URI=/admin/
+in F:\XAMPP\htdocs\armani\app\protected\models\LoginForm.php (74)
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\DefaultController.php (21)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 12:11:02 [error] [exception.CException] exception 'CException' with message 'AdminWebUser.allowAutoLogin must be set true in order to use cookie-based authentication.' in F:\XAMPP\htdocs\armani\yii-1\framework\web\auth\CWebUser.php:240
+Stack trace:
+#0 F:\XAMPP\htdocs\armani\app\protected\components\AdminWebUser.php(19): CWebUser->login(Object(UserIdentity), 2592000)
+#1 F:\XAMPP\htdocs\armani\app\protected\models\LoginForm.php(74): AdminWebUser->login(Object(UserIdentity), 2592000)
+#2 F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\DefaultController.php(21): LoginForm->login()
+#3 F:\XAMPP\htdocs\armani\yii-1\framework\web\actions\CInlineAction.php(49): DefaultController->actionIndex()
+#4 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#6 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(282): CController->run('')
+#8 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController('admin')
+#9 F:\XAMPP\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 F:\XAMPP\htdocs\armani\app\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/admin/
+HTTP_REFERER=http://www.armani.cc/admin/
+---
+2015/08/07 12:13:59 [error] [exception.CException] exception 'CException' with message 'AdminWebUser.allowAutoLogin must be set true in order to use cookie-based authentication.' in F:\XAMPP\htdocs\armani\yii-1\framework\web\auth\CWebUser.php:240
+Stack trace:
+#0 F:\XAMPP\htdocs\armani\app\protected\components\AdminWebUser.php(19): CWebUser->login(Object(UserIdentity), 2592000)
+#1 F:\XAMPP\htdocs\armani\app\protected\models\LoginForm.php(74): AdminWebUser->login(Object(UserIdentity), 2592000)
+#2 F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\DefaultController.php(21): LoginForm->login()
+#3 F:\XAMPP\htdocs\armani\yii-1\framework\web\actions\CInlineAction.php(49): DefaultController->actionIndex()
+#4 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#6 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(282): CController->run('')
+#8 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController('admin')
+#9 F:\XAMPP\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 F:\XAMPP\htdocs\armani\app\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/admin/
+HTTP_REFERER=http://www.armani.cc/admin/
+---
+2015/08/07 12:17:33 [error] [php] Undefined variable: _Session (F:\XAMPP\htdocs\armani\app\protected\modules\admin\views\market\admin.php:14)
+Stack trace:
+#0 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(869): MarketController->renderFile()
+#1 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(782): MarketController->renderPartial()
+#2 F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php(153): MarketController->render()
+#3 F:\XAMPP\htdocs\armani\yii-1\framework\web\actions\CInlineAction.php(49): MarketController->actionAdmin()
+#4 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 F:\XAMPP\htdocs\armani\yii-1\framework\web\filters\CFilterChain.php(133): MarketController->runAction()
+#6 F:\XAMPP\htdocs\armani\yii-1\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#8 F:\XAMPP\htdocs\armani\yii-1\framework\web\filters\CInlineFilter.php(58): MarketController->filterAccessControl()
+#9 F:\XAMPP\htdocs\armani\yii-1\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#10 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(291): CFilterChain->run()
+#11 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(265): MarketController->runActionWithFilters()
+#12 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(282): MarketController->run()
+#13 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#14 F:\XAMPP\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 F:\XAMPP\htdocs\armani\app\index.php(13): CWebApplication->run()
+REQUEST_URI=/admin/market/admin
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\views\market\admin.php (14)
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (153)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 12:20:19 [error] [exception.CException] exception 'CException' with message 'Property "CWebApplication.admin__adminInfo" is not defined.' in F:\XAMPP\htdocs\armani\yii-1\framework\base\CComponent.php:130
+Stack trace:
+#0 F:\XAMPP\htdocs\armani\yii-1\framework\base\CModule.php(105): CComponent->__get('admin__adminInf...')
+#1 F:\XAMPP\htdocs\armani\app\protected\modules\admin\views\market\admin.php(16): CModule->__get('admin__adminInf...')
+#2 F:\XAMPP\htdocs\armani\yii-1\framework\web\CBaseController.php(126): require('F:\XAMPP\htdocs...')
+#3 F:\XAMPP\htdocs\armani\yii-1\framework\web\CBaseController.php(95): CBaseController->renderInternal('F:\XAMPP\htdocs...', Array, true)
+#4 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(869): CBaseController->renderFile('F:\XAMPP\htdocs...', Array, true)
+#5 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(782): CController->renderPartial('admin', Array, true)
+#6 F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php(153): CController->render('admin', Array)
+#7 F:\XAMPP\htdocs\armani\yii-1\framework\web\actions\CInlineAction.php(49): MarketController->actionAdmin()
+#8 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 F:\XAMPP\htdocs\armani\yii-1\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#10 F:\XAMPP\htdocs\armani\yii-1\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#11 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#12 F:\XAMPP\htdocs\armani\yii-1\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#13 F:\XAMPP\htdocs\armani\yii-1\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#14 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(291): CFilterChain->run()
+#15 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(282): CController->run('admin')
+#17 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/market/ad...')
+#18 F:\XAMPP\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#19 F:\XAMPP\htdocs\armani\app\index.php(13): CApplication->run()
+#20 {main}
+REQUEST_URI=/admin/market/admin
+HTTP_REFERER=http://www.armani.cc/admin/market/admin
+---
+2015/08/07 12:20:40 [error] [exception.CException] exception 'CException' with message 'Property "AdminWebUser.session" is not defined.' in F:\XAMPP\htdocs\armani\yii-1\framework\base\CComponent.php:130
+Stack trace:
+#0 F:\XAMPP\htdocs\armani\yii-1\framework\web\auth\CWebUser.php(146): CComponent->__get('session')
+#1 F:\XAMPP\htdocs\armani\app\protected\components\AdminWebUser.php(14): CWebUser->__get('session')
+#2 F:\XAMPP\htdocs\armani\app\protected\modules\admin\views\market\admin.php(16): AdminWebUser->__get('session')
+#3 F:\XAMPP\htdocs\armani\yii-1\framework\web\CBaseController.php(126): require('F:\XAMPP\htdocs...')
+#4 F:\XAMPP\htdocs\armani\yii-1\framework\web\CBaseController.php(95): CBaseController->renderInternal('F:\XAMPP\htdocs...', Array, true)
+#5 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(869): CBaseController->renderFile('F:\XAMPP\htdocs...', Array, true)
+#6 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(782): CController->renderPartial('admin', Array, true)
+#7 F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php(153): CController->render('admin', Array)
+#8 F:\XAMPP\htdocs\armani\yii-1\framework\web\actions\CInlineAction.php(49): MarketController->actionAdmin()
+#9 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 F:\XAMPP\htdocs\armani\yii-1\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#11 F:\XAMPP\htdocs\armani\yii-1\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#12 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#13 F:\XAMPP\htdocs\armani\yii-1\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#14 F:\XAMPP\htdocs\armani\yii-1\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#15 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(291): CFilterChain->run()
+#16 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(282): CController->run('admin')
+#18 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/market/ad...')
+#19 F:\XAMPP\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#20 F:\XAMPP\htdocs\armani\app\index.php(13): CApplication->run()
+#21 {main}
+REQUEST_URI=/admin/market/admin
+HTTP_REFERER=http://www.armani.cc/admin/market/admin
+---
+2015/08/07 12:21:54 [error] [exception.CException] exception 'CException' with message 'Property "CWebApplication.getState" is not defined.' in F:\XAMPP\htdocs\armani\yii-1\framework\base\CComponent.php:130
+Stack trace:
+#0 F:\XAMPP\htdocs\armani\yii-1\framework\base\CModule.php(105): CComponent->__get('getState')
+#1 F:\XAMPP\htdocs\armani\app\protected\modules\admin\views\market\admin.php(15): CModule->__get('getState')
+#2 F:\XAMPP\htdocs\armani\yii-1\framework\web\CBaseController.php(126): require('F:\XAMPP\htdocs...')
+#3 F:\XAMPP\htdocs\armani\yii-1\framework\web\CBaseController.php(95): CBaseController->renderInternal('F:\XAMPP\htdocs...', Array, true)
+#4 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(869): CBaseController->renderFile('F:\XAMPP\htdocs...', Array, true)
+#5 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(782): CController->renderPartial('admin', Array, true)
+#6 F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php(153): CController->render('admin', Array)
+#7 F:\XAMPP\htdocs\armani\yii-1\framework\web\actions\CInlineAction.php(49): MarketController->actionAdmin()
+#8 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 F:\XAMPP\htdocs\armani\yii-1\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#10 F:\XAMPP\htdocs\armani\yii-1\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#11 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#12 F:\XAMPP\htdocs\armani\yii-1\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#13 F:\XAMPP\htdocs\armani\yii-1\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#14 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(291): CFilterChain->run()
+#15 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(282): CController->run('admin')
+#17 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/market/ad...')
+#18 F:\XAMPP\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#19 F:\XAMPP\htdocs\armani\app\index.php(13): CApplication->run()
+#20 {main}
+REQUEST_URI=/admin/market/admin
+HTTP_REFERER=http://www.armani.cc/admin/market/admin
+---
+2015/08/07 12:22:00 [error] [exception.CException] exception 'CException' with message 'Property "CWebApplication.state" is not defined.' in F:\XAMPP\htdocs\armani\yii-1\framework\base\CComponent.php:130
+Stack trace:
+#0 F:\XAMPP\htdocs\armani\yii-1\framework\base\CModule.php(105): CComponent->__get('state')
+#1 F:\XAMPP\htdocs\armani\app\protected\modules\admin\views\market\admin.php(15): CModule->__get('state')
+#2 F:\XAMPP\htdocs\armani\yii-1\framework\web\CBaseController.php(126): require('F:\XAMPP\htdocs...')
+#3 F:\XAMPP\htdocs\armani\yii-1\framework\web\CBaseController.php(95): CBaseController->renderInternal('F:\XAMPP\htdocs...', Array, true)
+#4 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(869): CBaseController->renderFile('F:\XAMPP\htdocs...', Array, true)
+#5 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(782): CController->renderPartial('admin', Array, true)
+#6 F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php(153): CController->render('admin', Array)
+#7 F:\XAMPP\htdocs\armani\yii-1\framework\web\actions\CInlineAction.php(49): MarketController->actionAdmin()
+#8 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 F:\XAMPP\htdocs\armani\yii-1\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#10 F:\XAMPP\htdocs\armani\yii-1\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#11 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#12 F:\XAMPP\htdocs\armani\yii-1\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#13 F:\XAMPP\htdocs\armani\yii-1\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#14 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(291): CFilterChain->run()
+#15 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(282): CController->run('admin')
+#17 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/market/ad...')
+#18 F:\XAMPP\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#19 F:\XAMPP\htdocs\armani\app\index.php(13): CApplication->run()
+#20 {main}
+REQUEST_URI=/admin/market/admin
+HTTP_REFERER=http://www.armani.cc/admin/market/admin
+---
