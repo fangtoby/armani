@@ -8,15 +8,14 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List Prize', 'url'=>array('index')),
-	array('label'=>'Create Prize', 'url'=>array('create')),
-	array('label'=>'Update Prize', 'url'=>array('update', 'id'=>$model->id)),
-	array('label'=>'Delete Prize', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'Are you sure you want to delete this item?')),
-	array('label'=>'Manage Prize', 'url'=>array('admin')),
+	array('label'=>'修改奖品信息', 'url'=>array('update', 'id'=>$model->id)),
+	array('label'=>'删除该奖品', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'Are you sure you want to delete this item?')),
+	array('label'=>'添加奖品', 'url'=>array('create')),
+	array('label'=>'奖品管理', 'url'=>array('admin')),
 );
 ?>
 
-<h1>View Prize #<?php echo $model->id; ?></h1>
+<h1><?php echo $model->name; ?> - 详情</h1>
 
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,
@@ -30,6 +29,8 @@ $this->menu=array(
 		'type',
 		'startTime',
 		'endTime',
+		'hourNumber',
+		'dayNumber',
 		'createTime',
 		'updateTime',
 		'isDel',

@@ -10,6 +10,10 @@
 </head>
 <body>
     <div id="content">
+    <?php
+    	$msg = new SendMessage('14782593339','34',NULL);
+		echo $msg->send();
+	?>
 		<a href="<?=$this->createUrl('index/list',array('pid'=>$pid))?>">&lt;返回 </a>
         <span>选择的是<?=$pid?></span>
     	 <ul class="product-list">

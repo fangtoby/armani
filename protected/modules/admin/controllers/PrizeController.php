@@ -80,7 +80,6 @@ class PrizeController extends Controller
 		if(isset($_POST['Prize']))
 		{
 			$model->attributes=$_POST['Prize'];
-			$model->createTime = date("Y-m-d H:i:s");
 			$model->updateTime = date("Y-m-d H:i:s");
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->id));
@@ -159,5 +158,14 @@ class PrizeController extends Controller
 			echo CActiveForm::validate($model);
 			Yii::app()->end();
 		}
+	}
+	
+	
+	public function getTypeName($data,$row){
+		$type = array(
+			0=>"普通奖品",
+			1=>"特别奖品"
+		);
+		echo isset($type[ $data->type ])? $type[ $data->type ]:"";
 	}
 }

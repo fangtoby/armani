@@ -8,8 +8,7 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List Prize', 'url'=>array('index')),
-	array('label'=>'Manage Prize', 'url'=>array('admin')),
+	array('label'=>'奖品管理', 'url'=>array('admin')),
 );
 ?>
 

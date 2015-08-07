@@ -10,6 +10,8 @@
  * @property integer $count
  * @property integer $number
  * @property double $rate
+ * @property integer $hourNumber
+ * @property integer $dayNumber
  * @property integer $type
  * @property string $startTime
  * @property string $endTime
@@ -35,12 +37,12 @@ class Prize extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('id, count, number, type, isDel', 'numerical', 'integerOnly'=>true),
+			array('id, count, number, hourNumber, dayNumber, type, isDel', 'numerical', 'integerOnly'=>true),
 			array('rate', 'numerical'),
 			array('name, note, startTime, endTime, createTime, updateTime', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, name, note, count, number, rate, type, startTime, endTime, createTime, updateTime, isDel', 'safe', 'on'=>'search'),
+			array('id, name, note, count, number, rate, hourNumber, dayNumber, type, startTime, endTime, createTime, updateTime, isDel', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -70,9 +72,12 @@ class Prize extends CActiveRecord
 			'type' => '奖品类型（0/1）',
 			'startTime' => '开始时间',
 			'endTime' => '结束时间',
-			'createTime' => 'Create Time',
-			'updateTime' => 'Update Time',
-			'isDel' => 'Is Del',
+			'createTime' => '创建时间',
+			'updateTime' => '更新时间',
+			'hourNumber' => '小时上限',
+			'dayNumber' => '单日上限',
+			'isDel' => '是否已被删除',
+
 		);
 	}
 
@@ -100,6 +105,8 @@ class Prize extends CActiveRecord
 		$criteria->compare('count',$this->count);
 		$criteria->compare('number',$this->number);
 		$criteria->compare('rate',$this->rate);
+		$criteria->compare('hourNumber',$this->hourNumber);
+		$criteria->compare('dayNumber',$this->dayNumber);
 		$criteria->compare('type',$this->type);
 		$criteria->compare('startTime',$this->startTime,true);
 		$criteria->compare('endTime',$this->endTime,true);

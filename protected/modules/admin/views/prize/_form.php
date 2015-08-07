@@ -64,8 +64,19 @@
 		<?php echo $form->error($model,'endTime'); ?>
 	</div>
 
+	<div class="row">
+		<?php echo $form->labelEx($model,'hourNumber'); ?>
+		<?php echo $form->textField($model,'hourNumber'); ?>
+		<?php echo $form->error($model,'hourNumber'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'dayNumber'); ?>
+		<?php echo $form->textField($model,'dayNumber'); ?>
+		<?php echo $form->error($model,'dayNumber'); ?>
+	</div>
 	<div class="row buttons">
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
+		<?php echo CHtml::submitButton($model->isNewRecord ? '添 加' : '更 新'); ?>
 	</div>
 
 <?php $this->endWidget(); ?>

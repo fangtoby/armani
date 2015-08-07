@@ -8,8 +8,7 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List Prize', 'url'=>array('index')),
-	array('label'=>'Create Prize', 'url'=>array('create')),
+	array('label'=>'添加奖品', 'url'=>array('create')),
 );
 
 
@@ -26,10 +25,16 @@ $this->menu=array(
 		'name',
 		'note',
 		'count',
-		'number',
 		'rate',
+		'hourNumber',
+		'dayNumber',
+		array(
+            'name'=>'type',
+            'type'=>'raw',
+            'value'=> array($this,'getTypeName'),   //调用自定义的函数
+        ),
+		'number',
 		/*
-		'type',
 		'startTime',
 		'endTime',
 		'createTime',

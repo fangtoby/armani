@@ -55,6 +55,7 @@ class ApiController extends Controller
 			));
 			
 			if(!$model){
+				
 				$model = new Lottery();
 				$model->phone = $number;
 				$model->cityId = $cityId;
