@@ -6,6 +6,7 @@
  * The followings are the available columns in table 'city':
  * @property integer $CityID
  * @property string $CityName
+ * @property integer $isDel
  */
 class City extends CActiveRecord
 {
@@ -25,6 +26,12 @@ class City extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
+			array('CityID, CityName', 'required'),
+			array('CityID, isDel', 'numerical', 'integerOnly'=>true),
+			array('CityName', 'length', 'max'=>100),
+			// The following rule is used by search().
+			// @todo Please remove those attributes that should not be searched.
+			array('CityID, CityName, isDel', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -45,8 +52,9 @@ class City extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'CityID' => 'City',
-			'CityName' => 'City Name',
+			'CityID' => '城市ID',
+			'CityName' => '城市名称',
+			'isDel' => 'Is Del',
 		);
 	}
 
@@ -70,6 +78,7 @@ class City extends CActiveRecord
 
 		$criteria->compare('CityID',$this->CityID);
 		$criteria->compare('CityName',$this->CityName,true);
+		$criteria->compare('isDel',$this->isDel);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

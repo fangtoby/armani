@@ -17,6 +17,11 @@
  * @property string $ShopPhone
  * @property string $createTime
  * @property string $updateTime
+ * @property integer $prize
+ * @property integer $count
+ * @property string $startTime
+ * @property string $endTime
+ * @property double $rate
  */
 class Market extends CActiveRecord
 {
@@ -36,6 +41,17 @@ class Market extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
+			array('ShopID', 'required'),
+			array('ShopID, CityID, prize, count', 'numerical', 'integerOnly'=>true),
+			array('rate', 'numerical'),
+			array('CounterManager, DirectorName, ShopLocation_X, ShopLocation_Y, ShopPhone', 'length', 'max'=>100),
+			array('ShopAddress, ShopName', 'length', 'max'=>200),
+			array('ShopCode', 'length', 'max'=>50),
+			array('ShopEmail', 'length', 'max'=>300),
+			array('createTime, updateTime, startTime, endTime', 'safe'),
+			// The following rule is used by search().
+			// @todo Please remove those attributes that should not be searched.
+			array('ShopID, CityID, CounterManager, DirectorName, ShopAddress, ShopCode, ShopEmail, ShopLocation_X, ShopLocation_Y, ShopName, ShopPhone, createTime, updateTime, prize, count, startTime, endTime, rate', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -56,19 +72,22 @@ class Market extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'ShopID' => 'Shop',
-			'CityID' => 'City',
-			'CounterManager' => 'Counter Manager',
-			'DirectorName' => 'Director Name',
-			'ShopAddress' => 'Shop Address',
+			'ShopID' => 'ShopID',
+			'CityID' => '城 市',
+			'CounterManager' => '经理',
+			'DirectorName' => '店长',
+			'ShopAddress' => '柜台地址',
 			'ShopCode' => 'Shop Code',
 			'ShopEmail' => 'Shop Email',
 			'ShopLocation_X' => 'Shop Location X',
 			'ShopLocation_Y' => 'Shop Location Y',
-			'ShopName' => 'Shop Name',
+			'ShopName' => '柜台名称',
 			'ShopPhone' => 'Shop Phone',
-			'createTime' => 'Create Time',
-			'updateTime' => 'Update Time',
+			'startTime' => '开始时间',
+			'endTime' => '结束时间',
+			'rate' => '中奖概率(0.001)',
+			'count' => '中奖人数',
+			'prize' => '奖品数量',
 		);
 	}
 
@@ -103,6 +122,11 @@ class Market extends CActiveRecord
 		$criteria->compare('ShopPhone',$this->ShopPhone,true);
 		$criteria->compare('createTime',$this->createTime,true);
 		$criteria->compare('updateTime',$this->updateTime,true);
+		$criteria->compare('prize',$this->prize);
+		$criteria->compare('count',$this->count);
+		$criteria->compare('startTime',$this->startTime,true);
+		$criteria->compare('endTime',$this->endTime,true);
+		$criteria->compare('rate',$this->rate);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

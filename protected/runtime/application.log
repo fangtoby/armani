@@ -6109,3 +6109,1206 @@ REQUEST_URI=/admin/market/update/id/2
 in F:\XAMPP\htdocs\armani\app\protected\modules\admin\views\layouts\column1.php (10)
 in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (103)
 in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 06:15:41 [warning] [application] Failed to set unsafe attribute "ShopID" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 06:15:41 [warning] [application] Failed to set unsafe attribute "CityID" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 06:15:41 [warning] [application] Failed to set unsafe attribute "CounterManager" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 06:15:41 [warning] [application] Failed to set unsafe attribute "DirectorName" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 06:15:41 [warning] [application] Failed to set unsafe attribute "ShopAddress" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 06:15:41 [warning] [application] Failed to set unsafe attribute "ShopCode" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 06:15:41 [warning] [application] Failed to set unsafe attribute "ShopEmail" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 06:15:41 [warning] [application] Failed to set unsafe attribute "ShopLocation_X" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 06:15:41 [warning] [application] Failed to set unsafe attribute "ShopLocation_Y" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 06:15:41 [warning] [application] Failed to set unsafe attribute "ShopName" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 06:15:41 [warning] [application] Failed to set unsafe attribute "ShopPhone" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 06:15:41 [warning] [application] Failed to set unsafe attribute "createTime" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 06:15:41 [warning] [application] Failed to set unsafe attribute "updateTime" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 06:15:41 [warning] [application] Failed to set unsafe attribute "prize" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 06:15:41 [warning] [application] Failed to set unsafe attribute "count" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 06:15:41 [warning] [application] Failed to set unsafe attribute "startTime" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 06:15:41 [warning] [application] Failed to set unsafe attribute "endTime" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 06:15:41 [warning] [application] Failed to set unsafe attribute "rate" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 06:16:09 [warning] [application] Failed to set unsafe attribute "ShopID" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 06:16:09 [warning] [application] Failed to set unsafe attribute "CityID" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 06:16:09 [warning] [application] Failed to set unsafe attribute "CounterManager" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 06:16:09 [warning] [application] Failed to set unsafe attribute "DirectorName" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 06:16:09 [warning] [application] Failed to set unsafe attribute "ShopAddress" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 06:16:09 [warning] [application] Failed to set unsafe attribute "ShopCode" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 06:16:09 [warning] [application] Failed to set unsafe attribute "ShopEmail" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 06:16:09 [warning] [application] Failed to set unsafe attribute "ShopLocation_X" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 06:16:09 [warning] [application] Failed to set unsafe attribute "ShopLocation_Y" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 06:16:09 [warning] [application] Failed to set unsafe attribute "ShopName" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 06:16:09 [warning] [application] Failed to set unsafe attribute "ShopPhone" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 06:16:09 [warning] [application] Failed to set unsafe attribute "createTime" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 06:16:09 [warning] [application] Failed to set unsafe attribute "updateTime" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 06:16:09 [warning] [application] Failed to set unsafe attribute "prize" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 06:16:09 [warning] [application] Failed to set unsafe attribute "count" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 06:16:09 [warning] [application] Failed to set unsafe attribute "startTime" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 06:16:09 [warning] [application] Failed to set unsafe attribute "endTime" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 06:16:09 [warning] [application] Failed to set unsafe attribute "rate" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 06:17:32 [warning] [application] Failed to set unsafe attribute "ShopID" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 06:17:32 [warning] [application] Failed to set unsafe attribute "CityID" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 06:17:32 [warning] [application] Failed to set unsafe attribute "CounterManager" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 06:17:32 [warning] [application] Failed to set unsafe attribute "DirectorName" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 06:17:32 [warning] [application] Failed to set unsafe attribute "ShopAddress" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 06:17:32 [warning] [application] Failed to set unsafe attribute "ShopCode" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 06:17:32 [warning] [application] Failed to set unsafe attribute "ShopEmail" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 06:17:32 [warning] [application] Failed to set unsafe attribute "ShopLocation_X" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 06:17:32 [warning] [application] Failed to set unsafe attribute "ShopLocation_Y" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 06:17:32 [warning] [application] Failed to set unsafe attribute "ShopName" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 06:17:32 [warning] [application] Failed to set unsafe attribute "ShopPhone" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 06:17:32 [warning] [application] Failed to set unsafe attribute "createTime" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 06:17:32 [warning] [application] Failed to set unsafe attribute "updateTime" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 06:17:32 [warning] [application] Failed to set unsafe attribute "prize" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 06:17:32 [warning] [application] Failed to set unsafe attribute "count" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 06:17:32 [warning] [application] Failed to set unsafe attribute "startTime" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 06:17:32 [warning] [application] Failed to set unsafe attribute "endTime" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 06:17:32 [warning] [application] Failed to set unsafe attribute "rate" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 06:18:35 [warning] [application] Failed to set unsafe attribute "ShopID" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 06:18:35 [warning] [application] Failed to set unsafe attribute "CityID" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 06:18:35 [warning] [application] Failed to set unsafe attribute "CounterManager" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 06:18:35 [warning] [application] Failed to set unsafe attribute "DirectorName" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 06:18:35 [warning] [application] Failed to set unsafe attribute "ShopAddress" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 06:18:35 [warning] [application] Failed to set unsafe attribute "ShopCode" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 06:18:35 [warning] [application] Failed to set unsafe attribute "ShopEmail" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 06:18:35 [warning] [application] Failed to set unsafe attribute "ShopLocation_X" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 06:18:35 [warning] [application] Failed to set unsafe attribute "ShopLocation_Y" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 06:18:35 [warning] [application] Failed to set unsafe attribute "ShopName" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 06:18:35 [warning] [application] Failed to set unsafe attribute "ShopPhone" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 06:18:35 [warning] [application] Failed to set unsafe attribute "createTime" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 06:18:35 [warning] [application] Failed to set unsafe attribute "updateTime" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 06:18:35 [warning] [application] Failed to set unsafe attribute "prize" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 06:18:35 [warning] [application] Failed to set unsafe attribute "count" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 06:18:35 [warning] [application] Failed to set unsafe attribute "startTime" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 06:18:35 [warning] [application] Failed to set unsafe attribute "endTime" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 06:18:35 [warning] [application] Failed to set unsafe attribute "rate" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 06:19:38 [warning] [application] Failed to set unsafe attribute "ShopID" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 06:19:38 [warning] [application] Failed to set unsafe attribute "CityID" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 06:19:38 [warning] [application] Failed to set unsafe attribute "CounterManager" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 06:19:38 [warning] [application] Failed to set unsafe attribute "DirectorName" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 06:19:38 [warning] [application] Failed to set unsafe attribute "ShopAddress" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 06:19:38 [warning] [application] Failed to set unsafe attribute "ShopCode" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 06:19:38 [warning] [application] Failed to set unsafe attribute "ShopEmail" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 06:19:38 [warning] [application] Failed to set unsafe attribute "ShopLocation_X" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 06:19:38 [warning] [application] Failed to set unsafe attribute "ShopLocation_Y" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 06:19:38 [warning] [application] Failed to set unsafe attribute "ShopName" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 06:19:38 [warning] [application] Failed to set unsafe attribute "ShopPhone" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 06:19:38 [warning] [application] Failed to set unsafe attribute "createTime" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 06:19:38 [warning] [application] Failed to set unsafe attribute "updateTime" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 06:19:38 [warning] [application] Failed to set unsafe attribute "prize" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 06:19:38 [warning] [application] Failed to set unsafe attribute "count" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 06:19:38 [warning] [application] Failed to set unsafe attribute "startTime" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 06:19:38 [warning] [application] Failed to set unsafe attribute "endTime" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 06:19:38 [warning] [application] Failed to set unsafe attribute "rate" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 06:26:48 [warning] [application] Failed to set unsafe attribute "ShopID" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 06:26:48 [warning] [application] Failed to set unsafe attribute "CityID" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 06:26:48 [warning] [application] Failed to set unsafe attribute "CounterManager" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 06:26:48 [warning] [application] Failed to set unsafe attribute "DirectorName" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 06:26:48 [warning] [application] Failed to set unsafe attribute "ShopAddress" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 06:26:48 [warning] [application] Failed to set unsafe attribute "ShopCode" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 06:26:48 [warning] [application] Failed to set unsafe attribute "ShopEmail" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 06:26:48 [warning] [application] Failed to set unsafe attribute "ShopLocation_X" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 06:26:48 [warning] [application] Failed to set unsafe attribute "ShopLocation_Y" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 06:26:48 [warning] [application] Failed to set unsafe attribute "ShopName" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 06:26:48 [warning] [application] Failed to set unsafe attribute "ShopPhone" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 06:26:48 [warning] [application] Failed to set unsafe attribute "prize" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 06:26:48 [warning] [application] Failed to set unsafe attribute "count" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 06:26:48 [warning] [application] Failed to set unsafe attribute "startTime" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 06:26:48 [warning] [application] Failed to set unsafe attribute "endTime" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 06:26:48 [warning] [application] Failed to set unsafe attribute "rate" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 06:27:13 [warning] [application] Failed to set unsafe attribute "ShopID" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 06:27:13 [warning] [application] Failed to set unsafe attribute "CityID" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 06:27:13 [warning] [application] Failed to set unsafe attribute "CounterManager" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 06:27:13 [warning] [application] Failed to set unsafe attribute "DirectorName" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 06:27:13 [warning] [application] Failed to set unsafe attribute "ShopAddress" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 06:27:13 [warning] [application] Failed to set unsafe attribute "ShopCode" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 06:27:13 [warning] [application] Failed to set unsafe attribute "ShopEmail" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 06:27:13 [warning] [application] Failed to set unsafe attribute "ShopLocation_X" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 06:27:13 [warning] [application] Failed to set unsafe attribute "ShopLocation_Y" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 06:27:13 [warning] [application] Failed to set unsafe attribute "ShopName" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 06:27:13 [warning] [application] Failed to set unsafe attribute "ShopPhone" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 06:27:13 [warning] [application] Failed to set unsafe attribute "prize" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 06:27:13 [warning] [application] Failed to set unsafe attribute "count" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 06:27:13 [warning] [application] Failed to set unsafe attribute "startTime" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 06:27:13 [warning] [application] Failed to set unsafe attribute "endTime" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 06:27:13 [warning] [application] Failed to set unsafe attribute "rate" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 06:30:29 [warning] [application] Failed to set unsafe attribute "ShopID" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 06:30:29 [warning] [application] Failed to set unsafe attribute "CityID" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 06:30:29 [warning] [application] Failed to set unsafe attribute "CounterManager" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 06:30:29 [warning] [application] Failed to set unsafe attribute "DirectorName" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 06:30:29 [warning] [application] Failed to set unsafe attribute "ShopAddress" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 06:30:29 [warning] [application] Failed to set unsafe attribute "ShopCode" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 06:30:29 [warning] [application] Failed to set unsafe attribute "ShopEmail" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 06:30:29 [warning] [application] Failed to set unsafe attribute "ShopLocation_X" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 06:30:29 [warning] [application] Failed to set unsafe attribute "ShopLocation_Y" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 06:30:29 [warning] [application] Failed to set unsafe attribute "ShopName" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 06:30:29 [warning] [application] Failed to set unsafe attribute "ShopPhone" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 06:30:29 [warning] [application] Failed to set unsafe attribute "prize" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 06:30:29 [warning] [application] Failed to set unsafe attribute "count" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 06:30:29 [warning] [application] Failed to set unsafe attribute "startTime" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 06:30:29 [warning] [application] Failed to set unsafe attribute "endTime" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 06:30:29 [warning] [application] Failed to set unsafe attribute "rate" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 07:14:11 [warning] [application] Failed to set unsafe attribute "ShopID" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 07:14:11 [warning] [application] Failed to set unsafe attribute "CityID" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 07:14:11 [warning] [application] Failed to set unsafe attribute "CounterManager" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 07:14:11 [warning] [application] Failed to set unsafe attribute "DirectorName" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 07:14:11 [warning] [application] Failed to set unsafe attribute "ShopAddress" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 07:14:11 [warning] [application] Failed to set unsafe attribute "ShopCode" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 07:14:11 [warning] [application] Failed to set unsafe attribute "ShopEmail" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 07:14:11 [warning] [application] Failed to set unsafe attribute "ShopLocation_X" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 07:14:11 [warning] [application] Failed to set unsafe attribute "ShopLocation_Y" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 07:14:11 [warning] [application] Failed to set unsafe attribute "ShopName" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 07:14:11 [warning] [application] Failed to set unsafe attribute "ShopPhone" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 07:14:11 [warning] [application] Failed to set unsafe attribute "prize" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 07:14:11 [warning] [application] Failed to set unsafe attribute "count" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 07:14:11 [warning] [application] Failed to set unsafe attribute "startTime" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 07:14:11 [warning] [application] Failed to set unsafe attribute "endTime" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 07:14:11 [warning] [application] Failed to set unsafe attribute "rate" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 07:15:22 [warning] [application] Failed to set unsafe attribute "ShopID" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 07:15:22 [warning] [application] Failed to set unsafe attribute "CityID" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 07:15:22 [warning] [application] Failed to set unsafe attribute "CounterManager" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 07:15:22 [warning] [application] Failed to set unsafe attribute "DirectorName" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 07:15:22 [warning] [application] Failed to set unsafe attribute "ShopAddress" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 07:15:22 [warning] [application] Failed to set unsafe attribute "ShopCode" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 07:15:22 [warning] [application] Failed to set unsafe attribute "ShopEmail" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 07:15:22 [warning] [application] Failed to set unsafe attribute "ShopLocation_X" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 07:15:22 [warning] [application] Failed to set unsafe attribute "ShopLocation_Y" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 07:15:22 [warning] [application] Failed to set unsafe attribute "ShopName" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 07:15:22 [warning] [application] Failed to set unsafe attribute "ShopPhone" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 07:15:22 [warning] [application] Failed to set unsafe attribute "prize" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 07:15:22 [warning] [application] Failed to set unsafe attribute "count" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 07:15:22 [warning] [application] Failed to set unsafe attribute "startTime" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 07:15:22 [warning] [application] Failed to set unsafe attribute "endTime" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 07:15:22 [warning] [application] Failed to set unsafe attribute "rate" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 07:15:38 [warning] [application] Failed to set unsafe attribute "ShopID" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 07:15:38 [warning] [application] Failed to set unsafe attribute "CityID" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 07:15:38 [warning] [application] Failed to set unsafe attribute "CounterManager" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 07:15:38 [warning] [application] Failed to set unsafe attribute "DirectorName" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 07:15:38 [warning] [application] Failed to set unsafe attribute "ShopAddress" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 07:15:38 [warning] [application] Failed to set unsafe attribute "ShopCode" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 07:15:38 [warning] [application] Failed to set unsafe attribute "ShopEmail" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 07:15:38 [warning] [application] Failed to set unsafe attribute "ShopLocation_X" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 07:15:38 [warning] [application] Failed to set unsafe attribute "ShopLocation_Y" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 07:15:38 [warning] [application] Failed to set unsafe attribute "ShopName" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 07:15:38 [warning] [application] Failed to set unsafe attribute "ShopPhone" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 07:15:38 [warning] [application] Failed to set unsafe attribute "prize" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 07:15:38 [warning] [application] Failed to set unsafe attribute "count" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 07:15:38 [warning] [application] Failed to set unsafe attribute "startTime" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 07:15:38 [warning] [application] Failed to set unsafe attribute "endTime" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 07:15:38 [warning] [application] Failed to set unsafe attribute "rate" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 07:18:10 [warning] [application] Failed to set unsafe attribute "startTime" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 07:18:10 [warning] [application] Failed to set unsafe attribute "endTime" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 07:29:05 [warning] [application] Failed to set unsafe attribute "startTime" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 07:29:05 [warning] [application] Failed to set unsafe attribute "endTime" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 07:30:02 [warning] [application] Failed to set unsafe attribute "startTime" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 07:30:02 [warning] [application] Failed to set unsafe attribute "endTime" of "Market".
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (96)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 07:42:46 [error] [php] Undefined variable: city (F:\XAMPP\htdocs\armani\app\protected\modules\admin\views\market\_form.php:32)
+Stack trace:
+#0 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(869): MarketController->renderFile()
+#1 F:\XAMPP\htdocs\armani\app\protected\modules\admin\views\market\update.php(21): MarketController->renderPartial()
+#2 F:\XAMPP\htdocs\armani\yii-1\framework\web\CBaseController.php(126): require()
+#3 F:\XAMPP\htdocs\armani\yii-1\framework\web\CBaseController.php(95): MarketController->renderInternal()
+#4 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(869): MarketController->renderFile()
+#5 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(782): MarketController->renderPartial()
+#6 F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php(105): MarketController->render()
+#7 unknown(0): MarketController->actionUpdate()
+#8 F:\XAMPP\htdocs\armani\yii-1\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs()
+#9 F:\XAMPP\htdocs\armani\yii-1\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#10 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(308): CInlineAction->runWithParams()
+#11 F:\XAMPP\htdocs\armani\yii-1\framework\web\filters\CFilterChain.php(133): MarketController->runAction()
+#12 F:\XAMPP\htdocs\armani\yii-1\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#13 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#14 F:\XAMPP\htdocs\armani\yii-1\framework\web\filters\CInlineFilter.php(58): MarketController->filterAccessControl()
+#15 F:\XAMPP\htdocs\armani\yii-1\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#16 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(291): CFilterChain->run()
+#17 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(265): MarketController->runActionWithFilters()
+#18 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(282): MarketController->run()
+#19 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#20 F:\XAMPP\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#21 F:\XAMPP\htdocs\armani\app\index.php(13): CWebApplication->run()
+REQUEST_URI=/admin/market/update/id/2
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\views\market\_form.php (32)
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\views\market\update.php (21)
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (105)
+2015/08/07 07:59:25 [error] [php] Undefined index:  (F:\XAMPP\htdocs\armani\app\protected\modules\admin\views\market\admin.php:29)
+Stack trace:
+#0 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(869): MarketController->renderFile()
+#1 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(782): MarketController->renderPartial()
+#2 F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php(153): MarketController->render()
+#3 F:\XAMPP\htdocs\armani\yii-1\framework\web\actions\CInlineAction.php(49): MarketController->actionAdmin()
+#4 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 F:\XAMPP\htdocs\armani\yii-1\framework\web\filters\CFilterChain.php(133): MarketController->runAction()
+#6 F:\XAMPP\htdocs\armani\yii-1\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#8 F:\XAMPP\htdocs\armani\yii-1\framework\web\filters\CInlineFilter.php(58): MarketController->filterAccessControl()
+#9 F:\XAMPP\htdocs\armani\yii-1\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#10 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(291): CFilterChain->run()
+#11 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(265): MarketController->runActionWithFilters()
+#12 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(282): MarketController->run()
+#13 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#14 F:\XAMPP\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 F:\XAMPP\htdocs\armani\app\index.php(13): CWebApplication->run()
+REQUEST_URI=/admin/market/admin
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\views\market\admin.php (29)
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (153)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 08:00:09 [error] [exception.CException] exception 'CException' with message 'Property "Market.type" is not defined.' in F:\XAMPP\htdocs\armani\yii-1\framework\base\CComponent.php:130
+Stack trace:
+#0 F:\XAMPP\htdocs\armani\yii-1\framework\db\ar\CActiveRecord.php(145): CComponent->__get('type')
+#1 F:\XAMPP\htdocs\armani\yii-1\framework\web\helpers\CHtml.php(2729): CActiveRecord->__get('type')
+#2 F:\XAMPP\htdocs\armani\yii-1\framework\web\helpers\CHtml.php(2452): CHtml::resolveValue(Object(Market), 'type')
+#3 F:\XAMPP\htdocs\armani\yii-1\framework\web\helpers\CHtml.php(1534): CHtml::activeInputField('text', Object(Market), 'type', Array)
+#4 F:\XAMPP\htdocs\armani\yii-1\framework\zii\widgets\grid\CDataColumn.php(104): CHtml::activeTextField(Object(Market), 'type', Array)
+#5 F:\XAMPP\htdocs\armani\yii-1\framework\zii\widgets\grid\CGridColumn.php(253): CDataColumn->getFilterCellContent()
+#6 F:\XAMPP\htdocs\armani\yii-1\framework\zii\widgets\grid\CGridColumn.php(119): CGridColumn->renderFilterCellContent()
+#7 F:\XAMPP\htdocs\armani\yii-1\framework\zii\widgets\grid\CGridView.php(538): CGridColumn->renderFilterCell()
+#8 F:\XAMPP\htdocs\armani\yii-1\framework\zii\widgets\grid\CGridView.php(516): CGridView->renderFilter()
+#9 F:\XAMPP\htdocs\armani\yii-1\framework\zii\widgets\grid\CGridView.php(486): CGridView->renderTableHeader()
+#10 F:\XAMPP\htdocs\armani\yii-1\framework\zii\widgets\CBaseListView.php(181): CGridView->renderItems()
+#11 [internal function]: CBaseListView->renderSection(Array)
+#12 F:\XAMPP\htdocs\armani\yii-1\framework\zii\widgets\CBaseListView.php(164): preg_replace_callback('/{(\w+)}/', Array, '{summary}?{item...')
+#13 F:\XAMPP\htdocs\armani\yii-1\framework\zii\widgets\CBaseListView.php(149): CBaseListView->renderContent()
+#14 F:\XAMPP\htdocs\armani\yii-1\framework\web\CBaseController.php(181): CBaseListView->run()
+#15 F:\XAMPP\htdocs\armani\app\protected\modules\admin\views\market\admin.php(49): CBaseController->widget('zii.widgets.gri...', Array)
+#16 F:\XAMPP\htdocs\armani\yii-1\framework\web\CBaseController.php(126): require('F:\XAMPP\htdocs...')
+#17 F:\XAMPP\htdocs\armani\yii-1\framework\web\CBaseController.php(95): CBaseController->renderInternal('F:\XAMPP\htdocs...', Array, true)
+#18 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(869): CBaseController->renderFile('F:\XAMPP\htdocs...', Array, true)
+#19 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(782): CController->renderPartial('admin', Array, true)
+#20 F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php(153): CController->render('admin', Array)
+#21 F:\XAMPP\htdocs\armani\yii-1\framework\web\actions\CInlineAction.php(49): MarketController->actionAdmin()
+#22 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#23 F:\XAMPP\htdocs\armani\yii-1\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#24 F:\XAMPP\htdocs\armani\yii-1\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#25 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#26 F:\XAMPP\htdocs\armani\yii-1\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#27 F:\XAMPP\htdocs\armani\yii-1\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#28 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(291): CFilterChain->run()
+#29 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#30 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(282): CController->run('admin')
+#31 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/market/ad...')
+#32 F:\XAMPP\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#33 F:\XAMPP\htdocs\armani\app\index.php(13): CApplication->run()
+#34 {main}
+REQUEST_URI=/admin/market/admin
+HTTP_REFERER=http://www.armani.cc/admin/market/view/id/2
+---
+2015/08/07 08:00:24 [error] [exception.CException] exception 'CException' with message 'Property "MarketController.CityID" is not defined.' in F:\XAMPP\htdocs\armani\yii-1\framework\base\CComponent.php:130
+Stack trace:
+#0 F:\XAMPP\htdocs\armani\app\protected\modules\admin\views\market\admin.php(29): CComponent->__get('CityID')
+#1 F:\XAMPP\htdocs\armani\yii-1\framework\web\CBaseController.php(126): require('F:\XAMPP\htdocs...')
+#2 F:\XAMPP\htdocs\armani\yii-1\framework\web\CBaseController.php(95): CBaseController->renderInternal('F:\XAMPP\htdocs...', Array, true)
+#3 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(869): CBaseController->renderFile('F:\XAMPP\htdocs...', Array, true)
+#4 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(782): CController->renderPartial('admin', Array, true)
+#5 F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php(153): CController->render('admin', Array)
+#6 F:\XAMPP\htdocs\armani\yii-1\framework\web\actions\CInlineAction.php(49): MarketController->actionAdmin()
+#7 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 F:\XAMPP\htdocs\armani\yii-1\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#9 F:\XAMPP\htdocs\armani\yii-1\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#10 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#11 F:\XAMPP\htdocs\armani\yii-1\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#12 F:\XAMPP\htdocs\armani\yii-1\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#13 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(291): CFilterChain->run()
+#14 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(282): CController->run('admin')
+#16 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/market/ad...')
+#17 F:\XAMPP\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#18 F:\XAMPP\htdocs\armani\app\index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/admin/market/admin
+HTTP_REFERER=http://www.armani.cc/admin/market/view/id/2
+---
+2015/08/07 08:08:52 [error] [php] Undefined variable: data (F:\XAMPP\htdocs\armani\app\protected\modules\admin\views\market\admin.php:29)
+Stack trace:
+#0 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(869): MarketController->renderFile()
+#1 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(782): MarketController->renderPartial()
+#2 F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php(153): MarketController->render()
+#3 F:\XAMPP\htdocs\armani\yii-1\framework\web\actions\CInlineAction.php(49): MarketController->actionAdmin()
+#4 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 F:\XAMPP\htdocs\armani\yii-1\framework\web\filters\CFilterChain.php(133): MarketController->runAction()
+#6 F:\XAMPP\htdocs\armani\yii-1\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#8 F:\XAMPP\htdocs\armani\yii-1\framework\web\filters\CInlineFilter.php(58): MarketController->filterAccessControl()
+#9 F:\XAMPP\htdocs\armani\yii-1\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#10 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(291): CFilterChain->run()
+#11 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(265): MarketController->runActionWithFilters()
+#12 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(282): MarketController->run()
+#13 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#14 F:\XAMPP\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 F:\XAMPP\htdocs\armani\app\index.php(13): CWebApplication->run()
+REQUEST_URI=/admin/market/admin
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\views\market\admin.php (29)
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (153)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 08:16:02 [error] [exception.CException] exception 'CException' with message 'Property "Market.type" is not defined.' in F:\XAMPP\htdocs\armani\yii-1\framework\base\CComponent.php:130
+Stack trace:
+#0 F:\XAMPP\htdocs\armani\yii-1\framework\db\ar\CActiveRecord.php(145): CComponent->__get('type')
+#1 F:\XAMPP\htdocs\armani\yii-1\framework\web\helpers\CHtml.php(2729): CActiveRecord->__get('type')
+#2 F:\XAMPP\htdocs\armani\yii-1\framework\web\helpers\CHtml.php(2452): CHtml::resolveValue(Object(Market), 'type')
+#3 F:\XAMPP\htdocs\armani\yii-1\framework\web\helpers\CHtml.php(1534): CHtml::activeInputField('text', Object(Market), 'type', Array)
+#4 F:\XAMPP\htdocs\armani\yii-1\framework\zii\widgets\grid\CDataColumn.php(104): CHtml::activeTextField(Object(Market), 'type', Array)
+#5 F:\XAMPP\htdocs\armani\yii-1\framework\zii\widgets\grid\CGridColumn.php(253): CDataColumn->getFilterCellContent()
+#6 F:\XAMPP\htdocs\armani\yii-1\framework\zii\widgets\grid\CGridColumn.php(119): CGridColumn->renderFilterCellContent()
+#7 F:\XAMPP\htdocs\armani\yii-1\framework\zii\widgets\grid\CGridView.php(538): CGridColumn->renderFilterCell()
+#8 F:\XAMPP\htdocs\armani\yii-1\framework\zii\widgets\grid\CGridView.php(516): CGridView->renderFilter()
+#9 F:\XAMPP\htdocs\armani\yii-1\framework\zii\widgets\grid\CGridView.php(486): CGridView->renderTableHeader()
+#10 F:\XAMPP\htdocs\armani\yii-1\framework\zii\widgets\CBaseListView.php(181): CGridView->renderItems()
+#11 [internal function]: CBaseListView->renderSection(Array)
+#12 F:\XAMPP\htdocs\armani\yii-1\framework\zii\widgets\CBaseListView.php(164): preg_replace_callback('/{(\w+)}/', Array, '{summary}?{item...')
+#13 F:\XAMPP\htdocs\armani\yii-1\framework\zii\widgets\CBaseListView.php(149): CBaseListView->renderContent()
+#14 F:\XAMPP\htdocs\armani\yii-1\framework\web\CBaseController.php(181): CBaseListView->run()
+#15 F:\XAMPP\htdocs\armani\app\protected\modules\admin\views\market\admin.php(49): CBaseController->widget('zii.widgets.gri...', Array)
+#16 F:\XAMPP\htdocs\armani\yii-1\framework\web\CBaseController.php(126): require('F:\XAMPP\htdocs...')
+#17 F:\XAMPP\htdocs\armani\yii-1\framework\web\CBaseController.php(95): CBaseController->renderInternal('F:\XAMPP\htdocs...', Array, true)
+#18 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(869): CBaseController->renderFile('F:\XAMPP\htdocs...', Array, true)
+#19 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(782): CController->renderPartial('admin', Array, true)
+#20 F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php(153): CController->render('admin', Array)
+#21 F:\XAMPP\htdocs\armani\yii-1\framework\web\actions\CInlineAction.php(49): MarketController->actionAdmin()
+#22 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#23 F:\XAMPP\htdocs\armani\yii-1\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#24 F:\XAMPP\htdocs\armani\yii-1\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#25 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#26 F:\XAMPP\htdocs\armani\yii-1\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#27 F:\XAMPP\htdocs\armani\yii-1\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#28 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(291): CFilterChain->run()
+#29 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#30 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(282): CController->run('admin')
+#31 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/market/ad...')
+#32 F:\XAMPP\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#33 F:\XAMPP\htdocs\armani\app\index.php(13): CApplication->run()
+#34 {main}
+REQUEST_URI=/admin/market/admin
+HTTP_REFERER=http://www.armani.cc/admin/market/view/id/2
+---
+2015/08/07 08:16:18 [error] [exception.CException] exception 'CException' with message 'Property "Market.type" is not defined.' in F:\XAMPP\htdocs\armani\yii-1\framework\base\CComponent.php:130
+Stack trace:
+#0 F:\XAMPP\htdocs\armani\yii-1\framework\db\ar\CActiveRecord.php(145): CComponent->__get('type')
+#1 F:\XAMPP\htdocs\armani\yii-1\framework\web\helpers\CHtml.php(2729): CActiveRecord->__get('type')
+#2 F:\XAMPP\htdocs\armani\yii-1\framework\web\helpers\CHtml.php(2452): CHtml::resolveValue(Object(Market), 'type')
+#3 F:\XAMPP\htdocs\armani\yii-1\framework\web\helpers\CHtml.php(1534): CHtml::activeInputField('text', Object(Market), 'type', Array)
+#4 F:\XAMPP\htdocs\armani\yii-1\framework\zii\widgets\grid\CDataColumn.php(104): CHtml::activeTextField(Object(Market), 'type', Array)
+#5 F:\XAMPP\htdocs\armani\yii-1\framework\zii\widgets\grid\CGridColumn.php(253): CDataColumn->getFilterCellContent()
+#6 F:\XAMPP\htdocs\armani\yii-1\framework\zii\widgets\grid\CGridColumn.php(119): CGridColumn->renderFilterCellContent()
+#7 F:\XAMPP\htdocs\armani\yii-1\framework\zii\widgets\grid\CGridView.php(538): CGridColumn->renderFilterCell()
+#8 F:\XAMPP\htdocs\armani\yii-1\framework\zii\widgets\grid\CGridView.php(516): CGridView->renderFilter()
+#9 F:\XAMPP\htdocs\armani\yii-1\framework\zii\widgets\grid\CGridView.php(486): CGridView->renderTableHeader()
+#10 F:\XAMPP\htdocs\armani\yii-1\framework\zii\widgets\CBaseListView.php(181): CGridView->renderItems()
+#11 [internal function]: CBaseListView->renderSection(Array)
+#12 F:\XAMPP\htdocs\armani\yii-1\framework\zii\widgets\CBaseListView.php(164): preg_replace_callback('/{(\w+)}/', Array, '{summary}?{item...')
+#13 F:\XAMPP\htdocs\armani\yii-1\framework\zii\widgets\CBaseListView.php(149): CBaseListView->renderContent()
+#14 F:\XAMPP\htdocs\armani\yii-1\framework\web\CBaseController.php(181): CBaseListView->run()
+#15 F:\XAMPP\htdocs\armani\app\protected\modules\admin\views\market\admin.php(49): CBaseController->widget('zii.widgets.gri...', Array)
+#16 F:\XAMPP\htdocs\armani\yii-1\framework\web\CBaseController.php(126): require('F:\XAMPP\htdocs...')
+#17 F:\XAMPP\htdocs\armani\yii-1\framework\web\CBaseController.php(95): CBaseController->renderInternal('F:\XAMPP\htdocs...', Array, true)
+#18 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(869): CBaseController->renderFile('F:\XAMPP\htdocs...', Array, true)
+#19 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(782): CController->renderPartial('admin', Array, true)
+#20 F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php(153): CController->render('admin', Array)
+#21 F:\XAMPP\htdocs\armani\yii-1\framework\web\actions\CInlineAction.php(49): MarketController->actionAdmin()
+#22 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#23 F:\XAMPP\htdocs\armani\yii-1\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#24 F:\XAMPP\htdocs\armani\yii-1\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#25 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#26 F:\XAMPP\htdocs\armani\yii-1\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#27 F:\XAMPP\htdocs\armani\yii-1\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#28 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(291): CFilterChain->run()
+#29 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#30 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(282): CController->run('admin')
+#31 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/market/ad...')
+#32 F:\XAMPP\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#33 F:\XAMPP\htdocs\armani\app\index.php(13): CApplication->run()
+#34 {main}
+REQUEST_URI=/admin/market/admin
+HTTP_REFERER=http://www.armani.cc/admin/market/view/id/2
+---
+2015/08/07 08:18:49 [error] [exception.CException] exception 'CException' with message 'Property "Market.type" is not defined.' in F:\XAMPP\htdocs\armani\yii-1\framework\base\CComponent.php:130
+Stack trace:
+#0 F:\XAMPP\htdocs\armani\yii-1\framework\db\ar\CActiveRecord.php(145): CComponent->__get('type')
+#1 F:\XAMPP\htdocs\armani\yii-1\framework\web\helpers\CHtml.php(2729): CActiveRecord->__get('type')
+#2 F:\XAMPP\htdocs\armani\yii-1\framework\web\helpers\CHtml.php(2452): CHtml::resolveValue(Object(Market), 'type')
+#3 F:\XAMPP\htdocs\armani\yii-1\framework\web\helpers\CHtml.php(1534): CHtml::activeInputField('text', Object(Market), 'type', Array)
+#4 F:\XAMPP\htdocs\armani\yii-1\framework\zii\widgets\grid\CDataColumn.php(104): CHtml::activeTextField(Object(Market), 'type', Array)
+#5 F:\XAMPP\htdocs\armani\yii-1\framework\zii\widgets\grid\CGridColumn.php(253): CDataColumn->getFilterCellContent()
+#6 F:\XAMPP\htdocs\armani\yii-1\framework\zii\widgets\grid\CGridColumn.php(119): CGridColumn->renderFilterCellContent()
+#7 F:\XAMPP\htdocs\armani\yii-1\framework\zii\widgets\grid\CGridView.php(538): CGridColumn->renderFilterCell()
+#8 F:\XAMPP\htdocs\armani\yii-1\framework\zii\widgets\grid\CGridView.php(516): CGridView->renderFilter()
+#9 F:\XAMPP\htdocs\armani\yii-1\framework\zii\widgets\grid\CGridView.php(486): CGridView->renderTableHeader()
+#10 F:\XAMPP\htdocs\armani\yii-1\framework\zii\widgets\CBaseListView.php(181): CGridView->renderItems()
+#11 [internal function]: CBaseListView->renderSection(Array)
+#12 F:\XAMPP\htdocs\armani\yii-1\framework\zii\widgets\CBaseListView.php(164): preg_replace_callback('/{(\w+)}/', Array, '{summary}?{item...')
+#13 F:\XAMPP\htdocs\armani\yii-1\framework\zii\widgets\CBaseListView.php(149): CBaseListView->renderContent()
+#14 F:\XAMPP\htdocs\armani\yii-1\framework\web\CBaseController.php(181): CBaseListView->run()
+#15 F:\XAMPP\htdocs\armani\app\protected\modules\admin\views\market\admin.php(49): CBaseController->widget('zii.widgets.gri...', Array)
+#16 F:\XAMPP\htdocs\armani\yii-1\framework\web\CBaseController.php(126): require('F:\XAMPP\htdocs...')
+#17 F:\XAMPP\htdocs\armani\yii-1\framework\web\CBaseController.php(95): CBaseController->renderInternal('F:\XAMPP\htdocs...', Array, true)
+#18 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(869): CBaseController->renderFile('F:\XAMPP\htdocs...', Array, true)
+#19 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(782): CController->renderPartial('admin', Array, true)
+#20 F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php(153): CController->render('admin', Array)
+#21 F:\XAMPP\htdocs\armani\yii-1\framework\web\actions\CInlineAction.php(49): MarketController->actionAdmin()
+#22 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#23 F:\XAMPP\htdocs\armani\yii-1\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#24 F:\XAMPP\htdocs\armani\yii-1\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#25 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#26 F:\XAMPP\htdocs\armani\yii-1\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#27 F:\XAMPP\htdocs\armani\yii-1\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#28 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(291): CFilterChain->run()
+#29 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#30 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(282): CController->run('admin')
+#31 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/market/ad...')
+#32 F:\XAMPP\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#33 F:\XAMPP\htdocs\armani\app\index.php(13): CApplication->run()
+#34 {main}
+REQUEST_URI=/admin/market/admin
+HTTP_REFERER=http://www.armani.cc/admin/market/view/id/2
+---
+2015/08/07 08:18:51 [error] [exception.CException] exception 'CException' with message 'Property "Market.type" is not defined.' in F:\XAMPP\htdocs\armani\yii-1\framework\base\CComponent.php:130
+Stack trace:
+#0 F:\XAMPP\htdocs\armani\yii-1\framework\db\ar\CActiveRecord.php(145): CComponent->__get('type')
+#1 F:\XAMPP\htdocs\armani\yii-1\framework\web\helpers\CHtml.php(2729): CActiveRecord->__get('type')
+#2 F:\XAMPP\htdocs\armani\yii-1\framework\web\helpers\CHtml.php(2452): CHtml::resolveValue(Object(Market), 'type')
+#3 F:\XAMPP\htdocs\armani\yii-1\framework\web\helpers\CHtml.php(1534): CHtml::activeInputField('text', Object(Market), 'type', Array)
+#4 F:\XAMPP\htdocs\armani\yii-1\framework\zii\widgets\grid\CDataColumn.php(104): CHtml::activeTextField(Object(Market), 'type', Array)
+#5 F:\XAMPP\htdocs\armani\yii-1\framework\zii\widgets\grid\CGridColumn.php(253): CDataColumn->getFilterCellContent()
+#6 F:\XAMPP\htdocs\armani\yii-1\framework\zii\widgets\grid\CGridColumn.php(119): CGridColumn->renderFilterCellContent()
+#7 F:\XAMPP\htdocs\armani\yii-1\framework\zii\widgets\grid\CGridView.php(538): CGridColumn->renderFilterCell()
+#8 F:\XAMPP\htdocs\armani\yii-1\framework\zii\widgets\grid\CGridView.php(516): CGridView->renderFilter()
+#9 F:\XAMPP\htdocs\armani\yii-1\framework\zii\widgets\grid\CGridView.php(486): CGridView->renderTableHeader()
+#10 F:\XAMPP\htdocs\armani\yii-1\framework\zii\widgets\CBaseListView.php(181): CGridView->renderItems()
+#11 [internal function]: CBaseListView->renderSection(Array)
+#12 F:\XAMPP\htdocs\armani\yii-1\framework\zii\widgets\CBaseListView.php(164): preg_replace_callback('/{(\w+)}/', Array, '{summary}?{item...')
+#13 F:\XAMPP\htdocs\armani\yii-1\framework\zii\widgets\CBaseListView.php(149): CBaseListView->renderContent()
+#14 F:\XAMPP\htdocs\armani\yii-1\framework\web\CBaseController.php(181): CBaseListView->run()
+#15 F:\XAMPP\htdocs\armani\app\protected\modules\admin\views\market\admin.php(49): CBaseController->widget('zii.widgets.gri...', Array)
+#16 F:\XAMPP\htdocs\armani\yii-1\framework\web\CBaseController.php(126): require('F:\XAMPP\htdocs...')
+#17 F:\XAMPP\htdocs\armani\yii-1\framework\web\CBaseController.php(95): CBaseController->renderInternal('F:\XAMPP\htdocs...', Array, true)
+#18 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(869): CBaseController->renderFile('F:\XAMPP\htdocs...', Array, true)
+#19 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(782): CController->renderPartial('admin', Array, true)
+#20 F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php(153): CController->render('admin', Array)
+#21 F:\XAMPP\htdocs\armani\yii-1\framework\web\actions\CInlineAction.php(49): MarketController->actionAdmin()
+#22 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#23 F:\XAMPP\htdocs\armani\yii-1\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#24 F:\XAMPP\htdocs\armani\yii-1\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#25 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#26 F:\XAMPP\htdocs\armani\yii-1\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#27 F:\XAMPP\htdocs\armani\yii-1\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#28 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(291): CFilterChain->run()
+#29 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#30 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(282): CController->run('admin')
+#31 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/market/ad...')
+#32 F:\XAMPP\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#33 F:\XAMPP\htdocs\armani\app\index.php(13): CApplication->run()
+#34 {main}
+REQUEST_URI=/admin/market/admin
+HTTP_REFERER=http://www.armani.cc/admin/market/view/id/2
+---
+2015/08/07 08:19:01 [error] [exception.CException] exception 'CException' with message 'Property "Market.city" is not defined.' in F:\XAMPP\htdocs\armani\yii-1\framework\base\CComponent.php:130
+Stack trace:
+#0 F:\XAMPP\htdocs\armani\yii-1\framework\db\ar\CActiveRecord.php(145): CComponent->__get('city')
+#1 F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php(186): CActiveRecord->__get('city')
+#2 [internal function]: MarketController->getCityName(Object(Market), 0, Object(CDataColumn))
+#3 F:\XAMPP\htdocs\armani\yii-1\framework\base\CComponent.php(617): call_user_func_array(Array, Array)
+#4 F:\XAMPP\htdocs\armani\yii-1\framework\zii\widgets\grid\CDataColumn.php(142): CComponent->evaluateExpression(Array, Array)
+#5 F:\XAMPP\htdocs\armani\yii-1\framework\zii\widgets\grid\CGridColumn.php(231): CDataColumn->getDataCellContent(0)
+#6 F:\XAMPP\htdocs\armani\yii-1\framework\zii\widgets\grid\CGridColumn.php(154): CGridColumn->renderDataCellContent(0, Object(Market))
+#7 F:\XAMPP\htdocs\armani\yii-1\framework\zii\widgets\grid\CGridView.php(638): CGridColumn->renderDataCell(0)
+#8 F:\XAMPP\htdocs\armani\yii-1\framework\zii\widgets\grid\CGridView.php(622): CGridView->renderDataCell(Object(CDataColumn), 0)
+#9 F:\XAMPP\htdocs\armani\yii-1\framework\zii\widgets\grid\CGridView.php(578): CGridView->renderTableRow(0)
+#10 F:\XAMPP\htdocs\armani\yii-1\framework\zii\widgets\grid\CGridView.php(488): CGridView->renderTableBody()
+#11 F:\XAMPP\htdocs\armani\yii-1\framework\zii\widgets\CBaseListView.php(181): CGridView->renderItems()
+#12 [internal function]: CBaseListView->renderSection(Array)
+#13 F:\XAMPP\htdocs\armani\yii-1\framework\zii\widgets\CBaseListView.php(164): preg_replace_callback('/{(\w+)}/', Array, '{summary}?{item...')
+#14 F:\XAMPP\htdocs\armani\yii-1\framework\zii\widgets\CBaseListView.php(149): CBaseListView->renderContent()
+#15 F:\XAMPP\htdocs\armani\yii-1\framework\web\CBaseController.php(181): CBaseListView->run()
+#16 F:\XAMPP\htdocs\armani\app\protected\modules\admin\views\market\admin.php(49): CBaseController->widget('zii.widgets.gri...', Array)
+#17 F:\XAMPP\htdocs\armani\yii-1\framework\web\CBaseController.php(126): require('F:\XAMPP\htdocs...')
+#18 F:\XAMPP\htdocs\armani\yii-1\framework\web\CBaseController.php(95): CBaseController->renderInternal('F:\XAMPP\htdocs...', Array, true)
+#19 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(869): CBaseController->renderFile('F:\XAMPP\htdocs...', Array, true)
+#20 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(782): CController->renderPartial('admin', Array, true)
+#21 F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php(153): CController->render('admin', Array)
+#22 F:\XAMPP\htdocs\armani\yii-1\framework\web\actions\CInlineAction.php(49): MarketController->actionAdmin()
+#23 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#24 F:\XAMPP\htdocs\armani\yii-1\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#25 F:\XAMPP\htdocs\armani\yii-1\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#26 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#27 F:\XAMPP\htdocs\armani\yii-1\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#28 F:\XAMPP\htdocs\armani\yii-1\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#29 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(291): CFilterChain->run()
+#30 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#31 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(282): CController->run('admin')
+#32 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/market/ad...')
+#33 F:\XAMPP\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#34 F:\XAMPP\htdocs\armani\app\index.php(13): CApplication->run()
+#35 {main}
+REQUEST_URI=/admin/market/admin
+HTTP_REFERER=http://www.armani.cc/admin/market/view/id/2
+---
+2015/08/07 08:19:20 [error] [php] Object of class City could not be converted to string (F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php:186)
+Stack trace:
+#0 F:\XAMPP\htdocs\armani\yii-1\framework\zii\widgets\grid\CDataColumn.php(142): CDataColumn->evaluateExpression()
+#1 F:\XAMPP\htdocs\armani\yii-1\framework\zii\widgets\grid\CGridColumn.php(231): CDataColumn->getDataCellContent()
+#2 F:\XAMPP\htdocs\armani\yii-1\framework\zii\widgets\grid\CGridColumn.php(154): CDataColumn->renderDataCellContent()
+#3 F:\XAMPP\htdocs\armani\yii-1\framework\zii\widgets\grid\CGridView.php(638): CDataColumn->renderDataCell()
+#4 F:\XAMPP\htdocs\armani\yii-1\framework\zii\widgets\grid\CGridView.php(622): CGridView->renderDataCell()
+#5 F:\XAMPP\htdocs\armani\yii-1\framework\zii\widgets\grid\CGridView.php(578): CGridView->renderTableRow()
+#6 F:\XAMPP\htdocs\armani\yii-1\framework\zii\widgets\grid\CGridView.php(488): CGridView->renderTableBody()
+#7 F:\XAMPP\htdocs\armani\yii-1\framework\zii\widgets\CBaseListView.php(181): CGridView->renderItems()
+#8 unknown(0): CGridView->renderSection()
+#9 F:\XAMPP\htdocs\armani\yii-1\framework\zii\widgets\CBaseListView.php(164): preg_replace_callback()
+#10 F:\XAMPP\htdocs\armani\yii-1\framework\zii\widgets\CBaseListView.php(149): CGridView->renderContent()
+#11 F:\XAMPP\htdocs\armani\yii-1\framework\web\CBaseController.php(181): CGridView->run()
+#12 F:\XAMPP\htdocs\armani\app\protected\modules\admin\views\market\admin.php(49): MarketController->widget()
+#13 F:\XAMPP\htdocs\armani\yii-1\framework\web\CBaseController.php(126): require()
+#14 F:\XAMPP\htdocs\armani\yii-1\framework\web\CBaseController.php(95): MarketController->renderInternal()
+#15 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(869): MarketController->renderFile()
+#16 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(782): MarketController->renderPartial()
+#17 F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php(153): MarketController->render()
+#18 F:\XAMPP\htdocs\armani\yii-1\framework\web\actions\CInlineAction.php(49): MarketController->actionAdmin()
+#19 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(308): CInlineAction->runWithParams()
+#20 F:\XAMPP\htdocs\armani\yii-1\framework\web\filters\CFilterChain.php(133): MarketController->runAction()
+#21 F:\XAMPP\htdocs\armani\yii-1\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#22 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#23 F:\XAMPP\htdocs\armani\yii-1\framework\web\filters\CInlineFilter.php(58): MarketController->filterAccessControl()
+#24 F:\XAMPP\htdocs\armani\yii-1\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#25 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(291): CFilterChain->run()
+#26 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(265): MarketController->runActionWithFilters()
+#27 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(282): MarketController->run()
+#28 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#29 F:\XAMPP\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#30 F:\XAMPP\htdocs\armani\app\index.php(13): CWebApplication->run()
+REQUEST_URI=/admin/market/admin
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (186)
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\views\market\admin.php (49)
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (153)
+2015/08/07 08:21:10 [error] [exception.CException] exception 'CException' with message 'Property "MarketController.CityID" is not defined.' in F:\XAMPP\htdocs\armani\yii-1\framework\base\CComponent.php:130
+Stack trace:
+#0 F:\XAMPP\htdocs\armani\app\protected\modules\admin\views\market\admin.php(29): CComponent->__get('CityID')
+#1 F:\XAMPP\htdocs\armani\yii-1\framework\web\CBaseController.php(126): require('F:\XAMPP\htdocs...')
+#2 F:\XAMPP\htdocs\armani\yii-1\framework\web\CBaseController.php(95): CBaseController->renderInternal('F:\XAMPP\htdocs...', Array, true)
+#3 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(869): CBaseController->renderFile('F:\XAMPP\htdocs...', Array, true)
+#4 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(782): CController->renderPartial('admin', Array, true)
+#5 F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php(153): CController->render('admin', Array)
+#6 F:\XAMPP\htdocs\armani\yii-1\framework\web\actions\CInlineAction.php(49): MarketController->actionAdmin()
+#7 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 F:\XAMPP\htdocs\armani\yii-1\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#9 F:\XAMPP\htdocs\armani\yii-1\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#10 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#11 F:\XAMPP\htdocs\armani\yii-1\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#12 F:\XAMPP\htdocs\armani\yii-1\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#13 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(291): CFilterChain->run()
+#14 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(282): CController->run('admin')
+#16 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/market/ad...')
+#17 F:\XAMPP\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#18 F:\XAMPP\htdocs\armani\app\index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/admin/market/admin
+HTTP_REFERER=http://www.armani.cc/admin/market/view/id/2
+---
+2015/08/07 08:21:40 [error] [php] Undefined variable: data (F:\XAMPP\htdocs\armani\app\protected\modules\admin\views\market\admin.php:29)
+Stack trace:
+#0 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(869): MarketController->renderFile()
+#1 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(782): MarketController->renderPartial()
+#2 F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php(153): MarketController->render()
+#3 F:\XAMPP\htdocs\armani\yii-1\framework\web\actions\CInlineAction.php(49): MarketController->actionAdmin()
+#4 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 F:\XAMPP\htdocs\armani\yii-1\framework\web\filters\CFilterChain.php(133): MarketController->runAction()
+#6 F:\XAMPP\htdocs\armani\yii-1\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#8 F:\XAMPP\htdocs\armani\yii-1\framework\web\filters\CInlineFilter.php(58): MarketController->filterAccessControl()
+#9 F:\XAMPP\htdocs\armani\yii-1\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#10 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(291): CFilterChain->run()
+#11 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(265): MarketController->runActionWithFilters()
+#12 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(282): MarketController->run()
+#13 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#14 F:\XAMPP\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 F:\XAMPP\htdocs\armani\app\index.php(13): CWebApplication->run()
+REQUEST_URI=/admin/market/admin
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\views\market\admin.php (29)
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (153)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 08:21:43 [error] [exception.CException] exception 'CException' with message 'Property "MarketController.CityID" is not defined.' in F:\XAMPP\htdocs\armani\yii-1\framework\base\CComponent.php:130
+Stack trace:
+#0 F:\XAMPP\htdocs\armani\app\protected\modules\admin\views\market\admin.php(29): CComponent->__get('CityID')
+#1 F:\XAMPP\htdocs\armani\yii-1\framework\web\CBaseController.php(126): require('F:\XAMPP\htdocs...')
+#2 F:\XAMPP\htdocs\armani\yii-1\framework\web\CBaseController.php(95): CBaseController->renderInternal('F:\XAMPP\htdocs...', Array, true)
+#3 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(869): CBaseController->renderFile('F:\XAMPP\htdocs...', Array, true)
+#4 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(782): CController->renderPartial('admin', Array, true)
+#5 F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php(153): CController->render('admin', Array)
+#6 F:\XAMPP\htdocs\armani\yii-1\framework\web\actions\CInlineAction.php(49): MarketController->actionAdmin()
+#7 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 F:\XAMPP\htdocs\armani\yii-1\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#9 F:\XAMPP\htdocs\armani\yii-1\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#10 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#11 F:\XAMPP\htdocs\armani\yii-1\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#12 F:\XAMPP\htdocs\armani\yii-1\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#13 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(291): CFilterChain->run()
+#14 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(282): CController->run('admin')
+#16 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/market/ad...')
+#17 F:\XAMPP\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#18 F:\XAMPP\htdocs\armani\app\index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/admin/market/admin
+HTTP_REFERER=http://www.armani.cc/admin/market/view/id/2
+---
+2015/08/07 08:22:03 [error] [php] Undefined index:  (F:\XAMPP\htdocs\armani\app\protected\modules\admin\views\market\admin.php:29)
+Stack trace:
+#0 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(869): MarketController->renderFile()
+#1 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(782): MarketController->renderPartial()
+#2 F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php(153): MarketController->render()
+#3 F:\XAMPP\htdocs\armani\yii-1\framework\web\actions\CInlineAction.php(49): MarketController->actionAdmin()
+#4 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 F:\XAMPP\htdocs\armani\yii-1\framework\web\filters\CFilterChain.php(133): MarketController->runAction()
+#6 F:\XAMPP\htdocs\armani\yii-1\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#8 F:\XAMPP\htdocs\armani\yii-1\framework\web\filters\CInlineFilter.php(58): MarketController->filterAccessControl()
+#9 F:\XAMPP\htdocs\armani\yii-1\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#10 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(291): CFilterChain->run()
+#11 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(265): MarketController->runActionWithFilters()
+#12 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(282): MarketController->run()
+#13 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#14 F:\XAMPP\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 F:\XAMPP\htdocs\armani\app\index.php(13): CWebApplication->run()
+REQUEST_URI=/admin/market/admin
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\views\market\admin.php (29)
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (153)
+in F:\XAMPP\htdocs\armani\app\index.php (13)
+2015/08/07 08:22:35 [error] [exception.CException] exception 'CException' with message 'Property "MarketController.CityID" is not defined.' in F:\XAMPP\htdocs\armani\yii-1\framework\base\CComponent.php:130
+Stack trace:
+#0 F:\XAMPP\htdocs\armani\app\protected\modules\admin\views\market\admin.php(29): CComponent->__get('CityID')
+#1 F:\XAMPP\htdocs\armani\yii-1\framework\web\CBaseController.php(126): require('F:\XAMPP\htdocs...')
+#2 F:\XAMPP\htdocs\armani\yii-1\framework\web\CBaseController.php(95): CBaseController->renderInternal('F:\XAMPP\htdocs...', Array, true)
+#3 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(869): CBaseController->renderFile('F:\XAMPP\htdocs...', Array, true)
+#4 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(782): CController->renderPartial('admin', Array, true)
+#5 F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php(153): CController->render('admin', Array)
+#6 F:\XAMPP\htdocs\armani\yii-1\framework\web\actions\CInlineAction.php(49): MarketController->actionAdmin()
+#7 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 F:\XAMPP\htdocs\armani\yii-1\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#9 F:\XAMPP\htdocs\armani\yii-1\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#10 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#11 F:\XAMPP\htdocs\armani\yii-1\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#12 F:\XAMPP\htdocs\armani\yii-1\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#13 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(291): CFilterChain->run()
+#14 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(282): CController->run('admin')
+#16 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/market/ad...')
+#17 F:\XAMPP\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#18 F:\XAMPP\htdocs\armani\app\index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/admin/market/admin
+HTTP_REFERER=http://www.armani.cc/admin/market/view/id/2
+---
+2015/08/07 08:22:49 [error] [php] Object of class City could not be converted to string (F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php:186)
+Stack trace:
+#0 F:\XAMPP\htdocs\armani\yii-1\framework\zii\widgets\grid\CDataColumn.php(142): CDataColumn->evaluateExpression()
+#1 F:\XAMPP\htdocs\armani\yii-1\framework\zii\widgets\grid\CGridColumn.php(231): CDataColumn->getDataCellContent()
+#2 F:\XAMPP\htdocs\armani\yii-1\framework\zii\widgets\grid\CGridColumn.php(154): CDataColumn->renderDataCellContent()
+#3 F:\XAMPP\htdocs\armani\yii-1\framework\zii\widgets\grid\CGridView.php(638): CDataColumn->renderDataCell()
+#4 F:\XAMPP\htdocs\armani\yii-1\framework\zii\widgets\grid\CGridView.php(622): CGridView->renderDataCell()
+#5 F:\XAMPP\htdocs\armani\yii-1\framework\zii\widgets\grid\CGridView.php(578): CGridView->renderTableRow()
+#6 F:\XAMPP\htdocs\armani\yii-1\framework\zii\widgets\grid\CGridView.php(488): CGridView->renderTableBody()
+#7 F:\XAMPP\htdocs\armani\yii-1\framework\zii\widgets\CBaseListView.php(181): CGridView->renderItems()
+#8 unknown(0): CGridView->renderSection()
+#9 F:\XAMPP\htdocs\armani\yii-1\framework\zii\widgets\CBaseListView.php(164): preg_replace_callback()
+#10 F:\XAMPP\htdocs\armani\yii-1\framework\zii\widgets\CBaseListView.php(149): CGridView->renderContent()
+#11 F:\XAMPP\htdocs\armani\yii-1\framework\web\CBaseController.php(181): CGridView->run()
+#12 F:\XAMPP\htdocs\armani\app\protected\modules\admin\views\market\admin.php(49): MarketController->widget()
+#13 F:\XAMPP\htdocs\armani\yii-1\framework\web\CBaseController.php(126): require()
+#14 F:\XAMPP\htdocs\armani\yii-1\framework\web\CBaseController.php(95): MarketController->renderInternal()
+#15 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(869): MarketController->renderFile()
+#16 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(782): MarketController->renderPartial()
+#17 F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php(153): MarketController->render()
+#18 F:\XAMPP\htdocs\armani\yii-1\framework\web\actions\CInlineAction.php(49): MarketController->actionAdmin()
+#19 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(308): CInlineAction->runWithParams()
+#20 F:\XAMPP\htdocs\armani\yii-1\framework\web\filters\CFilterChain.php(133): MarketController->runAction()
+#21 F:\XAMPP\htdocs\armani\yii-1\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#22 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#23 F:\XAMPP\htdocs\armani\yii-1\framework\web\filters\CInlineFilter.php(58): MarketController->filterAccessControl()
+#24 F:\XAMPP\htdocs\armani\yii-1\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#25 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(291): CFilterChain->run()
+#26 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(265): MarketController->runActionWithFilters()
+#27 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(282): MarketController->run()
+#28 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#29 F:\XAMPP\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#30 F:\XAMPP\htdocs\armani\app\index.php(13): CWebApplication->run()
+REQUEST_URI=/admin/market/admin
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (186)
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\views\market\admin.php (49)
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (153)
+2015/08/07 08:23:23 [error] [php] Object of class City could not be converted to string (F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php:186)
+Stack trace:
+#0 F:\XAMPP\htdocs\armani\yii-1\framework\zii\widgets\grid\CDataColumn.php(142): CDataColumn->evaluateExpression()
+#1 F:\XAMPP\htdocs\armani\yii-1\framework\zii\widgets\grid\CGridColumn.php(231): CDataColumn->getDataCellContent()
+#2 F:\XAMPP\htdocs\armani\yii-1\framework\zii\widgets\grid\CGridColumn.php(154): CDataColumn->renderDataCellContent()
+#3 F:\XAMPP\htdocs\armani\yii-1\framework\zii\widgets\grid\CGridView.php(638): CDataColumn->renderDataCell()
+#4 F:\XAMPP\htdocs\armani\yii-1\framework\zii\widgets\grid\CGridView.php(622): CGridView->renderDataCell()
+#5 F:\XAMPP\htdocs\armani\yii-1\framework\zii\widgets\grid\CGridView.php(578): CGridView->renderTableRow()
+#6 F:\XAMPP\htdocs\armani\yii-1\framework\zii\widgets\grid\CGridView.php(488): CGridView->renderTableBody()
+#7 F:\XAMPP\htdocs\armani\yii-1\framework\zii\widgets\CBaseListView.php(181): CGridView->renderItems()
+#8 unknown(0): CGridView->renderSection()
+#9 F:\XAMPP\htdocs\armani\yii-1\framework\zii\widgets\CBaseListView.php(164): preg_replace_callback()
+#10 F:\XAMPP\htdocs\armani\yii-1\framework\zii\widgets\CBaseListView.php(149): CGridView->renderContent()
+#11 F:\XAMPP\htdocs\armani\yii-1\framework\web\CBaseController.php(181): CGridView->run()
+#12 F:\XAMPP\htdocs\armani\app\protected\modules\admin\views\market\admin.php(49): MarketController->widget()
+#13 F:\XAMPP\htdocs\armani\yii-1\framework\web\CBaseController.php(126): require()
+#14 F:\XAMPP\htdocs\armani\yii-1\framework\web\CBaseController.php(95): MarketController->renderInternal()
+#15 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(869): MarketController->renderFile()
+#16 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(782): MarketController->renderPartial()
+#17 F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php(153): MarketController->render()
+#18 F:\XAMPP\htdocs\armani\yii-1\framework\web\actions\CInlineAction.php(49): MarketController->actionAdmin()
+#19 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(308): CInlineAction->runWithParams()
+#20 F:\XAMPP\htdocs\armani\yii-1\framework\web\filters\CFilterChain.php(133): MarketController->runAction()
+#21 F:\XAMPP\htdocs\armani\yii-1\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#22 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#23 F:\XAMPP\htdocs\armani\yii-1\framework\web\filters\CInlineFilter.php(58): MarketController->filterAccessControl()
+#24 F:\XAMPP\htdocs\armani\yii-1\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#25 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(291): CFilterChain->run()
+#26 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(265): MarketController->runActionWithFilters()
+#27 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(282): MarketController->run()
+#28 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#29 F:\XAMPP\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#30 F:\XAMPP\htdocs\armani\app\index.php(13): CWebApplication->run()
+REQUEST_URI=/admin/market/admin
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (186)
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\views\market\admin.php (49)
+in F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php (153)
+2015/08/07 08:25:14 [error] [exception.CException] exception 'CException' with message 'The "dataProvider" property cannot be empty.' in F:\XAMPP\htdocs\armani\yii-1\framework\zii\widgets\CBaseListView.php:123
+Stack trace:
+#0 F:\XAMPP\htdocs\armani\yii-1\framework\zii\widgets\grid\CGridView.php(339): CBaseListView->init()
+#1 F:\XAMPP\htdocs\armani\yii-1\framework\web\CBaseController.php(147): CGridView->init()
+#2 F:\XAMPP\htdocs\armani\yii-1\framework\web\CBaseController.php(180): CBaseController->createWidget('zii.widgets.gri...', Array)
+#3 F:\XAMPP\htdocs\armani\app\protected\modules\admin\views\market\admin.php(48): CBaseController->widget('zii.widgets.gri...', Array)
+#4 F:\XAMPP\htdocs\armani\yii-1\framework\web\CBaseController.php(126): require('F:\XAMPP\htdocs...')
+#5 F:\XAMPP\htdocs\armani\yii-1\framework\web\CBaseController.php(95): CBaseController->renderInternal('F:\XAMPP\htdocs...', Array, true)
+#6 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(869): CBaseController->renderFile('F:\XAMPP\htdocs...', Array, true)
+#7 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(782): CController->renderPartial('admin', Array, true)
+#8 F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php(153): CController->render('admin', Array)
+#9 F:\XAMPP\htdocs\armani\yii-1\framework\web\actions\CInlineAction.php(49): MarketController->actionAdmin()
+#10 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 F:\XAMPP\htdocs\armani\yii-1\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 F:\XAMPP\htdocs\armani\yii-1\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#13 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 F:\XAMPP\htdocs\armani\yii-1\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 F:\XAMPP\htdocs\armani\yii-1\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(291): CFilterChain->run()
+#17 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(282): CController->run('admin')
+#19 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/market/ad...')
+#20 F:\XAMPP\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#21 F:\XAMPP\htdocs\armani\app\index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/admin/market/admin
+HTTP_REFERER=http://www.armani.cc/admin/market/view/id/2
+---
+2015/08/07 08:25:22 [error] [exception.CException] exception 'CException' with message 'Market and its behaviors do not have a method or closure named "getData".' in F:\XAMPP\htdocs\armani\yii-1\framework\base\CComponent.php:266
+Stack trace:
+#0 F:\XAMPP\htdocs\armani\yii-1\framework\db\ar\CActiveRecord.php(227): CComponent->__call('getData', Array)
+#1 F:\XAMPP\htdocs\armani\yii-1\framework\zii\widgets\CBaseListView.php(125): CActiveRecord->__call('getData', Array)
+#2 F:\XAMPP\htdocs\armani\yii-1\framework\zii\widgets\CBaseListView.php(125): Market->getData()
+#3 F:\XAMPP\htdocs\armani\yii-1\framework\zii\widgets\grid\CGridView.php(339): CBaseListView->init()
+#4 F:\XAMPP\htdocs\armani\yii-1\framework\web\CBaseController.php(147): CGridView->init()
+#5 F:\XAMPP\htdocs\armani\yii-1\framework\web\CBaseController.php(180): CBaseController->createWidget('zii.widgets.gri...', Array)
+#6 F:\XAMPP\htdocs\armani\app\protected\modules\admin\views\market\admin.php(48): CBaseController->widget('zii.widgets.gri...', Array)
+#7 F:\XAMPP\htdocs\armani\yii-1\framework\web\CBaseController.php(126): require('F:\XAMPP\htdocs...')
+#8 F:\XAMPP\htdocs\armani\yii-1\framework\web\CBaseController.php(95): CBaseController->renderInternal('F:\XAMPP\htdocs...', Array, true)
+#9 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(869): CBaseController->renderFile('F:\XAMPP\htdocs...', Array, true)
+#10 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(782): CController->renderPartial('admin', Array, true)
+#11 F:\XAMPP\htdocs\armani\app\protected\modules\admin\controllers\MarketController.php(153): CController->render('admin', Array)
+#12 F:\XAMPP\htdocs\armani\yii-1\framework\web\actions\CInlineAction.php(49): MarketController->actionAdmin()
+#13 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#14 F:\XAMPP\htdocs\armani\yii-1\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#15 F:\XAMPP\htdocs\armani\yii-1\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#16 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#17 F:\XAMPP\htdocs\armani\yii-1\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#18 F:\XAMPP\htdocs\armani\yii-1\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#19 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(291): CFilterChain->run()
+#20 F:\XAMPP\htdocs\armani\yii-1\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#21 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(282): CController->run('admin')
+#22 F:\XAMPP\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/market/ad...')
+#23 F:\XAMPP\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#24 F:\XAMPP\htdocs\armani\app\index.php(13): CApplication->run()
+#25 {main}
+REQUEST_URI=/admin/market/admin
+HTTP_REFERER=http://www.armani.cc/admin/market/view/id/2
+---

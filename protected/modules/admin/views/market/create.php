@@ -8,11 +8,10 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List Market', 'url'=>array('index')),
-	array('label'=>'Manage Market', 'url'=>array('admin')),
+	array('label'=>'管理页面', 'url'=>array('admin')),
 );
 ?>
 
 <h1>Create Market</h1>
 
-<?php $this->renderPartial('_form', array('model'=>$model)); ?>
+<?php $this->renderPartial('_form', array('model'=>$model,'city'=>$city)); ?>

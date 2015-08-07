@@ -20,14 +20,13 @@
 	<?php echo $form->errorSummary($model); ?>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'ShopID'); ?>
-		<?php echo $form->textField($model,'ShopID'); ?>
-		<?php echo $form->error($model,'ShopID'); ?>
-	</div>
-
-	<div class="row">
 		<?php echo $form->labelEx($model,'CityID'); ?>
-		<?php echo $form->textField($model,'CityID'); ?>
+		<?php //echo $form->textField($model,'CityID'); ?>
+        <select name="Market[CityID]" id="Market_CityID">
+        	<?php foreach($city as $ct){ ?>
+            	<option value="<?=$ct['CityID'] ?>" <?php if($ct['CityID'] == $model->CityID ){ ?>selected <?php } ?>><?=$ct['CityName']?></option>
+            <?php } ?>
+        </select>
 		<?php echo $form->error($model,'CityID'); ?>
 	</div>
 
@@ -86,18 +85,6 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'createTime'); ?>
-		<?php echo $form->textField($model,'createTime'); ?>
-		<?php echo $form->error($model,'createTime'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'updateTime'); ?>
-		<?php echo $form->textField($model,'updateTime'); ?>
-		<?php echo $form->error($model,'updateTime'); ?>
-	</div>
-
-	<div class="row">
 		<?php echo $form->labelEx($model,'prize'); ?>
 		<?php echo $form->textField($model,'prize'); ?>
 		<?php echo $form->error($model,'prize'); ?>
@@ -109,12 +96,11 @@
 		<?php echo $form->error($model,'count'); ?>
 	</div>
 
-	<div class="row">
+<div class="row">
 		<?php echo $form->labelEx($model,'startTime'); ?>
 		<?php echo $form->textField($model,'startTime'); ?>
 		<?php echo $form->error($model,'startTime'); ?>
 	</div>
-
 	<div class="row">
 		<?php echo $form->labelEx($model,'endTime'); ?>
 		<?php echo $form->textField($model,'endTime'); ?>
@@ -134,3 +120,17 @@
 <?php $this->endWidget(); ?>
 
 </div><!-- form -->
+<script>
+	//$('#Market_startTime,#Market_endTime')
+	laydate({
+		elem: '#Market_startTime', //目标元素。由于laydate.js封装了一个轻量级的选择器引擎，因此elem还允许你传入class、tag但必须按照这种方式 '#id .class'
+	    format: 'YYYY/MM/DD hh:mm:ss',
+		event: 'focus' //响应事件。如果没有传入event，则按照默认的click
+	});
+	laydate({
+		elem: '#Market_endTime', //目标元素。由于laydate.js封装了一个轻量级的选择器引擎，因此elem还允许你传入class、tag但必须按照这种方式 '#id .class'
+	    format: 'YYYY/MM/DD hh:mm:ss',		
+		event: 'focus' //响应事件。如果没有传入event，则按照默认的click
+	});
+
+</script>

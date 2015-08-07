@@ -2,8 +2,8 @@ body
 {
 	margin: 0;
 	padding: 0;
-	color: #555;
-	font: normal 10pt Arial,Helvetica,sans-serif;
+	color: #333;
+	font: normal 12px "微软雅黑",Arial,Helvetica,sans-serif;
 	background: #EFEFEF;
 }
 
@@ -13,15 +13,25 @@ body
 	margin-bottom: 5px;
 	background: white;
 	border: 1px solid #C9E0ED;
+	width:1260px;
 }
 
 #header
-{
-	margin: 0;
-	padding: 0;
-	border-top: 3px solid #C9E0ED;
+{  
+	padding: 0px;
+  margin: 0px 20px;
+  border-bottom: 1px solid #C9E0ED;
+  padding:20px 0;
 }
-
+#header h1{
+	float:left;
+	line-height:50px;
+	}
+#header .top-menus
+{
+	margin: 20px 0px;
+	float: right;
+}
 #content
 {
     padding: 20px;
@@ -29,7 +39,7 @@ body
 
 #sidebar
 {
-	padding: 20px 20px 20px 0;
+	padding: 20px 0 20px 20px;
 }
 
 #footer
@@ -230,4 +240,19 @@ div.search-form
 
 .container{
 	background-color:#fff;
+	}
+/* input */
+input[type="text"]{
+	padding:5px;
+	border:solid 1px #ccc;
+	border-radius:3px;
+	}
+input[type="text"]:focus{
+	background: #ECFBD4;
+	}
+/* table */
+.grid-view table.items th{
+	background-color:#666 !important;
+	background-image:none !important;
+	color:#fff;
 	}

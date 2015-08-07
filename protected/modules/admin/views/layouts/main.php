@@ -9,16 +9,29 @@
 	<link rel="stylesheet" type="text/css" href="<?=Data::$data['staticUri']['css']?>ie.css" media="screen, projection" />
 	<![endif]-->
 
-	<link rel="stylesheet" type="text/css" href="<?=Data::$data['staticUri']['css']?>main.css" />
 	<link rel="stylesheet" type="text/css" href="<?=Data::$data['staticUri']['css']?>form.css" />
 	<link rel="stylesheet" type="text/css" href="<?=Data::$data['staticUri']['css']?>admin/main.css" />
 <script src="<?=Data::$data['staticUri']['js']?>jquery-1.7.1.js?v=<?=Yii::app()->params['version']['js'];?>"></script>
+<script src="<?=Data::$data['staticUri']['js']?>laydate/laydate.js?v=<?=Yii::app()->params['version']['js'];?>"></script>
   <title>首页</title>
 </head>
 <body>
-     <div id="content">
-     	<?php echo $content; ?>
-     </div><!-- content -->
+<div class="container" id="page">
+	 <div id="header" class="clearfix">
+     	<div class="top-menus">
+		<?php echo CHtml::link('店铺管理','/admin/market/admin'); ?> |
+		<?php echo CHtml::link('奖品设置','/admin/prize/admin'); ?> |
+		<?php echo CHtml::link('中奖记录','/admin/lottery/admin'); ?> |
+		<?php echo CHtml::link('地区管理','/admin/city/admin'); ?> 
+		<?php if(!Yii::app()->user->isGuest): ?>
+			| <?php echo CHtml::link('logout',array('default/logout')); ?>
+		<?php endif; ?>
+		</div>
+     	<h1>CCE-2015</h1> 
+     </div>
+     <?php echo $content; ?>
+     
+</div>
 </body>
 <script>
 </script>

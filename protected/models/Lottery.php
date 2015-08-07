@@ -54,13 +54,13 @@ class Lottery extends CActiveRecord
 		return array(
 			'id' => 'ID',
 			'uid' => 'Uid',
-			'phone' => 'Phone',
-			'cityId' => 'City',
-			'marketId' => 'Market',
-			'type' => 'Type',
-			'createTime' => 'Create Time',
-			'updateTime' => 'Update Time',
-			'win' => 'Win',
+			'phone' => '手机号码',
+			'cityId' => '店铺所在城市',
+			'marketId' => '店铺名称',
+			'type' => '中奖类型',
+			'createTime' => '中奖时间',
+			'win' => '是否中奖',
+			'giftId'=>'奖品描述'
 		);
 	}
 
