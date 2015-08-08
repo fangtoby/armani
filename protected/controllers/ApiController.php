@@ -80,8 +80,8 @@ class ApiController extends Controller
 				'phone'=>$number,
 				'from'=>$from
 			));
-			//抽奖次数限制
-			if(count($model) === 0){
+			//抽奖次数限制count($model) === 0
+			if(true){
 				$now = time();
 				$currectTime = date("Y-m-d H:i:s",$now);
 				$Market = Market::model()->findByPk($marketId);
@@ -130,6 +130,11 @@ class ApiController extends Controller
 				$win = 0;
 				//随机奖品Model
 				$prizeCount = count($rightPrizeModel);
+				if($prizeCount === 0){
+					$this->jsonSuccess(array(
+						'type'=>$code['sad']
+					));
+				}
 				$prizeRand = rand(1, $prizeCount);
 				$correctPrizeModel = $rightPrizeModel[ $prizeRand - 1 ];
 				$correctPrizeId = $correctPrizeModel->id;
@@ -145,40 +150,70 @@ class ApiController extends Controller
 					"currectTime"=>$currectTime,
 					"correctPrizeType"=>$correctPrizeType,
 				);
-				//奖品总数限制判断
-				if($correctPrizeModel->number > $correctPrizeModel->count){
-					//插入抽奖记录	
+				//特殊奖品
+				if($correctPrizeType == $prizeType['special']){
+					if($Market->count > $Market->prize){
+						//插入抽奖记录	
+						$this->addLotteryRecord($recordParamArr);
+						$this->jsonSuccess(array(
+							'type'=>$code['sad']
+						));
+					}
+					//根据奖品Id，获取奖品中奖率
+					$rate = $Market->rate;
+					$currentNumber = 1;
+					$denominator = floor(bcdiv(1, $rate));
+					if($currentNumber === rand($currentNumber,$denominator)){
+						$recordParamArr['win'] = 1;
+					}else{
+						$this->addLotteryRecord($recordParamArr);
+						$this->jsonSuccess(array(
+							'type'=>$code['sad']
+						));
+					}
+					$Market->count += 1;
+					$Market->updateTime = $currectTime;
+					$Market->save();
 					$this->addLotteryRecord($recordParamArr);
 					$this->jsonSuccess(array(
-						'type'=>$code['sad']
+							'type'=>$code['lucky']
 					));
-				}
-				//根据奖品Id，获取奖品中奖率
-				$rate = $correctPrizeModel->rate;
-				$currentNumber = 1;
-				$denominator = floor(bcdiv(1, $rate));
-				if($currentNumber === rand($currentNumber,$denominator)){
-					$recordParamArr['win'] = 1;
-				}else{
-					$this->addLotteryRecord($recordParamArr);
-					$this->jsonSuccess(array(
-						'type'=>$code['sad']
-					));
-				}
-				if($this->limitInitAndControl($now,$correctPrizeId,$correctPrizeModel->dayNumber,$correctPrizeModel->hourNumber,$currectTime)){
-					$correctPrizeModel->number += 1;
-					$correctPrizeModel->updateTime = $currectTime;
-					$correctPrizeModel->save();
-					$this->addLotteryRecord($recordParamArr);
-					$this->jsonSuccess(array(
-						'type'=>$code['lucky']
-					));
-				}else{
-					$recordParamArr['win'] = 0;
-					$this->addLotteryRecord($recordParamArr);
-					$this->jsonSuccess(array(
-						'type'=>$code['sad']
-					));
+				}else{//普通奖品
+					//奖品总数限制判断
+					if($correctPrizeModel->number > $correctPrizeModel->count){
+						//插入抽奖记录	
+						$this->addLotteryRecord($recordParamArr);
+						$this->jsonSuccess(array(
+							'type'=>$code['sad']
+						));
+					}
+					//根据奖品Id，获取奖品中奖率
+					$rate = $correctPrizeModel->rate;
+					$currentNumber = 1;
+					$denominator = floor(bcdiv(1, $rate));
+					if($currentNumber === rand($currentNumber,$denominator)){
+						$recordParamArr['win'] = 1;
+					}else{
+						$this->addLotteryRecord($recordParamArr);
+						$this->jsonSuccess(array(
+							'type'=>$code['sad']
+						));
+					}
+					if($this->limitInitAndControl($now,$correctPrizeId,$correctPrizeModel->dayNumber,$correctPrizeModel->hourNumber,$currectTime)){
+						$correctPrizeModel->number += 1;
+						$correctPrizeModel->updateTime = $currectTime;
+						$correctPrizeModel->save();
+						$this->addLotteryRecord($recordParamArr);
+						$this->jsonSuccess(array(
+							'type'=>$code['lucky']
+						));
+					}else{
+						$recordParamArr['win'] = 0;
+						$this->addLotteryRecord($recordParamArr);
+						$this->jsonSuccess(array(
+							'type'=>$code['sad']
+						));
+					}
 				}
 				
 			}else{

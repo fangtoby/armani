@@ -8087,3 +8087,14 @@ REQUEST_URI=/api/lottery?cityId=1&marketId=2&type=1&phone=14782593339
 in C:\xampp\htdocs\armani\armani\protected\controllers\ApiController.php (205)
 in C:\xampp\htdocs\armani\armani\protected\controllers\ApiController.php (164)
 in C:\xampp\htdocs\armani\armani\index.php (13)
+2015/08/08 17:48:18 [error] [php] Undefined offset: 0 (C:\xampp\htdocs\armani\armani\protected\controllers\ApiController.php:134)
+Stack trace:
+#0 C:\xampp\htdocs\armani\yii-1\framework\web\CController.php(286): ApiController->runAction()
+#1 C:\xampp\htdocs\armani\yii-1\framework\web\CController.php(265): ApiController->runActionWithFilters()
+#2 C:\xampp\htdocs\armani\yii-1\framework\web\CWebApplication.php(282): ApiController->run()
+#3 C:\xampp\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\armani\armani\index.php(13): CWebApplication->run()
+REQUEST_URI=/api/lottery?cityId=1&marketId=2&type=1&phone=14782593339
+in C:\xampp\htdocs\armani\armani\protected\controllers\ApiController.php (134)
+in C:\xampp\htdocs\armani\armani\index.php (13)
