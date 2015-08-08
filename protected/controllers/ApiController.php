@@ -162,7 +162,7 @@ class ApiController extends Controller
 					//根据奖品Id，获取奖品中奖率
 					$rate = $Market->rate;
 					$currentNumber = 1;
-					$denominator = floor(bcdiv(1, $rate));
+					$denominator = floor(1/$rate);
 					if($currentNumber === rand($currentNumber,$denominator)){
 						$recordParamArr['win'] = 1;
 					}else{
