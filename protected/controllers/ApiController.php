@@ -20,17 +20,25 @@ class ApiController extends Controller
 		$this->jsonSuccess($models);
 	}
 	/**
-	 * 手机号码录入
-	 *	code 1 输入成功
-	 *	code 2 数据库错误
-	 *	code 3 手机号码格式错误
+	 * 抽奖
+	 *	code 1 中奖
+	 *	code 2 没中奖
+	 *	code 3 重复抽奖限制
+	 *	code 4 手机号码格式错误
+	 *	code 5 地址门店不能为空
 	 */
 	 
-	public function actionAddinfo()
+	public function actionLottery()
 	{	
 		//$id = $this->uid;
-		$id = 3;
-		$code = 0;
+		$code = array(
+			'lucky'=>1,
+			'sad'=>2,
+			'lock'=>3,
+			'format'=>4,
+			'empty'=>5
+		);
+		
 		$cityId = $_GET['cityId'];
 		$marketId = $_GET['marketId'];
 		//$opendId = $_SESSION["openid"];
@@ -40,14 +48,12 @@ class ApiController extends Controller
 		
 		if(!is_numeric($cityId) ||  !is_numeric($marketId) || 
 		!isset($cityId) || !isset($marketId)){ 
-			$this->jsonError(array(
-				'code'=>$code
-			),'地址或门店不能为空');	
+			$this->jsonSuccess(array(
+				'type'=>$code['empty']
+			));	
 		}
 		
 		if(isset($number) && preg_match("/1[3458]{1}\d{9}$/",$number)){ 
-			$code = 1;
-			
 			$model = Lottery::model()->findByAttributes(array(
 				'phone'=>$number,
 				'type'=>$type,
@@ -67,24 +73,23 @@ class ApiController extends Controller
 				
 				if($model->save()){
 					$this->jsonSuccess(array(
-						'code'=>$code
+						'type'=>$code['lucky']
 						));
 				}else{
-					$code = 2;
-					$this->jsonError(array(
-						'code'=>$code
-					),'保存错误');
+					$this->jsonSuccess(array(
+						'type'=>$code['sad']
+					));
 				}
 			}else{
 				$code = 3;
-				$this->jsonError(array(
-					'code'=>$code
-				),'重复中奖限制');	
+				$this->jsonSuccess(array(
+						'type'=>$code['lock']
+				));	
 			}
 		}else{
-			$this->jsonError(array(
-				'code'=>$code
-			),'手机号码格式错误');	
+			$this->jsonSuccess(array(
+				'type'=>$code['format']
+			));	
 		}
 		
 	}
