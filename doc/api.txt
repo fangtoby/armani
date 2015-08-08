@@ -35,5 +35,6 @@ return:
 	*	type 4 手机号码格式错误
 	*	type 5 地址门店不能为空
 	
-分享后跳转链接 讨论
+分享后跳转链接
 
+http://masterofglow.comeyes.cn/index/share?openid=oPV4Ht0yokB6n-DEcr5JocRNPZv4&v=23
