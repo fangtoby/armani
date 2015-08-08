@@ -115,20 +115,22 @@ class IndexController extends Controller
 	
 	public function actionShare()
 	{
-		$pid = isset($_GET['pid']) ? $_GET['pid']:1;
-		$did = isset($_GET['did']) ? $_GET['did']:1;
-		
-		$user = User::model()->findByPk( 3/*$this->uid*/ );
-		
-		if($user){
-			$user->product_id = $pid;
-			$user->detail_id = $did;
-			$user->save();
+		if(isset($_GET['openid'])){
+			$openid = $_GET['openid'];
+			
+			$user = User::model()->findByAttributes(array(
+					'unionid'=>$openid
+				));
+			if(count($user)){
+				$this->render('share',array(
+					'signPackage'=>$this->signPackage,
+					'nickname'=>$user->nickname,
+					'headimgurl'=>$user->headimgurl,
+				));
+			}
+			
 		}
 		
-		$this->render('share',array(
-			'signPackage'=>$this->signPackage,
-		));
 	}
 	
 	/*

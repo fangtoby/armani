@@ -7604,3 +7604,94 @@ REQUEST_URI=/index/list
 in C:\xampp\htdocs\armani\armani\protected\views\index\list.php (39)
 in C:\xampp\htdocs\armani\armani\protected\controllers\IndexController.php (90)
 in C:\xampp\htdocs\armani\armani\index.php (13)
+2015/08/08 11:35:41 [error] [php] Undefined variable: info (C:\xampp\htdocs\armani\armani\protected\views\index\list.php:16)
+Stack trace:
+#0 C:\xampp\htdocs\armani\yii-1\framework\web\CController.php(869): IndexController->renderFile()
+#1 C:\xampp\htdocs\armani\yii-1\framework\web\CController.php(782): IndexController->renderPartial()
+#2 C:\xampp\htdocs\armani\armani\protected\controllers\IndexController.php(90): IndexController->render()
+#3 C:\xampp\htdocs\armani\yii-1\framework\web\actions\CInlineAction.php(49): IndexController->actionList()
+#4 C:\xampp\htdocs\armani\yii-1\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\armani\yii-1\framework\web\CController.php(286): IndexController->runAction()
+#6 C:\xampp\htdocs\armani\yii-1\framework\web\CController.php(265): IndexController->runActionWithFilters()
+#7 C:\xampp\htdocs\armani\yii-1\framework\web\CWebApplication.php(282): IndexController->run()
+#8 C:\xampp\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\armani\armani\index.php(13): CWebApplication->run()
+REQUEST_URI=/index/list
+in C:\xampp\htdocs\armani\armani\protected\views\index\list.php (16)
+in C:\xampp\htdocs\armani\armani\protected\controllers\IndexController.php (90)
+in C:\xampp\htdocs\armani\armani\index.php (13)
+2015/08/08 11:35:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\htdocs\armani\yii-1\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\armani\armani\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+HTTP_REFERER=http://www.armani.com/index/list
+---
+2015/08/08 11:38:42 [error] [php] Undefined variable: info (C:\xampp\htdocs\armani\armani\protected\controllers\IndexController.php:122)
+Stack trace:
+#0 C:\xampp\htdocs\armani\yii-1\framework\web\CController.php(286): IndexController->runAction()
+#1 C:\xampp\htdocs\armani\yii-1\framework\web\CController.php(265): IndexController->runActionWithFilters()
+#2 C:\xampp\htdocs\armani\yii-1\framework\web\CWebApplication.php(282): IndexController->run()
+#3 C:\xampp\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\armani\armani\index.php(13): CWebApplication->run()
+REQUEST_URI=/index/share
+in C:\xampp\htdocs\armani\armani\protected\controllers\IndexController.php (122)
+in C:\xampp\htdocs\armani\armani\index.php (13)
+2015/08/08 11:43:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "share&openid=oPV4Ht0yokB6n-DEcr5JocRNPZv4".' in C:\xampp\htdocs\armani\yii-1\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\armani\yii-1\framework\web\CController.php(270): CController->missingAction('share&openid=oP...')
+#1 C:\xampp\htdocs\armani\yii-1\framework\web\CWebApplication.php(282): CController->run('share&openid=oP...')
+#2 C:\xampp\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController('index/share&ope...')
+#3 C:\xampp\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\armani\armani\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index/share&openid=oPV4Ht0yokB6n-DEcr5JocRNPZv4
+---
+2015/08/08 11:43:29 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\armani\armani\protected\controllers\IndexController.php:128)
+Stack trace:
+#0 C:\xampp\htdocs\armani\yii-1\framework\web\CController.php(286): IndexController->runAction()
+#1 C:\xampp\htdocs\armani\yii-1\framework\web\CController.php(265): IndexController->runActionWithFilters()
+#2 C:\xampp\htdocs\armani\yii-1\framework\web\CWebApplication.php(282): IndexController->run()
+#3 C:\xampp\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\armani\armani\index.php(13): CWebApplication->run()
+REQUEST_URI=/index/share?openid=oPV4Ht0yokB6n-DEcr5JocRNPZv4
+in C:\xampp\htdocs\armani\armani\protected\controllers\IndexController.php (128)
+in C:\xampp\htdocs\armani\armani\index.php (13)
+2015/08/08 11:44:14 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\armani\armani\protected\controllers\IndexController.php:128)
+Stack trace:
+#0 C:\xampp\htdocs\armani\yii-1\framework\web\CController.php(286): IndexController->runAction()
+#1 C:\xampp\htdocs\armani\yii-1\framework\web\CController.php(265): IndexController->runActionWithFilters()
+#2 C:\xampp\htdocs\armani\yii-1\framework\web\CWebApplication.php(282): IndexController->run()
+#3 C:\xampp\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\armani\armani\index.php(13): CWebApplication->run()
+REQUEST_URI=/index/share?openid=oPV4Ht0yokB6n-DEcr5JocRNPZv4
+in C:\xampp\htdocs\armani\armani\protected\controllers\IndexController.php (128)
+in C:\xampp\htdocs\armani\armani\index.php (13)
+2015/08/08 11:44:45 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\armani\armani\protected\controllers\IndexController.php:129)
+Stack trace:
+#0 C:\xampp\htdocs\armani\yii-1\framework\web\CController.php(286): IndexController->runAction()
+#1 C:\xampp\htdocs\armani\yii-1\framework\web\CController.php(265): IndexController->runActionWithFilters()
+#2 C:\xampp\htdocs\armani\yii-1\framework\web\CWebApplication.php(282): IndexController->run()
+#3 C:\xampp\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\armani\armani\index.php(13): CWebApplication->run()
+REQUEST_URI=/index/share?openid=oPV4Ht0yokB6n-DEcr5JocRNPZv4
+in C:\xampp\htdocs\armani\armani\protected\controllers\IndexController.php (129)
+in C:\xampp\htdocs\armani\armani\index.php (13)
+2015/08/08 11:45:41 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\armani\armani\protected\controllers\IndexController.php:130)
+Stack trace:
+#0 C:\xampp\htdocs\armani\yii-1\framework\web\CController.php(286): IndexController->runAction()
+#1 C:\xampp\htdocs\armani\yii-1\framework\web\CController.php(265): IndexController->runActionWithFilters()
+#2 C:\xampp\htdocs\armani\yii-1\framework\web\CWebApplication.php(282): IndexController->run()
+#3 C:\xampp\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\armani\armani\index.php(13): CWebApplication->run()
+REQUEST_URI=/index/share?openid=oPV4Ht0yokB6n-DEcr5JocRNPZv4
+in C:\xampp\htdocs\armani\armani\protected\controllers\IndexController.php (130)
+in C:\xampp\htdocs\armani\armani\index.php (13)
