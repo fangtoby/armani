@@ -11,10 +11,13 @@
 	}
   </style>
 </head>
-<!--
-    <a href="<?=$this->createUrl('index/index')?>">&lt;首页 </a>
-    <a href="<?=$this->createUrl('index/detail',array('pid'=>2))?>">详情页 &gt;</a>
--->
+  <script language="javascript">
+  	var g_config = {
+		openid:"<?=$info["openid"];?>",
+		nickname:"<?=$info["nickname"];?>",
+		headimgurl:"<?=$info["headimgurl"];?>"
+	};
+  </script>
 <body>
     <div id="content">
     	<a href="<?=$this->createUrl('index/apply')?>">申请明星粉底 &gt;</a>
@@ -31,7 +34,7 @@
         	<li><a href="<?=$this->createUrl('index/detail',array('pid'=>2))?>"> 详情2 </a></li>
         	<li><a href="<?=$this->createUrl('index/detail',array('pid'=>3))?>"> 详情3 </a></li>
         </ul>
-        <?php echo var_dump($info); ?>
+        <?php //echo var_dump($info); ?>
     </div><!-- content -->
 </body>
 <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js?v=<?=Yii::app()->params['version']['js'];?>"></script>

@@ -1,3 +1,16 @@
+
+验证登录之后页面中埋入必要参数
+
+<script language="javascript">
+  var g_config = {
+	  openid:"<?=$info["openid"];?>",
+	  nickname:"<?=$info["nickname"];?>",
+	  headimgurl:"<?=$info["headimgurl"];?>"
+  };
+</script>
+ 
+通过<?=$info["openid"];?>获取你需要的参数
+ 
 抽奖接口 
 method:
 	GET
@@ -21,4 +34,6 @@ return:
 	*	type 3 重复抽奖限制
 	*	type 4 手机号码格式错误
 	*	type 5 地址门店不能为空
+	
+分享后跳转链接 讨论
 
