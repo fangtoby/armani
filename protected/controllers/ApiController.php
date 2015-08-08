@@ -81,7 +81,7 @@ class ApiController extends Controller
 				'from'=>$from
 			));
 			//抽奖次数限制count($model) === 0
-			if(true){
+			if(count($model)){
 				$now = time();
 				$currectTime = date("Y-m-d H:i:s",$now);
 				$Market = Market::model()->findByPk($marketId);
