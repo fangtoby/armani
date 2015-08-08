@@ -26,25 +26,47 @@ class ApiController extends Controller
 	 *	code 3 重复抽奖限制
 	 *	code 4 手机号码格式错误
 	 *	code 5 地址门店不能为空
+	 *	code 6 店铺不存在
+	 *	code 7 地址不存在
 	 */
 	 
 	public function actionLottery()
 	{	
-		//$id = $this->uid;
+		//反馈参数
 		$code = array(
 			'lucky'=>1,
 			'sad'=>2,
 			'lock'=>3,
 			'format'=>4,
-			'empty'=>5
+			'empty'=>5,
+			'noShop'=>6,
+			'noCity'=>7
+		);
+		//奖品类型
+		$prizeType = array(
+			'normal'=>0,
+			'special'=>1
+		);
+		//抽奖途径
+		$fromArr = array(
+			'quick'=>0,
+			'all'=>1
 		);
 		
+		//$opendId = $_SESSION["openid"];
 		$cityId = $_GET['cityId'];
 		$marketId = $_GET['marketId'];
-		//$opendId = $_SESSION["openid"];
 		$opendId = "oPV4Ht7hM8LFcOB2LT8CAtTe1nw0";
-		$type = $_GET['type'];
+		$from = $_GET['type'];
 		$number = $_GET['phone'];
+		$specialOpen = false;
+		
+		//途径控制
+		if(($from != $fromArr['quick']) && ($from != $fromArr['all'])){
+			$this->jsonSuccess(array(
+				'type'=>$code['lock']
+			));	
+		}
 		
 		if(!is_numeric($cityId) ||  !is_numeric($marketId) || 
 		!isset($cityId) || !isset($marketId)){ 
@@ -54,34 +76,112 @@ class ApiController extends Controller
 		}
 		
 		if(isset($number) && preg_match("/1[3458]{1}\d{9}$/",$number)){ 
-			$model = Lottery::model()->findByAttributes(array(
+			$model = Lottery::model()->findAllByAttributes(array(
 				'phone'=>$number,
-				'type'=>$type,
-				'marketId'=>$marketId
+				'from'=>$from
 			));
-			
-			if(!$model){
-				
-				$model = new Lottery();
-				$model->phone = $number;
-				$model->cityId = $cityId;
-				$model->marketId = $marketId;
-				$model->createTime = date("Y-m-d H:i:s");
-				$model->updateTime = date("Y-m-d H:i:s");
-				$model->type = $type;
-				$model->win = 0;
-				
-				if($model->save()){
-					$this->jsonSuccess(array(
-						'type'=>$code['lucky']
-						));
+			//抽奖次数限制
+			if(count($model) === 0){
+				$now = time();
+				$currectTime = date("Y-m-d H:i:s",$now);
+				$Market = Market::model()->findByPk($marketId);
+				if($Market){
+					//判断特殊奖品
+					if($from == $prizeType['special']){
+						//特殊奖时间开启判断
+						if($now < strtotime($Market->endTime) && $now > strtotime($Market->startTime)){
+							//特殊奖品数量限制
+							if($Market->count < $Market->prize){
+								$specialOpen = true;
+							}
+						}
+					}
+					
 				}else{
+					$this->jsonSuccess(array(
+						'type'=>$code['noShop']
+					));	
+				}
+				$City = City::model()->findByPk($cityId);
+				if(!$City){
+					$this->jsonSuccess(array(
+						'type'=>$code['noCity']
+					));	
+				}
+				//奖品列表
+				if($specialOpen){
+					$prizeList = Prize::model()->findAll();
+				}else{
+					$prizeList = Prize::model()->findAllByAttributes(array(
+						'type'=>$prizeType['normal']
+					));
+				}
+				$rightPrizeModel = array();
+				//普通奖品时间判断
+				foreach($prizeList as $key=>$val){  
+					if($val->type != 1){
+						if($now < strtotime($val->endTime) && $now > strtotime($val->startTime) ){
+							$rightPrizeModel[] = $val;  
+						}
+					}else{
+						$rightPrizeModel[] = $val;  
+					}
+				}
+				$win = 0;
+				//随机奖品Model
+				$prizeCount = count($rightPrizeModel);
+				$prizeRand = rand(1, $prizeCount);
+				$correctPrizeModel = $rightPrizeModel[ $prizeRand - 1 ];
+				$correctPrizeId = $correctPrizeModel->id;
+				$correctPrizeType = $correctPrizeModel->type;
+				//抽奖记录参数
+				$recordParamArr = array(
+					"win"=>$win,
+					"from"=>$from,
+					"number"=>$number,
+					"cityId"=>$cityId,
+					"marketId"=>$marketId,
+					"giftId"=>$correctPrizeId,
+					"currectTime"=>$currectTime,
+					"correctPrizeType"=>$correctPrizeType,
+				);
+				//奖品总数限制判断
+				if($correctPrizeModel->number > $correctPrizeModel->count){
+					//插入抽奖记录	
+					$this->addLotteryRecord($recordParamArr);
 					$this->jsonSuccess(array(
 						'type'=>$code['sad']
 					));
 				}
+				//根据奖品Id，获取奖品中奖率
+				$rate = $correctPrizeModel->rate;
+				$currentNumber = 1;
+				$denominator = floor(bcdiv(1, $rate));
+				if($currentNumber === rand($currentNumber,$denominator)){
+					$recordParamArr['win'] = 1;
+				}else{
+					$this->addLotteryRecord($recordParamArr);
+					$this->jsonSuccess(array(
+						'type'=>$code['sad']
+					));
+				}
+				if($this->limitInitAndControl($now,$correctPrizeId,$correctPrizeModel->dayNumber,$correctPrizeModel->hourNumber,$currectTime)){
+					$correctPrizeModel->number += 1;
+					$correctPrizeModel->updateTime = $currectTime;
+					$correctPrizeModel->save();
+					$this->addLotteryRecord($recordParamArr);
+					$this->jsonSuccess(array(
+						'type'=>$code['lucky']
+					));
+				}else{
+					$recordParamArr['win'] = 0;
+					$this->addLotteryRecord($recordParamArr);
+					$this->jsonSuccess(array(
+						'type'=>$code['sad']
+					));
+				}
+				
 			}else{
-				$code = 3;
 				$this->jsonSuccess(array(
 						'type'=>$code['lock']
 				));	
@@ -92,6 +192,65 @@ class ApiController extends Controller
 			));	
 		}
 		
+	}
+	public function addLotteryRecord($param){
+		$Lottery = new Lottery();
+		$Lottery->phone = $param['number'];
+		$Lottery->cityId = $param['cityId'];
+		$Lottery->marketId = $param['marketId'];
+		$Lottery->createTime = $param['currectTime'];
+		$Lottery->updateTime = $param['currectTime'];
+		$Lottery->giftId = $param['giftId'];
+		$Lottery->type = $param['correctPrizeType'];
+		$Lottery->from = $param['from'];
+		$Lottery->win = $param['win'];
+		$Lottery->save();
+	}
+	
+	public function limitInitAndControl($now,$correctPrizeType,$dayLimit,$hourLimit,$currectTime){
+		$db = Yii::app()->db;
+		//判断当天中奖数量限制
+		$dayParamString = date("Y-m-d",$now); 
+		$sqlStr = "SELECT daylimit.count,daylimit.id FROM daylimit where date_format(daylimit.dayTime,'%Y-%m-%d') = '".$dayParamString."' and daylimit.pid = '".$correctPrizeType."' ";
+		$dayLimitArr = $db->createCommand($sqlStr)->queryrow(true);
+		//判断小时中奖数量限制
+		$hourParamString = date("Y-m-d H",$now); 
+		$sqlStr = "SELECT hourlimit.count,hourlimit.id FROM hourlimit where date_format(hourlimit.hourTime,'%Y-%m-%d %H') = '".$hourParamString."' and hourlimit.pid = '".$correctPrizeType."' ";
+		$hourLimitrArr = $db->createCommand($sqlStr)->queryrow(true);
+		if(!is_array($dayLimitArr)){
+			$Daylimit = new Daylimit();
+			$Daylimit->pid = $correctPrizeType;
+			$Daylimit->dayTime = $currectTime;
+			$Daylimit->createTime = $currectTime;
+			$Daylimit->updateTime = $currectTime;
+			$Daylimit->count = 0;
+			$Daylimit->save();
+		}else{
+			$Daylimit = Daylimit::model()->findByPk($dayLimitArr['id']);
+		}
+		if(!is_array($hourLimitrArr)){
+			$Hourlimit = new Hourlimit();
+			$Hourlimit->pid = $correctPrizeType;
+			$Hourlimit->hourTime = $currectTime;
+			$Hourlimit->createTime = $currectTime;
+			$Hourlimit->updateTime = $currectTime;
+			$Hourlimit->count = 0;
+			$Hourlimit->save();
+		}else{
+			$Hourlimit = Hourlimit::model()->findByPk($hourLimitrArr['id']);
+		}
+		
+		if(($Daylimit->count < $dayLimit) && ($Hourlimit->count < $hourLimit)){
+			$Daylimit->count = $Daylimit->count +1;
+			$Daylimit->updateTime = $currectTime;
+			$Daylimit->save(); 
+			$Hourlimit->count = $Hourlimit->count + 1;
+			$Hourlimit->updateTime = $currectTime;
+			$Hourlimit->save(); 
+			return true;
+		}else{
+			return false;
+		}
 	}
 	/**
 	 * 客户信息录入
