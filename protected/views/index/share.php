@@ -1,11 +1,9 @@
-
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
 	<meta content="telephone=no" name="format-detection" />
-    <link href="<?=Data::$data['staticUri']['css']?>jquery.fullPage.css" rel="stylesheet" />
     <link href="<?=Data::$data['staticUri']['css']?>style.css" rel="stylesheet" />
     <script>
     	var g_config = {					
@@ -59,7 +57,7 @@
 	</head>
 <body>
 <div class='card' style='display:none'>
-		<img src='<?=Data::$data['staticUri']['img']?>card/s.jpg' class='cardbg'/>
+		<img src='<?=Data::$data['staticUri']['img']?>card/s1_1.jpg' class='cardbg'/>
 		<div class='self_info'>
 			
 			<img src='<?=$info["headimgurl"];?>' width='70px' height='70px' />
@@ -71,7 +69,7 @@
 <script>
 $(function(){
 	var id = window.location.href.split('&v=')[1];
-	$('.cardbg').attr('src',<?=Data::$data['staticUri']['img']?> + 'card/s'+id+'.jpg')
+	$('.cardbg').attr('src',  '<?=Data::$data['staticUri']['img']?>card/s'+id+'.jpg')
 	$('.card').fadeIn();
 	$('.card a').click(function(){
 		window.location.href='http://'+window.location.host

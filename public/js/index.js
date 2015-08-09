@@ -49,7 +49,7 @@
 				
 				switch(index){
 					case 0:
-						window.location.href='http://'+window.location.host+'/index/setinfo';
+						window.location.replace( '/index/setinfo');
 						break;
 					case 1:
 						$('.category').hide()
@@ -77,7 +77,7 @@
 				
 				switch(index){
 					case 0:
-						window.location.href='http://'+window.location.host+'/index/setinfo';
+						window.location.replace( '/index/setinfo');
 						break;
 					case 1:
 						$('.sub_category').attr('class','').addClass('sub_category').hide();

@@ -10,14 +10,14 @@ class IndexController extends Controller
 			$info = CJSON::decode($_GET['info']);
 			
 			$openid = 'oPV4Ht0yokB6n-DEcr5JocRNPZv4';
-			/*
+			
 			$user = User::model()->findByAttributes(array(
 				'unionid'=>$openid
-			));*/
-			
+			));
+			/*
 			$user = User::model()->findAllByAttributes(array(
 				'unionid'=>$info['openid']
-			));
+			));*/
 			
 			if(!$user){
 				$user = new User();

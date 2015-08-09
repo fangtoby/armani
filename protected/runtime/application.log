@@ -8271,3 +8271,86 @@ Stack trace:
 REQUEST_URI=/index/css/style.css
 HTTP_REFERER=http://www.armani.com/index/setinfo
 ---
+2015/08/09 17:01:15 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\armani\armani\protected\controllers\IndexController.php:39)
+Stack trace:
+#0 C:\xampp\htdocs\armani\yii-1\framework\web\CController.php(286): IndexController->runAction()
+#1 C:\xampp\htdocs\armani\yii-1\framework\web\CController.php(265): IndexController->runActionWithFilters()
+#2 C:\xampp\htdocs\armani\yii-1\framework\web\CWebApplication.php(282): IndexController->run()
+#3 C:\xampp\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\armani\armani\index.php(14): CWebApplication->run()
+REQUEST_URI=/index/index?info=3434
+in C:\xampp\htdocs\armani\armani\protected\controllers\IndexController.php (39)
+in C:\xampp\htdocs\armani\armani\index.php (14)
+2015/08/09 17:07:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/css/jquery.fullPage.css".' in C:\xampp\htdocs\armani\yii-1\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController('public/css/jque...')
+#1 C:\xampp\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\armani\armani\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/public/css/jquery.fullPage.css
+HTTP_REFERER=http://www.armani.com/index/share?openid=oPV4Ht0yokB6n-DEcr5JocRNPZv4
+---
+2015/08/09 17:07:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/images/card/s.jpg".' in C:\xampp\htdocs\armani\yii-1\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController('public/images/c...')
+#1 C:\xampp\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\armani\armani\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/public/images/card/s.jpg
+HTTP_REFERER=http://www.armani.com/index/share?openid=oPV4Ht0yokB6n-DEcr5JocRNPZv4
+---
+2015/08/09 17:08:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/css/jquery.fullPage.css".' in C:\xampp\htdocs\armani\yii-1\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController('public/css/jque...')
+#1 C:\xampp\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\armani\armani\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/public/css/jquery.fullPage.css
+HTTP_REFERER=http://www.armani.com/index/share?openid=oPV4Ht0yokB6n-DEcr5JocRNPZv4
+---
+2015/08/09 17:08:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/images/card/s.jpg".' in C:\xampp\htdocs\armani\yii-1\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController('public/images/c...')
+#1 C:\xampp\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\armani\armani\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/public/images/card/s.jpg
+HTTP_REFERER=http://www.armani.com/index/share?openid=oPV4Ht0yokB6n-DEcr5JocRNPZv4
+---
+2015/08/09 17:08:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/images/card/sundefined.jpg".' in C:\xampp\htdocs\armani\yii-1\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController('public/images/c...')
+#1 C:\xampp\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\armani\armani\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/public/images/card/sundefined.jpg
+HTTP_REFERER=http://www.armani.com/index/share?openid=oPV4Ht0yokB6n-DEcr5JocRNPZv4
+---
+2015/08/09 17:14:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/css/jquery.fullPage.css".' in C:\xampp\htdocs\armani\yii-1\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController('public/css/jque...')
+#1 C:\xampp\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\armani\armani\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/public/css/jquery.fullPage.css
+HTTP_REFERER=http://www.armani.com/index/share?openid=oPV4Ht0yokB6n-DEcr5JocRNPZv4
+---
+2015/08/09 17:14:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/images/card/sundefined.jpg".' in C:\xampp\htdocs\armani\yii-1\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController('public/images/c...')
+#1 C:\xampp\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\armani\armani\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/public/images/card/sundefined.jpg
+HTTP_REFERER=http://www.armani.com/index/share?openid=oPV4Ht0yokB6n-DEcr5JocRNPZv4
+---
+2015/08/09 17:15:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/images/card/sundefined.jpg".' in C:\xampp\htdocs\armani\yii-1\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController('public/images/c...')
+#1 C:\xampp\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\armani\armani\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/public/images/card/sundefined.jpg
+HTTP_REFERER=http://www.armani.com/index/share?openid=oPV4Ht0yokB6n-DEcr5JocRNPZv4
+---
