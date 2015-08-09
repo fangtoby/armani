@@ -32,7 +32,7 @@
 			})
 			
 			$('.setback a').click(function(){
-				window.loaction.href="http://masterofglow.comeyes.cn/"
+				window.loaction.href="http://masterofglow.comeyes.cn/index/list"
 			})
 			
         },
@@ -115,7 +115,7 @@
 		
 		ajax:function(cityId,marketId,type,phone){
 			 $.ajax({
-       			 url: 'api/lottery',
+       			 url: '/api/lottery',
       			 type: "get",
         		 dataType: "json",
         		 async: false,
@@ -140,20 +140,15 @@
 				 		$('.backResult .msg').html('恭喜您<br>获取阿玛尼赋予'+response.data.prize+'<br>我们将短信通知邀您莅临专柜')
 				 		$('.setinfo').hide();
 				 		$('.backResult').show();
-				 		var vid = $('.cardbg').attr('src').split('images/card/')[1].split('.jpg')[0]
-				 		window.share.link='http://masterofglow.comeyes.cn/index/share?openid="<?=$info["openid"];?>"&v='+vid+''
+				 		var vid = $('.cardbg').attr('src').split( g_config.path.img + 'card/')[1].split('.jpg')[0]
+				 		window.share.link='http://masterofglow.comeyes.cn/index/share?openid='+ g_config.openid +'&v='+vid+''
 				 		window.share.desc='底妆大师阿玛尼15周年，我是第'+response.data.number+'个致敬大师的追随者'
 				 		shareConfig();
 				 	}
 				 
        			 }
   			  });
-		
 		}
-	
-		
-		
-		
 	
     });
 })(jQuery);

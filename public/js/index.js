@@ -5,12 +5,10 @@
     $.extend(Mgm.prototype, {
 		
         init: function(data) {
-        
-		  	
-		  	$('.self_info img').attr('src','<?=$info["headimgurl"];?>')
-			$('.self_info span').empty().html('<?=$info["nickname"];?>')
+		  	$('.self_info img').attr('src',g_config.headimgurl)
+			$('.self_info span').empty().html( g_config.nickname )
 			var self = this;
-			self.loadimages(['images/category.jpg','images/sub1.jpg','images/sub2.jpg','images/sub3.jpg'])
+			self.loadimages(['category.jpg','sub1.jpg','sub2.jpg','sub3.jpg'])
         },
 		
 		loadimages:function(arr){
@@ -30,7 +28,7 @@
 			
 			for (var i=0; i<arr.length; i++){
 				newimages[i]=new Image()
-				newimages[i].src=arr[i]
+				newimages[i].src= g_config.path.img + arr[i]
 				newimages[i].onload=function(){
 					imageloadpost()
 				}
@@ -51,7 +49,7 @@
 				
 				switch(index){
 					case 0:
-						window.location.href='http://'+window.location.host+'/html/setinfo.html';
+						window.location.href='http://'+window.location.host+'/index/setinfo';
 						break;
 					case 1:
 						$('.category').hide()
@@ -79,7 +77,7 @@
 				
 				switch(index){
 					case 0:
-						window.location.href='http://'+window.location.host+'/html/setinfo.html';
+						window.location.href='http://'+window.location.host+'/index/setinfo';
 						break;
 					case 1:
 						$('.sub_category').attr('class','').addClass('sub_category').hide();
@@ -89,19 +87,19 @@
 					case 2:
 						var id = $('.sub_category').attr('data-id');
 						$('.sub_category').hide()
-						$('.card .cardbg').attr('src','images/card/s'+id+'_1.jpg');
+						$('.card .cardbg').attr('src',g_config.path.img + 'card/s'+id+'_1.jpg');
 						$('.result').fadeIn();
 						break;
 					case 3:
 						var id = $('.sub_category').attr('data-id');
 						$('.sub_category').hide()
-						$('.card .cardbg').attr('src','images/card/s'+id+'_2.jpg')
+						$('.card .cardbg').attr('src',g_config.path.img + 'card/s'+id+'_2.jpg')
 						$('.result').fadeIn();
 						break;
 					case 4:
 						var id = $('.sub_category').attr('data-id');
 						$('.sub_category').hide()
-						$('.card .cardbg').attr('src','images/card/s'+id+'_3.jpg')
+						$('.card .cardbg').attr('src',g_config.path.img + 'card/s'+id+'_3.jpg')
 						$('.result').fadeIn();
 						break;
 				
@@ -119,9 +117,6 @@
 			
 			
 		}
-		
-		
-		
 	
     });
 })(jQuery);

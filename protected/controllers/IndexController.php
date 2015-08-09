@@ -13,8 +13,6 @@ class IndexController extends Controller
 				'unionid'=>$info['openid']
 			));
 			
-			//$_SESSION["openid"] = $info['openid'];
-			
 			if(!$user){
 				$user = new User();
 				$user->unionid = $info['openid'];
@@ -35,7 +33,6 @@ class IndexController extends Controller
 			Yii::app()->session['uid'] = $user->id;
 			
 			$this->render('list',array(
-				'signPackage'=>$this->signPackage,
 				'result'=>$this->result,
 				'url'=>Yii::app()->params['severUrl'],
 				'info'=>$info
@@ -52,54 +49,36 @@ class IndexController extends Controller
 			$url="https://open.weixin.qq.com/connect/oauth2/authorize?appid={$appId}&redirect_uri={$ulink}&response_type=code&scope=snsapi_userinfo&state=State#wechat_redirect";
 	
 			$this->render('index',array(
-				'signPackage'=>$this->signPackage,
 				'url'=>$url
 			));
 		}
 	}
-	
-	public function actionList()
-	{
-		//$info = $_GET['info'];
-		
-		$models = Product::model()->findAll();
-		$data = array();
-		
-		foreach($models as $model){
-			$data[] = $model->attributes;
+	public function actionList(){
+		$uid = Yii::app()->session['uid'];
+		$user = User::model()->findByPk($uid);
+		if(count($user)){
+			$this->render('list',array(
+				'info'=>array(
+					'openid'=>$user->id,
+					'nickname'=>$user->nickname,
+					'headimgurl'=>$user->headimgurl,
+				)
+			));
 		}
-		/*$result= array_map(function($record){ 
-			return $record->attributes; 
-		},$models);
-		*/
-		$this->render('list',array(
-			'signPackage'=>$this->signPackage,
-			'result'=>$this->result,
-			'data'=>$data,
-			//'info'=>$info
-		));
-		
 	}
-	
-	public function actionDetail()
+	public function actionSetinfo()
 	{
-		$pid = isset($_GET['pid']) ? $_GET['pid']:1;
-		/*
-		$models = Detail::model()->findAllByAttributes(array(
-			'pid'=>$pid
-		));
-		
-		$data = array();
-		
-		foreach($item as $models){
-			$data[] = $model->attributes;
+		$uid = Yii::app()->session['uid'];
+		$user = User::model()->findByPk($uid);
+		if(count($user)){
+			$this->render('setinfo',array(
+				'info'=>array(
+					'openid'=>$user->id,
+					'nickname'=>$user->nickname,
+					'headimgurl'=>$user->headimgurl,
+				)
+			));
 		}
-		
-		if(!$models) $this->result = 0;
-		*/
-		$this->render('detail',array(
-			'pid'=>$pid
-		));
 		
 	}
 	
@@ -113,59 +92,16 @@ class IndexController extends Controller
 				));
 			if(count($user)){
 				$this->render('share',array(
-					'signPackage'=>$this->signPackage,
-					'nickname'=>$user->nickname,
-					'headimgurl'=>$user->headimgurl,
-					'number'=>$user->id
+						'number'=>$user->id,
+						'info'=>array(
+							'openid'=>$user->id,
+							'nickname'=>$user->nickname,
+							'headimgurl'=>$user->headimgurl,
+					)
 				));
 			}
 			
 		}
-		
 	}
-	
-	/*
-	*	申请粉底
-	*/
-	
-	public function actionApply()
-	{
-		$City = City::model()->findAll();
-		$Market = Market::model()->findAll();
-		
-		$this->render('apply',array(
-			'signPackage'=>$this->signPackage,
-			'city'=>$City,
-			'market'=>$Market
-		));
-	}
-	
-	public function actionContact()
-	{
-		$this->render('contact',array(
-			'signPackage'=>$this->signPackage,
-		));
-	}
-	
-	public function actionFollow()
-	{
-		$pid = isset($_GET['pid']) ? $_GET['pid']:1;
-		$did = isset($_GET['did']) ? $_GET['did']:1;
-		$this->render('follow',array(
-			'signPackage'=>$this->signPackage,
-			'pid'=>$pid,
-			'did'=>$did
-		));
-	}
-	
-	public function actionAddress()
-	{
-		$this->render('address',array(
-			'signPackage'=>$this->signPackage,
-		));
-	}
-	public function actionError()
-	{
-		$this->render('Error');
-	}
+
 }

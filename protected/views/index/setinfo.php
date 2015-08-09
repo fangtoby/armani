@@ -5,8 +5,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
 	<meta content="telephone=no" name="format-detection" />
-    <link href="<?=Data::$data['staticUri']['css']?>jquery.fullPage.css" rel="stylesheet" />
-    <link href="<?=Data::$data['staticUri']['css']?>style.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
     <script>
     	var g_config = {					
 				openid:"<?=$info["openid"];?>",
@@ -41,6 +40,8 @@
     <!--移动端版本兼容 end -->
     <title></title>
     <script src="<?=Data::$data['staticUri']['js']?>jquery.min.js"></script>
+    <script src="<?=Data::$data['staticUri']['js']?>shops.js"></script>
+    <script src="<?=Data::$data['staticUri']['js']?>setinfo.js"></script>
 
 
 	<script>
@@ -57,25 +58,29 @@
 	<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
     <script src="<?=Data::$data['staticUri']['js']?>wechat.js"></script>
 	</head>
-<body>
-<div class='card' style='display:none'>
-		<img src='<?=Data::$data['staticUri']['img']?>card/s.jpg' class='cardbg'/>
-		<div class='self_info'>
-			
-			<img src='<?=$info["headimgurl"];?>' width='70px' height='70px' />
-			<span><?=$info["nickname"];?></span>
+<body style='background:#fbefe3'>
+<div class="getprize">
+	<form>
+		<input type='text' placeholder='手机号码' maxLength='11'/>
+		<div class='select citylist'>
+			<span class='city' data-id='0'>城市</span>
+			<select>
+				
+			</select>
 		</div>
-		<a href='javascript:;'><img src='<?=Data::$data['staticUri']['img']?>cardbtn.jpg' /></a>
-	</div>
+		<div class='select shoplist'>
+			<span class='shop' data-id='0'>专柜</span>
+			<select>
+				
+			</select>
+		</div>
+		<a href='javascript:;'><img src='<?=Data::$data['staticUri']['img']?>submitbtn.png' /></a>
+	</form>
+</div>
+ <div class='setback' style="display:none">
+	<img src='<?=Data::$data['staticUri']['img']?>success.png' />
+	<a href='javascript:;'><img src='<?=Data::$data['staticUri']['img']?>backbtn.png' /></a>
+ </div>
 </body>
-<script>
-$(function(){
-	var id = window.location.href.split('&v=')[1];
-	$('.cardbg').attr('src',<?=Data::$data['staticUri']['img']?> + 'card/s'+id+'.jpg')
-	$('.card').fadeIn();
-	$('.card a').click(function(){
-		window.location.href='http://'+window.location.host
-	})
-})
-</script>
+
 </html>

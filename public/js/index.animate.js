@@ -11,7 +11,6 @@
 			'gifjpg/1-13.jpg','gifjpg/1-14.jpg','gifjpg/1-15.jpg','gifjpg/1-16.jpg','gifjpg/1-17.jpg','gifjpg/1-18.jpg','gifjpg/1-19.jpg',
 			'gifjpg/1-20.jpg','p1_1.png','p1_2.png','p1_3.png','p3_bg.jpg','bg.jpg'])
         },
-		
 		loadimages : function(arr){
 			var self=this;
 			var newimages=[], loadedimages=0
