@@ -53,10 +53,9 @@ class ApiController extends Controller
 			'all'=>1
 		);
 		
-		//$opendId = $_SESSION["openid"];
+		//$opendId = Yii::app()->session['uid'];
 		$cityId = $_GET['cityId'];
 		$marketId = $_GET['marketId'];
-		$opendId = "oPV4Ht7hM8LFcOB2LT8CAtTe1nw0";
 		$from = $_GET['type'];
 		$number = $_GET['phone'];
 		$specialOpen = false;
@@ -199,7 +198,14 @@ class ApiController extends Controller
 							'type'=>$code['sad']
 						));
 					}
-					if($this->limitInitAndControl($now,$correctPrizeId,$correctPrizeModel->dayNumber,$correctPrizeModel->hourNumber,$currectTime)){
+					$limitParamArr = array(
+						'now'=>$now,
+						'correctPrizeId'=>$correctPrizeId,
+						'dayNumber'=>$correctPrizeModel->dayNumber,
+						'hourNumber'=>$correctPrizeModel->hourNumber,
+						'currectTime'=>$currectTime
+					);
+					if($this->limitInitAndControl($limitParamArr)){
 						$correctPrizeModel->number += 1;
 						$correctPrizeModel->updateTime = $currectTime;
 						$correctPrizeModel->save();
@@ -242,22 +248,23 @@ class ApiController extends Controller
 		$Lottery->save();
 	}
 	
-	public function limitInitAndControl($now,$correctPrizeType,$dayLimit,$hourLimit,$currectTime){
+	public function limitInitAndControl($param){
 		$db = Yii::app()->db;
 		//判断当天中奖数量限制
-		$dayParamString = date("Y-m-d",$now); 
-		$sqlStr = "SELECT daylimit.count,daylimit.id FROM daylimit where date_format(daylimit.dayTime,'%Y-%m-%d') = '".$dayParamString."' and daylimit.pid = '".$correctPrizeType."' ";
+		$dayParamString = date("Y-m-d",$param["now"]); 
+		$sqlStr = "SELECT daylimit.count,daylimit.id FROM daylimit where date_format(daylimit.dayTime,'%Y-%m-%d') = '".$dayParamString."' and daylimit.pid = '".$param["correctPrizeId"]."' ";
 		$dayLimitArr = $db->createCommand($sqlStr)->queryrow(true);
 		//判断小时中奖数量限制
-		$hourParamString = date("Y-m-d H",$now); 
-		$sqlStr = "SELECT hourlimit.count,hourlimit.id FROM hourlimit where date_format(hourlimit.hourTime,'%Y-%m-%d %H') = '".$hourParamString."' and hourlimit.pid = '".$correctPrizeType."' ";
+		$hourParamString = date("Y-m-d H",$param["now"]); 
+		$sqlStr = "SELECT hourlimit.count,hourlimit.id FROM hourlimit where date_format(hourlimit.hourTime,'%Y-%m-%d %H') = '".$hourParamString."' and hourlimit.pid = '".$param["correctPrizeId"]."' ";
 		$hourLimitrArr = $db->createCommand($sqlStr)->queryrow(true);
+		
 		if(!is_array($dayLimitArr)){
 			$Daylimit = new Daylimit();
-			$Daylimit->pid = $correctPrizeType;
-			$Daylimit->dayTime = $currectTime;
-			$Daylimit->createTime = $currectTime;
-			$Daylimit->updateTime = $currectTime;
+			$Daylimit->pid = $param["correctPrizeId"];
+			$Daylimit->dayTime = $param["currectTime"];
+			$Daylimit->createTime = $param["currectTime"];
+			$Daylimit->updateTime = $param["currectTime"];
 			$Daylimit->count = 0;
 			$Daylimit->save();
 		}else{
@@ -265,22 +272,22 @@ class ApiController extends Controller
 		}
 		if(!is_array($hourLimitrArr)){
 			$Hourlimit = new Hourlimit();
-			$Hourlimit->pid = $correctPrizeType;
-			$Hourlimit->hourTime = $currectTime;
-			$Hourlimit->createTime = $currectTime;
-			$Hourlimit->updateTime = $currectTime;
+			$Hourlimit->pid = $param["correctPrizeId"];
+			$Hourlimit->hourTime =  $param["currectTime"];
+			$Hourlimit->createTime =  $param["currectTime"];
+			$Hourlimit->updateTime =  $param["currectTime"];
 			$Hourlimit->count = 0;
 			$Hourlimit->save();
 		}else{
 			$Hourlimit = Hourlimit::model()->findByPk($hourLimitrArr['id']);
 		}
 		
-		if(($Daylimit->count < $dayLimit) && ($Hourlimit->count < $hourLimit)){
+		if(($Daylimit->count <  $param["dayNumber"]) && ($Hourlimit->count < $param["hourNumber"])){
 			$Daylimit->count = $Daylimit->count +1;
-			$Daylimit->updateTime = $currectTime;
+			$Daylimit->updateTime = $param["currectTime"];
 			$Daylimit->save(); 
 			$Hourlimit->count = $Hourlimit->count + 1;
-			$Hourlimit->updateTime = $currectTime;
+			$Hourlimit->updateTime = $param["currectTime"];
 			$Hourlimit->save(); 
 			return true;
 		}else{

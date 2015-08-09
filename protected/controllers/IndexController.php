@@ -9,13 +9,13 @@ class IndexController extends Controller
 		if(isset($_GET['info']) && $_GET['info'] !=  NULL){
 			$info = CJSON::decode($_GET['info']);
 			
-			$model = User::model()->findAllByAttributes(array(
+			$user = User::model()->findAllByAttributes(array(
 				'unionid'=>$info['openid']
 			));
 			
 			//$_SESSION["openid"] = $info['openid'];
 			
-			if(!$model){
+			if(!$user){
 				$user = new User();
 				$user->unionid = $info['openid'];
 				
@@ -30,33 +30,23 @@ class IndexController extends Controller
 				$user->sex = $info['sex'];
 				$user->headimgurl = $info['headimgurl'];
 				$user->save();
-			}else{
-				/*$model->unionid = $info['openid'];
-				$model->nickname = $info['nickname'];
-				$model->sex = $info['sex'];
-				$model->headimgurl = $info['headimgurl'];
-				$model->save();*/
 			}
 			
-			$models = Product::model()->findAll();
+			//Yii::app()->session['uid'] = $user->id;
 			
-			$data = array();
-			
-			foreach($models as $model){
-				$data[] = $model->attributes;
-			}
 			$this->render('list',array(
 				'signPackage'=>$this->signPackage,
 				'result'=>$this->result,
-				'data'=>$data,
+				'url'=>Yii::app()->params['severUrl'],
 				'info'=>$info
 			));
 			
 		}else{
-			$id = "7";
-			$appId = "wxc2efec250f2952a3";
-			$domain = "wxresponse.comeyes.com";
-			$link ="http://masterofglow.comeyes.cn";
+			$id = Yii::app()->params['weichat']['id'];
+			$appId = Yii::app()->params['weichat']['appId'];
+			$domain = Yii::app()->params['weichat']['domain'];
+			$link = Yii::app()->params['severUrl'];
+			
 			$ulink =  urlencode("http://{$domain}/External/Oauth.ashx?link={$link}&id={$id}");
 			
 			$url="https://open.weixin.qq.com/connect/oauth2/authorize?appid={$appId}&redirect_uri={$ulink}&response_type=code&scope=snsapi_userinfo&state=State#wechat_redirect";

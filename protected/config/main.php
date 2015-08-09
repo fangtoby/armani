@@ -40,6 +40,7 @@ return array(
 		),
 		'admin' => array(  
 			'class' => 'AdminWebUser', //后台登录类实例  
+			'allowAutoLogin'=>true,
 			'stateKeyPrefix' => 'admin', //后台session前缀  
 			"guestName" => "游客"  
 		),
@@ -91,7 +92,8 @@ return array(
 	// using Yii::app()->params['paramName']
 	'params'=>array(
 		// this is used in contact page
-		'adminEmail'=>'webmaster@example.com',
+		'severUrl'=>'http://masterofglow.comeyes.cn',
+		'weichat'=>require(dirname(__FILE__).'/weichat.php'),
 		'version'=>require(dirname(__FILE__).'/version.php'),
 	),
 );
