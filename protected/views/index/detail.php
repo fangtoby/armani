@@ -12,17 +12,8 @@
     <div id="content">
     <?php
 	
-	$db = Yii::app()->db;
-	$t=time(); 
- 	echo date("Y-m-d",$t); 
-	$correctPrizeType = 1;
-	$hourParamString = date("Y-m-d H",$t); 
-		$sqlStr = "SELECT hourlimit.count,hourlimit.id FROM hourlimit where date_format(hourlimit.hourTime,'%Y-%m-%d %H') = '".$hourParamString."' and hourlimit.pid = '".$correctPrizeType."' ";
-		$hourLimitrArr = $db->createCommand($sqlStr)->queryrow(true);
-	var_dump($hourLimitrArr);
-	
-    	$msg = new SendMessage('14782593339','34',NULL);
-		echo $msg->send();
+		echo SendMessage::send('14782593339','34',NULL);
+    echo "<br />"
 	?>
 		<a href="<?=$this->createUrl('index/list',array('pid'=>$pid))?>">&lt;返回 </a>
         <span>选择的是<?=$pid?></span>

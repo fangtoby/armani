@@ -18,27 +18,26 @@
 */
 class SendMessage{
 	
-	private $uid = "clarisonic2014lucky";
-	private $pwd = "ccegroup2014&mobile";
-	private $mobile;
-	private $msg;
-	private $dtime;
-	private $optional_headers = NULL;
-	private $url = "http://www.smsadmin.cn/smsmarketing/wwwroot/api/get_send/";
+	public static $uid = "clarisonic2014lucky";
+	public static $pwd = "ccegroup2014&mobile";
+	public static $mobile;
+	public static $msg;
+	public static $dtime;
+	public static $optional_headers = NULL;
+	public static $url = "http://www.smsadmin.cn/smsmarketing/wwwroot/api/get_send/";
 	
-	public function __construct($mobile, $msg, $dtime = NULL) {
-		$this->mobile = $mobile;
-		$this->msg = $msg;
-		$this->dtime = $dtime;
-    }
-	
-	public function send(){
+	public static function send($mobile, $msg, $dtime = NULL){
+		
+		self::$mobile = $mobile;
+		self::$msg = $msg;
+		self::$dtime = $dtime;
+
 		$data = array(
-			'uid'=>$this->uid,
-			'pwd'=>$this->pwd,
-			'mobile'=>$this->mobile,
-			'msg'=>$this->msg,
-			'dtime'=>$this->dtime
+			'uid'=>self::$uid,
+			'pwd'=>self::$pwd,
+			'mobile'=>self::$mobile,
+			'msg'=>self::$msg,
+			'dtime'=>self::$dtime
 		);
 		
 		$params = array('http' => array(
@@ -46,11 +45,11 @@ class SendMessage{
 					  'content' => $data
 				   ));
 				   
-		 if ($this->optional_headers !== null) {
-			$params['http']['header'] = $this->optional_headers;
+		 if (self::$optional_headers !== null) {
+			$params['http']['header'] = self::$optional_headers;
 		 }
 		 $ctx = stream_context_create($params);
-		 $fp = @fopen($this->url, 'rb', false, $ctx);
+		 $fp = @fopen(self::$url, 'rb', false, $ctx);
 		 if (!$fp) {
 			throw new Exception("Problem with $url, $php_errormsg");
 		 }
@@ -62,13 +61,13 @@ class SendMessage{
 	}
 	function sends(){
 		$data = array(
-			'uid'=>$this->uid,
-			'pwd'=>$this->pwd,
-			'mobile'=>$this->mobile,
-			'msg'=>$this->msg,
-			'dtime'=>$this->dtime
+			'uid'=>self::$uid,
+			'pwd'=>self::$pwd,
+			'mobile'=>self::$mobile,
+			'msg'=>self::$msg,
+			'dtime'=>self::$dtime
 		);
-		return $this->send($this->url,$data);	
+		return self::$send(self::$url,$data);	
 	}
 	function send_post($url, $post_data) {  
 	  
@@ -89,11 +88,11 @@ class SendMessage{
   
 	public function sendMs(){
 		$data = array(
-			'uid'=>$this->uid,
-			'pwd'=>$this->pwd,
-			'mobile'=>$this->mobile,
-			'msg'=>$this->msg,
-			'dtime'=>$this->dtime
+			'uid'=>self::$uid,
+			'pwd'=>self::$pwd,
+			'mobile'=>self::$mobile,
+			'msg'=>self::$msg,
+			'dtime'=>self::$dtime
 		);
 		
 		$o = "" ;
@@ -103,7 +102,7 @@ class SendMessage{
 		} 
 		
 		$post_data = substr( $o, 0, -1);
-		$ch = curl_init($this->url) ;
+		$ch = curl_init(self::$url) ;
 		curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "GET"); // 正确
 		//curl_exec($ch);
 		

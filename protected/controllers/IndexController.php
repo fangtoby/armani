@@ -32,7 +32,7 @@ class IndexController extends Controller
 				$user->save();
 			}
 			
-			//Yii::app()->session['uid'] = $user->id;
+			Yii::app()->session['uid'] = $user->id;
 			
 			$this->render('list',array(
 				'signPackage'=>$this->signPackage,
@@ -116,6 +116,7 @@ class IndexController extends Controller
 					'signPackage'=>$this->signPackage,
 					'nickname'=>$user->nickname,
 					'headimgurl'=>$user->headimgurl,
+					'number'=>$user->id
 				));
 			}
 			

@@ -28,6 +28,7 @@ class ApiController extends Controller
 	 *	code 5 地址门店不能为空
 	 *	code 6 店铺不存在
 	 *	code 7 地址不存在
+	 *	code 8 session过期
 	 */
 	 
 	public function actionLottery()
@@ -40,7 +41,8 @@ class ApiController extends Controller
 			'format'=>4,
 			'empty'=>5,
 			'noShop'=>6,
-			'noCity'=>7
+			'noCity'=>7,
+			'timeout'=>8
 		);
 		//奖品类型
 		$prizeType = array(
@@ -53,7 +55,14 @@ class ApiController extends Controller
 			'all'=>1
 		);
 		
-		//$opendId = Yii::app()->session['uid'];
+		$uid = Yii::app()->session['uid'];
+
+		if (!isset($uid)) {
+			$this->jsonSuccess(array(
+				'type'=>$code['timeout']
+			));	
+		}
+
 		$cityId = $_GET['cityId'];
 		$marketId = $_GET['marketId'];
 		$from = $_GET['type'];
@@ -138,6 +147,7 @@ class ApiController extends Controller
 				$correctPrizeModel = $rightPrizeModel[ $prizeRand - 1 ];
 				$correctPrizeId = $correctPrizeModel->id;
 				$correctPrizeType = $correctPrizeModel->type;
+				$prizeNoteStr = $correctPrizeModel->note."".$correctPrizeModel->nmae;
 				//抽奖记录参数
 				$recordParamArr = array(
 					"win"=>$win,
@@ -175,7 +185,9 @@ class ApiController extends Controller
 					$Market->save();
 					$this->addLotteryRecord($recordParamArr);
 					$this->jsonSuccess(array(
-							'type'=>$code['lucky']
+							'type'=>$code['lucky'],
+							'prize'=>$prizeNoteStr,
+							'number'=>$uid
 					));
 				}else{//普通奖品
 					//奖品总数限制判断
@@ -212,6 +224,8 @@ class ApiController extends Controller
 						$this->addLotteryRecord($recordParamArr);
 						$this->jsonSuccess(array(
 							'type'=>$code['lucky']
+							'prize'=>$prizeNoteStr,
+							'number'=>$uid
 						));
 					}else{
 						$recordParamArr['win'] = 0;
