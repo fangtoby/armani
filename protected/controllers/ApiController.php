@@ -55,8 +55,9 @@ class ApiController extends Controller
 			'all'=>1
 		);
 		
-		$uid = Yii::app()->session['uid'];
-
+		//$uid = Yii::app()->session['uid'];
+		$uid = 5;
+		
 		if (!isset($uid)) {
 			$this->jsonSuccess(array(
 				'type'=>$code['timeout']
@@ -147,7 +148,7 @@ class ApiController extends Controller
 				$correctPrizeModel = $rightPrizeModel[ $prizeRand - 1 ];
 				$correctPrizeId = $correctPrizeModel->id;
 				$correctPrizeType = $correctPrizeModel->type;
-				$prizeNoteStr = $correctPrizeModel->note."".$correctPrizeModel->nmae;
+				$prizeNoteStr = $correctPrizeModel->note."".$correctPrizeModel->name;
 				//抽奖记录参数
 				$recordParamArr = array(
 					"win"=>$win,
@@ -201,7 +202,7 @@ class ApiController extends Controller
 					//根据奖品Id，获取奖品中奖率
 					$rate = $correctPrizeModel->rate;
 					$currentNumber = 1;
-					$denominator = floor(bcdiv(1, $rate));
+					$denominator = floor(1/$rate);
 					if($currentNumber === rand($currentNumber,$denominator)){
 						$recordParamArr['win'] = 1;
 					}else{
