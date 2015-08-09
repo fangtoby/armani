@@ -41,7 +41,7 @@
     <title></title>
     <script src="<?=Data::$data['staticUri']['js']?>jquery.min.js"></script>
     <script src="<?=Data::$data['staticUri']['js']?>shops.js"></script>
-    <script src="<?=Data::$data['staticUri']['js']?>setinfo.js"></script>
+    <script src="<?=Data::$data['staticUri']['js']?>setInfo.js"></script>
 
 
 	<script>
