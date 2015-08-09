@@ -72,8 +72,9 @@ class IndexController extends Controller
 		}
 	}
 	public function actionList(){
-		//$uid = Yii::app()->session['uid'];
-		$uid = 5;
+		
+		$uid = Yii::app()->session['uid'];
+		//$uid = 5;
 		$user = User::model()->findByPk($uid);
 		if(count($user)){
 			$this->render('list',array(
@@ -87,8 +88,8 @@ class IndexController extends Controller
 	}
 	public function actionSetinfo()
 	{
-		//$uid = Yii::app()->session['uid'];
-		$uid = 5;
+		$uid = Yii::app()->session['uid'];
+		//$uid = 5;
 		$user = User::model()->findByPk($uid);
 		if(count($user)){
 			$this->render('setinfo',array(

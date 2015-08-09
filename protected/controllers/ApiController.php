@@ -55,8 +55,8 @@ class ApiController extends Controller
 			'all'=>1
 		);
 		
-		//$uid = Yii::app()->session['uid'];
-		$uid = 5;
+		$uid = Yii::app()->session['uid'];
+		//$uid = 5;
 		
 		if (!isset($uid)) {
 			$this->jsonSuccess(array(
