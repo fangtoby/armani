@@ -50,7 +50,7 @@
 	</script>
 	
 	<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
-    <script src="<?=Data::$data['staticUri']['js']?>weixinshare.js"></script>
+    <script src="<?=Data::$data['staticUri']['js']?>wechat.js"></script>
 	</head>
 <body>
 <div class='loading'>
