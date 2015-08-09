@@ -223,7 +223,7 @@ class ApiController extends Controller
 						$correctPrizeModel->save();
 						$this->addLotteryRecord($recordParamArr);
 						$this->jsonSuccess(array(
-							'type'=>$code['lucky']
+							'type'=>$code['lucky'],
 							'prize'=>$prizeNoteStr,
 							'number'=>$uid
 						));
