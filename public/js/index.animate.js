@@ -6,10 +6,10 @@
 		
         init: function(data) {
         
-			this.loadimages(['images/gifjpg/1-0.jpg','images/gifjpg/1-1.jpg','images/gifjpg/1-2.jpg','images/gifjpg/1-3.jpg','images/gifjpg/1-4.jpg','images/gifjpg/1-5.jpg',
-			'images/gifjpg/1-6.jpg','images/gifjpg/1-7.jpg','images/gifjpg/1-8.jpg','images/gifjpg/1-9.jpg','images/gifjpg/1-10.jpg','images/gifjpg/1-11.jpg','images/gifjpg/1-12.jpg',
-			'images/gifjpg/1-13.jpg','images/gifjpg/1-14.jpg','images/gifjpg/1-15.jpg','images/gifjpg/1-16.jpg','images/gifjpg/1-17.jpg','images/gifjpg/1-18.jpg','images/gifjpg/1-19.jpg',
-			'images/gifjpg/1-20.jpg','images/p1_1.png','images/p1_2.png','images/p1_3.png','images/p3_bg.jpg','images/bg.jpg'])
+			this.loadimages(['gifjpg/1-0.jpg','gifjpg/1-1.jpg','gifjpg/1-2.jpg','gifjpg/1-3.jpg','gifjpg/1-4.jpg','gifjpg/1-5.jpg',
+			'gifjpg/1-6.jpg','gifjpg/1-7.jpg','gifjpg/1-8.jpg','gifjpg/1-9.jpg','gifjpg/1-10.jpg','gifjpg/1-11.jpg','gifjpg/1-12.jpg',
+			'gifjpg/1-13.jpg','gifjpg/1-14.jpg','gifjpg/1-15.jpg','gifjpg/1-16.jpg','gifjpg/1-17.jpg','gifjpg/1-18.jpg','gifjpg/1-19.jpg',
+			'gifjpg/1-20.jpg','p1_1.png','p1_2.png','p1_3.png','p3_bg.jpg','bg.jpg'])
         },
 		
 		loadimages : function(arr){
@@ -31,7 +31,7 @@
 			
 			for (var i=0; i<arr.length; i++){
 				newimages[i]=new Image()
-				newimages[i].src=arr[i]
+				newimages[i].src= g_config.path.img + arr[i]
 				newimages[i].onload=function(){
 					imageloadpost()
 				}
@@ -83,7 +83,7 @@
 			var self = this;
 				num++;
 				if(num<=20){
-					$('.part1 img').attr('src','images/gifjpg/1-'+num+'.jpg')
+					$('.part1 img').attr('src',g_config.path.img + 'gifjpg/1-'+num+'.jpg')
 					setTimeout(function(){
 						self.flow(num);
 					},100)
