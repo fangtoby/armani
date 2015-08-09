@@ -18,7 +18,6 @@
 		}else{
 			
 		}
-    echo "<br />";
 	?>
     </div><!-- content -->
 </body>
