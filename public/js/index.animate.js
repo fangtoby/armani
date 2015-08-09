@@ -70,7 +70,7 @@
 			},1000)
 			
 			$('.part3 a').on('touchstart',function(){
-				window.location.replace("http://masterofglow.comeyes.cn/");
+				window.location.replace( g_config.validateUrl );
 			})
 			
 		},
