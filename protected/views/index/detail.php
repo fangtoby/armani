@@ -10,10 +10,13 @@
 </head>
 <body>
     <div id="content">
-    <?php
-	
+	<?php
+
 		echo SendMessage::send('14782593339','34',NULL);
-    echo "<br />"
+    echo "<br />";
+
+    echo Yii::app()->session['uid'];
+    echo "<br />";
 	?>
 		<a href="<?=$this->createUrl('index/list',array('pid'=>$pid))?>">&lt;返回 </a>
         <span>选择的是<?=$pid?></span>

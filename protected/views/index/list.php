@@ -28,6 +28,10 @@
             <li>NonceStr:<span class="NonceStr"></span></li>
             <li>SignaTure:<span class="SignaTure"></span></li>
         </ul>
+        <?php 
+        	 echo Yii::app()->session['uid'];
+    echo "<br />";
+        ?>
         <span>已结登陆</span>
         <ul class="product-list">
         	<li><a href="<?=$this->createUrl('index/detail',array('pid'=>1))?>"> 详情1 </a></li>
