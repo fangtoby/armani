@@ -123,5 +123,7 @@ class IndexController extends Controller
 			
 		}
 	}
-
+	public function actionDetail(){
+		$this->render('detail');
+	}
 }

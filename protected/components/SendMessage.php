@@ -16,6 +16,7 @@
 * 
 * @author: fangtoby@live.cn
 */
+
 class SendMessage{
 	
 	public static $uid = "clarisonic2014lucky";
@@ -26,6 +27,16 @@ class SendMessage{
 	public static $optional_headers = NULL;
 	public static $url = "http://www.smsadmin.cn/smsmarketing/wwwroot/api/get_send/";
 	
+	public static function sendMs($mobile, $msg, $dtime = NULL){
+		$url = self::$url."?uid=".self::$uid."&pwd=".self::$pwd."&mobile=".$mobile."&msg=".$msg."&dtime=";
+		$html = iconv('GBK', 'UTF-8', file_get_contents($url));
+		$result = substr($html, 0, 1 );
+		if($result == "0"){
+			return true;	 
+		}else{
+			return false;
+		}
+	}
 	public static function send($mobile, $msg, $dtime = NULL){
 		
 		self::$mobile = $mobile;
@@ -59,7 +70,12 @@ class SendMessage{
 		 }
 		 return $response;
 	}
-	function sends(){
+	function sends($mobile, $msg, $dtime = NULL){
+		
+		self::$mobile = $mobile;
+		self::$msg = $msg;
+		self::$dtime = $dtime;
+
 		$data = array(
 			'uid'=>self::$uid,
 			'pwd'=>self::$pwd,
@@ -67,7 +83,8 @@ class SendMessage{
 			'msg'=>self::$msg,
 			'dtime'=>self::$dtime
 		);
-		return self::$send(self::$url,$data);	
+		
+		return self::send_post(self::$url,$data);	
 	}
 	function send_post($url, $post_data) {  
 	  
@@ -85,27 +102,4 @@ class SendMessage{
 	  
 	  return $result;  
 	}  
-  
-	public function sendMs(){
-		$data = array(
-			'uid'=>self::$uid,
-			'pwd'=>self::$pwd,
-			'mobile'=>self::$mobile,
-			'msg'=>self::$msg,
-			'dtime'=>self::$dtime
-		);
-		
-		$o = "" ;
-		foreach ($data as $k => $v) 
-		{ 
-			 $o .= $k."=".urlencode($v)."&" ;
-		} 
-		
-		$post_data = substr( $o, 0, -1);
-		$ch = curl_init(self::$url) ;
-		curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "GET"); // 正确
-		//curl_exec($ch);
-		
-		return curl_exec($ch);
-	}
 }

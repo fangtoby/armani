@@ -8354,3 +8354,133 @@ Stack trace:
 REQUEST_URI=/public/images/card/sundefined.jpg
 HTTP_REFERER=http://www.armani.com/index/share?openid=oPV4Ht0yokB6n-DEcr5JocRNPZv4
 ---
+2015/08/09 21:58:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "detail".' in C:\xampp\htdocs\armani\yii-1\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\armani\yii-1\framework\web\CController.php(270): CController->missingAction('detail')
+#1 C:\xampp\htdocs\armani\yii-1\framework\web\CWebApplication.php(282): CController->run('detail')
+#2 C:\xampp\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController('index/detail')
+#3 C:\xampp\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\armani\armani\index.php(14): CApplication->run()
+#5 {main}
+REQUEST_URI=/index/detail
+---
+2015/08/09 22:01:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/js/jquery-1.7.1.js".' in C:\xampp\htdocs\armani\yii-1\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController('public/js/jquer...')
+#1 C:\xampp\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\armani\armani\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/public/js/jquery-1.7.1.js?v=20150803
+HTTP_REFERER=http://www.armani.com/index/detail
+---
+2015/08/09 22:02:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/js/jquery-1.7.1.js".' in C:\xampp\htdocs\armani\yii-1\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController('public/js/jquer...')
+#1 C:\xampp\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\armani\armani\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/public/js/jquery-1.7.1.js?v=20150803
+HTTP_REFERER=http://www.armani.com/index/detail
+---
+2015/08/09 22:03:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/js/jquery-1.7.1.js".' in C:\xampp\htdocs\armani\yii-1\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController('public/js/jquer...')
+#1 C:\xampp\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\armani\armani\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/public/js/jquery-1.7.1.js?v=20150803
+HTTP_REFERER=http://www.armani.com/index/detail
+---
+2015/08/09 22:03:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/js/jquery-1.7.1.js".' in C:\xampp\htdocs\armani\yii-1\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController('public/js/jquer...')
+#1 C:\xampp\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\armani\armani\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/public/js/jquery-1.7.1.js?v=20150803
+HTTP_REFERER=http://www.armani.com/index/detail
+---
+2015/08/09 22:04:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/js/jquery-1.7.1.js".' in C:\xampp\htdocs\armani\yii-1\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController('public/js/jquer...')
+#1 C:\xampp\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\armani\armani\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/public/js/jquery-1.7.1.js?v=20150803
+HTTP_REFERER=http://www.armani.com/index/detail
+---
+2015/08/09 22:07:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/js/jquery-1.7.1.js".' in C:\xampp\htdocs\armani\yii-1\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController('public/js/jquer...')
+#1 C:\xampp\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\armani\armani\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/public/js/jquery-1.7.1.js?v=20150803
+HTTP_REFERER=http://www.armani.com/index/detail
+---
+2015/08/09 22:07:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/js/jquery-1.7.1.js".' in C:\xampp\htdocs\armani\yii-1\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController('public/js/jquer...')
+#1 C:\xampp\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\armani\armani\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/public/js/jquery-1.7.1.js?v=20150803
+HTTP_REFERER=http://www.armani.com/index/detail
+---
+2015/08/09 22:07:59 [error] [php] file_get_contents(http://www.smsadmin.cn/smsmarketing/wwwroot/api/get_send/): failed to open stream: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+ (C:\xampp\htdocs\armani\armani\protected\components\SendMessage.php:92)
+Stack trace:
+#0 C:\xampp\htdocs\armani\armani\protected\views\index\detail.php(15): IndexController->sends()
+#1 C:\xampp\htdocs\armani\yii-1\framework\web\CBaseController.php(126): require()
+#2 C:\xampp\htdocs\armani\yii-1\framework\web\CBaseController.php(95): IndexController->renderInternal()
+#3 C:\xampp\htdocs\armani\yii-1\framework\web\CController.php(869): IndexController->renderFile()
+#4 C:\xampp\htdocs\armani\yii-1\framework\web\CController.php(782): IndexController->renderPartial()
+#5 C:\xampp\htdocs\armani\armani\protected\controllers\IndexController.php(127): IndexController->render()
+#6 C:\xampp\htdocs\armani\yii-1\framework\web\actions\CInlineAction.php(49): IndexController->actionDetail()
+#7 C:\xampp\htdocs\armani\yii-1\framework\web\CController.php(308): CInlineAction->runWithParams()
+#8 C:\xampp\htdocs\armani\yii-1\framework\web\CController.php(286): IndexController->runAction()
+#9 C:\xampp\htdocs\armani\yii-1\framework\web\CController.php(265): IndexController->runActionWithFilters()
+#10 C:\xampp\htdocs\armani\yii-1\framework\web\CWebApplication.php(282): IndexController->run()
+#11 C:\xampp\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#12 C:\xampp\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\armani\armani\index.php(14): CWebApplication->run()
+REQUEST_URI=/index/detail
+in C:\xampp\htdocs\armani\armani\protected\components\SendMessage.php (92)
+in C:\xampp\htdocs\armani\armani\protected\components\SendMessage.php (78)
+in C:\xampp\htdocs\armani\armani\protected\views\index\detail.php (15)
+2015/08/09 22:09:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/js/jquery-1.7.1.js".' in C:\xampp\htdocs\armani\yii-1\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController('public/js/jquer...')
+#1 C:\xampp\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\armani\armani\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/public/js/jquery-1.7.1.js?v=20150803
+HTTP_REFERER=http://www.armani.com/index/detail
+---
+2015/08/09 22:10:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "public/js/jquery-1.7.1.js".' in C:\xampp\htdocs\armani\yii-1\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController('public/js/jquer...')
+#1 C:\xampp\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\armani\armani\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/public/js/jquery-1.7.1.js?v=20150803
+HTTP_REFERER=http://www.armani.com/index/detail
+---
+2015/08/09 22:39:02 [error] [php] Undefined variable: result (C:\xampp\htdocs\armani\armani\protected\components\SendMessage.php:33)
+Stack trace:
+#0 C:\xampp\htdocs\armani\yii-1\framework\web\CBaseController.php(95): IndexController->renderInternal()
+#1 C:\xampp\htdocs\armani\yii-1\framework\web\CController.php(869): IndexController->renderFile()
+#2 C:\xampp\htdocs\armani\yii-1\framework\web\CController.php(782): IndexController->renderPartial()
+#3 C:\xampp\htdocs\armani\armani\protected\controllers\IndexController.php(127): IndexController->render()
+#4 C:\xampp\htdocs\armani\yii-1\framework\web\actions\CInlineAction.php(49): IndexController->actionDetail()
+#5 C:\xampp\htdocs\armani\yii-1\framework\web\CController.php(308): CInlineAction->runWithParams()
+#6 C:\xampp\htdocs\armani\yii-1\framework\web\CController.php(286): IndexController->runAction()
+#7 C:\xampp\htdocs\armani\yii-1\framework\web\CController.php(265): IndexController->runActionWithFilters()
+#8 C:\xampp\htdocs\armani\yii-1\framework\web\CWebApplication.php(282): IndexController->run()
+#9 C:\xampp\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#10 C:\xampp\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\armani\armani\index.php(14): CWebApplication->run()
+REQUEST_URI=/index/detail
+in C:\xampp\htdocs\armani\armani\protected\components\SendMessage.php (33)
+in C:\xampp\htdocs\armani\armani\protected\views\index\detail.php (16)
+in C:\xampp\htdocs\armani\armani\protected\controllers\IndexController.php (127)
