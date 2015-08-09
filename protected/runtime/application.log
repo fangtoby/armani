@@ -8218,3 +8218,56 @@ Stack trace:
 REQUEST_URI=/index/images/p1_3.png
 HTTP_REFERER=http://www.armani.com/index/index
 ---
+2015/08/09 16:52:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index&info=3434".' in C:\xampp\htdocs\armani\yii-1\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\armani\yii-1\framework\web\CController.php(270): CController->missingAction('index&info=3434')
+#1 C:\xampp\htdocs\armani\yii-1\framework\web\CWebApplication.php(282): CController->run('index&info=3434')
+#2 C:\xampp\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController('index/index&inf...')
+#3 C:\xampp\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\armani\armani\index.php(14): CApplication->run()
+#5 {main}
+REQUEST_URI=/index/index&info=3434
+---
+2015/08/09 16:55:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index&info=3434".' in C:\xampp\htdocs\armani\yii-1\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\armani\yii-1\framework\web\CController.php(270): CController->missingAction('index&info=3434')
+#1 C:\xampp\htdocs\armani\yii-1\framework\web\CWebApplication.php(282): CController->run('index&info=3434')
+#2 C:\xampp\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController('index/index&inf...')
+#3 C:\xampp\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\armani\armani\index.php(14): CApplication->run()
+#5 {main}
+REQUEST_URI=/index/index&info=3434
+---
+2015/08/09 16:55:31 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\armani\armani\protected\controllers\IndexController.php:38)
+Stack trace:
+#0 C:\xampp\htdocs\armani\yii-1\framework\web\CController.php(286): IndexController->runAction()
+#1 C:\xampp\htdocs\armani\yii-1\framework\web\CController.php(265): IndexController->runActionWithFilters()
+#2 C:\xampp\htdocs\armani\yii-1\framework\web\CWebApplication.php(282): IndexController->run()
+#3 C:\xampp\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\armani\armani\index.php(14): CWebApplication->run()
+REQUEST_URI=/index/index?info=3434
+in C:\xampp\htdocs\armani\armani\protected\controllers\IndexController.php (38)
+in C:\xampp\htdocs\armani\armani\index.php (14)
+2015/08/09 16:57:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "css".' in C:\xampp\htdocs\armani\yii-1\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\armani\yii-1\framework\web\CController.php(270): CController->missingAction('css')
+#1 C:\xampp\htdocs\armani\yii-1\framework\web\CWebApplication.php(282): CController->run('css')
+#2 C:\xampp\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController('index/css/style...')
+#3 C:\xampp\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\armani\armani\index.php(14): CApplication->run()
+#5 {main}
+REQUEST_URI=/index/css/style.css
+HTTP_REFERER=http://www.armani.com/index/setinfo
+---
+2015/08/09 16:57:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "css".' in C:\xampp\htdocs\armani\yii-1\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\armani\yii-1\framework\web\CController.php(270): CController->missingAction('css')
+#1 C:\xampp\htdocs\armani\yii-1\framework\web\CWebApplication.php(282): CController->run('css')
+#2 C:\xampp\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController('index/css/style...')
+#3 C:\xampp\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\armani\armani\index.php(14): CApplication->run()
+#5 {main}
+REQUEST_URI=/index/css/style.css
+HTTP_REFERER=http://www.armani.com/index/setinfo
+---

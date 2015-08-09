@@ -5,7 +5,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
 	<meta content="telephone=no" name="format-detection" />
-    <link href="css/style.css" rel="stylesheet" />
+    <link href="<?=Data::$data['staticUri']['css']?>style.css" rel="stylesheet" />
     <script>
     	var g_config = {					
 				openid:"<?=$info["openid"];?>",

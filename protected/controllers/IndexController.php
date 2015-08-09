@@ -9,6 +9,12 @@ class IndexController extends Controller
 		if(isset($_GET['info']) && $_GET['info'] !=  NULL){
 			$info = CJSON::decode($_GET['info']);
 			
+			$openid = 'oPV4Ht0yokB6n-DEcr5JocRNPZv4';
+			/*
+			$user = User::model()->findByAttributes(array(
+				'unionid'=>$openid
+			));*/
+			
 			$user = User::model()->findAllByAttributes(array(
 				'unionid'=>$info['openid']
 			));
@@ -32,11 +38,23 @@ class IndexController extends Controller
 			
 			Yii::app()->session['uid'] = $user->id;
 			
+				
+			
+			$this->render('list',array(
+				'result'=>$this->result,
+				'url'=>Yii::app()->params['severUrl'],
+				'info'=>array(
+					'openid'=>$user->id,
+					'nickname'=>$user->nickname,
+					'headimgurl'=>$user->headimgurl,
+				)
+			));
+			/*
 			$this->render('list',array(
 				'result'=>$this->result,
 				'url'=>Yii::app()->params['severUrl'],
 				'info'=>$info
-			));
+			));*/
 			
 		}else{
 			$id = Yii::app()->params['weichat']['id'];
