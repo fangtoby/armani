@@ -70,14 +70,10 @@
 			},1000)
 			
 			$('.part3 a').on('touchstart',function(){
-				
-				window.loaction.href="http://masterofglow.comeyes.cn/"
+				window.location.replace("http://masterofglow.comeyes.cn/");
 			})
 			
-			
 		},
-		
-		
 		flow:function(num){
 			var self = this;
 				num++;

@@ -53,7 +53,7 @@
 	</head>
 <body>
 <div class='loading'>
-	<img src='images/load.jpg' />
+	<img src='<?=Data::$data['staticUri']['img']?>load.jpg' />
 	<p>Loading...<em>1</em>%</p>
 </div>
 
@@ -69,7 +69,7 @@
 	<div class='part2' style='display:none'>
 		<img src='<?=Data::$data['staticUri']['img']?>p1_1.png' width='100%' />
 		<img src='<?=Data::$data['staticUri']['img']?>p1_2.png' width='100%' />
-		<img src='images/p1_3.png' width='100%' />
+		<img src='<?=Data::$data['staticUri']['img']?>p1_3.png' width='100%' />
 	</div>
 	<div class='part3' style='display:none'>
 		<img src='<?=Data::$data['staticUri']['img']?>p3_1.png' width='100%'  class='p3cp1' style='display:none' />
