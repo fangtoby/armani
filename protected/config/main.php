@@ -72,11 +72,11 @@ return array(
 					'class'=>'CFileLogRoute',
 					'levels'=>'error, warning',
 				),
-				array(
-					'class'=>'CWebLogRoute',//这表示把日志显示在网页下方，下方有详细的
-					'levels'=>'trace, info, error, warning',
-					'categories'=>'cool.*,system.db.*',
-				),
+				// array(
+				// 	'class'=>'CWebLogRoute',//这表示把日志显示在网页下方，下方有详细的
+				// 	'levels'=>'trace, info, error, warning',
+				// 	'categories'=>'cool.*,system.db.*',
+				// ),
 				// uncomment the following to show log messages on web pages
 				/*
 				array(

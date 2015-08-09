@@ -12,7 +12,7 @@ class IndexController extends Controller
 			$openid = 'oPV4Ht0yokB6n-DEcr5JocRNPZv4';
 			
 			$user = User::model()->findByAttributes(array(
-				'unionid'=>$openid
+				'unionid'=>$info['openid']
 			));
 			/*
 			$user = User::model()->findAllByAttributes(array(
