@@ -6,10 +6,10 @@
     <link href="<?=Data::$data['staticUri']['css']?>style.css" rel="stylesheet" />
     <script>
     	var g_config = {
-				'path':{
-					'js':"<?=Data::$data['staticUri']['js']?>",
-					'css':"<?=Data::$data['staticUri']['css']?>",
-					'img':"<?=Data::$data['staticUri']['img']?>"
+				path:{
+					js:"<?=Data::$data['staticUri']['js']?>",
+					css:"<?=Data::$data['staticUri']['css']?>",
+					img:"<?=Data::$data['staticUri']['img']?>"
 				}
 			};
     </script>
