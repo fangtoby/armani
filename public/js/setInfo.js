@@ -33,7 +33,11 @@
 			})
 			
 			$('.setback a').click(function(){
-				window.loaction.href="http://masterofglow.comeyes.cn/index/list";
+				window.location.href="http://masterofglow.comeyes.cn/index/list";
+			})
+			
+			$('.shareTips').click(function(){
+				$('.overlay,.shareTips').hide();
 			})
 			
         },
@@ -114,7 +118,7 @@
 				
 		},
 		
-		ajax:function(cityId,marketId,type,phone){
+		ajax:function(cityId,marketId,btntype,phone){
 			 $.ajax({
        			 url: '/api/lottery',
       			 type: "get",
@@ -123,22 +127,28 @@
         		 data: {
         		 	cityId:cityId,
         		 	marketId:marketId,
-        		 	type:type,
+        		 	type:btntype,
         		 	phone:phone
         		 	
         		 },
 				 success: function (response) {
 				 	self.block = true;
-				 	if(response.data != 200){
+				 	if(response.code != 200){
 				 		alert(response.message)
 				 		return false;
 				 	}
-				 
-				 	if(type == 0){
+
+				 	if(btntype == 0){
 						 $('.getprize').hide();
 						 $('.setback').show();
 				 	}else{
-				 		$('.backResult .msg').html('恭喜您<br>获取阿玛尼赋予'+response.data.prize+'<br>我们将短信通知邀您莅临专柜')
+				 	
+				 		if(response.data.type == 1){
+				 			$('.backResult .msg').html('恭喜您<br>获取阿玛尼赋予<br>'+response.data.prize+'<br>我们将短信通知邀您莅临专柜')
+				 		}else{
+				 			$('.backResult .msg').html('很遗憾<br>')
+				 		}
+				 		
 				 		$('.setinfo').hide();
 				 		$('.backResult').show();
 				 		var vid = $('.cardbg').attr('src').split('images/card/')[1].split('.jpg')[0]
@@ -150,7 +160,7 @@
 							if(self.iswechat == false){
 								window.location.href = "http://service.weibo.com/share/share.php?pic="
 									+encodeURIComponent(g_config.path.img+'sharelogo.jpg')
-									+"&title='底妆大师阿玛尼15周年，我是第'+response.data.number+'个致敬大师的追随者'&url="
+									+"&title='底妆大师阿玛尼15周年，我是第"+response.data.number+"个致敬大师的追随者'&url="
 									+ encodeURIComponent('http://masterofglow.comeyes.cn/index/share?openid='+ g_config.openid +'&v='+vid+'');
 							}else{
 								$('.backResult').hide()
@@ -161,7 +171,11 @@
 				 	}
 				 
        			 }
-  			  });		},
+  			  });		
+  			  
+  		},
+  		
+  		
 		isWeiXin:function(){
   				  var ua = window.navigator.userAgent.toLowerCase();
    				if(ua.match(/MicroMessenger/i) == 'micromessenger'){
