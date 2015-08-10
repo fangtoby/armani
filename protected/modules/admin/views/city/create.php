@@ -8,11 +8,10 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List City', 'url'=>array('index')),
-	array('label'=>'Manage City', 'url'=>array('admin')),
+	array('label'=>'地区管理', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Create City</h1>
+<h1>添加地区</h1>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>

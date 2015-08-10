@@ -26,7 +26,8 @@
 		<?php echo CHtml::link('地区管理','/admin/city/admin'); ?> 
         <?php endif; ?>
 		<?php if(!Yii::app()->admin->isGuest): ?>
-			| <?php echo CHtml::link( Yii::app()->admin->name.':退出',array('/admin/default/logout')); ?>
+			| <?php echo CHtml::link( '退出',array('/admin/default/logout')); ?>
+            | <?php echo "<a href='#' class='admin-name' > 您好 : ".Yii::app()->admin->name."</a>"; ?>
 		<?php endif; ?>
 		</div>
      	<h1>CCE-2015</h1> 

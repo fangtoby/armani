@@ -90,10 +90,13 @@ class Lottery extends CActiveRecord
 		$criteria->compare('type',$this->type);
 		$criteria->compare('createTime',$this->createTime,true);
 		$criteria->compare('updateTime',$this->updateTime,true);
-		$criteria->compare('win',$this->win);
+		$criteria->compare('win',1);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
+			'pagination'=>array(
+				'pageSize'=>20,
+			),
 		));
 	}
 

@@ -15,6 +15,8 @@ $this->menu=array(
 );
 ?>
 
+<h1>店铺信息详情 - <?php echo $model->ShopName; ?></h1>
+
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,
 	'attributes'=>array(

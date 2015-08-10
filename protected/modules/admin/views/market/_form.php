@@ -90,12 +90,6 @@
 		<?php echo $form->error($model,'prize'); ?>
 	</div>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'count'); ?>
-		<?php echo $form->textField($model,'count'); ?>
-		<?php echo $form->error($model,'count'); ?>
-	</div>
-
 <div class="row">
 		<?php echo $form->labelEx($model,'startTime'); ?>
 		<?php echo $form->textField($model,'startTime'); ?>

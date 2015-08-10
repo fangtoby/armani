@@ -1,14 +1,23 @@
 /*
 MySQL Data Transfer
+<<<<<<< HEAD
 Source Host: localhost
 Source Database: armani
 Target Host: localhost
 Target Database: armani
 Date: 2015/8/7 18:33:33
+=======
+Source Host: 127.1.1.0
+Source Database: armani
+Target Host: 127.1.1.0
+Target Database: armani
+Date: 8/8/2015 11:56:38 PM
+>>>>>>> 8bab64ca239cfa0914c53f408405f6329b273617
 */
 
 SET FOREIGN_KEY_CHECKS=0;
 -- ----------------------------
+<<<<<<< HEAD
 -- Table structure for admin
 -- ----------------------------
 DROP TABLE IF EXISTS `admin`;
@@ -22,6 +31,8 @@ CREATE TABLE `admin` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
+=======
+>>>>>>> 8bab64ca239cfa0914c53f408405f6329b273617
 -- Table structure for city
 -- ----------------------------
 DROP TABLE IF EXISTS `city`;
@@ -33,6 +44,24 @@ CREATE TABLE `city` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
+<<<<<<< HEAD
+=======
+-- Table structure for daylimit
+-- ----------------------------
+DROP TABLE IF EXISTS `daylimit`;
+CREATE TABLE `daylimit` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `pid` int(11) DEFAULT NULL,
+  `count` int(11) DEFAULT '0',
+  `dayTime` datetime DEFAULT NULL,
+  `createTime` datetime DEFAULT NULL,
+  `updateTime` datetime DEFAULT NULL,
+  `isDel` int(11) DEFAULT '0',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+>>>>>>> 8bab64ca239cfa0914c53f408405f6329b273617
 -- Table structure for detail
 -- ----------------------------
 DROP TABLE IF EXISTS `detail`;
@@ -48,6 +77,24 @@ CREATE TABLE `detail` (
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
+<<<<<<< HEAD
+=======
+-- Table structure for hourlimit
+-- ----------------------------
+DROP TABLE IF EXISTS `hourlimit`;
+CREATE TABLE `hourlimit` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `pid` int(11) DEFAULT NULL,
+  `count` int(11) DEFAULT '0',
+  `hourTime` datetime DEFAULT NULL,
+  `createTime` datetime DEFAULT NULL,
+  `updateTime` datetime DEFAULT NULL,
+  `isDel` int(11) DEFAULT '0',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+>>>>>>> 8bab64ca239cfa0914c53f408405f6329b273617
 -- Table structure for lottery
 -- ----------------------------
 DROP TABLE IF EXISTS `lottery`;
@@ -58,12 +105,20 @@ CREATE TABLE `lottery` (
   `cityId` int(11) DEFAULT NULL,
   `marketId` int(11) DEFAULT NULL,
   `giftId` int(11) DEFAULT NULL,
+<<<<<<< HEAD
+=======
+  `from` int(11) DEFAULT NULL,
+>>>>>>> 8bab64ca239cfa0914c53f408405f6329b273617
   `type` int(11) DEFAULT NULL,
   `createTime` datetime DEFAULT NULL,
   `updateTime` datetime DEFAULT NULL,
   `win` int(11) DEFAULT '0',
   PRIMARY KEY (`id`)
+<<<<<<< HEAD
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+=======
+) ENGINE=InnoDB AUTO_INCREMENT=303 DEFAULT CHARSET=utf8;
+>>>>>>> 8bab64ca239cfa0914c53f408405f6329b273617
 
 -- ----------------------------
 -- Table structure for market
@@ -112,7 +167,11 @@ CREATE TABLE `prize` (
   `updateTime` datetime DEFAULT NULL,
   `isDel` int(11) DEFAULT '0',
   PRIMARY KEY (`id`)
+<<<<<<< HEAD
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+=======
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+>>>>>>> 8bab64ca239cfa0914c53f408405f6329b273617
 
 -- ----------------------------
 -- Table structure for product
@@ -179,12 +238,19 @@ CREATE TABLE `user` (
   `isShare` int(11) DEFAULT '0',
   `countReward` int(11) DEFAULT '0',
   PRIMARY KEY (`id`)
+<<<<<<< HEAD
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+=======
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+>>>>>>> 8bab64ca239cfa0914c53f408405f6329b273617
 
 -- ----------------------------
 -- Records 
 -- ----------------------------
+<<<<<<< HEAD
 INSERT INTO `admin` VALUES ('0', 'masterofglow', '61185739c685afa80ab2c39850def3faddb62a9ba51b64afce2dc1dd1ce5e7f9', null, null);
+=======
+>>>>>>> 8bab64ca239cfa0914c53f408405f6329b273617
 INSERT INTO `city` VALUES ('1', '北京', '0');
 INSERT INTO `city` VALUES ('2', '西安', '0');
 INSERT INTO `city` VALUES ('3', '沈阳', '0');
@@ -214,10 +280,14 @@ INSERT INTO `city` VALUES ('26', '其他城市', '0');
 INSERT INTO `detail` VALUES ('1', '1', 'Nude', '/images/list/logo.png', '2015-07-21 14:10:23', '2015-07-21 14:10:23', '0');
 INSERT INTO `detail` VALUES ('2', '2', 'Gebe', '/images/list/logo.png', '2015-07-21 14:10:23', '2015-07-21 14:10:23', '0');
 INSERT INTO `detail` VALUES ('3', '1', 'Gebe', '/images/list/logo.png', '2015-07-21 14:10:23', '2015-07-21 14:10:23', '0');
+<<<<<<< HEAD
 INSERT INTO `lottery` VALUES ('2', null, '14782593339', '1', '2', '1', '1', '2015-08-06 11:15:38', '2015-08-06 11:15:38', '0');
 INSERT INTO `lottery` VALUES ('3', null, '14782593338', '1', '11', '1', '1', '2015-08-06 11:20:19', '2015-08-06 11:20:19', '0');
 INSERT INTO `lottery` VALUES ('4', null, '14782593332', '1', '12', '1', '1', '2015-08-06 11:20:46', '2015-08-06 11:20:46', '0');
 INSERT INTO `market` VALUES ('2', '1', '付珊珊', '马丽娜', '北京市朝阳区建国路87号新光天地一层化妆品', 'A30', 'gac.cn-bej.xinguang@lorealposasia.com', '116.484893', '39.915465', '北京新光', '010-65331980', '2015-08-07 07:54:34', '2015-08-07 07:54:34', '1', '0', '2015-08-13 00:00:00', '2015-08-28 00:00:00', '0.001', '0');
+=======
+INSERT INTO `market` VALUES ('2', '1', '付珊珊', '马丽娜', '北京市朝阳区建国路87号新光天地一层化妆品', 'A30', 'gac.cn-bej.xinguang@lorealposasia.com', '116.484893', '39.915465', '北京新光', '010-65331980', '2015-08-07 07:54:34', '2015-08-08 17:51:52', '1', '0', '2015-08-07 00:00:00', '2015-08-26 00:00:00', '0.5', '0');
+>>>>>>> 8bab64ca239cfa0914c53f408405f6329b273617
 INSERT INTO `market` VALUES ('3', '2', '宋海涛', '伍光瑜', '西安市莲湖区西大街1号世纪金花钟楼店', 'A80', 'gac.cn-xia.jinhua@lorealposasia.com', '108.952124', '34.266097', '西安金花', '029-87631788', null, null, '1', '0', '2015-08-12 00:00:00', '2015-08-27 00:00:00', '0.003', '0');
 INSERT INTO `market` VALUES ('4', '2', '尚琳', '伍光瑜', '西安市碑林区环城南路东段336号', 'AY0', 'gac.cn-xiajinhuazj@lorealposasia.com', '108.955125', '34.255908', '西安珠江', '029-89358142', '2015-08-07 08:35:53', '2015-08-07 08:35:53', '1', '0', '2015-08-15 00:00:00', '2015-08-22 00:00:00', '0.001', '0');
 INSERT INTO `market` VALUES ('5', '2', '雷蕾', '伍光瑜', '西安市解放市场6号', 'AU0', 'gac.cn-xia.kaiyuan@lorealposasia.com', '108.95479', '34.264919', '西安开元', '029-87367558', '2015-08-07 08:36:06', '2015-08-07 08:36:06', '1', '0', '2015-08-26 00:00:00', '2015-08-28 00:00:00', '0.003', '0');
@@ -258,6 +328,7 @@ INSERT INTO `market` VALUES ('39', '24', '谭慧敏', '章蔚', '广州市越秀
 INSERT INTO `market` VALUES ('166', '9', '赵静', '', '上海市南京东路228号', 'G80', 'gac.cn-sha.nwdawan@lorealposasia.com', '', '', '上海大丸', '13818008371', null, null, '1', '0', null, null, null, '0');
 INSERT INTO `market` VALUES ('167', '25', '黄文婷', '', '深圳市福田区华强北茂业百货华强北店一楼阿玛尼柜台', 'G70', 'gac.cn-shz.nsmaoye2@lorealposasia.com', '', '', '深圳茂业', '0755-83996649', null, null, '1', '0', null, null, null, '0');
 INSERT INTO `market` VALUES ('174', '26', '', '', '', '000', '', '', '', '其它柜台', '', null, null, '1', '0', null, null, null, '0');
+<<<<<<< HEAD
 INSERT INTO `prize` VALUES ('1', '明星底妆体验组合', '1ml x 1ml ', '30000', null, '0.001', '100', '1000', '0', '2015-08-19 00:00:00', '2015-08-21 00:00:00', '2015-08-07 10:43:38', '2015-08-07 10:43:38', '0');
 INSERT INTO `prize` VALUES ('2', '大师造型粉底乳', '5ml ', '3000', null, '0.001', '50', '1400', '0', '2015-08-20 00:00:00', '2015-08-28 00:00:00', '2015-08-07 10:45:33', '2015-08-07 10:45:33', '0');
 INSERT INTO `prize` VALUES ('3', ' 黑钥匙赋活水', '10ml', '800', null, '0.001', '0', '0', '0', '2015-08-19 00:00:00', '2015-08-28 00:00:00', '2015-08-07 11:00:30', '2015-08-07 11:00:30', '0');
@@ -267,3 +338,14 @@ INSERT INTO `product` VALUES ('2', 'Gene', 'Gene is Beautflu', '/images/list/log
 INSERT INTO `reward` VALUES ('1', '1', '0.001', null, '0', '0.005', null, '0', '0.01', null, '0', '0.0002', null, '0', null, '2015-08-14 19:00:34', '2015-08-05 19:03:09', '2015-08-05 19:03:12', '0');
 INSERT INTO `user` VALUES ('3', null, null, 'oPV4Ht7hM8LFcOB2LT8CAtTe1nw0', null, '^*&fhug(*&ye(r*)e(*uf)(ds', '2015-07-21 16:02:02', '14782593339', '2015-07-21 16:02:10', '2015-07-21 16:02:13', '1', '0', '1', '1', '1', '2', null, '0');
 INSERT INTO `user` VALUES ('4', null, null, null, null, null, null, null, null, null, '1', '0', null, null, null, null, '0', '0');
+=======
+INSERT INTO `prize` VALUES ('1', '明星底妆体验组合', '1ml x 1ml ', '30000', '0', '0.5', '100', '1000', '0', '2015-08-05 00:00:00', '2015-08-07 00:00:00', '2015-08-07 10:43:38', '2015-08-08 16:10:37', '0');
+INSERT INTO `prize` VALUES ('2', '大师造型粉底乳', '5ml ', '3000', '0', '0.5', '50', '1400', '0', '2015-08-04 00:00:00', '2015-08-07 00:00:00', '2015-08-07 10:45:33', '2015-08-08 17:13:34', '0');
+INSERT INTO `prize` VALUES ('3', ' 黑钥匙赋活水', '10ml', '800', '0', '0.5', '10', '20', '0', '2015-08-05 00:00:00', '2015-08-07 00:00:00', '2015-08-07 11:00:30', '2015-08-08 17:13:26', '0');
+INSERT INTO `prize` VALUES ('4', ' 正品小滴管粉底液', null, '1', '0', '0.001', '10', '10', '1', '2015-08-04 20:41:39', '2015-08-27 20:41:43', null, null, '0');
+INSERT INTO `product` VALUES ('1', 'Nude', 'nude is beautiflu', '/images/list/logo.png', '2015-07-21 14:10:23', '2015-07-21 14:10:23');
+INSERT INTO `product` VALUES ('2', 'Gene', 'Gene is Beautflu', '/images/list/logo.png', '2015-07-21 14:10:23', '2015-07-21 14:10:23');
+INSERT INTO `reward` VALUES ('1', '1', '0.001', null, '0', '0.005', null, '0', '0.01', null, '0', '0.0002', null, '0', null, '2015-08-14 19:00:34', '2015-08-05 19:03:09', '2015-08-05 19:03:12', '0');
+INSERT INTO `user` VALUES ('5', '2', '袁钰', 'oPV4Ht0yokB6n-DEcr5JocRNPZv4', 'http://wx.qlogo.cn/mmopen/3sARqwhTOjHybkW7Q1icNxQtQsJfRZ1ZOPiap5Bsxd9pzWoMRbSNlMYa1sibruLLv00rd8sHdBkdVzaXrxEEn0fpwOKnFG2Y7Ix/0', null, null, null, null, null, '1', '0', null, null, null, null, '0', '0');
+INSERT INTO `user` VALUES ('6', '1', 'Yomi', 'oPV4Ht7hM8LFcOB2LT8CAtTe1nw0', 'http://wx.qlogo.cn/mmopen/3sARqwhTOjHybkW7Q1icNxRoALVhRrXib47w4xwTW05nLRok83wJXJGNtiaqiaV4pFT3l8Kmnbr71glHNEjS7QROaibDlyl3zYXuJ/0', null, null, null, null, null, '1', '0', null, null, null, null, '0', '0');
+>>>>>>> 8bab64ca239cfa0914c53f408405f6329b273617

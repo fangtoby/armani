@@ -13,19 +13,23 @@ body
 	margin-bottom: 5px;
 	background: white;
 	border: 1px solid #C9E0ED;
-	width:1260px;
+	width:75%;
+	min-width:1100px;
+	padding:20px;
 }
 
 #header
 {  
 	padding: 0px;
-  margin: 0px 20px;
   border-bottom: 1px solid #C9E0ED;
   padding:20px 0;
 }
 #header h1{
 	float:left;
 	line-height:50px;
+	font-size:30px;
+	color:#0066A4;
+	margin-bottom:0px;
 	}
 #header .top-menus
 {
@@ -34,12 +38,11 @@ body
 }
 #content
 {
-    padding: 20px;
 }
 
 #sidebar
 {
-	padding: 20px 0 20px 20px;
+	padding:10px 0;
 }
 
 #footer
@@ -187,9 +190,8 @@ div.search-form
 .portlet-content
 {
 	font-size:0.9em;
-	margin: 0 0 15px 0;
-	padding: 5px 8px;
-	background:#EFFDFF;
+	padding: 5px 0;
+	overflow:hidden;
 }
 
 .portlet-content ul
@@ -199,11 +201,13 @@ div.search-form
 	list-style-type:none;
 	margin: 0;
 	padding: 0;
+	overflow:hidden;
+	float:right;
 }
 
 .portlet-content li
 {
-	padding: 2px 0 4px 0px;
+	float:right;
 }
 
 .operations
@@ -220,12 +224,18 @@ div.search-form
 
 .operations li a
 {
-	font: bold 12px Arial;
+	font: normal 12px "微软雅黑",Arial;
 	color: #0066A4;
 	display: block;
-	padding: 2px 0 2px 8px;
+	padding: 8px 15px;
 	line-height: 15px;
+	background:#EFFDFF;
+	margin-right:1px;
 	text-decoration: none;
+	transition:all 1s;
+	-moz-transition: all 1s; /* Firefox 4 */
+	-webkit-transition: all 1s; /* Safari 和 Chrome */
+	-o-transition: all 1s; /* Opera */
 }
 
 .operations li a:visited
@@ -242,17 +252,83 @@ div.search-form
 	background-color:#fff;
 	}
 /* input */
-input[type="text"],input[type="password"]{
-	padding:5px;
+input[type="text"],input[type="password"] ,div.form select{
 	border:solid 1px #ccc;
 	border-radius:3px;
 	}
-input[type="text"]:focus , ,input[type="password"]:focus{
+input[type="text"]:focus ,input[type="password"]:focus{
 	background: #ECFBD4;
+	transition:all 0.5s;
+	-moz-transition: all 0.5s; /* Firefox 4 */
+	-webkit-transition: all 0.5s; /* Safari 和 Chrome */
+	-o-transition: all 0.5s; /* Opera */
+	}
+div.form input{
+	padding:10px;
+	}
+div.form select{
+	padding:10px;
+	}
+h1{
+	font-size:20px;
+	line-height:40px;
+	color:#0066A4;
+	}
+.login-title{
+	}
+.top-menus a{
+	}
+a.admin-name{
+	display:inline-block;
+	text-decoration:none;
+	padding:2px 5px;
+	color:#fff;
+	border-radius:2px;
+	background-color:#C00;
 	}
 /* table */
 .grid-view table.items th{
-	background-color:#666 !important;
+	padding:15px 0 !important;
+	background-color:#0066A4 !important;
 	background-image:none !important;
 	color:#fff;
 	}
+.grid-view table.items th, .grid-view table.items td {
+	text-align:center !important;
+}
+.grid-view table.items tr.even {
+  background: #fff !important;
+}
+table.detail-view th, table.detail-view td
+{
+	font-size: 0.9em;
+	border: 1px white solid;
+	padding: 0.6em 0.6em !important;
+	vertical-align: top;
+}
+
+table.detail-view tr.even
+{
+	background:#fff !important;
+}
+
+div.form .row {
+  margin: 5px 0;
+  overflow:hidden;
+  
+}
+div.form .note {
+	padding-left:110px;
+  
+}
+div.form .buttons{
+	padding-left:110px;
+	}
+div.form .row label{
+	width:100px;
+	padding-right:10px;
+	text-align:right;
+	}
+div.form .row label,div.form input{
+	display:inline-block;
+}

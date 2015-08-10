@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, width=device-width">
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="<?=Data::$data['staticUri']['css']?>main.css?v=<?=Yii::app()->params['version']['css'];?>">
   <title>申请明星粉底</title>
   <style>
@@ -10,20 +10,19 @@
 </head>
 <body>
     <div id="content">
-    <?php
-    	$msg = new SendMessage('14782593339','34',NULL);
-		echo $msg->send();
+	<?php
+$msg = "恭喜您获得专属底妆权利，写七天内，凭短息莅临阿玛尼美妆专柜，尊享明星粉底体验装一份，共襄15周年礼遇。（数量有限，领完即止）【阿玛尼美妆】
+";
+		
+		$result = SMessage::sendMs('14782593339','xx','xx');
+		if($result){
+			echo "发送成功";	
+		}else{
+			
+		}
 	?>
-		<a href="<?=$this->createUrl('index/list',array('pid'=>$pid))?>">&lt;返回 </a>
-        <span>选择的是<?=$pid?></span>
-    	 <ul class="product-list">
-        	<li><a href="<?=$this->createUrl('index/follow',array('did'=>1,'pid'=>$pid))?>"> 详情1 </a></li>
-        	<li><a href="<?=$this->createUrl('index/follow',array('did'=>2,'pid'=>$pid))?>"> 详情2 </a></li>
-        	<li><a href="<?=$this->createUrl('index/follow',array('did'=>3,'pid'=>$pid))?>"> 详情3 </a></li>
-        </ul>
     </div><!-- content -->
 </body>
-<script src="<?=Data::$data['staticUri']['js']?>jquery-1.7.1.js?v=<?=Yii::app()->params['version']['js'];?>"></script>
 <script>
 </script>
 </html>

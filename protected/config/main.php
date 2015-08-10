@@ -40,6 +40,7 @@ return array(
 		),
 		'admin' => array(  
 			'class' => 'AdminWebUser', //后台登录类实例  
+			'allowAutoLogin'=>true,
 			'stateKeyPrefix' => 'admin', //后台session前缀  
 			"guestName" => "游客"  
 		),
@@ -71,11 +72,11 @@ return array(
 					'class'=>'CFileLogRoute',
 					'levels'=>'error, warning',
 				),
-				/*array(
-					'class'=>'CWebLogRoute',//这表示把日志显示在网页下方，下方有详细的
-					'levels'=>'trace, info, error, warning',
-					'categories'=>'cool.*,system.db.*',
-				),*/
+				// array(
+				// 	'class'=>'CWebLogRoute',//这表示把日志显示在网页下方，下方有详细的
+				// 	'levels'=>'trace, info, error, warning',
+				// 	'categories'=>'cool.*,system.db.*',
+				// ),
 				// uncomment the following to show log messages on web pages
 				/*
 				array(
@@ -91,7 +92,8 @@ return array(
 	// using Yii::app()->params['paramName']
 	'params'=>array(
 		// this is used in contact page
-		'adminEmail'=>'webmaster@example.com',
+		'severUrl'=>'http://masterofglow.comeyes.cn',
+		'weichat'=>require(dirname(__FILE__).'/weichat.php'),
 		'version'=>require(dirname(__FILE__).'/version.php'),
 	),
 );

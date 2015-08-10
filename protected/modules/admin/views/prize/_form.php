@@ -47,11 +47,10 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'type'); ?>
-		<?php echo $form->textField($model,'type'); ?>
+<?php echo CHtml::dropDownList( 'Prize[type]', $model->type, $this->prizeType ,array( "id"=>"Prize_type"  ) );  ?>
 		<?php echo $form->error($model,'type'); ?>
-        <span>0是普通奖品，1是特别奖品</span>
+        <span>0是普通奖品，1是特别奖品，2正装大奖</span>
 	</div>
-
 	<div class="row">
 		<?php echo $form->labelEx($model,'startTime'); ?>
 		<?php echo $form->textField($model,'startTime'); ?>

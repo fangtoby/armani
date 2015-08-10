@@ -16,29 +16,46 @@
 * 
 * @author: fangtoby@live.cn
 */
+
 class SendMessage{
 	
-	private $uid = "clarisonic2014lucky";
-	private $pwd = "ccegroup2014&mobile";
-	private $mobile;
-	private $msg;
-	private $dtime;
-	private $optional_headers = NULL;
-	private $url = "http://www.smsadmin.cn/smsmarketing/wwwroot/api/get_send/";
+	public static $uid = "clarisonic2014lucky";
+	public static $pwd = "ccegroup2014&mobile";
+	public static $mobile;
+	public static $msg;
+	public static $dtime;
+	public static $optional_headers = NULL;
+	public static $url = "http://www.smsadmin.cn/smsmarketing/wwwroot/api/get_send/";
 	
-	public function __construct($mobile, $msg, $dtime = NULL) {
-		$this->mobile = $mobile;
-		$this->msg = $msg;
-		$this->dtime = $dtime;
-    }
-	
-	public function send(){
+	public static function sendMs($mobile,$place,$prize, $dtime = NULL){
+		
+		$msg = "恭喜您获得专属底妆权利，写七天内，凭短息莅临阿玛尼{$place}美妆专柜，尊享明星粉底体验装($prize)一份，共襄15周年礼遇。（数量有限，领完即止）【阿玛尼美妆】
+";
+		
+		//$msg = urlencode(iconv('UTF-8', 'GB2312', $msg));
+		$msg = iconv('UTF-8', 'GB2312', $msg);
+		
+		$url = self::$url."?uid=".self::$uid."&pwd=".self::$pwd."&mobile=".$mobile."&msg=".$msg."";
+		$html = iconv('GBK', 'UTF-8', file_get_contents($url));
+		$result = substr($html, 0, 1 );
+		if($result == "0"){
+			return true;	 
+		}else{
+			return false;
+		}
+	}
+	public static function send($mobile, $msg, $dtime = NULL){
+		
+		self::$mobile = $mobile;
+		self::$msg = $msg;
+		self::$dtime = $dtime;
+
 		$data = array(
-			'uid'=>$this->uid,
-			'pwd'=>$this->pwd,
-			'mobile'=>$this->mobile,
-			'msg'=>$this->msg,
-			'dtime'=>$this->dtime
+			'uid'=>self::$uid,
+			'pwd'=>self::$pwd,
+			'mobile'=>self::$mobile,
+			'msg'=>self::$msg,
+			'dtime'=>self::$dtime
 		);
 		
 		$params = array('http' => array(
@@ -46,11 +63,11 @@ class SendMessage{
 					  'content' => $data
 				   ));
 				   
-		 if ($this->optional_headers !== null) {
-			$params['http']['header'] = $this->optional_headers;
+		 if (self::$optional_headers !== null) {
+			$params['http']['header'] = self::$optional_headers;
 		 }
 		 $ctx = stream_context_create($params);
-		 $fp = @fopen($this->url, 'rb', false, $ctx);
+		 $fp = @fopen(self::$url, 'rb', false, $ctx);
 		 if (!$fp) {
 			throw new Exception("Problem with $url, $php_errormsg");
 		 }
@@ -60,15 +77,21 @@ class SendMessage{
 		 }
 		 return $response;
 	}
-	function sends(){
+	function sends($mobile, $msg, $dtime = NULL){
+		
+		self::$mobile = $mobile;
+		self::$msg = $msg;
+		self::$dtime = $dtime;
+
 		$data = array(
-			'uid'=>$this->uid,
-			'pwd'=>$this->pwd,
-			'mobile'=>$this->mobile,
-			'msg'=>$this->msg,
-			'dtime'=>$this->dtime
+			'uid'=>self::$uid,
+			'pwd'=>self::$pwd,
+			'mobile'=>self::$mobile,
+			'msg'=>self::$msg,
+			'dtime'=>self::$dtime
 		);
-		return $this->send($this->url,$data);	
+		
+		return self::send_post(self::$url,$data);	
 	}
 	function send_post($url, $post_data) {  
 	  
@@ -86,27 +109,4 @@ class SendMessage{
 	  
 	  return $result;  
 	}  
-  
-	public function sendMs(){
-		$data = array(
-			'uid'=>$this->uid,
-			'pwd'=>$this->pwd,
-			'mobile'=>$this->mobile,
-			'msg'=>$this->msg,
-			'dtime'=>$this->dtime
-		);
-		
-		$o = "" ;
-		foreach ($data as $k => $v) 
-		{ 
-			 $o .= $k."=".urlencode($v)."&" ;
-		} 
-		
-		$post_data = substr( $o, 0, -1);
-		$ch = curl_init($this->url) ;
-		curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "GET"); // 正确
-		//curl_exec($ch);
-		
-		return curl_exec($ch);
-	}
 }

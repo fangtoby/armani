@@ -69,7 +69,7 @@ class Prize extends CActiveRecord
 			'count' => '奖品总数',
 			'number' => '已中奖人数',
 			'rate' => '中奖概率',
-			'type' => '奖品类型（0/1）',
+			'type' => '奖品类型',
 			'startTime' => '开始时间',
 			'endTime' => '结束时间',
 			'createTime' => '创建时间',

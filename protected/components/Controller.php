@@ -47,6 +47,7 @@ class Controller extends CController
 		Data::$data['staticUri'] = array(
 			'css' => $webUri.'/public/css/',
 			'js' => $webUri.'/public/js/',
+			'img' => $webUri.'/public/images/',
 		);
 		
 		return $action;

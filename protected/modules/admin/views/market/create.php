@@ -12,6 +12,6 @@ $this->menu=array(
 );
 ?>
 
-<h1>Create Market</h1>
+<h1>添加门店</h1>
 
 <?php $this->renderPartial('_form', array('model'=>$model,'city'=>$city)); ?>

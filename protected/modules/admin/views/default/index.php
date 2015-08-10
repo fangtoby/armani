@@ -5,10 +5,6 @@ $this->breadcrumbs=array(
 	$this->module->id,
 );
 ?>
-<h1>登陆</h1>
-<?php
-echo Yii::app()->session['uid'];
-?>
 <div class="form">
 <?php $form=$this->beginWidget('CActiveForm', array(
 	'id'=>'login-form',
@@ -18,6 +14,7 @@ echo Yii::app()->session['uid'];
 	),
 )); ?>
 
+<h1 class="login-title">登陆</h1>
 	<div class="row">
 		<?php echo $form->labelEx($model,'username'); ?>
 		<?php echo $form->textField($model,'username'); ?>
