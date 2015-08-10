@@ -10,7 +10,18 @@
 </head>
 <body>
     <div id="content">
-    <span><?php echo $info['nickname']; ?></span>
+    <span><?php // echo $info['nickname']; ?></span>
+    
+    <?php
+	$place = "x43ml utf8-gbk-uft8{}remove";
+	$prize = "xx";
+	//$placeg = iconv('UTF-8', 'GB2312', $place);
+	//$prizeg = iconv('UTF-8', 'GB2312', $prize);
+	//$msg = SMessage::sendMs("14782593339",$placeg,$prizeg);
+	$msg = SMessage::sendMs("14782593339",$place,$prize);
+		//echo iconv('GB2312', 'UTF-8',SMessage::test("14782593339",$placeg,$prizeg));
+	echo $msg;
+	?>
     </div><!-- content -->
 </body>
 <script>

@@ -130,7 +130,7 @@ class IndexController extends Controller
 		}
 	}
 	public function actionDetail(){
-		if(isset($_GET['openid'])){
+		/*if(isset($_GET['openid'])){
 			$openid = $_GET['openid'];
 			
 			$user = User::model()->findByAttributes(array(
@@ -148,6 +148,7 @@ class IndexController extends Controller
 				));
 			}
 			
-		}
+		}*/
+		$this->render('detail');
 	}
 }

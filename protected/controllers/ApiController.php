@@ -137,9 +137,11 @@ class ApiController extends Controller
 				$rightPrizeModel = array();
 				//普通奖品时间判断
 				foreach($prizeList as $key=>$val){  
-					if($val->type != 1){
-						if($now < strtotime($val->endTime) && $now > strtotime($val->startTime) ){
-							$rightPrizeModel[] = $val;  
+					if($val->type != 2){
+						if($val->number < $val->count){
+							if($now < strtotime($val->endTime) && $now > strtotime($val->startTime) ){
+								$rightPrizeModel[] = $val;  
+							}
 						}
 					}else{
 						$rightPrizeModel[] = $val;  
@@ -161,7 +163,11 @@ class ApiController extends Controller
 				}
 				$correctPrizeId = $correctPrizeModel->id;
 				$correctPrizeType = $correctPrizeModel->type;
-				$prizeNoteStr = $correctPrizeModel->note."".$correctPrizeModel->name;
+				if($correctPrizeModel->note){
+					$prizeNoteStr = $correctPrizeModel->note."".$correctPrizeModel->name;
+				}else{
+					$prizeNoteStr = $correctPrizeModel->name;
+				}
 				//抽奖记录参数
 				$recordParamArr = array(
 					"win"=>$win,
@@ -202,7 +208,7 @@ class ApiController extends Controller
 					$shopNameGBK = iconv('UTF-8', 'GB2312',  $Market->ShopName);
 					$prizeNoteGBK = iconv('UTF-8', 'GB2312', $prizeNoteStr);
 					
-					$result = SMessage::sendMs($number,$shopNameGBK ,$prizeNoteGBK );
+					$result = SMessage::sendMs($number,$Market->ShopName ,$prizeNoteStr );
 					$this->jsonSuccess(array(
 							'type'=>$code['lucky'],
 							'prize'=>$prizeNoteStr,
