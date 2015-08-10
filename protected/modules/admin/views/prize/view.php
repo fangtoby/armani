@@ -20,6 +20,11 @@ $this->menu=array(
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,
 	'attributes'=>array(
+		  array(
+		  'name'=>'Status',
+		  'value'=> $this->jugementStart($model) ,  //这里显示图片
+		  'type'=>'raw', 
+		  ),
 		'id',
 		'name',
 		'note',

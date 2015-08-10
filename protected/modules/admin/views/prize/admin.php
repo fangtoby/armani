@@ -21,23 +21,41 @@ $this->menu=array(
 	'dataProvider'=>$model->search(),
 	'filter'=>$model,
 	'columns'=>array(
-		'id',
+		 array(
+		  'name'=>'Status',
+		  'value'=>  array($this,'jugementStart'),  
+		  'type'=>'raw',   
+			'htmlOptions'=>array(
+				'width'=>'70',
+		)
+		 ),
 		'name',
 		'note',
 		'count',
 		'rate',
-		'hourNumber',
-		'dayNumber',
+		 array(
+		  'name'=>'hourNumber',
+		  'value'=>  $model->hourNumber,  
+		  'type'=>'raw',   
+			'htmlOptions'=>array(
+				'width'=>'70',
+		)),
+		 array(
+		  'name'=>'dayNumber',
+		  'value'=>  $model->dayNumber,  
+		  'type'=>'raw',   
+			'htmlOptions'=>array(
+				'width'=>'70',
+		)),
 		array(
             'name'=>'type',
             'type'=>'raw',
             'value'=> array($this,'getTypeName'),   //调用自定义的函数
         ),
 		'number',
-		/*
 		'startTime',
 		'endTime',
-		'createTime',
+		/*'createTime',
 		'updateTime',
 		'isDel',
 		*/

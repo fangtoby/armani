@@ -25,6 +25,7 @@
  */
 class Market extends CActiveRecord
 {
+	public $Status;
 	/**
 	 * @return string the associated database table name
 	 */
@@ -41,7 +42,7 @@ class Market extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('ShopID', 'required'),
+			array('CityID, CounterManager, DirectorName, ShopAddress, ShopCode, ShopEmail,ShopName, ShopPhone, prize, startTime, endTime, rate', 'required'),
 			array('ShopID, CityID, prize, count', 'numerical', 'integerOnly'=>true),
 			array('rate', 'numerical'),
 			array('CounterManager, DirectorName, ShopLocation_X, ShopLocation_Y, ShopPhone', 'length', 'max'=>100),
@@ -72,7 +73,8 @@ class Market extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'ShopID' => 'ShopID',
+			'ShopID' => '店铺ID',
+			'Status' => '状态',
 			'CityID' => '城 市',
 			'CounterManager' => '经理',
 			'DirectorName' => '店长',
@@ -85,7 +87,9 @@ class Market extends CActiveRecord
 			'ShopPhone' => 'Shop Phone',
 			'startTime' => '开始时间',
 			'endTime' => '结束时间',
-			'rate' => '中奖概率(0.001)',
+			'createTime' => '创建时间',
+			'updateTime' => '更新时间',
+			'rate' => '中奖概率',
 			'count' => '中奖人数',
 			'prize' => '奖品数量',
 		);
@@ -108,7 +112,7 @@ class Market extends CActiveRecord
 		// @todo Please modify the following code to remove attributes that should not be searched.
 
 		$criteria=new CDbCriteria;
-
+		$criteria->compare('Status',$this->Status);
 		$criteria->compare('ShopID',$this->ShopID);
 		$criteria->compare('CityID',$this->CityID);
 		$criteria->compare('CounterManager',$this->CounterManager,true);

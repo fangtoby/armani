@@ -20,8 +20,17 @@ $this->menu=array(
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,
 	'attributes'=>array(
+		  array(
+		  'name'=>'状态',
+		  'value'=> $this->jugementStart($model) ,  //这里显示图片
+		  'type'=>'raw', 
+		  ),
 		'ShopID',
-		'CityID',
+		  array(
+		  'name'=>'CityID',
+		  'value'=> $this->getDetailCityName($model->CityID) ,  //这里显示图片
+		  'type'=>'raw', 
+		  ),
 		'CounterManager',
 		'DirectorName',
 		'ShopAddress',

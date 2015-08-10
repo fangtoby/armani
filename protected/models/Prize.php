@@ -21,6 +21,7 @@
  */
 class Prize extends CActiveRecord
 {
+	public $Status;
 	/**
 	 * @return string the associated database table name
 	 */
@@ -64,6 +65,7 @@ class Prize extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
+			'Status' => '状态',
 			'name' => '名称',
 			'note' => '规格',
 			'count' => '奖品总数',
@@ -129,4 +131,5 @@ class Prize extends CActiveRecord
 	{
 		return parent::model($className);
 	}
+	
 }

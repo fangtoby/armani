@@ -185,4 +185,34 @@ class MarketController extends Controller
 		$city = City::model()->findByPk($data->CityID );
 		echo $city->CityName;
 	}
+	
+	public function getDetailCityName($cityId){
+		$city = City::model()->findByPk($cityId );
+		return $city->CityName;
+	}
+	
+	public function getJugementStart($data,$row){
+		echo $this->jugementStart($data);
+	}
+	
+	public function jugementStart($model){
+		$now = time();
+		$status = array(
+			0=>"未开始",
+			1=>"进行中",
+			2=>"结束",
+			3=>"未设定"
+		);
+		if($model->endTime && $model->startTime){
+			if($now < strtotime($model->endTime) && $now > strtotime($model->startTime)){
+				return $status[1];
+			}
+			if($now < strtotime($model->startTime)){
+				return $status[0];	
+			}
+			return $status[2];
+		}
+		return $status[3];
+		
+	}
 }
