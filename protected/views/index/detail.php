@@ -10,15 +10,7 @@
 </head>
 <body>
     <div id="content">
-	<?php
-		$result = SMessage::sendMs('14782593339','xx','xx');
-		echo $result;
-		if($result){
-			echo "发送成功";	
-		}else{
-			
-		}
-	?>
+    <span><?php echo $info['nickname']; ?></span>
     </div><!-- content -->
 </body>
 <script>

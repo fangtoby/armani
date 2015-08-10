@@ -199,7 +199,10 @@ class ApiController extends Controller
 					$Market->save();
 					$this->addLotteryRecord($recordParamArr);
 					//发送短信
-					$result = SMessage::sendMs($number, $Market->ShopName , $prizeNoteStr);
+					$shopNameGBK = iconv('UTF-8', 'GB2312',  $Market->ShopName);
+					$prizeNoteGBK = iconv('UTF-8', 'GB2312', $prizeNoteStr);
+					
+					$result = SMessage::sendMs($number,$shopNameGBK ,$prizeNoteGBK );
 					$this->jsonSuccess(array(
 							'type'=>$code['lucky'],
 							'prize'=>$prizeNoteStr,
@@ -240,7 +243,10 @@ class ApiController extends Controller
 						$this->addLotteryRecord($recordParamArr);
 						
 						//发送短信
-						$result = SMessage::sendMs($number, $Market->ShopName , $prizeNoteStr);
+						$shopNameGBK = iconv('UTF-8', 'GB2312',  $Market->ShopName);
+						$prizeNoteGBK = iconv('UTF-8', 'GB2312', $prizeNoteStr);
+						
+						$result = SMessage::sendMs($number,$shopNameGBK ,$prizeNoteGBK );
 						
 						$this->jsonSuccess(array(
 							'type'=>$code['lucky'],
