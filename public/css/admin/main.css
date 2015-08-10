@@ -336,3 +336,17 @@ div.form .row label,div.form input{
 .footer{
 	text-align:center;
 	}
+#login-form{
+	width:200px;
+	margin:0 auto;
+	}
+#login-form h1{
+	text-align:center;
+	}
+#login-form label{
+	display:initial;
+	}
+#login-form .buttons{
+	padding-left:0px;
+	text-align:center;
+	}
