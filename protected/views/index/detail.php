@@ -11,10 +11,8 @@
 <body>
     <div id="content">
 	<?php
-$msg = "恭喜您获得专属底妆权利，写七天内，凭短息莅临阿玛尼美妆专柜，尊享明星粉底体验装一份，共襄15周年礼遇。（数量有限，领完即止）【阿玛尼美妆】
-";
-		
 		$result = SMessage::sendMs('14782593339','xx','xx');
+		echo $result;
 		if($result){
 			echo "发送成功";	
 		}else{

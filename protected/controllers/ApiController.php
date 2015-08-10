@@ -55,7 +55,8 @@ class ApiController extends Controller
 		//奖品类型
 		$prizeType = array(
 			'normal'=>0,
-			'special'=>1
+			'special'=>1,
+			'bigGift'=>2
 		);
 		//抽奖途径
 		$fromArr = array(
@@ -126,7 +127,7 @@ class ApiController extends Controller
 					));	
 				}
 				//奖品列表
-				if($specialOpen){
+				if($specialOpen && $from == $fromArr['all']){
 					$prizeList = Prize::model()->findAll();
 				}else{
 					$prizeList = Prize::model()->findAllByAttributes(array(
@@ -197,6 +198,8 @@ class ApiController extends Controller
 					$Market->updateTime = $currectTime;
 					$Market->save();
 					$this->addLotteryRecord($recordParamArr);
+					//发送短信
+					$result = SMessage::sendMs($number, $Market->ShopName , $prizeNoteStr);
 					$this->jsonSuccess(array(
 							'type'=>$code['lucky'],
 							'prize'=>$prizeNoteStr,
@@ -235,6 +238,10 @@ class ApiController extends Controller
 						$correctPrizeModel->updateTime = $currectTime;
 						$correctPrizeModel->save();
 						$this->addLotteryRecord($recordParamArr);
+						
+						//发送短信
+						$result = SMessage::sendMs($number, $Market->ShopName , $prizeNoteStr);
+						
 						$this->jsonSuccess(array(
 							'type'=>$code['lucky'],
 							'prize'=>$prizeNoteStr,

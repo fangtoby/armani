@@ -332,3 +332,7 @@ div.form .row label{
 div.form .row label,div.form input{
 	display:inline-block;
 }
+
+.footer{
+	text-align:center;
+	}

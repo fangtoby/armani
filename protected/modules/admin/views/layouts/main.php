@@ -35,6 +35,9 @@
      <?php echo $content; ?>
      
 </div>
+<div class="footer">
+	<span>CCE-2015 &copy;</span>
+</div>
 </body>
 <script>
 </script>

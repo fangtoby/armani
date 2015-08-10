@@ -29,8 +29,7 @@ class SMessage{
 	
 	public static function sendMs($mobile,$place,$prize, $dtime = NULL){
 		
-		$msg = "恭喜您获得专属底妆权利，写七天内，凭短息莅临阿玛尼{$place}美妆专柜，尊享明星粉底体验装($prize)一份，共襄15周年礼遇。（数量有限，领完即止）【阿玛尼美妆】
-";
+		$msg = "恭喜您获得专属底妆权利，七天内，凭短息莅临阿玛尼{$place}美妆专柜，尊享明星粉底体验装($prize)一份，共襄15周年礼遇。（数量有限，领完即止）【阿玛尼美妆】";
 		
 		//$msg = urlencode(iconv('UTF-8', 'GB2312', $msg));
 		//$msg = iconv('UTF-8', 'GB2312', $msg);
@@ -44,12 +43,13 @@ class SMessage{
 			return false;
 		}
 	}
-	public static function send($mobile, $msg, $dtime = NULL){
+	public static function send($mobile, $place,$prize , $dtime = NULL){
 		
 		self::$mobile = $mobile;
-		self::$msg = $msg;
 		self::$dtime = $dtime;
-
+		$msg = "恭喜您获得专属底妆权利，七天内，凭短息莅临阿玛尼{$place}美妆专柜，尊享明星粉底体验装($prize)一份，共襄15周年礼遇。（数量有限，领完即止）【阿玛尼美妆】
+";
+		self::$msg = $msg;
 		$data = array(
 			'uid'=>self::$uid,
 			'pwd'=>self::$pwd,
@@ -77,23 +77,26 @@ class SMessage{
 		 }
 		 return $response;
 	}
-	function sends($mobile, $msg, $dtime = NULL){
+	public static function  sends($mobile, $place,$prize){
+		
+		$msg = "恭喜您获得专属底妆权利，七天内，凭短息莅临阿玛尼{$place}美妆专柜，尊享明星粉底体验装($prize)一份，共襄15周年礼遇。（数量有限，领完即止）【阿玛尼美妆】
+";
+		self::$msg = $msg;
 		
 		self::$mobile = $mobile;
 		self::$msg = $msg;
-		self::$dtime = $dtime;
 
 		$data = array(
 			'uid'=>self::$uid,
 			'pwd'=>self::$pwd,
-			'mobile'=>self::$mobile,
-			'msg'=>self::$msg,
-			'dtime'=>self::$dtime
+			'mobile'=>$mobile,
+			'msg'=>$msg,
+			'dtime'=>""
 		);
 		
 		return self::send_post(self::$url,$data);	
 	}
-	function send_post($url, $post_data) {  
+	public static function send_post($url, $post_data) {  
 	  
 	  $postdata = http_build_query($post_data);  
 	  $options = array(  
