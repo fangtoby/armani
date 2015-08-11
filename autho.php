@@ -5,6 +5,7 @@ function authRequest($url){
 	curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, FALSE); 
 	curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, FALSE); 
 	curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+	curl_setopt($ch, CURLOPT_HTTPHEADER, array('Expect:')); 
 	$data = curl_exec($ch);
 	curl_close($ch);
 
