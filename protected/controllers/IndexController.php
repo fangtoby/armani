@@ -61,12 +61,8 @@ class IndexController extends Controller
 			'wb'=>2,
 		);
 		
-		$where = 0;
-		if(isset($_GET['code'])){
-			$code = $_GET['code'];
-			echo $code;
-			exit;
-		}
+		$where = 1;
+
 		if(isset($_GET['path'])){
 			if($path['wx'] == $_GET['path']){
 				$where = 1;
@@ -75,22 +71,20 @@ class IndexController extends Controller
 				$where = 2;
 			}
 		}
-		
+
 		if(isset($_GET['info']) && $_GET['info'] !=  NULL){
 			$info = CJSON::decode($_GET['info']);
-			
-			$openid = 'oPV4Ht0yokB6n-DEcr5JocRNPZv4';
 			
 			$user = User::model()->findByAttributes(array(
 				'unionid'=>$info['openid']
 			));
-			
+
 			if(!$user){
 				$user = new User();
 				$user->unionid = $info['openid'];
 				$nickname = json_encode($info['nickname']);
 				$user->nickname = $nickname; 
-				
+				$user->path = $where;
 				$user->sex = $info['sex'];
 				$user->headimgurl = $info['headimgurl'];
 				$user->save();
@@ -102,6 +96,7 @@ class IndexController extends Controller
 				'result'=>$this->result,
 				'url'=>Yii::app()->params['severUrl'],
 				'info'=>array(
+					'where'=>$where,
 					'openid'=>$user->id,
 					'nickname'=>json_decode($user->nickname),
 					'headimgurl'=>$user->headimgurl,
@@ -118,7 +113,7 @@ class IndexController extends Controller
 				$url="https://open.weixin.qq.com/connect/oauth2/authorize?appid={$appId}&redirect_uri={$ulink}&response_type=code&scope=snsapi_userinfo&state=State#wechat_redirect";
 			}else if($where == $path['wb']){
 				$id = "3163304423";
-				$link = $link."/index/indexs";
+				$link = "http://masterofglow.comeyes.cn/autho.php";
 				$authorize = "https://api.weibo.com/oauth2/authorize?client_id={$id}&response_type=code&redirect_uri={$link}";
 				//$url = urlencode($authorize);
 			}

@@ -1,29 +1,41 @@
 <?php
-function authRequest($url){
-	$ch = curl_init();
-	curl_setopt($ch, CURLOPT_URL, $url);
-	curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, FALSE); 
-	curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, FALSE); 
-	curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-	curl_setopt($ch, CURLOPT_HTTPHEADER, array('Expect:')); 
-	$data = curl_exec($ch);
-	curl_close($ch);
 
-	var_dump(json_decode($data));
-}
-	
-if(isset($_GET['code'])){
-	$code = $_GET['code'];
-	echo "code:".$_GET['code'];
-	$weiboAuthoUrl = "https://api.weibo.com/oauth2/access_token?";
-	$registeredRedirect = "http://masterofglow.comeyes.cn/autho.php";
-	$clientSecret = "b9c38995ee427ea6c98058d3a8f84d0b";
-	$clentId = "3163304423";
-	$url = "{$weiboAuthoUrl}client_id={$clentId}&client_secret={$clientSecret}&grant_type=authorization_code&redirect_uri={$registeredRedirect}&code={$code}";
-	
-	authRequest($url);
-	
-}else{
-	echo "error";	
-}
+require_once dirname(__FILE__).DIRECTORY_SEPARATOR.'sinaWeibo/SinaWeibo.php';
 
+$weiboService=new SinaWeibo(WB_AKEY, WB_SKEY);
+		
+if (isset($_REQUEST['code'])) {
+		$keys = array();
+		$keys['code'] = $_REQUEST['code'];
+		$keys['redirect_uri'] = WB_CALLBACK_URL;
+		try {
+			$token = $weiboService->getAccessToken( 'code', $keys ) ;
+		} catch (OAuthException $e) {
+
+		}
+}
+		
+if ($token) {
+	$_SESSION['token'] = $token;
+	//$back_url = "/index/index?info=";
+	$c = new SaeTClientV2(WB_AKEY, WB_SKEY, $_SESSION['token']['access_token']);
+
+	$me = $c->get_uid();
+	$me = $c->show_user_by_id($me['uid']);
+
+	print_r($me);
+	eixt;
+	//setcookie( 'weibojs_'.$weiboService->client_id, http_build_query($token) );
+	//header( "refresh:3;url=".$back_url);
+	// $data = {
+	// 	''
+	// };
+	//echo "<h1>认证已经通过，将会在3秒之后跳转到微博列表页面。如果没有，点击<a href=".$_SESSION['back_url'].">这里</a>。</h1>";exit;
+	
+} else {
+	echo '认证失败';
+}
+?>
+<script type="text/javascript">
+	//window.location.href = "/index/indexs?path=2&info=";
+</script>
