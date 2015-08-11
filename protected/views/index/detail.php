@@ -13,14 +13,13 @@
     <span><?php // echo $info['nickname']; ?></span>
     
     <?php
-	$place = "十多个地方asdfasx43mlutf8-gbk-uft8{}remove";
-	$prize = "对待xx";
-	$placeg = iconv('UTF-8', 'GB2312', $place);
-	$prizeg = iconv('UTF-8', 'GB2312', $prize);
-	$msg = SMessage::sendMs("14782593339",$placeg,$prizeg);
-	//$msg = SMessage::sendMs("14782593339",$place,$prize);
-		//echo iconv('GB2312', 'UTF-8',SMessage::test("14782593339",$placeg,$prizeg));
-	echo $msg;
+	
+		$str = "Hello $bytes World";
+
+		echo "<td>$str</td>\n";
+		echo "<td>".emoji_unified_to_html($str)."</td>\n";
+		echo "<td>".emoji_html_to_unified(emoji_unified_to_html($str))."</td>\n";
+		echo "</tr>\n";
 	?>
     </div><!-- content -->
 </body>
