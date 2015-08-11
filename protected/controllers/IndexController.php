@@ -27,7 +27,8 @@ class IndexController extends Controller
 				//$tmpStr = preg_replace("#(\\\ue[0-9a-f]{3})#ie","addslashes('\\1')",$tmpStr); //将emoji的unicode留下，其他不动 
 				//$nickname = json_decode($tmpStr); 
 				//$user->nickname = $nickname;
-				$nickname = emoji_html_to_unified($info['nickname']);
+				//$nickname = emoji_html_to_unified($info['nickname']);
+				$nickname = json_encode($info['nickname']);
 				$user->nickname = $nickname;
 				//$text = preg_replace("#\\\u([0-9a-f]+)#ie","iconv('UCS-2','UTF-8', pack('H4', '\\1'))",$text); //对emoji unicode进行二进制pack并转utf8 
 				
@@ -45,7 +46,7 @@ class IndexController extends Controller
 				'url'=>Yii::app()->params['severUrl'],
 				'info'=>array(
 					'openid'=>$user->id,
-					'nickname'=>$user->nickname,
+					'nickname'=>json_decode($user->nickname),
 					'headimgurl'=>$user->headimgurl,
 				)
 			));
@@ -101,7 +102,7 @@ class IndexController extends Controller
 			$this->render('setinfo',array(
 				'info'=>array(
 					'openid'=>$user->id,
-					'nickname'=>$user->nickname,
+					'nickname'=>json_decode($user->nickname),
 					'headimgurl'=>$user->headimgurl,
 				)
 			));
