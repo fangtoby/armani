@@ -164,9 +164,9 @@ class ApiController extends Controller
 				$correctPrizeId = $correctPrizeModel->id;
 				$correctPrizeType = $correctPrizeModel->type;
 				if($correctPrizeModel->note){
-					$prizeNoteStr = $correctPrizeModel->note."".$correctPrizeModel->name;
+					$prizeNoteStr = str_replace(' ','',$correctPrizeModel->note."".$correctPrizeModel->name);
 				}else{
-					$prizeNoteStr = $correctPrizeModel->name;
+					$prizeNoteStr =  str_replace(' ','',$correctPrizeModel->name);
 				}
 				//抽奖记录参数
 				$recordParamArr = array(
@@ -205,10 +205,10 @@ class ApiController extends Controller
 					$Market->save();
 					$this->addLotteryRecord($recordParamArr);
 					//发送短信
-					$shopNameGBK = iconv('UTF-8', 'GB2312',  $Market->ShopName);
+					$shopNameGBK = iconv('UTF-8', 'GB2312',  str_replace(' ','',$Market->ShopName));
 					$prizeNoteGBK = iconv('UTF-8', 'GB2312', $prizeNoteStr);
 					
-					$result = SMessage::sendMs($number,$Market->ShopName ,$prizeNoteStr );
+					$result = SMessage::sendMs($number,$shopNameGBK,$prizeNoteGBK );
 					$this->jsonSuccess(array(
 							'type'=>$code['lucky'],
 							'prize'=>$prizeNoteStr,
@@ -249,7 +249,7 @@ class ApiController extends Controller
 						$this->addLotteryRecord($recordParamArr);
 						
 						//发送短信
-						$shopNameGBK = iconv('UTF-8', 'GB2312',  $Market->ShopName);
+						$shopNameGBK = iconv('UTF-8', 'GB2312',  str_replace(' ','',$Market->ShopName));
 						$prizeNoteGBK = iconv('UTF-8', 'GB2312', $prizeNoteStr);
 						
 						$result = SMessage::sendMs($number,$shopNameGBK ,$prizeNoteGBK );
