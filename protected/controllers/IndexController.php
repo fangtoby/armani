@@ -84,7 +84,7 @@ class IndexController extends Controller
 			$this->render('list',array(
 				'info'=>array(
 					'openid'=>$user->id,
-					'nickname'=>$user->nickname,
+					'nickname'=>json_encode($user->nickname),
 					'headimgurl'=>$user->headimgurl,
 				)
 			));
@@ -123,7 +123,7 @@ class IndexController extends Controller
 						'number'=>$user->id,
 						'info'=>array(
 							'openid'=>$user->id,
-							'nickname'=>$user->nickname,
+							'nickname'=>json_encode($user->nickname),
 							'headimgurl'=>$user->headimgurl,
 					)
 				));
