@@ -8,7 +8,7 @@
     <script>
     	var g_config = {					
 				openid:"<?=$info["openid"];?>",
-				nickname:"<?=$info["nickname"];?>",
+				nickname:'<?=$info["nickname"];?>',
 				headimgurl:"<?=$info["headimgurl"];?>",
 				path:{
 					js:"<?=Data::$data['staticUri']['js']?>",
@@ -58,6 +58,8 @@
     <script src="<?=Data::$data['staticUri']['js']?>wechat.js"></script>
 	</head>
 <body style='background: #000' >
+<img src='<?=Data::$data['staticUri']['img']?>qrcode.png' class='qrcode' style='display:none'/>
+<div class='page'>
  <div class='category'  style='display:none' >
 	<a href='javascript:;' class="apply1"></a>
 	<a href='javascript:;' class="catest"></a>
@@ -73,7 +75,7 @@
  </div>
  <div class='result' style='display:none'>
 	<div class='card'>
-		<img src='<?=Data::$data['staticUri']['img']?>card/s1_1.jpg' class='cardbg'/>
+		<img src='' class='cardbg'/>
 		<div class='self_info'>
 			
 			<img src='<?=Data::$data['staticUri']['img']?>img.jpg' width='70px' height='70px' />
@@ -83,43 +85,49 @@
 	</div>
  </div>
  <div class='overlay' style='display:none'>
+		
 	<div class='setinfo' style='display:none'>
 		<a href='javascript:;' class='close'>close</a>
-		<img src='<?=Data::$data['staticUri']['img']?>tips.png' />
-		<form>
-		<input type='text' placeholder='手机号码' maxLength='11'/>
-		<div class='select citylist'>
-			<span class='city' data-id='0'>城市</span>
-			<select>
+		<div class='popup1' style='display:none'>
+			<img src='<?=Data::$data['staticUri']['img']?>tips.png' />
+			<form>
+			<input type='text' placeholder='手机号码' maxLength='11'/>
+			<div class='select citylist'>
+				<span class='city' data-id='0'>城市</span>
+				<select>
 				
-			</select>
-		</div>
-		<div class='select shoplist'>
-			<span class='shop' data-id='0'>专柜</span>
-			<select>
+				</select>
+			</div>
+			<div class='select shoplist'>
+				<span class='shop' data-id='0'>专柜</span>
+				<select>
 				
-			</select>
+				</select>
+			</div>
+			<a href='javascript:;'><img src='<?=Data::$data['staticUri']['img']?>submitbtn.png' /></a>
+			</form>
 		</div>
-		<a href='javascript:;'><img src='<?=Data::$data['staticUri']['img']?>submitbtn.png' /></a>
-	</form>
+		
+		<div class='popup2' style='display:none'>
+			
+			<span class='msg'>恭喜您<br>
+			获取阿玛尼赋予5ml权利粉饼<br>
+			我们将短信通知邀您莅临专柜
+			</span>
+			<img src='<?=Data::$data['staticUri']['img']?>scale.png'/>
+			<a href='javascript:;' class='share'><img src='<?=Data::$data['staticUri']['img']?>submitbtn.png' /></a>
+		
+	 	
+	 	</div>
+	
 	</div>
 	
-	<div class='backResult' style='display:none'>
-		<a href='javascript:;' class='close'>close</a>
-		<span class='msg'>恭喜您<br>
-		获取阿玛尼赋予5ml权利粉饼<br>
-		我们将短信通知邀您莅临专柜
-		</span>
-		<span>长按关注,共赴优雅之约</span>
-		<img src='<?=Data::$data['staticUri']['img']?>qrcode.png' class='qrcode' />
-		<a href='javascript:;' class='share'><img src='<?=Data::$data['staticUri']['img']?>submitbtn.png' /></a>
-	</div>
 	
-	<div class='share' style='display:none'>
+	<div class='shareTips' style='display:none'>
 		<img src='<?=Data::$data['staticUri']['img']?>sharetips.png' />
 	</div>
  </div>
- 
+ </div>
 </body>
 
 </html>

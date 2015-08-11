@@ -5,12 +5,16 @@
     $.extend(Mgm.prototype, {
 		
         init: function(data) {
-        
-			this.loadimages(['gifjpg/1-0.jpg','gifjpg/1-1.jpg','gifjpg/1-2.jpg','gifjpg/1-3.jpg','gifjpg/1-4.jpg','gifjpg/1-5.jpg',
+        var self = this;
+     	   setTimeout(function(){
+			self.loadimages(['gifjpg/1-0.jpg','gifjpg/1-1.jpg','gifjpg/1-2.jpg','gifjpg/1-3.jpg','gifjpg/1-4.jpg','gifjpg/1-5.jpg',
 			'gifjpg/1-6.jpg','gifjpg/1-7.jpg','gifjpg/1-8.jpg','gifjpg/1-9.jpg','gifjpg/1-10.jpg','gifjpg/1-11.jpg','gifjpg/1-12.jpg',
 			'gifjpg/1-13.jpg','gifjpg/1-14.jpg','gifjpg/1-15.jpg','gifjpg/1-16.jpg','gifjpg/1-17.jpg','gifjpg/1-18.jpg','gifjpg/1-19.jpg',
 			'gifjpg/1-20.jpg','p1_1.png','p1_2.png','p1_3.png','p3_bg.jpg','bg.jpg'])
+			},500)
+			
         },
+        
 		loadimages : function(arr){
 			var self=this;
 			var newimages=[], loadedimages=0
@@ -39,6 +43,9 @@
 				}
 			}
 		},
+		
+		
+		
 		
 		landing:function(){
 		var self = this;
@@ -105,7 +112,7 @@
 			var self = this;
 			num++;
 			if(num<=2015){
-				$('.year').empty().html(num+'年')
+				$('.year em').empty().html(num)
 					setTimeout(function(){
 						self.setyear(num);
 					},200)

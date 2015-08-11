@@ -9,14 +9,17 @@
         	this.isWeiXin();
         	this.type = null;
 			$('.citylist select').empty();
+			$(".shoplist select").hide();
 			this.shopdata = ss.result;
+			
 			this.fillCity();
 			this.block = true;
 			var self = this;
+			
 			$('.getprize form a').click(function(){
-			if(self.block == false){
-				return false;
-			}
+				if(self.block == false){
+					return false;
+				}
 			
 				self.block = false;
 				self.type = 0; 
@@ -24,10 +27,13 @@
 			})
 			
 			$('.setinfo form a').click(function(){
-			if(self.block == false){
-				return false;
-			}
-			self.block = false;
+			
+				
+				if(self.block == false){
+				
+					return false;
+				}
+				self.block = false;
 				self.type = 1; 
 				self.forminfo();
 			})
@@ -46,18 +52,32 @@
         	var mobile = $('input').val();
 			var city = $('.city').attr('data-id');
 			var seshops = $('.shop').attr('data-id');
-			 if(city == '0' ){
-				alert('请选择城市')
-				return false;
-			}
-			if(seshops == '0' ){		
-					alert('请选择专柜')
-					return false;
-			}
+		
 			if(mobile !='' &&  /^1[34578]\d{9}/.test(mobile)) {
-				$('.backResult .msg').empty();
-      			  this.ajax(city,seshops,this.type,mobile)  				
-      		  }
+					if(city == '0' ){
+						alert('请选择城市')
+						this.block = true;
+						return false;
+					}
+					  
+					if(seshops == '0' ){		
+							alert('请选择专柜')
+							this.block = true;
+							return false;
+					}
+					
+						$('.setinfo .popup2 .msg').empty();
+						this.ajax(city,seshops,this.type,mobile)  	
+					
+      		  }else{
+					alert('请输入正确手机号')
+					this.block = true;
+					return false;	 
+			  }
+			  
+			
+			
+		
         
         },
         
@@ -106,6 +126,7 @@
 						}
 					}
 					$(".shoplist select").append(shtml)
+					$(".shoplist select").show();
 				})
 				
 			$(".shoplist select").on("change",function() {
@@ -119,6 +140,7 @@
 		},
 		
 		ajax:function(cityId,marketId,btntype,phone){
+		var self = this;
 			 $.ajax({
        			 url: '/api/lottery',
       			 type: "get",
@@ -132,7 +154,9 @@
         		 	
         		 },
 				 success: function (response) {
+				 
 				 	self.block = true;
+				 	
 				 	if(response.code != 200){
 				 		alert(response.message)
 				 		return false;
@@ -144,17 +168,25 @@
 				 	}else{
 				 	
 				 		if(response.data.type == 1){
-				 			$('.backResult .msg').html('恭喜您<br>获取阿玛尼赋予<br>'+response.data.prize+'<br>我们将短信通知邀您莅临专柜')
-				 		}else{
-				 			$('.backResult .msg').html('很遗憾<br>')
+				 			$('.setinfo .popup2 .msg').html('恭喜您<br>获取阿玛尼赋予<br>'+response.data.prize+'<br>我们将短信通知邀您莅临专柜')
+				 			
+				 			$('.setinfo .popup1').hide();
+				 			$('.setinfo .popup2').show();
+				 			$('.qrcode').show();
+				 			var vid = $('.cardbg').attr('src').split('images/card/')[1].split('.jpg')[0]
+				 			window.share.link='http://masterofglow.comeyes.cn/index/share?openid='+ g_config.openid +'&v='+vid+''
+				 			window.share.desc='底妆大师阿玛尼15周年，我是第'+response.data.number+'个致敬大师的追随者'
+				 			shareConfig();
+				 			
+				 			
 				 		}
 				 		
-				 		$('.setinfo').hide();
-				 		$('.backResult').show();
-				 		var vid = $('.cardbg').attr('src').split('images/card/')[1].split('.jpg')[0]
-				 		window.share.link='http://masterofglow.comeyes.cn/index/share?openid='+ g_config.openid +'&v='+vid+''
-				 		window.share.desc='底妆大师阿玛尼15周年，我是第'+response.data.number+'个致敬大师的追随者'
-				 		shareConfig();
+				 		
+				 		if(response.data.type == 3){
+				 			alert('您已经中过奖了')
+				 		}
+				 		
+				 		
 				 		
 				 		$('.share').click(function(){
 							if(self.iswechat == false){
@@ -163,7 +195,9 @@
 									+"&title='底妆大师阿玛尼15周年，我是第"+response.data.number+"个致敬大师的追随者'&url="
 									+ encodeURIComponent('http://masterofglow.comeyes.cn/index/share?openid='+ g_config.openid +'&v='+vid+'');
 							}else{
-								$('.backResult').hide()
+								$('.setinfo').hide()
+								$('.setinfo .popup2').hide()
+								$('.qrcode').hide();
 								$('.shareTips').fadeIn()
 							}	
 			
@@ -179,10 +213,11 @@
 		isWeiXin:function(){
   				  var ua = window.navigator.userAgent.toLowerCase();
    				if(ua.match(/MicroMessenger/i) == 'micromessenger'){
+					this.iswechat = true
+				
+  				  }else{
 					this.iswechat = false
 					
-  				  }else{
-					this.iswechat = true
   				  }
 			}
 	

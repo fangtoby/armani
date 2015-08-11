@@ -10,17 +10,7 @@
 </head>
 <body>
     <div id="content">
-    <span><?php // echo $info['nickname']; ?></span>
-    
-    <?php
-	
-		$str = "Hello $bytes World";
-
-		echo "<td>$str</td>\n";
-		echo "<td>".emoji_unified_to_html($str)."</td>\n";
-		echo "<td>".emoji_html_to_unified(emoji_unified_to_html($str))."</td>\n";
-		echo "</tr>\n";
-	?>
+    <span><?php echo $info['nickname']; ?></span>
     </div><!-- content -->
 </body>
 <script>

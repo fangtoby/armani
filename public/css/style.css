@@ -36,12 +36,12 @@ font-family: '微软雅黑';
 }
 .animate .part2{
 position: relative;
-width: 100%;
-height: 100%;
-background: url(../images/bg.jpg) repeat;
+width: 640px;
+background: #d9bc92 url(../images/bg.jpg) no-repeat;
 background-size: cover;
 display: block;
-min-height: 1008px;
+height: 100%;
+overflow: hidden;
 }
 .animate .part2 img:nth-child(1){
 margin-top: 60px;
@@ -54,7 +54,6 @@ height: 100%;
 background: url(../images/p3_bg.jpg) repeat;
 background-size: cover;
 display: block;
-min-height: 1008px;
 }
 .category {
 position: relative;
@@ -63,6 +62,7 @@ height: 100%;
 background: #000 url(../images/category.jpg) no-repeat;
 background-size: 100%;
 display: block;
+min-height: 1008px;
 }
 .animate .part3 a {
 position: relative;
@@ -74,15 +74,21 @@ top: 58px;
 }
 
 p.year {
-position: absolute;
-top: 330px;
-font: 60px '微软雅黑';
-text-align: center;
-width: 100%;
-color: #fff;
-letter-spacing: 3px;
+    position: absolute;
+    top: 325px;
+    font: 60px '微软雅黑';
+    text-align: center;
+    width: 234px;
+    color: #fff;
+    letter-spacing: 3px;
+    left: 205px;
 }
-
+.year em{
+    width: 153px;
+    position: relative;
+    display: block;
+    float: left;
+}
 a.apply1 {
 position: relative;
 width: 216px;
@@ -104,9 +110,10 @@ top: 252px;
 
 .sub_category {
 position: relative;
-width: 100%;
+width: 640px;
 height: 100%;
 display: block;
+min-height: 1008px;
 }
 .sub1{
 background: #000 url(../images/sub1.jpg) no-repeat;
@@ -151,7 +158,10 @@ height: 250px;
 right: 9px;
 top: 753px;
 }
-
+.result{
+position: relative;
+width: 640px;
+}
 .sub3 a.btn1 {
 position: absolute;
 width: 305px;
@@ -197,7 +207,7 @@ float: right;
 height: 67px;
 right: 20px;
 text-align: right;
-font: 37px/96px '微软雅黑';
+font: 25px/96px '微软雅黑';
 border-bottom: 2px solid;
 position: relative;
 }
@@ -207,21 +217,22 @@ position: relative;
 width: 330px;
 height: 75px;
 display: block;
-margin: 0 auto;
+margin: 0 auto 30px;
 }
 
 .overlay {
-position: fixed;
+position: absolute;
 top: 0;
 width: 100%;
 height: 100%;
 background: rgba(0,0,0,0.8);
+min-height: 1008px;
 }
 
 .setinfo,.backResult {
 position: relative;
 width: 550px;
-height: 100%;
+height: 670px;
 background: url(../images/popbg.png) no-repeat;
 background-size: 100%;
 display: block;
@@ -296,6 +307,7 @@ height: 100%;
 background: #fbefe3 url(../images/info_bg.jpg) no-repeat;
 background-size: 100%;
 display: block;
+min-height: 1008px;
 }
 form a,.setback a{
 top: 50px;
@@ -382,7 +394,7 @@ top: 282px;
 position: absolute;
 }
 .part0 img:nth-child(3){
-top: 810px;
+top: 85%;
 position: absolute;
 }
 .part1 {
@@ -392,32 +404,38 @@ height: 100%;
 background: #aa816b;
 }
 
-.backResult span{
-position: relative;
-width: 100%;
-display: block;
-text-align: center;
-font: 30px/45px '微软雅黑'
-top: 50px;
+.popup2 span{
+    position: absolute;
+    width: 100%;
+    display: block;
+    text-align: center;
+    font: 30px/38px '微软雅黑';
+    top: 50px;
 }
-.backResult span:nth-child(2){
-margin-top: 50px;
-}
+
 .qrcode{
 position: relative;
-margin: 65px auto 30px;
+margin: 0px auto;
 width: 218px;
 display: block;
+z-index: 10;
+top: 395px;
 }
 
 .share{
-position: relative;
+position: absolute;
 width: 261px;
 height: 67px;
 display: block;
 margin: 0 auto;
+bottom: 40px;
+left: 144.5px;
 }
-
+.page {
+position: absolute;
+top: 0;
+z-index: 0;
+}
 
 
 

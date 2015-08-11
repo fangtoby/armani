@@ -8,7 +8,7 @@
     <script>
     	var g_config = {					
 				openid:"<?=$info["openid"];?>",
-				nickname:"<?=$info["nickname"];?>",
+				nickname:'<?=$info["nickname"];?>',
 				headimgurl:"<?=$info["headimgurl"];?>",
 				path:{
 					js:"<?=Data::$data['staticUri']['js']?>",

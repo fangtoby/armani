@@ -5,6 +5,7 @@
     $.extend(Mgm.prototype, {
 		
         init: function(data) {
+      		
 		  	$('.self_info img').attr('src',g_config.headimgurl)
 			$('.self_info span').empty().html( g_config.nickname )
 			var self = this;
@@ -108,15 +109,22 @@
 			})
 			
 			$('.card a').click(function(){
-				$('.overlay,.setinfo').fadeIn()
+				$('.overlay,.setinfo,.popup1').fadeIn()
 			})
 			
 			$('.close').click(function(){
-				$('.overlay,.overlay>div').hide()
+				$('.overlay,.overlay>div,.qrcode,.popup1,.popup2').hide();
+				
+
 			})
+			
+		
+		
 			
 			
 		}
+			
+		
 	
     });
 })(jQuery);

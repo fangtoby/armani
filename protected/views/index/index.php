@@ -65,7 +65,7 @@
 		<img src='<?=Data::$data['staticUri']['img']?>01.jpg' width='100%'style='display:none'/>
 	</div>
 	<div class='part1' style='display:none'>
-		<img src='<?=Data::$data['staticUri']['img']?>gifjpg/1-0.jpg' width='100%' />
+		<img src='<?=Data::$data['staticUri']['img']?>gifjpg/1-0.jpg' width='100%' height='100%' />
 	</div>
 	<div class='part2' style='display:none'>
 		<img src='<?=Data::$data['staticUri']['img']?>p1_1.png' width='100%' />
@@ -75,7 +75,7 @@
 	<div class='part3' style='display:none'>
 		<img src='<?=Data::$data['staticUri']['img']?>p3_1.png' width='100%'  class='p3cp1' style='display:none' />
 		<img src='<?=Data::$data['staticUri']['img']?>p3_2.png' width='100%' class='p3cp2' style='display:none'/>
-		<p class='year' style='display:none'>2000年</p>
+		<p class='year' style='display:none'><em>2000</em>年</p>
 		<a href='javascript:;' style='display:none'><img src='<?=Data::$data['staticUri']['img']?>p3btn.png' /></a>
 	</div>
  </div>
