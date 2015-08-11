@@ -4,7 +4,6 @@
  * All controller classes for this application should extend from this base class.
  */
  
-include('emoji.php');
 class Controller extends CController
 {
 	/**

@@ -1,6 +1,7 @@
 <?php
 ini_set('date.timezone','Asia/Shanghai');
 
+include('emoji.php');
 // change the following paths if necessary
 $yii=dirname(__FILE__).'/../yii-1/framework/yii.php';
 $config=dirname(__FILE__).'/protected/config/main.php';
