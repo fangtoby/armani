@@ -120,7 +120,7 @@ class IndexController extends Controller
 				$id = "3163304423";
 				$link = $link."/index/indexs";
 				$authorize = "https://api.weibo.com/oauth2/authorize?client_id={$id}&response_type=code&redirect_uri={$link}";
-				$url = urlencode($authorize);
+				//$url = urlencode($authorize);
 			}
 			$this->render('index',array(
 				'url'=>$url

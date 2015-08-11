@@ -9478,3 +9478,13 @@ REQUEST_URI=/index/detail
 in C:\xampp\htdocs\armani\armani\protected\views\index\detail.php (17)
 in C:\xampp\htdocs\armani\armani\protected\controllers\IndexController.php (153)
 in C:\xampp\htdocs\armani\armani\index.php (2094)
+2015/08/11 15:38:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "admin.php".' in C:\xampp\htdocs\armani\yii-1\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\armani\yii-1\framework\web\CController.php(270): CController->missingAction('admin.php')
+#1 C:\xampp\htdocs\armani\yii-1\framework\web\CWebApplication.php(282): CController->run('admin.php')
+#2 C:\xampp\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/lottery/a...')
+#3 C:\xampp\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\armani\armani\index.php(14): CApplication->run()
+#5 {main}
+REQUEST_URI=/admin/lottery/admin.php
+---
