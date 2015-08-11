@@ -78,13 +78,19 @@ class IndexController extends Controller
 			$user = User::model()->findByAttributes(array(
 				'unionid'=>$info['openid']
 			));
-
+			
+			if($where == $path['wx']){
+				$referer = $_SERVER['HTTP_REFERER'];
+			}else{
+				$referer = $info['referer'];
+			}
 			if(!$user){
 				$user = new User();
 				$user->unionid = $info['openid'];
 				$nickname = json_encode($info['nickname']);
 				$user->nickname = $nickname; 
 				$user->path = $where;
+				$user->utm_source = $referer;
 				$user->sex = $info['sex'];
 				$user->headimgurl = $info['headimgurl'];
 				$user->save();

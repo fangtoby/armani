@@ -22,8 +22,30 @@ if ($token) {
 
 	$me = $c->get_uid();
 	$me = $c->show_user_by_id($me['uid']);
-
+	
 	print_r($me);
+	exit;
+	//gender
+	$gender = 3;
+	
+	switch($me['gender']){
+		case 'm':
+		$gender = 1;
+		break;
+		case 'f':
+		$gender = 2;
+		break;
+	}
+	
+	$info = array(
+		'openid'=>$me['id'],
+		'nickname'=>$me['name'],
+		'sex'=> $gender,
+		'headimgurl'=>$me['profile_image_url'],
+		'referer'=>$_SERVER['HTTP_REFERER']
+	);
+	$info = json_encode($info);
+	
 	eixt;
 	//setcookie( 'weibojs_'.$weiboService->client_id, http_build_query($token) );
 	//header( "refresh:3;url=".$back_url);
@@ -37,5 +59,5 @@ if ($token) {
 }
 ?>
 <script type="text/javascript">
-	//window.location.href = "/index/indexs?path=2&info=";
+	//window.location.href = "/index/indexs?path=2&info=<?=$info?>";
 </script>

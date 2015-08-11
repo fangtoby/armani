@@ -170,6 +170,7 @@ class ApiController extends Controller
 				}
 				//抽奖记录参数
 				$recordParamArr = array(
+					"uid"=>$uid, 
 					"win"=>$win,
 					"from"=>$from,
 					"number"=>$number,
@@ -282,6 +283,7 @@ class ApiController extends Controller
 	}
 	public function addLotteryRecord($param){
 		$Lottery = new Lottery();
+		$Lottery->uid = $param['uid'];
 		$Lottery->phone = $param['number'];
 		$Lottery->cityId = $param['cityId'];
 		$Lottery->marketId = $param['marketId'];
