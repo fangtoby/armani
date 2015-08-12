@@ -6,5 +6,3 @@ class SinaWeibo extends SaeTOAuthV2{
 	//$code_url = $o->getAuthorizeURL( WB_CALLBACK_URL );
 	
 }
-
-?>
