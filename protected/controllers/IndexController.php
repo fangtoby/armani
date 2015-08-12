@@ -22,10 +22,11 @@ class IndexController extends Controller
 				$user->headimgurl = $info['headimgurl'];
 				$user->save();
 			}else{
-				echo "Error";	
-				exit;
+				//echo "Error";	
+				//exit;
 			}
-			
+			//echo 2;
+			//exit;
 			Yii::app()->session['uid'] = $user->id;
 			
 			$this->redirect(array('/index/list','id'=>$user->id));
@@ -170,7 +171,7 @@ class IndexController extends Controller
 	
 	public function actionList(){
 		if(isset($_GET['test'])){
-			$uid = 5;
+			$uid = 13;
 		}else{
 			$uid = Yii::app()->session['uid'];
 		}
@@ -190,7 +191,7 @@ class IndexController extends Controller
 	public function actionSetinfo()
 	{
 		if(isset($_GET['test'])){
-			$uid = 5;
+			$uid = 13;
 		}else{
 			$uid = Yii::app()->session['uid'];
 		}
