@@ -92,7 +92,7 @@ return array(
 	// using Yii::app()->params['paramName']
 	'params'=>array(
 		// this is used in contact page
-		'severUrl'=>'http://masterofglow.comeyes.cn',
+		'severUrl'=>'http://masterofglow.comeyes.cn/index/autho',
 		'weichat'=>require(dirname(__FILE__).'/weichat.php'),
 		'version'=>require(dirname(__FILE__).'/version.php'),
 	),

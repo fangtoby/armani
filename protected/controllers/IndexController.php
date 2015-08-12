@@ -4,6 +4,45 @@ class IndexController extends Controller
 {
 	protected $result = 1;
 	
+	public function actionAutho(){
+		if(isset($_GET['info']) && $_GET['info'] !=  NULL){
+			$info = CJSON::decode($_GET['info']);
+			$openid = 'oPV4Ht0yokB6n-DEcr5JocRNPZv4';
+			
+			$user = User::model()->findByAttributes(array(
+				'unionid'=>$info['openid']
+			));
+			
+			if(!$user){
+				$user = new User();
+				$user->unionid = $info['openid'];
+				$nickname = json_encode($info['nickname']);
+				$user->nickname = $nickname;
+				$user->sex = $info['sex'];
+				$user->headimgurl = $info['headimgurl'];
+				$user->save();
+			}else{
+				echo "Error";	
+				exit;
+			}
+			
+			Yii::app()->session['uid'] = $user->id;
+			
+			$this->redirect(array('/index/list','id'=>$user->id));
+			/*
+			$this->render('list',array(
+				'url'=>Yii::app()->params['severUrl'],
+				'info'=>array(
+					'openid'=>$user->id,
+					'nickname'=>json_decode($user->nickname),
+					'headimgurl'=>$user->headimgurl,
+				)
+			));
+			*/
+		}else{
+			echo "Autho Error";	
+		}
+	}
 	public function actionIndex()
 	{
 		if(isset($_GET['info']) && $_GET['info'] !=  NULL){
@@ -139,9 +178,10 @@ class IndexController extends Controller
 		$user = User::model()->findByPk($uid);
 		if(count($user)){
 			$this->render('list',array(
+				'url'=>Yii::app()->params['severUrl'],
 				'info'=>array(
 					'openid'=>$user->id,
-					'nickname'=>json_encode($user->nickname),
+					'nickname'=>json_decode($user->nickname),
 					'headimgurl'=>$user->headimgurl,
 				)
 			));
