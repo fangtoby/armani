@@ -5,11 +5,15 @@
     $.extend(Mgm.prototype, {
 		
         init: function(data) {
-      		
+      		doPageview('Page_Glow')
+      		document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
+ 				 WeixinJSBridge.call('hideToolbar');
+ 				 WeixinJSBridge.call('showOptionMenu');
+			});
 		  	$('.self_info img').attr('src',g_config.headimgurl)
 			$('.self_info span').empty().html( g_config.nickname )
 			var self = this;
-			self.loadimages(['category.jpg','sub1.jpg','sub2.jpg','sub3.jpg'])
+			self.loadimages(['category.jpg','sub1.jpg','sub2.jpg','sub3.jpg','info_bg.jpg'])
         },
 		
 		loadimages:function(arr){
@@ -46,26 +50,34 @@
 			$('.category a').click(function(e){
 			
 				var index = $(this).index();
-				console.log(index)
-				
+			
 				switch(index){
 					case 0:
-						window.location.replace( '/index/setinfo');
+						doTrack('Apply')
+						$('.category').hide();
+						$('.getprize').fadeIn(500)
+						doPageview('Page_leads')
 						break;
 					case 1:
+						doTrack('Natural_Glow')
 						$('.category').hide()
 						$('.sub_category').addClass('sub1').fadeIn(500);
 						$('.sub_category').attr('data-id','1');
+						doPageview('Page_NaturalGlow')
 						break;
 					case 2:
+						doTrack('Mastre_Glow')
 						$('.category').hide()
 						$('.sub_category').addClass('sub2').fadeIn(500);
 						$('.sub_category').attr('data-id','2');
+						doPageview('Page_MasterGlow')
 						break;
 					case 3:
+						doTrack('Sophisticated_Glow')
 						$('.category').hide()
 						$('.sub_category').addClass('sub3').fadeIn(500);
 						$('.sub_category').attr('data-id','3');
+							doPageview('Page_SophisticatedGlow')
 						break;
 				
 				}
@@ -78,7 +90,10 @@
 				
 				switch(index){
 					case 0:
-						window.location.replace( '/index/setinfo');
+						doTrack('Apply')
+						$('.sub_category').hide();
+						$('.getprize').fadeIn(500)
+						doPageview('Page_leads')
 						break;
 					case 1:
 						$('.sub_category').attr('class','').addClass('sub_category').hide();
@@ -86,19 +101,63 @@
 						$('.category').fadeIn(500)
 						break;
 					case 2:
+						
+						
 						var id = $('.sub_category').attr('data-id');
+							switch(id){
+								case '1':
+									doTrack('Natural')
+									doPageview('Page_NaturalLook')
+								break;
+								case '2':
+									doTrack('Master')
+									doPageview('Page_MasterLook')
+								break;
+								case '3':
+									doTrack('Sophisticated')
+									doPageview('Page_SophisticatedLook')
+								break;
+							}
 						$('.sub_category').hide()
 						$('.card .cardbg').attr('src',g_config.path.img + 'card/s'+id+'_1.jpg');
 						$('.result').fadeIn();
 						break;
 					case 3:
 						var id = $('.sub_category').attr('data-id');
+						switch(id){
+								case '1':
+									doTrack('Node')
+									doPageview('Page_NaturalLook')
+								break;
+								case '2':
+									doTrack('Icon')
+									doPageview('Page_IconLook')
+								break;
+								case '3':
+									doTrack('Contour')
+									doPageview('Page_ContourLook')
+								break;
+							}
 						$('.sub_category').hide()
 						$('.card .cardbg').attr('src',g_config.path.img + 'card/s'+id+'_2.jpg')
 						$('.result').fadeIn();
 						break;
 					case 4:
 						var id = $('.sub_category').attr('data-id');
+						switch(id){
+								case '1':
+									doTrack('Skin')
+									doPageview('Page_SkinLook')
+								break;
+								case '2':
+									doTrack('shape')
+									doPageview('Page_ShapeLook')
+								break;
+								case '3':
+									doTrack('Hollywood')
+									doPageview('Page_HollywoodLook')
+								break;
+							}
 						$('.sub_category').hide()
 						$('.card .cardbg').attr('src',g_config.path.img + 'card/s'+id+'_3.jpg')
 						$('.result').fadeIn();
@@ -170,7 +229,7 @@ function doTrack(name) {
 	console.log('track',name)
 	ga('send', {
 	  'hitType': 'event',          // Required.
-	  'eventCategory': "",   // Required.
+	  'eventCategory': "Armani",   // Required.
 	  'eventAction': 'click',      // Required.
 	  'eventLabel': name,
 	  'eventValue': 1
@@ -180,13 +239,6 @@ function doPageview(name) {
 	console.log('doPageview',name)
 	ga('send', 'pageview', {
 	'page': name,
-	'title': ""
+	'title': "Armani"
     });
-	ga('send', {
-	  'hitType': 'event',          // Required.
-	  'eventCategory': "",   // Required.
-	  'eventAction': 'page',      // Required.
-	  'eventLabel': name,
-	  'eventValue': 1
-	});
 };

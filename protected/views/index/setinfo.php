@@ -38,7 +38,7 @@
         }
     </script>
     <!--移动端版本兼容 end -->
-    <title></title>
+    <title>致敬阿玛尼 底妆大师十五周年</title>
     <script src="<?=Data::$data['staticUri']['js']?>jquery.min.js"></script>
     <script src="<?=Data::$data['staticUri']['js']?>shops.js"></script>
     <script src="<?=Data::$data['staticUri']['js']?>setInfo.js"></script>

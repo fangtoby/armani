@@ -178,7 +178,8 @@ class LotteryController extends Controller
 	public function getTypeName($data,$row){
 		$type = array(
 			0=>"普通奖品",
-			1=>"特别奖品"
+			1=>"特别奖品",
+			2=>"正装大奖"
 		);
 		echo isset($type[ $data->type ])? $type[ $data->type ]:"";
 	}

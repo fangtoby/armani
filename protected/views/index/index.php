@@ -34,20 +34,20 @@
         }
     </script>
     <!-- 移动端版本兼容 end -->
-    <title></title>
+    <title>致敬阿玛尼 底妆大师十五周年</title>
     <script src="<?=Data::$data['staticUri']['js']?>jquery.min.js"></script>
     <script src="<?=Data::$data['staticUri']['js']?>index.animate.js"></script>
 
-	<script>
-	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-	  ga('create', '', 'auto');
-	  ga('send', 'pageview');
+  ga('create', 'UA-66237221-1', 'auto');
+  ga('send', 'pageview');
 
-	</script>
+</script>
 	
 	<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
     <script src="<?=Data::$data['staticUri']['js']?>wechat.js"></script>
@@ -71,6 +71,7 @@
 		<img src='<?=Data::$data['staticUri']['img']?>p1_1.png' width='100%' />
 		<img src='<?=Data::$data['staticUri']['img']?>p1_2.png' width='100%' />
 		<img src='<?=Data::$data['staticUri']['img']?>p1_3.png' width='100%' />
+		<img src='<?=Data::$data['staticUri']['img']?>p1copy.png' width='100%' style='position: relative;top: -40px;display:none' />
 	</div>
 	<div class='part3' style='display:none'>
 		<img src='<?=Data::$data['staticUri']['img']?>p3_1.png' width='100%'  class='p3cp1' style='display:none' />

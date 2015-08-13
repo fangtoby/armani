@@ -37,9 +37,20 @@
         }
     </script>
     <!--移动端版本兼容 end -->
-    <title></title>
+    <title>致敬阿玛尼 底妆大师十五周年</title>
     <script src="<?=Data::$data['staticUri']['js']?>jquery.min.js"></script>
-
+	 <script>
+    	var g_config = {					
+				openid:"<?=$info["openid"];?>",
+				nickname:'<?=$info["nickname"];?>',
+				headimgurl:"<?=$info["headimgurl"];?>",
+				path:{
+					js:"<?=Data::$data['staticUri']['js']?>",
+					css:"<?=Data::$data['staticUri']['css']?>",
+					img:"<?=Data::$data['staticUri']['img']?>"
+				}
+			};
+    </script>
 
 	<script>
 	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -57,19 +68,20 @@
 	</head>
 <body>
 <div class='card' style='display:none'>
-		<img src='<?=Data::$data['staticUri']['img']?>card/s1_1.jpg' class='cardbg'/>
+		<img src='' class='cardbg'/>
 		<div class='self_info'>
 			
 			<img src='<?=$info["headimgurl"];?>' width='70px' height='70px' />
-			<span><?=$info["nickname"];?></span>
+			<span></span>
 		</div>
 		<a href='javascript:;'><img src='<?=Data::$data['staticUri']['img']?>cardbtn.jpg' /></a>
 	</div>
 </body>
 <script>
 $(function(){
-	var id = window.location.href.split('&v=')[1];
-	$('.cardbg').attr('src',  '<?=Data::$data['staticUri']['img']?>card/s'+id+'.jpg')
+$('.self_info span').html(g_config.nickname)
+	var id = window.location.href.split('&v=')[1].split('&')[0];
+	$('.cardbg').attr('src',  '<?=Data::$data['staticUri']['img']?>card/'+id+'.jpg')
 	$('.card').fadeIn();
 	$('.card a').click(function(){
 		window.location.href='http://'+window.location.host
