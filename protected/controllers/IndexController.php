@@ -3,6 +3,12 @@
 class IndexController extends Controller
 {
 	protected $result = 1;
+
+	protected $path = array(
+			'wx'=>1,
+			'wb'=>2,
+		);
+
 	//微博认证返回链接,收集用户信息
 	public function actionAutho(){
 		if(isset($_GET['info']) && $_GET['info'] !=  NULL){
@@ -16,6 +22,7 @@ class IndexController extends Controller
 				$nickname = json_encode($info['nickname']);
 				$user->nickname = $nickname;
 				$user->sex = $info['sex'];
+				$user->path = $this->path['wx'];
 				$user->headimgurl = $info['headimgurl'];
 				$user->save();
 			}
@@ -78,43 +85,24 @@ class IndexController extends Controller
 	
 	public function actionIndexs()
 	{
-		$path = array(
-			'wx'=>1,
-			'wb'=>2,
-		);
-		
-		$where = 1;
-
-		if(isset($_GET['path'])){
-			if($path['wx'] == $_GET['path']){
-				$where = 1;
-			}
-			if($path['wb'] == $_GET['path']){
-				$where = 2;
-			}
-		}
-
 		if(isset($_GET['info']) && $_GET['info'] !=  NULL){
-			$info = CJSON::decode($_GET['info']);
-			
+			$info = json_decode($_GET['info']);
+
 			$user = User::model()->findByAttributes(array(
-				'unionid'=>$info['openid']
+				'unionid'=>$info->openid
 			));
 			
-			if($where == $path['wx']){
-				$referer = $_SERVER['HTTP_REFERER'];
-			}else{
-				$referer = $info['referer'];
-			}
+			$referer = $info->referer;
+			
 			if(!$user){
 				$user = new User();
-				$user->unionid = $info['openid'];
-				$nickname = json_encode($info['nickname']);
+				$user->unionid = $info->openid;
+				$nickname = json_encode($info->nickname);
 				$user->nickname = $nickname; 
-				$user->path = $where;
+				$user->path = $this->path['wb'];
 				$user->utm_source = $referer;
-				$user->sex = $info['sex'];
-				$user->headimgurl = $info['headimgurl'];
+				$user->sex = $info->sex;
+				$user->headimgurl = $info->headimgurl;
 				$user->save();
 			}
 			
@@ -122,7 +110,7 @@ class IndexController extends Controller
 			
 			$this->render('list',array(
 				'result'=>$this->result,
-				'url'=>Yii::app()->params['severUrl'],
+				'url'=>Yii::app()->params['severWbUrl'],
 				'info'=>array(
 					'where'=>$where,
 					'openid'=>$user->id,

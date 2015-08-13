@@ -5,17 +5,17 @@
 	<meta content="telephone=no" name="format-detection" />
     <link href="<?=Data::$data['staticUri']['css']?>style.css" rel="stylesheet" />
     <script>
-    	var g_config = {
-				validateUrl:{
-					wx:"<?=$url['wx'];?>",
-					wb:"<?=$url['wb'];?>"
-				},
-				path:{
-					js:"<?=Data::$data['staticUri']['js']?>",
-					css:"<?=Data::$data['staticUri']['css']?>",
-					img:"<?=Data::$data['staticUri']['img']?>"
-				}
-			};
+        var g_config = {
+                validateUrl:{
+                    wx:"<?=$url['wx'];?>",
+                    wb:"<?=$url['wb'];?>"
+                },
+                path:{
+                    js:"<?=Data::$data['staticUri']['js']?>",
+                    css:"<?=Data::$data['staticUri']['css']?>",
+                    img:"<?=Data::$data['staticUri']['img']?>"
+                }
+            };
     </script>
     <!--移动端版本兼容 -->
     <script type="text/javascript">
