@@ -6,7 +6,10 @@
     <link href="<?=Data::$data['staticUri']['css']?>style.css" rel="stylesheet" />
     <script>
     	var g_config = {
-				validateUrl:"<?=$url?>",
+				validateUrl:{
+					wx:"<?=$url['wx'];?>",
+					wb:"<?=$url['wb'];?>"
+				},
 				path:{
 					js:"<?=Data::$data['staticUri']['js']?>",
 					css:"<?=Data::$data['staticUri']['css']?>",

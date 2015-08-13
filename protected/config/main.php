@@ -92,8 +92,10 @@ return array(
 	// using Yii::app()->params['paramName']
 	'params'=>array(
 		// this is used in contact page
-		'severUrl'=>'http://masterofglow.comeyes.cn/index/autho',
+		'severWxUrl'=>'http://masterofglow.comeyes.cn/index/autho',
+		'severWbUrl'=>'http://masterofglow.comeyes.cn/autho.php',
 		'weichat'=>require(dirname(__FILE__).'/weichat.php'),
+		'weibo'=>require(dirname(__FILE__).'/weibo.php'),
 		'version'=>require(dirname(__FILE__).'/version.php'),
 	),
 );

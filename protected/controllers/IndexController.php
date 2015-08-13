@@ -7,8 +7,6 @@ class IndexController extends Controller
 	public function actionAutho(){
 		if(isset($_GET['info']) && $_GET['info'] !=  NULL){
 			$info = CJSON::decode($_GET['info']);
-			$openid = 'oPV4Ht0yokB6n-DEcr5JocRNPZv4';
-			
 			$user = User::model()->findByAttributes(array(
 				'unionid'=>$info['openid']
 			));
@@ -21,25 +19,11 @@ class IndexController extends Controller
 				$user->sex = $info['sex'];
 				$user->headimgurl = $info['headimgurl'];
 				$user->save();
-			}else{
-				//echo "Error";	
-				//exit;
 			}
-			//echo 2;
-			//exit;
 			Yii::app()->session['uid'] = $user->id;
 			
 			$this->redirect(array('/index/list','id'=>$user->id));
-			/*
-			$this->render('list',array(
-				'url'=>Yii::app()->params['severUrl'],
-				'info'=>array(
-					'openid'=>$user->id,
-					'nickname'=>json_decode($user->nickname),
-					'headimgurl'=>$user->headimgurl,
-				)
-			));
-			*/
+			
 		}else{
 			echo "Autho Error";	
 		}
@@ -48,9 +32,6 @@ class IndexController extends Controller
 	{
 		if(isset($_GET['info']) && $_GET['info'] !=  NULL){
 			$info = CJSON::decode($_GET['info']);
-			
-			$openid = 'oPV4Ht0yokB6n-DEcr5JocRNPZv4';
-			
 			$user = User::model()->findByAttributes(array(
 				'unionid'=>$info['openid']
 			));
@@ -65,9 +46,6 @@ class IndexController extends Controller
 			}
 			
 			Yii::app()->session['uid'] = $user->id;
-			
-				
-			
 			$this->render('list',array(
 				'result'=>$this->result,
 				'url'=>Yii::app()->params['severUrl'],
@@ -79,17 +57,23 @@ class IndexController extends Controller
 			));
 			
 		}else{
-			$id = Yii::app()->params['weichat']['id'];
-			$appId = Yii::app()->params['weichat']['appId'];
-			$domain = Yii::app()->params['weichat']['domain'];
-			$link = Yii::app()->params['severUrl'];
+			$wxlink = Yii::app()->params['severWxUrl'];
+			$wxid = Yii::app()->params['weichat']['id'];
+			$wxappId = Yii::app()->params['weichat']['appId'];
+			$wxdomain = Yii::app()->params['weichat']['domain'];
+			$wxulink =  urlencode("http://{$wxdomain}/External/Oauth.ashx?link={$wxlink}&id={$wxid}");
+			$wxurl="https://open.weixin.qq.com/connect/oauth2/authorize?appid={$wxappId}&redirect_uri={$wxulink}&response_type=code&scope=snsapi_userinfo&state=State#wechat_redirect";
 			
-			$ulink =  urlencode("http://{$domain}/External/Oauth.ashx?link={$link}&id={$id}");
+			$wblink = Yii::app()->params['severWbUrl'];
+			$wbid =Yii::app()->params['weibo']['id'];
 			
-			$url="https://open.weixin.qq.com/connect/oauth2/authorize?appid={$appId}&redirect_uri={$ulink}&response_type=code&scope=snsapi_userinfo&state=State#wechat_redirect";
-	
+			$wburl = "https://api.weibo.com/oauth2/authorize?client_id={$wbid}&response_type=code&redirect_uri={$wblink}";
+			
 			$this->render('index',array(
-				'url'=>$url
+				'url'=>array(
+					'wx'=>$wxurl,
+					'wb'=>$wburl
+				)
 			));
 		}
 	}
@@ -150,19 +134,18 @@ class IndexController extends Controller
 			));
 			
 		}else{
-			$link = Yii::app()->params['severUrl'];
-			if($where == $path['wx']){
-				$id = Yii::app()->params['weichat']['id'];
-				$appId = Yii::app()->params['weichat']['appId'];
-				$domain = Yii::app()->params['weichat']['domain'];
-				$ulink =  urlencode("http://{$domain}/External/Oauth.ashx?link={$link}&id={$id}");
-				$url="https://open.weixin.qq.com/connect/oauth2/authorize?appid={$appId}&redirect_uri={$ulink}&response_type=code&scope=snsapi_userinfo&state=State#wechat_redirect";
-			}else if($where == $path['wb']){
-				$id = "3163304423";
-				$link = "http://masterofglow.comeyes.cn/autho.php";
-				$authorize = "https://api.weibo.com/oauth2/authorize?client_id={$id}&response_type=code&redirect_uri={$link}";
-				//$url = urlencode($authorize);
-			}
+			$link = Yii::app()->params['severWxUrl'];
+			
+			$wxid = Yii::app()->params['weichat']['id'];
+			$wxappId = Yii::app()->params['weichat']['appId'];
+			$wxdomain = Yii::app()->params['weichat']['domain'];
+			$wxulink =  urlencode("http://{$wxdomain}/External/Oauth.ashx?link={$link}&id={$wxid}");
+			$wxurl="https://open.weixin.qq.com/connect/oauth2/authorize?appid={$wxappId}&redirect_uri={$wxulink}&response_type=code&scope=snsapi_userinfo&state=State#wechat_redirect";
+			
+			$wbid = "3163304423";
+			$wblink = "http://masterofglow.comeyes.cn/autho.php";
+			$wburl = "https://api.weibo.com/oauth2/authorize?client_id={$id}&response_type=code&redirect_uri={$link}";
+			
 			$this->render('index',array(
 				'url'=>$url
 			));
@@ -171,7 +154,7 @@ class IndexController extends Controller
 	
 	public function actionList(){
 		if(isset($_GET['test'])){
-			$uid = 13;
+			$uid = 15;
 		}else{
 			$uid = Yii::app()->session['uid'];
 		}
@@ -191,7 +174,7 @@ class IndexController extends Controller
 	public function actionSetinfo()
 	{
 		if(isset($_GET['test'])){
-			$uid = 13;
+			$uid = 15;
 		}else{
 			$uid = Yii::app()->session['uid'];
 		}
@@ -213,9 +196,7 @@ class IndexController extends Controller
 		if(isset($_GET['openid'])){
 			$openid = $_GET['openid'];
 			
-			$user = User::model()->findByAttributes(array(
-					'unionid'=>$openid
-				));
+			$user = User::model()->findByPk($openid);
 			if(count($user)){
 				$this->render('share',array(
 						'number'=>$user->id,

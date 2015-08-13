@@ -9488,3 +9488,36 @@ Stack trace:
 #5 {main}
 REQUEST_URI=/admin/lottery/admin.php
 ---
+2015/08/13 19:38:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "armani/anrmani".' in C:\xampp\htdocs\armani\yii-1\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController('armani/anrmani')
+#1 C:\xampp\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\armani\armani\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/armani/anrmani
+---
+2015/08/13 19:38:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\htdocs\armani\yii-1\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\armani\armani\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+HTTP_REFERER=http://127.0.0.1/armani/anrmani
+---
+2015/08/13 19:38:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "armani/armani.php".' in C:\xampp\htdocs\armani\yii-1\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController('armani/armani.p...')
+#1 C:\xampp\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\armani\armani\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/armani/armani.php
+---
+2015/08/13 19:39:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "armani/armani/autho.php".' in C:\xampp\htdocs\armani\yii-1\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\armani\yii-1\framework\web\CWebApplication.php(141): CWebApplication->runController('armani/armani/a...')
+#1 C:\xampp\htdocs\armani\yii-1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\armani\armani\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/armani/armani/autho.php
+---
