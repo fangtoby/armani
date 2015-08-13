@@ -24,11 +24,27 @@ $this->menu=array(
 		'id',
 		'uid',
 		'phone',
-		'cityId',
-		'marketId',
-		'type',
+		  array(
+		  'name'=>'cityId',
+		  'value'=> $this->_gtCityName($model->cityId) ,  //这里显示图片
+		  'type'=>'raw', 
+		  ),
+		  array(
+		  'name'=>'marketId',
+		  'value'=> $this->_getMarketName($model->marketId) ,  //这里显示图片
+		  'type'=>'raw', 
+		  ),
+		  array(
+		  'name'=>'type',
+		  'value'=> $this->_getTypeName($model->type) ,  //这里显示图片
+		  'type'=>'raw', 
+		  ),
 		'createTime',
 		'updateTime',
-		'win',
+		  array(
+		  'name'=>'win',
+		  'value'=> $this->_getWinName($model->win) ,  //这里显示图片
+		  'type'=>'raw', 
+		  ),
 	),
 )); ?>
