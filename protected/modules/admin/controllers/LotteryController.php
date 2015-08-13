@@ -157,32 +157,43 @@ class LotteryController extends Controller
 	
 	
 	public function getCityName($data,$row){
-		$city = City::model()->findByPk($data->cityId );
-		echo $city->CityName;
+		echo $this->_gtCityName( $data->cityId );
 	}
 	
+	public function _gtCityName($cityid){
+		$city = City::model()->findByPk($cityid );
+		return $city->CityName;
+	}
 	
 	public function getMarketName($data,$row){
-		$Market = Market::model()->findByPk($data->marketId );
-		echo $Market->ShopName;
+		echo $this->_getMarketName($data->marketId );
+	}
+	public function _getMarketName($marketId){
+		$Market = Market::model()->findByPk($marketId );
+		return $Market->ShopName;
 	}
 	
 	public function getWinName($data,$row){
+		echo $this->_getWinName( $data->win );
+	}
+	public function _getWinName($win){
 		$type = array(
 			0=>"否",
 			1=>"是"
 		);
-		echo $type[ $data->win ];
+		return $type[ $win ];
 	}
-	
 	public function getTypeName($data,$row){
-		$type = array(
-			0=>"普通奖品",
-			1=>"特别奖品"
-		);
-		echo isset($type[ $data->type ])? $type[ $data->type ]:"";
+		echo $this->_getTypeName( $data->type );
 	}
-	
+	public function _getTypeName($type){
+		$types = array(
+			0=>"普通奖品",
+			1=>"特别奖品",
+			2=>"正装大奖"
+		);
+		return isset($types[ $type ])? $types[ $type ]:"";
+	}
 	public function getGiftName($data,$row){
 		$Prize = Prize::model()->findByPk($data->giftId );
 		if($Prize){

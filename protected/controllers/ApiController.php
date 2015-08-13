@@ -58,6 +58,8 @@ class ApiController extends Controller
 			'special'=>1,
 			'bigGift'=>2
 		);
+		
+		
 		//抽奖途径
 		$fromArr = array(
 			'quick'=>0,
@@ -66,13 +68,12 @@ class ApiController extends Controller
 		
 		$uid = Yii::app()->session['uid'];
 		//$uid = 5;
-		
 		if (!isset($uid)) {
 			$this->jsonSuccess(array(
 				'type'=>$code['timeout']
 			));	
 		}
-
+		
 		$cityId = $_GET['cityId'];
 		$marketId = $_GET['marketId'];
 		$from = $_GET['type'];
@@ -85,15 +86,16 @@ class ApiController extends Controller
 				'type'=>$code['lock']
 			));	
 		}
-		
+		//验证城市、商铺信息是否为空
 		if(!is_numeric($cityId) ||  !is_numeric($marketId) || 
 		!isset($cityId) || !isset($marketId)){ 
 			$this->jsonSuccess(array(
 				'type'=>$code['empty']
 			));	
 		}
-		
+		//验证手机号码格式
 		if(isset($number) && preg_match("/1[3458]{1}\d{9}$/",$number)){ 
+			
 			$model = Lottery::model()->findAllByAttributes(array(
 				'phone'=>$number,
 				'from'=>$from
@@ -105,7 +107,7 @@ class ApiController extends Controller
 				$Market = Market::model()->findByPk($marketId);
 				if($Market){
 					//判断特殊奖品
-					if($from == $prizeType['special']){
+					if($from == $prizeType['all']){
 						//特殊奖时间开启判断
 						if($now < strtotime($Market->endTime) && $now > strtotime($Market->startTime)){
 							//特殊奖品数量限制
@@ -127,7 +129,7 @@ class ApiController extends Controller
 					));	
 				}
 				//奖品列表
-				if($specialOpen && $from == $fromArr['all']){
+				if($from == $fromArr['all']){
 					$prizeList = Prize::model()->findAll();
 				}else{
 					$prizeList = Prize::model()->findAllByAttributes(array(
@@ -137,14 +139,14 @@ class ApiController extends Controller
 				$rightPrizeModel = array();
 				//普通奖品时间判断
 				foreach($prizeList as $key=>$val){  
-					if($val->type != 2){
+					if($val->type == 2 && $specialOpen){
+						$rightPrizeModel[] = $val;  
+					}else{
 						if($val->number < $val->count){
 							if($now < strtotime($val->endTime) && $now > strtotime($val->startTime) ){
 								$rightPrizeModel[] = $val;  
 							}
 						}
-					}else{
-						$rightPrizeModel[] = $val;  
 					}
 				}
 				$win = 0;
@@ -170,7 +172,7 @@ class ApiController extends Controller
 				}
 				//抽奖记录参数
 				$recordParamArr = array(
-					"uid"=>$uid, 
+					"uid"=>$uid,
 					"win"=>$win,
 					"from"=>$from,
 					"number"=>$number,
@@ -181,7 +183,7 @@ class ApiController extends Controller
 					"correctPrizeType"=>$correctPrizeType,
 				);
 				//特殊奖品
-				if($correctPrizeType == $prizeType['special']){
+				if($correctPrizeType == $prizeType['bigGift']){
 					if($Market->count > $Market->prize){
 						//插入抽奖记录	
 						$this->addLotteryRecord($recordParamArr);
@@ -330,17 +332,44 @@ class ApiController extends Controller
 			$Hourlimit = Hourlimit::model()->findByPk($hourLimitrArr['id']);
 		}
 		
-		if(($Daylimit->count <  $param["dayNumber"]) && ($Hourlimit->count < $param["hourNumber"])){
+		$result = false;
+		
+		if($param["dayNumber"] != 0 && $param["hourNumber"] != 0){
+			if(($Daylimit->count <  $param["dayNumber"]) && ($Hourlimit->count < $param["hourNumber"])){
+				$result = true;
+			}else{
+				$result = false;
+			}	
+		}else{
+			if($param["dayNumber"] == 0){ 
+				if($param["hourNumber"] == 0){
+					$result = true;
+				}else{
+					if($Hourlimit->count < $param["hourNumber"]){
+						$result = true;
+					}else{
+						$result = false;
+					}
+				}
+			}else{
+				if($param["hourNumber"] == 0){
+					if($Daylimit->count <  $param["dayNumber"]){
+						$result = true;
+					}else{
+						$result = false;
+					}
+				}	
+			}
+		}
+		if($result){
 			$Daylimit->count = $Daylimit->count +1;
 			$Daylimit->updateTime = $param["currectTime"];
 			$Daylimit->save(); 
 			$Hourlimit->count = $Hourlimit->count + 1;
 			$Hourlimit->updateTime = $param["currectTime"];
-			$Hourlimit->save(); 
-			return true;
-		}else{
-			return false;
+			$Hourlimit->save(); 	
 		}
+		return $result;
 	}
 	/**
 	 * 客户信息录入

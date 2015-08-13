@@ -14,6 +14,7 @@
 			
 			this.fillCity();
 			this.block = true;
+			
 			var self = this;
 			
 			$('.getprize form a').click(function(){
@@ -23,23 +24,26 @@
 			
 				self.block = false;
 				self.type = 0; 
-				self.forminfo();
+				doTrack('Submit_2')
+				self.forminfo('getprize');
 			})
 			
 			$('.setinfo form a').click(function(){
 			
-				
 				if(self.block == false){
 				
 					return false;
 				}
 				self.block = false;
 				self.type = 1; 
-				self.forminfo();
+				doTrack('Submit_1')
+				self.forminfo('setinfo');
 			})
 			
 			$('.setback a').click(function(){
-				window.location.href="http://masterofglow.comeyes.cn/index/list";
+				doTrack('upgrade');
+				$('.setback').hide();
+				$('.category').fadeIn(500)
 			})
 			
 			$('.shareTips').click(function(){
@@ -48,11 +52,37 @@
 			
         },
         
-        forminfo:function(){
-        	var mobile = $('input').val();
-			var city = $('.city').attr('data-id');
-			var seshops = $('.shop').attr('data-id');
-		
+        forminfo:function(from){
+        	if(from == 'getprize'){
+        		var mobile = $('.getprize input').val();
+				var city = $('.getprize .city').attr('data-id');
+				var seshops = $('.getprize .shop').attr('data-id');
+				var cityval = $('.getprize .city').html();
+				var shopval = $('.getprize .shop').html();
+				$('.setinfo input').val(mobile)
+				$('.setinfo .shop').attr('data-id',seshops)
+				$('.setinfo .shop').empty().html(shopval)
+				$('.setinfo .city').attr('data-id',city)
+				$('.setinfo .city').empty().html(cityval)
+        	
+        	}
+        	
+        	if(from == 'setinfo'){
+        		var mobile = $('.setinfo input').val();
+				var city = $('.setinfo .city').attr('data-id');
+				var seshops = $('.setinfo .shop').attr('data-id');
+				var cityval = $('.setinfo .city').html();
+				var shopval = $('.setinfo .shop').html();
+				$('.getprize input').val(mobile)
+				$('.getprize .shop').attr('data-id',seshops)
+				$('.getprize .shop').empty().html(shopval)
+				$('.getprize .city').attr('data-id',city)
+				$('.getprize .city').empty().html(cityval)
+        	
+        	}
+        	
+        	
+			
 			if(mobile !='' &&  /^1[34578]\d{9}/.test(mobile)) {
 					if(city == '0' ){
 						alert('请选择城市')
@@ -116,6 +146,8 @@
 				$('.city').attr('data-id',id)
 				$('.city').empty().html(val)
 				$(".shoplist select").empty();
+				$('.shop').attr('data-id','0')
+				$('.shop').empty().html('专柜')
 				var sthtml = '<option value="SHOPID">SHOPNAME</option>';
 				var shtml = '<option value="0">选择你申领的柜台</option>';				
 					for (s in self.shopdata) {
@@ -165,6 +197,7 @@
 				 	if(btntype == 0){
 						 $('.getprize').hide();
 						 $('.setback').show();
+						 doPageview('Page_result')
 				 	}else{
 				 	
 				 		if(response.data.type == 1){
@@ -173,9 +206,11 @@
 				 			$('.setinfo .popup1').hide();
 				 			$('.setinfo .popup2').show();
 				 			$('.qrcode').show();
+				 			
 				 			var vid = $('.cardbg').attr('src').split('images/card/')[1].split('.jpg')[0]
+				 			window.share.imgUrl = 'http://masterofglow.comeyes.cn/public/images/sharelogo.jpg'
 				 			window.share.link='http://masterofglow.comeyes.cn/index/share?openid='+ g_config.openid +'&v='+vid+''
-				 			window.share.desc='底妆大师阿玛尼15周年，我是第'+response.data.number+'个致敬大师的追随者'
+				 			window.share.desc='底妆大师阿玛尼15周年，我是第'+g_config.openid+'个致敬大师的追随者'
 				 			shareConfig();
 				 			
 				 			
@@ -265,7 +300,7 @@ function doTrack(name) {
 	console.log('track',name)
 	ga('send', {
 	  'hitType': 'event',          // Required.
-	  'eventCategory': "",   // Required.
+	  'eventCategory': "Armani",   // Required.
 	  'eventAction': 'click',      // Required.
 	  'eventLabel': name,
 	  'eventValue': 1
@@ -275,13 +310,6 @@ function doPageview(name) {
 	console.log('doPageview',name)
 	ga('send', 'pageview', {
 	'page': name,
-	'title': ""
+	'title': "Armani"
     });
-	ga('send', {
-	  'hitType': 'event',          // Required.
-	  'eventCategory': "",   // Required.
-	  'eventAction': 'page',      // Required.
-	  'eventLabel': name,
-	  'eventValue': 1
-	});
 };

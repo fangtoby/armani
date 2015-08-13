@@ -5,6 +5,7 @@
     $.extend(Mgm.prototype, {
 		
         init: function(data) {
+        doPageview('Homepage')
         var self = this;
      	   setTimeout(function(){
 			self.loadimages(['gifjpg/1-0.jpg','gifjpg/1-1.jpg','gifjpg/1-2.jpg','gifjpg/1-3.jpg','gifjpg/1-4.jpg','gifjpg/1-5.jpg',
@@ -48,6 +49,7 @@
 		
 		
 		landing:function(){
+		
 		var self = this;
 		$('.loading').fadeOut();
 		
@@ -77,6 +79,7 @@
 			},1000)
 			
 			$('.part3 a').on('touchstart',function(){
+				doTrack('Start')
 				window.location.replace( g_config.validateUrl );
 			})
 			
@@ -96,12 +99,13 @@
 					    $('.part2 img:nth-child(1)').addClass('p1_on');
 					    $('.part2 img:nth-child(2)').addClass('p2_on');
 					    $('.part2 img:nth-child(3)').addClass('p1_on');
-					    $('.part2').delay(1500).fadeOut();
-					    $('.part3').delay(1500).fadeIn(1000);
-					    $('.p3cp1,.year').delay(2000).fadeIn(500)
+					    $('.part2 img:nth-child(4)').delay(1000).fadeIn(500);
+					    $('.part2').delay(1800).fadeOut();
+					    $('.part3').delay(1800).fadeIn(1000);
+					    $('.p3cp1,.year').delay(2200).fadeIn(500)
 					    setTimeout(function(){
 							self.setyear(2000);
-						},2500)
+						},2700)
 						
 					},1000)
 					
@@ -168,23 +172,18 @@ function doTrack(name) {
 	console.log('track',name)
 	ga('send', {
 	  'hitType': 'event',          // Required.
-	  'eventCategory': "",   // Required.
+	  'eventCategory': "Armani",   // Required.
 	  'eventAction': 'click',      // Required.
 	  'eventLabel': name,
 	  'eventValue': 1
 	});
 };
 function doPageview(name) {
-	console.log('doPageview',name)
+
 	ga('send', 'pageview', {
 	'page': name,
-	'title': ""
+	'title': "Armani"
     });
-	ga('send', {
-	  'hitType': 'event',          // Required.
-	  'eventCategory': "",   // Required.
-	  'eventAction': 'page',      // Required.
-	  'eventLabel': name,
-	  'eventValue': 1
-	});
+    
+	
 };
