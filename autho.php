@@ -8,7 +8,6 @@ if (isset($_REQUEST['code'])) {
 		$keys = array();
 		$keys['code'] = $_REQUEST['code'];
 		$keys['redirect_uri'] = WB_CALLBACK_URL;
-		//print_r($keys);
 		try {
 			$token = $weiboService->getAccessToken( 'code', $keys ) ;
 		} catch (OAuthException $e) {
@@ -17,16 +16,10 @@ if (isset($_REQUEST['code'])) {
 }
 if ($token) {
 	$_SESSION['token'] = $token;
-	//$back_url = "/index/index?info=";
 	$c = new SaeTClientV2(WB_AKEY, WB_SKEY, $_SESSION['token']['access_token']);
 	$me = $c->get_uid();
 	$me = $c->show_user_by_id($me['uid']);
-	
-	//print_r($me);
-	//exit;
-	//gender
-	$gender = 3;
-	
+	$gender = 3;	
 	switch($me['gender']){
 		case 'm':
 		$gender = 1;
@@ -35,7 +28,6 @@ if ($token) {
 		$gender = 2;
 		break;
 	}
-	
 	$info = array(
 		'openid'=>$me['id'],
 		'nickname'=>$me['name'],

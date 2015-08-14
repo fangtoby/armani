@@ -151,7 +151,11 @@ class Controller extends CController
 	  }
 	  return $str;
 	}
-	
+	protected function getCurrectDate(){
+		$now = time();
+		$currectTime = date("Y-m-d H:i:s",$now);	
+		return $currectTime;
+	}
 	protected function jsonSuccess($data, $params = array())
 	{
 		$data = array('code'=>200,'message'=>'操作成功','data'=>$data);

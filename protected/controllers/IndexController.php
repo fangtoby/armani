@@ -16,6 +16,8 @@ class IndexController extends Controller
 			$user = User::model()->findByAttributes(array(
 				'unionid'=>$info['openid']
 			));
+			$today = $this->getCurrectDate();
+			
 			if(!$user){
 				$user = new User();
 				$user->unionid = $info['openid'];
@@ -24,6 +26,9 @@ class IndexController extends Controller
 				$user->sex = $info['sex'];
 				$user->path = $this->path['wx'];
 				$user->headimgurl = $info['headimgurl'];
+				$user->createTime = $today;
+				$user->updateTime = $today;
+				$user->login_times = 1;
 				$user->save();
 			}
 			Yii::app()->session['uid'] = $user->id;
@@ -68,7 +73,8 @@ class IndexController extends Controller
 			$wxappId = Yii::app()->params['weichat']['appId'];
 			$wxdomain = Yii::app()->params['weichat']['domain'];
 			$wxulink =  urlencode("http://{$wxdomain}/External/Oauth.ashx?link={$wxlink}&id={$wxid}");
-			$wxurl="https://open.weixin.qq.com/connect/oauth2/authorize?appid={$wxappId}&redirect_uri={$wxulink}&response_type=code&scope=snsapi_userinfo&state=State#wechat_redirect";
+			$wxOpenApi = "https://open.weixin.qq.com/connect/oauth2/authorize";
+			$wxurl="{$wxOpenApi}?appid={$wxappId}&redirect_uri={$wxulink}&response_type=code&scope=snsapi_userinfo&state=State#wechat_redirect";
 			
 			$wblink = Yii::app()->params['severWbUrl'];
 			$wbid =Yii::app()->params['weibo']['id'];
@@ -91,6 +97,7 @@ class IndexController extends Controller
 			$user = User::model()->findByAttributes(array(
 				'unionid'=>$info->openid
 			));
+			$today = $this->getCurrectDate();
 			
 			$referer = $info->referer;
 			
@@ -103,6 +110,9 @@ class IndexController extends Controller
 				$user->utm_source = $referer;
 				$user->sex = $info->sex;
 				$user->headimgurl = $info->headimgurl;
+				$user->createTime = $today;
+				$user->updateTime = $today;
+				$user->login_times = 1;
 				$user->save();
 			}
 			
