@@ -49,6 +49,16 @@ $this->menu=array(
             'type'=>'raw',
             'value'=> array($this,'getGiftName'),   //调用自定义的函数
         ),
+        array(  
+            'name'=>'username',  
+            'value'=>'$data->user->nickname',  //定义展示的 value 值  
+           // 'filter'=>CHtml::activeTextField($model,'name'), //添加搜索 filter  
+        ),  
+        array(  
+            'name'=>'path',  
+            'value'=>'$data->user->path',  //定义展示的 value 值  
+            //'filter'=>CHtml::activeTextField($model,'name'), //添加搜索 filter  
+        ), 
 		array(
 		'header'=>'操作',
 		'class'=>'CButtonColumn',

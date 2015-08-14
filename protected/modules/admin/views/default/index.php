@@ -12,7 +12,8 @@ $this->breadcrumbs=array(
 	'clientOptions'=>array(
 		'validateOnSubmit'=>true,
 	),
-)); ?>
+)); 
+?>
 
 <h1 class="login-title">登陆</h1>
 	<div class="row">

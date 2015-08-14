@@ -37,4 +37,25 @@ class DefaultController extends Controller
 	public function actionPassword(){
 		$this->render('password');
 	}
+	
+	public function actionModifyPassword(){
+		$oldPassword = $_GET['oldPwd'];	
+		$newPassword = $_GET['newPwd'];	//
+		$id = Yii::app()->admin->id;
+		
+		$admin = Admin::model()->findByPk( $id );
+		
+		if(hash('sha256', $oldPassword) === $admin->password){
+			
+			$admin->password = hash('sha256', $newPassword);
+			$admin->save();
+			echo CJSON::encode(array(
+				'type'=>1
+			));	
+		}else{
+			echo CJSON::encode(array(
+				'type'=>0
+			));	
+		}
+	}
 }

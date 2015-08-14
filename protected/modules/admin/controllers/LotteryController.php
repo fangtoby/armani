@@ -200,4 +200,5 @@ class LotteryController extends Controller
 			echo $Prize->name."-".$Prize->note;
 		}
 	}
+	
 }
