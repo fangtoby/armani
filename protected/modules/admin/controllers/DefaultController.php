@@ -33,4 +33,8 @@ class DefaultController extends Controller
 		Yii::app()->admin->logout();
 		$this->redirect("/admin/default/index");
 	}
+	
+	public function actionPassword(){
+		$this->render('password');
+	}
 }
