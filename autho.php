@@ -8,23 +8,22 @@ if (isset($_REQUEST['code'])) {
 		$keys = array();
 		$keys['code'] = $_REQUEST['code'];
 		$keys['redirect_uri'] = WB_CALLBACK_URL;
+		//print_r($keys);
 		try {
 			$token = $weiboService->getAccessToken( 'code', $keys ) ;
 		} catch (OAuthException $e) {
-
+			echo $e;
 		}
 }
-		
 if ($token) {
 	$_SESSION['token'] = $token;
 	//$back_url = "/index/index?info=";
 	$c = new SaeTClientV2(WB_AKEY, WB_SKEY, $_SESSION['token']['access_token']);
-
 	$me = $c->get_uid();
 	$me = $c->show_user_by_id($me['uid']);
 	
-	print_r($me);
-	exit;
+	//print_r($me);
+	//exit;
 	//gender
 	$gender = 3;
 	
@@ -46,8 +45,7 @@ if ($token) {
 	);
 	$info = json_encode($info);
 	
-	eixt;
-	//setcookie( 'weibojs_'.$weiboService->client_id, http_build_query($token) );
+	setcookie( 'weibojs_'.$weiboService->client_id, http_build_query($token) );
 	//header( "refresh:3;url=".$back_url);
 	// $data = {
 	// 	''
@@ -59,5 +57,5 @@ if ($token) {
 }
 ?>
 <script type="text/javascript">
-	//window.location.href = "/index/indexs?path=2&info=<?=$info?>";
+	window.location.href = '/index/indexs?path=2&info=<?=$info?>';
 </script>

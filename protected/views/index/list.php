@@ -10,6 +10,7 @@
 				openid:"<?=$info["openid"];?>",
 				nickname:'<?=$info["nickname"];?>',
 				headimgurl:"<?=$info["headimgurl"];?>",
+				from:"<?=$info["from"];?>",//g_config.from == 0 微信 1 微博
 				path:{
 					js:"<?=Data::$data['staticUri']['js']?>",
 					css:"<?=Data::$data['staticUri']['css']?>",
