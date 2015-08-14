@@ -107,7 +107,7 @@ class ApiController extends Controller
 				$Market = Market::model()->findByPk($marketId);
 				if($Market){
 					//判断特殊奖品
-					if($from == $prizeType['all']){
+					if($from == $fromArr['all']){
 						//特殊奖时间开启判断
 						if($now < strtotime($Market->endTime) && $now > strtotime($Market->startTime)){
 							//特殊奖品数量限制

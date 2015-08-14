@@ -168,6 +168,8 @@
 			})
 			
 			$('.card a').click(function(){
+				var id =$('.cardbg').attr('src').split('images/card/s')[1].split('.jpg')[0]
+				doTrack('Btn:Greet'+id )
 				$('.overlay,.setinfo,.popup1').fadeIn()
 			})
 			

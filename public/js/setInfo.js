@@ -195,9 +195,18 @@
 				 	}
 
 				 	if(btntype == 0){
-						 $('.getprize').hide();
-						 $('.setback').show();
-						 doPageview('Page_result')
+				 		if(response.data.type == 1){
+				 			 $('.getprize').hide();
+							 $('.setback').show();
+							 doPageview('Page_result')
+				 		}
+				 		
+				 		if(response.data.type == 3){
+				 			alert('您已经中过奖了')
+				 			$('.getprize').hide();
+				 			$('.category').fadeIn();
+				 		}
+						
 				 	}else{
 				 	
 				 		if(response.data.type == 1){
@@ -224,10 +233,11 @@
 				 		
 				 		
 				 		$('.share').click(function(){
+				 			doTrack('Share_1')
 							if(self.iswechat == false){
 								window.location.href = "http://service.weibo.com/share/share.php?pic="
-									+encodeURIComponent(g_config.path.img+'sharelogo.jpg')
-									+"&title='底妆大师阿玛尼15周年，我是第"+response.data.number+"个致敬大师的追随者'&url="
+									+encodeURIComponent('http://masterofglow.comeyes.cn/public/images/sharelogo.jpg')
+									+"&title='致敬阿玛尼，底妆大师15周年。我是第"+g_config.openid+"个致敬大师的追随者，此刻与我一起共襄15周年礼遇'&url="
 									+ encodeURIComponent('http://masterofglow.comeyes.cn/index/share?openid='+ g_config.openid +'&v='+vid+'');
 							}else{
 								$('.setinfo').hide()

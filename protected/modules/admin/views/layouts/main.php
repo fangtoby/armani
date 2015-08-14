@@ -10,7 +10,7 @@
 	<![endif]-->
 
 	<link rel="stylesheet" type="text/css" href="<?=Data::$data['staticUri']['css']?>form.css" />
-	<link rel="stylesheet" type="text/css" href="<?=Data::$data['staticUri']['css']?>admin/main.css" />
+	<link rel="stylesheet" type="text/css" href="<?=Data::$data['staticUri']['css']?>admin/main.css?v=<?=Yii::app()->params['version']['css'];?>" />
 <script src="<?=Data::$data['staticUri']['js']?>jquery-1.7.1.js?v=<?=Yii::app()->params['version']['js'];?>"></script>
 <script src="<?=Data::$data['staticUri']['js']?>laydate/laydate.js?v=<?=Yii::app()->params['version']['js'];?>"></script>
   <title>首页</title>

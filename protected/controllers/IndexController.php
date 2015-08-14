@@ -30,6 +30,11 @@ class IndexController extends Controller
 				$user->updateTime = $today;
 				$user->login_times = 1;
 				$user->save();
+			}else{
+				$user->headimgurl = $info['headimgurl'];
+				$user->updateTime = $today;
+				$user->login_times += 1;
+				$user->save();
 			}
 			Yii::app()->session['uid'] = $user->id;
 			//2015-08-13
@@ -114,6 +119,11 @@ class IndexController extends Controller
 				$user->updateTime = $today;
 				$user->login_times = 1;
 				$user->save();
+			}else{
+				$user->headimgurl = $info->headimgurl;
+				$user->updateTime = $today;
+				$user->login_times += 1;
+				$user->save();
 			}
 			
 			Yii::app()->session['uid'] = $user->id;
@@ -122,7 +132,6 @@ class IndexController extends Controller
 				'result'=>$this->result,
 				'url'=>Yii::app()->params['severWbUrl'],
 				'info'=>array(
-					'where'=>$where,
 					'openid'=>$user->id,
 					'nickname'=>json_decode($user->nickname),
 					'headimgurl'=>$user->headimgurl,

@@ -20,6 +20,9 @@ if ($token) {
 	$me = $c->get_uid();
 	$me = $c->show_user_by_id($me['uid']);
 	$gender = 3;	
+	/*echo "<pre>";
+	print_r($me);
+	exit;*/
 	switch($me['gender']){
 		case 'm':
 		$gender = 1;

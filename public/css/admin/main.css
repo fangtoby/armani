@@ -336,17 +336,42 @@ div.form .row label,div.form input{
 .footer{
 	text-align:center;
 	}
+	
 #login-form{
-	width:200px;
+	width:300px;
 	margin:0 auto;
 	}
 #login-form h1{
 	text-align:center;
 	}
+#login-form .row{
+	position: relative; margin-top: 20px;
+	}
 #login-form label{
 	display:initial;
+	width:56px;
+	position:absolute; color: #333; top:12px; left: 15px; cursor: text;
 	}
 #login-form .buttons{
 	padding-left:0px;
 	text-align:center;
+	}
+#login-form input[type="text"] , #login-form input[type="password"] {
+	
+    width: 100%;
+    margin: 0;
+    padding: 11px 15px 11px 75px;
+    border: 1px solid #bebebe;
+    color: #666;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+#login-form input[type="submit"]{
+	    width: 100px;
+    height: 36px;
+    border: 0;
+    font-size: 14px;
+    background-color: #555;
+    color: #fff;
+    cursor: pointer;
 	}

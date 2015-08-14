@@ -6,6 +6,8 @@
 		
         init: function(data) {
         doPageview('Homepage')
+        this.iswechat = false;
+        this.isWeiXin();
         var self = this;
      	   setTimeout(function(){
 			self.loadimages(['gifjpg/1-0.jpg','gifjpg/1-1.jpg','gifjpg/1-2.jpg','gifjpg/1-3.jpg','gifjpg/1-4.jpg','gifjpg/1-5.jpg',
@@ -22,8 +24,10 @@
 			var arr=(typeof arr!="object")? [arr] : arr
 			function imageloadpost(){
 				loadedimages++
-				
 				var num = parseInt(100/arr.length*loadedimages)
+				var hei = 635-425/arr.length*loadedimages
+				$('.loading .mask').css('height',hei)
+				
 				$('.loading p em').empty().html(num)
 				if (loadedimages==arr.length){
 					setTimeout(function(){
@@ -80,7 +84,12 @@
 			
 			$('.part3 a').on('touchstart',function(){
 				doTrack('Start')
-				window.location.replace( g_config.validateUrl );
+				if(self.iswechat == true){
+					window.location.replace( g_config.validateUrl.wx );
+				}else{
+					window.location.replace( g_config.validateUrl.wb );
+				}
+				
 			})
 			
 		},
@@ -115,16 +124,40 @@
 		setyear:function(num){
 			var self = this;
 			num++;
+			if(num == 2001){
+				 $('.p3cp1').fadeIn(700)
+				}
+				
+			if(num == 2004){
+				 $('.p3cp2').fadeIn(700)
+				}
+				
+			if(num == 2009){
+				 $('.p3cp3').fadeIn(700)
+				}
+				
+			if(num == 2014){
+				  $('.part3 a').fadeIn(700)
+				}
+				
 			if(num<=2015){
 				$('.year em').empty().html(num)
 					setTimeout(function(){
 						self.setyear(num);
 					},200)
-				}else{
-					 $('.p3cp2').fadeIn(500)
-					  $('.part3 a').fadeIn(500)
 				}
 		
+		},
+		
+		
+		isWeiXin:function(){
+  			  var ua = window.navigator.userAgent.toLowerCase();
+   			if(ua.match(/MicroMessenger/i) == 'micromessenger'){
+				this.iswechat = true
+				
+  			  }else{
+				this.iswechat = false
+  			  }
 		}
 		
 	

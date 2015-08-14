@@ -374,7 +374,7 @@ height: 100%;
     0%{transform: translate(150px,0);opacity:0}
 }
 
-img.p3cp1 {
+img.p3cp1,img.p3cp2,img.p3cp0 {
 position: absolute;
 top: 0;
 }
@@ -437,6 +437,12 @@ top: 0;
 z-index: 0;
 }
 
-
+.mask{
+position: absolute;
+top: 0;
+left: 0;
+height: 635px;
+overflow: hidden;
+}
 
 

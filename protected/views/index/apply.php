@@ -37,10 +37,15 @@
 <script>
 	console.log(ss);
 	var i = 0;
-	/*var timer = window.setInterval(function(){
-		send(ss['result'][i]);
+	var timer = window.setInterval(function(){
+		if(ss['result'][i]){
+			send(ss['result'][i]);
+		}else{
+			clearInterval(timer);	
+		}
 		i++;
-	},2000);*/
+	},2000);
+	
 	$('#apply').click(function(e) {
         var data = {
 			'cityId':  $('#city option:selected').val() ,
@@ -50,10 +55,11 @@
 		};
 		send(data);
     });
+	
 	function send(data){
 		 $.ajax({
 				 type: "GET",
-				 url: "/api/addinfo",
+				 url: "/api/addShopInfo",
 				 data: data,
 				 dataType:'json',
 				 success: function(data){
