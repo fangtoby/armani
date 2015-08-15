@@ -35,7 +35,7 @@ font-size: 40px;
 font-family: '微软雅黑';
 }
 .animate .part2{
-position: relative;
+position: absolute;
 width: 640px;
 background: #d9bc92 url(../images/bg.jpg) no-repeat;
 background-size: cover;
@@ -43,12 +43,16 @@ display: block;
 height: 100%;
 overflow: hidden;
 }
+.animate .part2 img:nth-child(1),.animate .part2 img:nth-child(2),.animate .part2 img:nth-child(3) {
+opacity:0
+}
 .animate .part2 img:nth-child(1){
 margin-top: 60px;
+
 }
 
 .animate .part3{
-position: relative;
+position: absolute;
 width: 100%;
 height: 100%;
 background: url(../images/p3_bg.jpg) repeat;
@@ -300,6 +304,12 @@ display: block;
 top: 0;
 opacity: 0;
 }
+
+.getprize {
+background: #fbefe3 url(../images/infogp_bg.jpg) no-repeat!important;
+background-size: 100%;
+}
+
 .getprize,.setback{
 position: relative;
 width: 100%;
@@ -309,6 +319,7 @@ background-size: 100%;
 display: block;
 min-height: 1008px;
 }
+
 form a,.setback a{
 top: 50px;
 position: relative;
@@ -321,7 +332,7 @@ margin: 0 auto;
 top: 25px;
 }
 .getprize form{
-top: 550px;
+top: 630px;
 }
 .animate{
 position: relative;
@@ -330,7 +341,7 @@ height: 100%;
 }
 
 
-.p1_on{-webkit-animation:imgp1 1s ease-out;-moz-animation:imgp1 1s ease-out 1 ;-o-transform:imgp1 1s ease-out 1 ;animation:imgp1 1s ease-out 1  ;}
+.p1_on{-webkit-animation:imgp1 1s ease-out;-moz-animation:imgp1 1s ease-out 1 ;-o-transform:imgp1 1s ease-out 1 ;animation:imgp1 1s ease-out 1 ;opacity:1!important}
 @-webkit-keyframes imgp1{
     
     100%{-webkit-transform: translate(0,0);opacity:1}
@@ -352,7 +363,7 @@ height: 100%;
     0%{transform: translate(-150px,0);opacity:0}
 }
 
-.p2_on{-webkit-animation:imgp2 1s ease-out;-moz-animation:imgp2 1s ease-out 1 ;-o-transform:imgp2 1s ease-out 1 ;animation:imgp2 1s ease-out 1  ;}
+.p2_on{-webkit-animation:imgp2 1s ease-out;-moz-animation:imgp2 1s ease-out 1 ;-o-transform:imgp2 1s ease-out 1 ;animation:imgp2 1s ease-out 1 ;opacity:1!important}
 @-webkit-keyframes imgp2{
     
     100%{-webkit-transform: translate(0,0);opacity:1}
@@ -398,7 +409,7 @@ top: 85%;
 position: absolute;
 }
 .part1 {
-position: relative;
+position: absolute;
 width: 100%;
 height: 100%;
 background: #aa816b;

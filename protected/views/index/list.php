@@ -10,7 +10,6 @@
 				openid:"<?=$info["openid"];?>",
 				nickname:'<?=$info["nickname"];?>',
 				headimgurl:"<?=$info["headimgurl"];?>",
-				from:"<?=$info["from"];?>",//g_config.from == 0 微信 1 微博
 				path:{
 					js:"<?=Data::$data['staticUri']['js']?>",
 					css:"<?=Data::$data['staticUri']['css']?>",
@@ -59,6 +58,7 @@
     <script src="<?=Data::$data['staticUri']['js']?>wechat.js"></script>
 	</head>
 <body style='background: #000' >
+<div class='uploading' style='display:none'> 提交中... </div>
 <img src='<?=Data::$data['staticUri']['img']?>qrcode.png' class='qrcode' style='display:none'/>
 <div class='page'>
  <div class='category'  style='display:none' >

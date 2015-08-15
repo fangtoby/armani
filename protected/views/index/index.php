@@ -57,7 +57,11 @@
 	</head>
 <body>
 <div class='loading'>
-	<img src='<?=Data::$data['staticUri']['img']?>load.jpg' />
+	<div  class='mask'>
+		<img src='<?=Data::$data['staticUri']['img']?>loading.jpg'/>
+	</div>
+	
+	<img src='<?=Data::$data['staticUri']['img']?>loading_on.jpg' />
 	<p>Loading...<em>1</em>%</p>
 </div>
 
@@ -77,8 +81,10 @@
 		<img src='<?=Data::$data['staticUri']['img']?>p1copy.png' width='100%' style='position: relative;top: -40px;display:none' />
 	</div>
 	<div class='part3' style='display:none'>
+		<img src='<?=Data::$data['staticUri']['img']?>p3_0.png' width='100%'  class='p3cp0'>
 		<img src='<?=Data::$data['staticUri']['img']?>p3_1.png' width='100%'  class='p3cp1' style='display:none' />
 		<img src='<?=Data::$data['staticUri']['img']?>p3_2.png' width='100%' class='p3cp2' style='display:none'/>
+		<img src='<?=Data::$data['staticUri']['img']?>p3_3.png' width='100%'  class='p3cp3' style='display:none' />
 		<p class='year' style='display:none'><em>2000</em>年</p>
 		<a href='javascript:;' style='display:none'><img src='<?=Data::$data['staticUri']['img']?>p3btn.png' /></a>
 	</div>

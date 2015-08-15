@@ -95,7 +95,7 @@
 							this.block = true;
 							return false;
 					}
-					
+						$('.uploading').fadeIn()
 						$('.setinfo .popup2 .msg').empty();
 						this.ajax(city,seshops,this.type,mobile)  	
 					
@@ -186,7 +186,7 @@
         		 	
         		 },
 				 success: function (response) {
-				 
+					 $('.uploading').hide()
 				 	self.block = true;
 				 	
 				 	if(response.code != 200){
