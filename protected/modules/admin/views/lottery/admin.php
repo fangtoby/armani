@@ -51,12 +51,12 @@ $this->menu=array(
         ),
         array(  
             'name'=>'username',  
-            'value'=>'$data->user->nickname',  //定义展示的 value 值  
+            'value'=>'json_decode($data->user->nickname)',  //定义展示的 value 值  
            // 'filter'=>CHtml::activeTextField($model,'name'), //添加搜索 filter  
         ),  
         array(  
             'name'=>'path',  
-            'value'=>'$data->user->path',  //定义展示的 value 值  
+            'value'=>'$data->user->path == 1 ? "微信":"新浪微博"',  //定义展示的 value 值  
             //'filter'=>CHtml::activeTextField($model,'name'), //添加搜索 filter  
         ), 
 		array(
