@@ -38,8 +38,9 @@ if ($token) {
 		'headimgurl'=>$me['profile_image_url'],
 		'referer'=>$_SERVER['HTTP_REFERER']
 	);
-	$info = json_encode($info);
-	
+	//$info = str_replace('"',"'",json_encode($info));
+	$info = http_build_query($info);
+
 	setcookie( 'weibojs_'.$weiboService->client_id, http_build_query($token) );
 	//header( "refresh:3;url=".$back_url);
 	// $data = {
@@ -52,5 +53,5 @@ if ($token) {
 }
 ?>
 <script type="text/javascript">
-	window.location.href = '/index/indexs?path=2&info=<?=$info?>';
+	window.location.href = '/index/indexs?path=2&<?=$info?>';
 </script>

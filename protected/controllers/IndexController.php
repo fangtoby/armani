@@ -96,31 +96,35 @@ class IndexController extends Controller
 	
 	public function actionIndexs()
 	{
-		if(isset($_GET['info']) && $_GET['info'] !=  NULL){
-			$info = json_decode($_GET['info']);
+		//var_dump($_GET);
+		//var_dump(json_decode($_GET['info']));
+		//exit;
+
+		if(isset($_GET['openid']) && $_GET['openid'] !=  NULL){
+			$info = $_GET;
 
 			$user = User::model()->findByAttributes(array(
-				'unionid'=>$info->openid
+				'unionid'=>$info['openid']
 			));
 			$today = $this->getCurrectDate();
 			
-			$referer = $info->referer;
+			//$referer = $info['referer'];
 			
 			if(!$user){
 				$user = new User();
-				$user->unionid = $info->openid;
-				$nickname = json_encode($info->nickname);
+				$user->unionid = $info['openid'];
+				$nickname = json_encode($info['nickname']);
 				$user->nickname = $nickname; 
 				$user->path = $this->path['wb'];
-				$user->utm_source = $referer;
-				$user->sex = $info->sex;
-				$user->headimgurl = $info->headimgurl;
+				//$user->utm_source = $referer;
+				$user->sex = $info['sex'];
+				$user->headimgurl = $info['headimgurl'];
 				$user->createTime = $today;
 				$user->updateTime = $today;
 				$user->login_times = 1;
 				$user->save();
 			}else{
-				$user->headimgurl = $info->headimgurl;
+				$user->headimgurl = $info['headimgurl'];
 				$user->updateTime = $today;
 				$user->login_times += 1;
 				$user->save();
