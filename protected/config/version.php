@@ -2,6 +2,6 @@
 
 // This is the Version configuration.
 return array(
-	'js'=>'20150803',
-	'css'=>'20150813'
+	'js'=>'20150818',
+	'css'=>'20150818'
 );

@@ -42,7 +42,7 @@ class Market extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('CityID, CounterManager, DirectorName, ShopAddress, ShopCode, ShopEmail,ShopName, ShopPhone, prize, startTime, endTime, rate', 'required'),
+			//array('CityID, ShopAddress, ShopCode, ShopEmail,ShopName, ShopPhone, prize, startTime, endTime, rate', 'required'),
 			array('ShopID, CityID, prize, count', 'numerical', 'integerOnly'=>true),
 			array('rate', 'numerical'),
 			array('CounterManager, DirectorName, ShopLocation_X, ShopLocation_Y, ShopPhone', 'length', 'max'=>100),

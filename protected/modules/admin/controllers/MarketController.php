@@ -100,6 +100,8 @@ class MarketController extends Controller
 			$model->attributes=$_POST['Market'];
 			$model->createTime = date("Y-m-d H:i:s");
 			$model->updateTime = date("Y-m-d H:i:s");
+			//print_r($_POST['Market']);
+			//exit;
 			
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->ShopID));

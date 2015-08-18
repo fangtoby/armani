@@ -14,20 +14,7 @@
     	<input placeholder="手机号码" type="text" id="phone" />
         </div>
     	<div >
-        <select id="city" >
-        	<?php foreach($city as $i){ ?>
-        	<option value="<?=$i['CityID']?>"><?=$i['CityName']?></option>
-        	<?php } ?>
-        </select>
-        </div>
-    	<div >
-        <select id="counter" >
-        	<?php foreach($market as $i){ ?>
-				<?php if($i['CityID'] == 1){ ?>
-                <option value="<?=$i['ShopID']?>"><?=$i['ShopName']?></option>
-                <?php } ?>
-        	<?php } ?>
-        </select>
+       
         </div>
         <button id="apply">提交</button>
     </div><!-- content -->
@@ -59,7 +46,7 @@
 	function send(data){
 		 $.ajax({
 				 type: "GET",
-				 url: "/api/addShopInfo",
+				 url: "/api/addShopInfo?v=234243dfsdf",
 				 data: data,
 				 dataType:'json',
 				 success: function(data){
