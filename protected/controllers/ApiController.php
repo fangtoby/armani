@@ -186,21 +186,65 @@ class ApiController extends Controller
 				if($correctPrizeType == $prizeType['bigGift']){
 					if($Market->count > $Market->prize){
 						//插入抽奖记录	
+						$recordParamArr['win'] = 1;
+						$recordParamArr['giftId'] = 1;
+						$recordParamArr['correctPrizeType'] = $prizeType['normal'];
+
 						$this->addLotteryRecord($recordParamArr);
+						
+						$prizeNormal = Prize::model()->findByPk(1);
+						$prizeNormal->number += 1;
+						$prizeNormal->updateTime = $currectTime;
+						$prizeNormal->save();
+
+						$prizeNoteStr = str_replace(' ','',$prizeNormal->note."".$prizeNormal->name);
+
+						$shopNameGBK = iconv('UTF-8', 'GB2312',  str_replace(' ','',$Market->ShopName));
+						$prizeNoteGBK = iconv('UTF-8', 'GB2312', $prizeNoteStr);
+						
+						$result = SMessage::sendMs($number,$shopNameGBK,$prizeNoteGBK );
+						
 						$this->jsonSuccess(array(
-							'type'=>$code['sad']
+								'type'=>$code['lucky'],
+								'prize'=>$prizeNoteStr,
+								'number'=>$uid
 						));
 					}
 					//根据奖品Id，获取奖品中奖率
 					$rate = $Market->rate;
 					$currentNumber = 1;
-					$denominator = floor(1/$rate);
-					if($currentNumber === rand($currentNumber,$denominator)){
+					if($rate != NULL){
+						$denominator = floor(1/$rate);
+						$isWillPrize = rand($currentNumber,$denominator);
+					}else{
+						$isWillPrize = 2;
+					}
+					if($currentNumber === $isWillPrize){
 						$recordParamArr['win'] = 1;
 					}else{
+
+						$recordParamArr['win'] = 1;
+						$recordParamArr['giftId'] = 1;
+						$recordParamArr['correctPrizeType'] = $prizeType['normal'];
+
 						$this->addLotteryRecord($recordParamArr);
+						
+						$prizeNormal = Prize::model()->findByPk(1);
+						$prizeNormal->number += 1;
+						$prizeNormal->updateTime = $currectTime;
+						$prizeNormal->save();
+
+						$prizeNoteStr = str_replace(' ','',$prizeNormal->note."".$prizeNormal->name);
+
+						$shopNameGBK = iconv('UTF-8', 'GB2312',  str_replace(' ','',$Market->ShopName));
+						$prizeNoteGBK = iconv('UTF-8', 'GB2312', $prizeNoteStr);
+						
+						$result = SMessage::sendMs($number,$shopNameGBK,$prizeNoteGBK );
+						
 						$this->jsonSuccess(array(
-							'type'=>$code['sad']
+								'type'=>$code['lucky'],
+								'prize'=>$prizeNoteStr,
+								'number'=>$uid
 						));
 					}
 					$Market->count += 1;
@@ -221,9 +265,28 @@ class ApiController extends Controller
 					//奖品总数限制判断
 					if($correctPrizeModel->number > $correctPrizeModel->count){
 						//插入抽奖记录	
+						$recordParamArr['win'] = 1;
+						$recordParamArr['giftId'] = 1;
+						$recordParamArr['correctPrizeType'] = $prizeType['normal'];
+
 						$this->addLotteryRecord($recordParamArr);
+						
+						$prizeNormal = Prize::model()->findByPk(1);
+						$prizeNormal->number += 1;
+						$prizeNormal->updateTime = $currectTime;
+						$prizeNormal->save();
+
+						$prizeNoteStr = str_replace(' ','',$prizeNormal->note."".$prizeNormal->name);
+
+						$shopNameGBK = iconv('UTF-8', 'GB2312',  str_replace(' ','',$Market->ShopName));
+						$prizeNoteGBK = iconv('UTF-8', 'GB2312', $prizeNoteStr);
+						
+						$result = SMessage::sendMs($number,$shopNameGBK,$prizeNoteGBK );
+						
 						$this->jsonSuccess(array(
-							'type'=>$code['sad']
+								'type'=>$code['lucky'],
+								'prize'=>$prizeNoteStr,
+								'number'=>$uid
 						));
 					}
 					//根据奖品Id，获取奖品中奖率
@@ -233,9 +296,28 @@ class ApiController extends Controller
 					if($currentNumber === rand($currentNumber,$denominator)){
 						$recordParamArr['win'] = 1;
 					}else{
+						$recordParamArr['win'] = 1;
+						$recordParamArr['giftId'] = 1;
+						$recordParamArr['correctPrizeType'] = $prizeType['normal'];
+
 						$this->addLotteryRecord($recordParamArr);
+						
+						$prizeNormal = Prize::model()->findByPk(1);
+						$prizeNormal->number += 1;
+						$prizeNormal->updateTime = $currectTime;
+						$prizeNormal->save();
+
+						$prizeNoteStr = str_replace(' ','',$prizeNormal->note."".$prizeNormal->name);
+
+						$shopNameGBK = iconv('UTF-8', 'GB2312',  str_replace(' ','',$Market->ShopName));
+						$prizeNoteGBK = iconv('UTF-8', 'GB2312', $prizeNoteStr);
+						
+						$result = SMessage::sendMs($number,$shopNameGBK,$prizeNoteGBK );
+						
 						$this->jsonSuccess(array(
-							'type'=>$code['sad']
+								'type'=>$code['lucky'],
+								'prize'=>$prizeNoteStr,
+								'number'=>$uid
 						));
 					}
 					$limitParamArr = array(
@@ -263,10 +345,28 @@ class ApiController extends Controller
 							'number'=>$uid
 						));
 					}else{
-						$recordParamArr['win'] = 0;
+						$recordParamArr['win'] = 1;
+						$recordParamArr['giftId'] = 1;
+						$recordParamArr['correctPrizeType'] = $prizeType['normal'];
+
 						$this->addLotteryRecord($recordParamArr);
+						
+						$prizeNormal = Prize::model()->findByPk(1);
+						$prizeNormal->number += 1;
+						$prizeNormal->updateTime = $currectTime;
+						$prizeNormal->save();
+
+						$prizeNoteStr = str_replace(' ','',$prizeNormal->note."".$prizeNormal->name);
+
+						$shopNameGBK = iconv('UTF-8', 'GB2312',  str_replace(' ','',$Market->ShopName));
+						$prizeNoteGBK = iconv('UTF-8', 'GB2312', $prizeNoteStr);
+						
+						$result = SMessage::sendMs($number,$shopNameGBK,$prizeNoteGBK );
+						
 						$this->jsonSuccess(array(
-							'type'=>$code['sad']
+								'type'=>$code['lucky'],
+								'prize'=>$prizeNoteStr,
+								'number'=>$uid
 						));
 					}
 				}
