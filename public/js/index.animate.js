@@ -79,8 +79,8 @@
 			$('.part1').fadeIn(1000);
 			var self = this;
 			setTimeout(function(){
-				self.flow(0);
-			},1000)
+				self.flow(1);
+			},500)
 			
 			$('.part3 a').on('touchstart',function(){
 				doTrack('Start')
@@ -110,19 +110,23 @@
 					
 					setTimeout(function(){
 					    
-					   $('.part2 img:nth-child(1)').addClass('p1_on');
-					    $('.part2 img:nth-child(2)').delay(500).addClass('p2_on');
-					    $('.part2 img:nth-child(3)').delay(1000).addClass('p1_on');
-					    $('.part2 img:nth-child(4)').delay(1000).fadeIn(500);
+					    $('.part2 img:nth-child(1)').addClass('p1_on');
+					     setTimeout(function(){
+							 $('.part2 img:nth-child(2)').addClass('p2_on');
+						},400)
+						 setTimeout(function(){
+							   $('.part2 img:nth-child(3)').addClass('p1_on');
+						},800)
+					  
+					    $('.part2 img:nth-child(4)').delay(1200).fadeIn(500);
 					    $('.part2').delay(3000).fadeOut();
 					    $('.part3').delay(3000).fadeIn(1000);
 					    $('.p3cp1,.year').delay(3000).fadeIn(500)
 					    setTimeout(function(){
 							self.setyear(2000);
-						},3800)
+						},3500)
 						
-						
-					},1000)
+					},200)
 					
 				}
 		},
