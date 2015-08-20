@@ -4,5 +4,5 @@
 return array(
 		"id" => "7",
 		"appId"=> "wxc2efec250f2952a3",
-		"domain"=> "wxresponse.comeyes.com"
+		"domain"=> "wxproxy.comeyes.com"
 );
