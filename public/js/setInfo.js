@@ -208,7 +208,7 @@
 				 		}
 						
 				 	}else{
-				 	
+					 	var vid = $('.cardbg').attr('src').split('images/card/')[1].split('.jpg')[0]
 				 		if(response.data.type == 1){
 				 			$('.setinfo .popup2 .msg').html('恭喜您<br>获取阿玛尼赋予<br>'+response.data.prize+'<br>我们将短信通知邀您莅临专柜')
 				 			
@@ -216,10 +216,10 @@
 				 			$('.setinfo .popup2').show();
 				 			$('.qrcode').show();
 				 			
-				 			var vid = $('.cardbg').attr('src').split('images/card/')[1].split('.jpg')[0]
+				 			
 				 			window.share.imgUrl = 'http://masterofglow.comeyes.cn/public/images/sharelogo.jpg'
 				 			window.share.link='http://masterofglow.comeyes.cn/index/share?openid='+ g_config.openid +'&v='+vid+''
-				 			window.share.desc='底妆大师阿玛尼15周年，我是第'+g_config.openid+'个致敬大师的追随者'
+				 			window.share.desc='我是第'+ g_config.openid +'个阿玛尼权利底妆追随者，共襄15年大师礼遇'
 				 			shareConfig();
 				 			
 				 			
@@ -227,7 +227,18 @@
 				 		
 				 		
 				 		if(response.data.type == 3){
-				 			alert('您已经中过奖了')
+				 			alert('您已经中过奖了');
+				 			$('.setinfo').hide()
+							$('.setinfo .popup1').hide()
+							if(self.iswechat == false){
+								window.location.href = "http://service.weibo.com/share/share.php?pic="
+									+encodeURIComponent('http://masterofglow.comeyes.cn/public/images/sharelogo.jpg')
+									+"&title='致敬阿玛尼，底妆大师15周年。我是第"+g_config.openid+"个致敬大师的追随者，此刻与我一起共襄15周年礼遇'&url="
+									+ encodeURIComponent('http://masterofglow.comeyes.cn/index/share?openid='+ g_config.openid +'&v='+vid+'');
+							}else{
+								$('.shareTips').fadeIn()
+							}
+							
 				 		}
 				 		
 				 		

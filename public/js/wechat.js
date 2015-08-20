@@ -4,7 +4,7 @@
         imgUrl: 'http://masterofglow.comeyes.cn/public/images/sharelogo.jpg',
         link: 'http://masterofglow.comeyes.cn/',
         title: "",
-        desc: "致敬阿玛尼 底妆大师15周年",
+        desc: "致敬阿玛尼 底妆大师15周年 共襄礼遇",
     }
 
     shareConfig();

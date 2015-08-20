@@ -77,7 +77,8 @@ class IndexController extends Controller
 			$wxid = Yii::app()->params['weichat']['id'];
 			$wxappId = Yii::app()->params['weichat']['appId'];
 			$wxdomain = Yii::app()->params['weichat']['domain'];
-			$wxulink =  urlencode("http://{$wxdomain}/External/Oauth.ashx?link={$wxlink}&id={$wxid}");
+			
+			$wxulink =  urlencode("http://{$wxdomain}/Service/Oauth.ashx?link={$wxlink}&id={$wxid}&params=");
 			$wxOpenApi = "https://open.weixin.qq.com/connect/oauth2/authorize";
 			$wxurl="{$wxOpenApi}?appid={$wxappId}&redirect_uri={$wxulink}&response_type=code&scope=snsapi_userinfo&state=State#wechat_redirect";
 			
