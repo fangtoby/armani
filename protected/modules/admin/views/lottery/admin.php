@@ -14,7 +14,35 @@ $this->menu=array(
 ?>
 
 <h1>中奖记录</h1>
+<div class="history_from_date form">
+    <input type="hidden" value="1" name="Lottery[search]" />
+    <input type="text" readonly name="Lottery[search_starttime]" id="Lottery_startTime" placeholder="开始时间" value="<?php echo isset($model->search_starttime) ? $model->search_starttime:""; ?>" />
+    <span>-to-</span>
+    <input type="text" readonly name="Lottery[search_endtime]" id="Lottery_endTime" placeholder="结束时间" value="<?php echo isset($model->search_endtime) ? $model->search_endtime:""; ?>"  />
+    
+    <button id="history_search">查 询</button>
 
+<script>
+        $('#history_search').click(function(e) {
+            var a = {};
+            $("input[name^='Lottery']").each(function(i, o){
+                $this = $(this)
+                a[ $this.attr('name') ] = $this.val();
+            });
+            send(a);
+        });
+        function send(data){
+            var selectedStr = '';
+            var url = "<?=$this->createUrl('/admin/lottery/admin');?>";
+
+            for(var key in data){
+                selectedStr += encodeURIComponent(key)+'='+encodeURIComponent(data[key]) + '&';
+            }
+
+            $('#lottery-grid').yiiGridView('update', {url: url + '?' + selectedStr +'&Lottery_page=1&ajax=lottery-grid' });
+
+        }
+</script>
 <?php $this->widget('zii.widgets.grid.CGridView', array(
 	'id'=>'lottery-grid',
 	'dataProvider'=>$model->search(),
@@ -69,3 +97,17 @@ $this->menu=array(
 		),
 	),
 )); ?>
+<script>
+    //$('#Market_startTime,#Market_endTime')
+    laydate({
+        elem: '#Lottery_startTime', //目标元素。由于laydate.js封装了一个轻量级的选择器引擎，因此elem还允许你传入class、tag但必须按照这种方式 '#id .class'
+        format: 'YYYY-MM-DD hh:mm:ss',
+        //event: 'focus' //响应事件。如果没有传入event，则按照默认的click
+    });
+    laydate({
+        elem: '#Lottery_endTime', //目标元素。由于laydate.js封装了一个轻量级的选择器引擎，因此elem还允许你传入class、tag但必须按照这种方式 '#id .class'
+        format: 'YYYY-MM-DD hh:mm:ss',      
+        //event: 'focus' //响应事件。如果没有传入event，则按照默认的click
+    });
+
+</script>

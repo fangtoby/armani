@@ -119,9 +119,15 @@ class LotteryController extends Controller
 	{
 		$model=new Lottery('search');
 		$model->unsetAttributes();  // clear any default values
-		if(isset($_GET['Lottery']))
-			$model->attributes=$_GET['Lottery'];
-
+		if(isset($_GET['Lottery'])){
+			$Search = $_GET['Lottery'];
+			if(isset($Search['search'])){
+				$model->search_endtime = $Search['search_endtime'];
+				$model->search_starttime = $Search['search_starttime'];
+			}
+			$model->phone = isset($Search['phone']) ? $Search['phone']:NULL;
+		}
+		
 		$this->render('admin',array(
 			'model'=>$model,
 		));
