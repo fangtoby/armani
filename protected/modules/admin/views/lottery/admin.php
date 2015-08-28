@@ -36,9 +36,9 @@ $this->menu=array(
 </style>
 <div class="clearfix">
 <ul class="download-link">
-    <li><a href="/csv/lottery.php?v=<?=time();?>">中奖记录</a></li>
-    <li><a href="/csv/city.php?v=<?=time();?>">城市抽奖数量统计</a></li>
-    <li><a href="/csv/market.php?v=<?=time();?>">店铺抽奖数量统计</a></li>
+    <li><a href="/csv/lottery.php?scode=<?=$code;?>&v=<?=time();?>">中奖记录</a></li>
+    <li><a href="/csv/city.php?scode=<?=$code;?>&v=<?=time();?>">城市抽奖数量统计</a></li>
+    <li><a href="/csv/market.php?scode=<?=$code;?>&v=<?=time();?>">店铺抽奖数量统计</a></li>
 </ul>
 </div>
 <div class="history_from_date form">

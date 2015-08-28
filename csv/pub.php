@@ -31,6 +31,30 @@ function export_csv($filename,$data) {
     header('Pragma:public'); 
     echo $data; 
 } 
+ /**
+ * 简单对称加密算法之解密
+ * @param String $string 需要解密的字串
+ * @param String $skey 解密KEY
+ * @author Anyon Zou <zoujingli@qq.com>
+ * @date 2013-08-13 19:30
+ * @update 2014-10-10 10:10
+ * @return String
+ */
+ function decode($string = '', $skey = 'cxphp') {
+    $strArr = str_split(str_replace(array('O0O0O', 'o000o', 'oo00o'), array('=', '+', '/'), $string), 2);
+    $strCount = count($strArr);
+    foreach (str_split($skey) as $key => $value)
+        $key <= $strCount && $strArr[$key][1] === $value && $strArr[$key] = $strArr[$key][0];
+    return base64_decode(join('', $strArr));
+ }
+
+$string = "wrsd7903sdf*#dfasd/";
+$skey = "MASTER";
+
+if (!isset($_GET['scode']) || decode($_GET['scode'],$skey)  != $string) {
+    echo "<div style='color:red;text-align:center;'>您无权限下载。</div>";
+    exit;
+}
 
 $agent = $_SERVER['HTTP_USER_AGENT'];
 
