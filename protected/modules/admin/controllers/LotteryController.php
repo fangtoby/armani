@@ -111,12 +111,33 @@ class LotteryController extends Controller
 			'dataProvider'=>$dataProvider,
 		));
 	}
-
+	/**
+	 * 简单对称加密算法之加密
+	 * @param String $string 需要加密的字串
+	 * @param String $skey 加密EKY
+	 * @author Anyon Zou <zoujingli@qq.com>
+	 * @date 2013-08-13 19:30
+	 * @update 2014-10-10 10:10
+	 * @return String
+	 */
+	 public function encode($string = '', $skey = 'cxphp') {
+	    $strArr = str_split(base64_encode($string));
+	    $strCount = count($strArr);
+	    foreach (str_split($skey) as $key => $value)
+	        $key < $strCount && $strArr[$key].=$value;
+	    return str_replace(array('=', '+', '/'), array('O0O0O', 'o000o', 'oo00o'), join('', $strArr));
+	 }
+	
 	/**
 	 * Manages all models.
 	 */
 	public function actionAdmin()
 	{
+		$string = "wrsd7903sdf*#dfasd/";
+		$skey = "MASTER";
+
+		$scode = $this->encode($string,$skey);
+
 		$model=new Lottery('search');
 		$model->unsetAttributes();  // clear any default values
 		if(isset($_GET['Lottery'])){
@@ -130,6 +151,7 @@ class LotteryController extends Controller
 		
 		$this->render('admin',array(
 			'model'=>$model,
+			'code'=>$scode
 		));
 	}
 
