@@ -28,7 +28,10 @@ class SMessage{
 	public static $url = "http://www.smsadmin.cn/smsmarketing/wwwroot/api/get_send/";
 	
 	public static function sendMs($mobile,$place,$prize, $dtime = NULL){
-		$msg = "恭喜您获得专属底妆权利，七天内，凭短息莅临阿玛尼".$place."美妆专柜，尊享明星粉底体验装（".$prize."）一份，共襄15周年礼遇。（数量有限，领完即止）【阿玛尼美妆】";
+		$msg = "恭喜你获得专属底妆权利，七天内，凭短息莅临阿玛尼{$place}美妆专柜，尊享明星粉底体验装({$prize})一份，共襄15周年礼遇。（数量有限，领完即止）【阿玛尼美妆】";
+		
+		//$msg = urlencode(iconv('UTF-8', 'GB2312', $msg));
+		//$msg = iconv('UTF-8', 'GB2312', $msg);
 		
 		$url = self::$url."?uid=".self::$uid."&pwd=".self::$pwd."&mobile=".$mobile."&msg=".$msg."&dtime=''";
 		$html = iconv('GBK', 'UTF-8', file_get_contents($url));
@@ -38,14 +41,6 @@ class SMessage{
 		}else{
 			return false;
 		}
-	}
-	public static function test($mobile,$place,$prize){
-		/*$placeg = iconv('UTF-8', 'GB2312', $place);
-		echo $placeg;
-		$prizeg = iconv('UTF-8', 'GB2312', $prize);
-		echo $prizeg;*/
-				$msg = "恭喜您获得专属底妆权利，七天内，凭短息莅临阿玛尼".$place."美妆专柜，尊享明星粉底体验装（".$prize."）一份，共襄15周年礼遇。（数量有限，领完即止）【阿玛尼美妆】";
-				return $msg;
 	}
 	public static function send($mobile, $place,$prize , $dtime = NULL){
 		
