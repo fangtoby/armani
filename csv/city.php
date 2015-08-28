@@ -40,11 +40,10 @@ if (eregi('Mac', $agent)){
     $isMac = true;
 }
 
-$sql = 'SELECT c.CityName,m.ShopName,t.phone,p.name,u.nickname,u.sex,t.from,t.createTime FROM lottery t '.
-'left join user u on u.id = t.uid left join market m on m.ShopID = t.marketId left join city c on c.CityID = t.cityId left join prize p on p.id = t.giftId order by t.cityId,t.marketId,t.giftId';
+$sql = 'SELECT t.cityId,c.CityName,p.name,count(*) as number FROM lottery t left join city c on c.CityID = t.cityId left join prize p on p.id = t.giftId group by t.cityId,t.giftId';
 
 
-// SELECT t.cityId,c.CityName,p.name,count(*) as number FROM `lottery` t
+// SELECT t.cityId,c.CityName,p.name,count(*) as number FROM lottery t
 // left join city c on c.CityID = t.cityId
 // left join prize p on p.id = t.giftId
 // group by t.cityId,t.giftId
@@ -60,36 +59,19 @@ if (!$isOK) {
 	echo "DB Error!";
 }
 
-$fromMap = array('微信',"微博");
-$sexs = array(1=> '男',2=> '女');
-
 $res  = mysql_query($sql);
 
-$str = "地区,门店,手机号码,奖品名称,性别,来源,抽奖时间\n"; 
-
-if ($isMac) {
-    $str = "地区,门店,手机号码,奖品名称,客户昵称,性别,来源,抽奖时间\n"; 
-}
+$str = "ID,地区,奖品名称,奖品数量\n"; 
 
 
 while ($row = mysql_fetch_assoc($res)) {
 	//var_dump($row);
 	//exit;
-	$cityname = $row['CityName'];
-	$shopname = $row['ShopName'];
-	$phone = $row['phone'];
+	$cityId = $row['cityId'];
+	$CityName = $row['CityName'];
 	$name = $row['name'];
-    if ($isMac) {
-       $nickName = json_decode( $row['nickname'] );
-    }
-	$sex = $sexs[$row['sex']];
-	$from = $fromMap[$row['from']];
-	$createTime = $row['createTime'];
-	if ($isMac) {
-        $str .= $cityname.','.$shopname.','.$phone.','.$name.','.$nickName.','.$sex.','.$from.','.$createTime . "\n";
-    }else{
-        $str .= $cityname.','.$shopname.','.$phone.','.$name.','.$sex.','.$from.','.$createTime . "\n";
-    }
+	$number = $row['number'];
+    $str .= $cityId.','.$CityName.','.$name.','.$number. "\n";
 }
 if (!$isMac) {
      $str = iconv('utf-8','gb2312',$str);
