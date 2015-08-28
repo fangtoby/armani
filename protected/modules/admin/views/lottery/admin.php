@@ -13,7 +13,7 @@ $this->menu=array(
 
 ?>
 
-<h1>中奖记录</h1>
+<h1>中奖记录 <a href="/csv.php?v=<?=time();?>">Download</a></h1>
 <div class="history_from_date form">
     <input type="hidden" value="1" name="Lottery[search]" />
     <input type="text" readonly name="Lottery[search_starttime]" id="Lottery_startTime" placeholder="开始时间" value="<?php echo isset($model->search_starttime) ? $model->search_starttime:""; ?>" />
