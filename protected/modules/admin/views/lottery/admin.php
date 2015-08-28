@@ -43,6 +43,7 @@ $this->menu=array(
 
         }
 </script>
+</div>
 <?php $this->widget('zii.widgets.grid.CGridView', array(
 	'id'=>'lottery-grid',
 	'dataProvider'=>$model->search(),
