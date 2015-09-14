@@ -137,6 +137,9 @@ class ApiController extends Controller
 					));
 				}
 				$rightPrizeModel = array();
+				//屏蔽店铺id
+				//2015-09-14 21:06:43
+				$hiddenIds = array(193,220);
 				//普通奖品时间判断
 				foreach($prizeList as $key=>$val){  
 					if($val->type == 2 && $specialOpen){
@@ -144,7 +147,13 @@ class ApiController extends Controller
 					}else{
 						if($val->number < $val->count){
 							if($now < strtotime($val->endTime) && $now > strtotime($val->startTime) ){
-								$rightPrizeModel[] = $val;  
+								if (in_array($marketId, $hiddenIds)) {//判断是否在屏蔽店铺列表中
+									if ($val->id != 3) {
+										$rightPrizeModel[] = $val; 
+									}
+								}else{
+									$rightPrizeModel[] = $val; 
+								}
 							}
 						}
 					}
