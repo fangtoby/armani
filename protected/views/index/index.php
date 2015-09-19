@@ -37,7 +37,7 @@
         }
     </script>
     <!-- 移动端版本兼容 end -->
-    <title>致敬阿玛尼 底妆大师十五周年</title>
+    <title>致敬阿玛尼 底妆大师15周年</title>
     <script src="<?=Data::$data['staticUri']['js']?>jquery.min.js"></script>
     <script src="<?=Data::$data['staticUri']['js']?>index.animate.js"></script>
 
@@ -72,13 +72,13 @@
 		<img src='<?=Data::$data['staticUri']['img']?>01.jpg' width='100%'style='display:none'/>
 	</div>
 	<div class='part1' style='display:none'>
-		<img src='<?=Data::$data['staticUri']['img']?>gifjpg/1-0.jpg' width='100%' height='100%' />
+		<img src='<?=Data::$data['staticUri']['img']?>gifjpg/1-1.jpg' width='100%' height='100%' />
 	</div>
 	<div class='part2' style='display:none'>
 		<img src='<?=Data::$data['staticUri']['img']?>p1_1.png' width='100%' />
 		<img src='<?=Data::$data['staticUri']['img']?>p1_2.png' width='100%' />
 		<img src='<?=Data::$data['staticUri']['img']?>p1_3.png' width='100%' />
-		<img src='<?=Data::$data['staticUri']['img']?>p1copy.png' width='100%' style='position: relative;top: -40px;display:none' />
+		<img src='<?=Data::$data['staticUri']['img']?>p1copy.png' width='100%' style='position: absolute;top: 90%;left:0;display:none' />
 	</div>
 	<div class='part3' style='display:none'>
 		<img src='<?=Data::$data['staticUri']['img']?>p3_0.png' width='100%'  class='p3cp0'>

@@ -8,7 +8,8 @@
     <script>
     	var g_config = {					
 				openid:"<?=$info["openid"];?>",
-				nickname:'<?=$info["nickname"];?>',
+				nickname:"<?=$info["nickname"];?>",
+				count:"<?=$info["count"];?>",
 				headimgurl:"<?=$info["headimgurl"];?>",
 				path:{
 					js:"<?=Data::$data['staticUri']['js']?>",
@@ -37,9 +38,9 @@
         }
     </script>
     <!--移动端版本兼容 end -->
-    <title>致敬阿玛尼 底妆大师十五周年</title>
+    <title>致敬阿玛尼 底妆大师15周年</title>
     <script src="<?=Data::$data['staticUri']['js']?>jquery.min.js"></script>
-    <script src="<?=Data::$data['staticUri']['js']?>shops.js"></script>
+    <script src="<?=Data::$data['staticUri']['js']?>shops.js?v=<?=time();?>"></script>
     <script src="<?=Data::$data['staticUri']['js']?>setInfo.js"></script>
     <script src="<?=Data::$data['staticUri']['js']?>index.js"></script>
 
@@ -116,7 +117,7 @@
 			我们将短信通知邀您莅临专柜
 			</span>
 			<img src='<?=Data::$data['staticUri']['img']?>scale.png'/>
-			<a href='javascript:;' class='share'><img src='<?=Data::$data['staticUri']['img']?>submitbtn.png' /></a>
+			<a href='javascript:;' class='share'><img src='<?=Data::$data['staticUri']['img']?>sharebtn.png' /></a>
 		
 	 	
 	 	</div>

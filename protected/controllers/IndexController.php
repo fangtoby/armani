@@ -67,6 +67,7 @@ class IndexController extends Controller
 				'url'=>Yii::app()->params['severUrl'],
 				'info'=>array(
 					'openid'=>$user->id,
+					'count'=>$user->getAllUserCount(),
 					'nickname'=>json_decode($user->nickname),
 					'headimgurl'=>$user->headimgurl,
 				)
@@ -138,6 +139,7 @@ class IndexController extends Controller
 				'url'=>Yii::app()->params['severWbUrl'],
 				'info'=>array(
 					'openid'=>$user->id,
+					'count'=>$user->getAllUserCount(),
 					'nickname'=>json_decode($user->nickname),
 					'headimgurl'=>$user->headimgurl,
 				)
@@ -159,6 +161,7 @@ class IndexController extends Controller
 				'url'=>Yii::app()->params['severUrl'],
 				'info'=>array(
 					'openid'=>$user->id,
+					'count'=>$user->getAllUserCount(),
 					'nickname'=>json_decode($user->nickname),
 					'headimgurl'=>$user->headimgurl,
 				)
@@ -177,6 +180,7 @@ class IndexController extends Controller
 			$this->render('setinfo',array(
 				'info'=>array(
 					'openid'=>$user->id,
+					'count'=>$user->getAllUserCount(),
 					'nickname'=>json_decode($user->nickname),
 					'headimgurl'=>$user->headimgurl,
 				)
@@ -200,6 +204,7 @@ class IndexController extends Controller
 						'number'=>$user->id,
 						'info'=>array(
 							'openid'=>$user->id,
+							'count'=>$user->getAllUserCount(),
 							'nickname'=>json_decode($user->nickname),
 							'headimgurl'=>$user->headimgurl,
 					)

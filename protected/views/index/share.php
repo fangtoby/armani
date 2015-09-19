@@ -9,6 +9,7 @@
     	var g_config = {					
 				openid:"<?=$info["openid"];?>",
 				nickname:'<?=$info["nickname"];?>',
+				count:"<?=$info["count"];?>",
 				headimgurl:"<?=$info["headimgurl"];?>",
 				path:{
 					js:"<?=Data::$data['staticUri']['js']?>",
@@ -37,7 +38,7 @@
         }
     </script>
     <!--移动端版本兼容 end -->
-    <title>致敬阿玛尼 底妆大师十五周年</title>
+    <title>致敬阿玛尼 底妆大师15周年</title>
     <script src="<?=Data::$data['staticUri']['js']?>jquery.min.js"></script>
 	 <script>
     	var g_config = {					

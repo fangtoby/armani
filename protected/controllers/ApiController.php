@@ -139,7 +139,7 @@ class ApiController extends Controller
 				$rightPrizeModel = array();
 				//屏蔽店铺id
 				//2015-09-14 21:06:43
-				$hiddenIds = array(193,220);
+				$hiddenIds = array(193,220,228,229);
 				//普通奖品时间判断
 				foreach($prizeList as $key=>$val){  
 					if($val->type == 2 && $specialOpen){
@@ -415,17 +415,17 @@ class ApiController extends Controller
 		$dayLimitArr = $db->createCommand($sqlStr)->queryrow(true);
 		//判断小时中奖数量限制
 		$hourParamString = date("Y-m-d H",$param["now"]); 
-		$sqlStr = "SELECT hourlimit.count,hourlimit.id FROM hourlimit where date_format(hourlimit.hourTime,'%Y-%m-%d %H') = '".$hourParamString."' and hourlimit.pid = '".$param["correctPrizeId"]."' ";
+		$sqlStr = "SELECT hourlimit.count,hourlimit.id FROM hourlimit where date_format(hourlimit.hourTime,'%Y-%m-%d %H') = '".$hourParamString."' and hourlimit.pid != '".$param["correctPrizeId"]."' ";
 		$hourLimitrArr = $db->createCommand($sqlStr)->queryrow(true);
 		
 		if(!is_array($dayLimitArr)){
 			$Daylimit = new Daylimit();
-			$Daylimit->pid = $param["correctPrizeId"];
+			$Daylimit->pid = $$param["correctPrizeId"];
 			$Daylimit->dayTime = $param["currectTime"];
 			$Daylimit->createTime = $param["currectTime"];
 			$Daylimit->updateTime = $param["currectTime"];
 			$Daylimit->count = 0;
-			$Daylimit->save();
+			$Daylimit->update();
 		}else{
 			$Daylimit = Daylimit::model()->findByPk($dayLimitArr['id']);
 		}

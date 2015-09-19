@@ -10,7 +10,12 @@
 </head>
 <body>
     <div id="content">
-    <span><?php echo $info['nickname']; ?></span>
+    <span>
+    <?php 
+    	$user = new User();
+    	echo $user->getAllUserCount();
+
+     ?></span>
     </div><!-- content -->
 </body>
 <script>

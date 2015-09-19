@@ -10,6 +10,7 @@
     	var g_config = {					
 				openid:"<?=$info["openid"];?>",
 				nickname:'<?=$info["nickname"];?>',
+				count:"<?=$info["count"];?>",
 				headimgurl:"<?=$info["headimgurl"];?>",
 				path:{
 					js:"<?=Data::$data['staticUri']['js']?>",
